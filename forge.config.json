@@ -1,0 +1,11 @@
+{
+  "framework": "generic",
+  "model": "opus",
+  "designPreview": "storybook",
+  "githubSync": false,
+  "githubRepo": null,
+  "autoCommit": true,
+  "storybook": {
+    "port": 6006
+  }
+}
