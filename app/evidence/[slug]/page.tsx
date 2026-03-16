@@ -111,16 +111,17 @@ export default async function EvidenceDetailPage({ params }: PageProps) {
                     />
                   </div>
                   {item.sourceUrl && (
-                    <figcaption className="px-4 py-2 text-xs text-[var(--text-muted)] bg-[var(--bg-secondary)]">
+                    <figcaption className="px-4 py-2 text-xs text-[var(--text-muted)] bg-[var(--bg-secondary)] flex items-center justify-between">
                       <a
                         href={item.sourceUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-1 hover:text-gold transition-colors"
                       >
-                        Image source
+                        View on Wikimedia Commons
                         <ExternalLink className="w-3 h-3" aria-hidden="true" />
                       </a>
+                      <span>Public Domain</span>
                     </figcaption>
                   )}
                 </figure>

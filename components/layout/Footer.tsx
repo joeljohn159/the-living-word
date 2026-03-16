@@ -19,7 +19,7 @@ export function Footer() {
       role="contentinfo"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 sm:py-12">
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
           {/* About section */}
           <div className="space-y-3">
             <h2 className="font-cormorant text-lg font-semibold text-gold tracking-wide">
@@ -66,7 +66,7 @@ export function Footer() {
               <select
                 id="version-select"
                 className={cn(
-                  "w-full max-w-[200px] rounded-md px-3 py-2",
+                  "w-full sm:max-w-[240px] rounded-md px-3 py-2",
                   "bg-secondary text-secondary-foreground text-sm",
                   "border border-border",
                   "focus:outline-none focus:ring-2 focus:ring-ring",

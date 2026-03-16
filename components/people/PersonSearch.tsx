@@ -14,6 +14,8 @@ interface Person {
   tribeOrGroup: string | null;
   birthRef: string | null;
   deathRef: string | null;
+  imageUrl?: string | null;
+  sourceUrl?: string | null;
 }
 
 const ROLES = [
@@ -253,6 +255,8 @@ export function PersonSearch({ people }: PersonSearchProps) {
                     description={person.description}
                     tribeOrGroup={person.tribeOrGroup}
                     alsoKnownAs={person.alsoKnownAs}
+                    imageUrl={person.imageUrl}
+                    sourceUrl={person.sourceUrl}
                   />
                 ))}
               </div>

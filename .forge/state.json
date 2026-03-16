@@ -269,6 +269,20 @@
       "details": "Snapshot taken before build",
       "snapshotId": "037",
       "timestamp": "2026-03-16T05:25:19.242Z"
+    },
+    {
+      "action": "build",
+      "storyId": "evidence-people-images",
+      "details": "Snapshot taken before build",
+      "snapshotId": "039",
+      "timestamp": "2026-03-16T05:28:53.965Z"
+    },
+    {
+      "action": "build",
+      "storyId": "header-mobile-overlap",
+      "details": "Snapshot taken before build",
+      "snapshotId": "039",
+      "timestamp": "2026-03-16T05:28:53.965Z"
     }
   ]
 }

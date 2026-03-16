@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
-import { ArrowLeft, BookOpen, Crown } from "lucide-react";
+import { ArrowLeft, BookOpen, Crown, ExternalLink } from "lucide-react";
 import {
   getPerson,
   getPersonChildren,
@@ -98,10 +99,37 @@ export default async function PersonProfilePage({ params }: PageProps) {
 
         {/* Profile Header */}
         <header className="mb-8 animate-fade-in">
-          <div className="flex items-start gap-4">
-            <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[var(--bg-tertiary)] text-[var(--accent-gold)]">
-              <Crown className="h-7 w-7" aria-hidden="true" />
-            </div>
+          <div className="flex flex-col sm:flex-row items-start gap-4">
+            {/* Portrait image or fallback icon */}
+            {person.imageUrl ? (
+              <div className="relative w-full sm:w-40 aspect-[3/4] sm:aspect-[3/4] shrink-0 overflow-hidden rounded-lg bg-[var(--bg-secondary)]">
+                <Image
+                  src={person.imageUrl}
+                  alt={`Portrait of ${person.name}`}
+                  fill
+                  sizes="(max-width: 640px) 100vw, 160px"
+                  className="object-cover"
+                  unoptimized
+                />
+                {person.sourceUrl && (
+                  <a
+                    href={person.sourceUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="absolute bottom-1 right-1 flex items-center gap-0.5 rounded bg-black/60 px-1.5 py-0.5 text-[9px] text-white/80 hover:text-white backdrop-blur-sm transition-colors"
+                    onClick={(e) => e.stopPropagation()}
+                    aria-label="View image source on Wikimedia Commons"
+                  >
+                    <ExternalLink className="h-2.5 w-2.5" aria-hidden="true" />
+                    Wikimedia
+                  </a>
+                )}
+              </div>
+            ) : (
+              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[var(--bg-tertiary)] text-[var(--accent-gold)]">
+                <Crown className="h-7 w-7" aria-hidden="true" />
+              </div>
+            )}
             <div>
               <h1 className="heading text-3xl sm:text-4xl text-gold">
                 {person.name}

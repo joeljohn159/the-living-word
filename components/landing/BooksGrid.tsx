@@ -133,7 +133,7 @@ export function BooksGrid() {
         {/* Books grid */}
         <motion.div
           layout
-          className="grid grid-cols-2 xs:grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-11 gap-1.5 sm:gap-2"
+          className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 gap-1.5 sm:gap-2"
         >
           {filteredBooks.map((book, i) => (
             <motion.div

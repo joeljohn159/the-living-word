@@ -20,6 +20,8 @@ interface PersonEntry {
   father_slug: string | null;
   mother_slug: string | null;
   tribe_or_group: string;
+  image_url: string | null;
+  source_url: string | null;
 }
 
 interface ReferenceEntry {
@@ -77,6 +79,8 @@ export function seedPeople(): void {
         fatherId: null,
         motherId: null,
         tribeOrGroup: entry.tribe_or_group,
+        imageUrl: entry.image_url ?? null,
+        sourceUrl: entry.source_url ?? null,
       })
       .returning()
       .get();

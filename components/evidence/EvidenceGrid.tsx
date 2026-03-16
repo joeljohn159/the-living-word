@@ -45,6 +45,7 @@ export function EvidenceGrid({ items }: EvidenceGridProps) {
             dateDiscovered={item.dateDiscovered}
             locationFound={item.locationFound}
             imageUrl={item.imageUrl}
+            sourceUrl={item.sourceUrl}
             significance={item.significance}
           />
         </div>

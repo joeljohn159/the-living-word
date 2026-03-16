@@ -617,6 +617,8 @@ export async function getAllPeople() {
       tribeOrGroup: people.tribeOrGroup,
       birthRef: people.birthRef,
       deathRef: people.deathRef,
+      imageUrl: people.imageUrl,
+      sourceUrl: people.sourceUrl,
     })
     .from(people)
     .orderBy(asc(people.name))

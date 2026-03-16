@@ -230,6 +230,8 @@ export const people = sqliteTable("people", {
   fatherId: integer("father_id"),
   motherId: integer("mother_id"),
   tribeOrGroup: text("tribe_or_group"),
+  imageUrl: text("image_url"),
+  sourceUrl: text("source_url"),
 });
 
 // ─── People References ──────────────────────────────────────

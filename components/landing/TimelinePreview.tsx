@@ -117,7 +117,7 @@ export function TimelinePreview() {
   }
 
   return (
-    <section className="py-16 sm:py-24 px-4" aria-label="Timeline Preview">
+    <section className="py-16 sm:py-24 px-4 overflow-x-clip" aria-label="Timeline Preview">
       <div className="mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -159,12 +159,6 @@ export function TimelinePreview() {
           className="overflow-x-auto scrollbar-hide pb-4 -mx-4 px-4"
         >
           <div className="relative flex items-start gap-0 min-w-max">
-            {/* Horizontal line */}
-            <div
-              className="absolute top-[38px] left-0 right-0 h-px bg-[var(--border)]"
-              aria-hidden="true"
-            />
-
             {TIMELINE_EVENTS.map((event, i) => (
               <motion.div
                 key={event.title}
@@ -175,15 +169,22 @@ export function TimelinePreview() {
                 className="relative flex flex-col items-center w-[140px] sm:w-[180px] flex-shrink-0"
               >
                 {/* Date */}
-                <span className="font-source-sans text-[11px] text-[var(--text-secondary)] mb-2 whitespace-nowrap font-medium">
+                <span className="font-source-sans text-[11px] leading-4 text-[var(--text-secondary)] mb-2 whitespace-nowrap font-medium">
                   {event.date}
                 </span>
 
-                {/* Dot */}
-                <div
-                  className="w-3 h-3 rounded-full bg-gold border-2 border-[var(--bg-primary)] z-10 mb-4"
-                  aria-hidden="true"
-                />
+                {/* Dot with horizontal connector line */}
+                <div className="relative flex items-center justify-center w-full mb-4">
+                  {/* Line segment through each item */}
+                  <div
+                    className="absolute left-0 right-0 h-px bg-[var(--border)]"
+                    aria-hidden="true"
+                  />
+                  <div
+                    className="relative z-10 w-3 h-3 rounded-full bg-gold border-2 border-[var(--bg-primary)]"
+                    aria-hidden="true"
+                  />
+                </div>
 
                 {/* Card */}
                 <div

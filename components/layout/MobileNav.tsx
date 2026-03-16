@@ -32,9 +32,9 @@ export function MobileNav() {
         <Menu className="h-6 w-6" />
       </SheetTrigger>
 
-      <SheetContent>
+      <SheetContent className="overflow-y-auto">
         <nav
-          className="flex flex-col h-full pt-12 pb-6 px-6"
+          className="flex flex-col h-full pt-14 pb-6 px-6"
           aria-label="Mobile navigation"
         >
           {/* Logo */}

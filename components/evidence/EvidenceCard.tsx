@@ -12,6 +12,7 @@ interface EvidenceCardProps {
   dateDiscovered: string | null;
   locationFound: string | null;
   imageUrl: string | null;
+  sourceUrl?: string | null;
   significance: string | null;
 }
 
@@ -23,6 +24,7 @@ export function EvidenceCard({
   dateDiscovered,
   locationFound,
   imageUrl,
+  sourceUrl,
   significance,
 }: EvidenceCardProps) {
   const significanceRating = getSignificanceRating(significance);
@@ -99,6 +101,15 @@ export function EvidenceCard({
               />
             ))}
           </div>
+        )}
+
+        {imageUrl && sourceUrl && (
+          <p className="text-[10px] text-[var(--text-muted)] truncate">
+            Photo:{" "}
+            <span className="underline" aria-label="Wikimedia Commons source">
+              Wikimedia Commons
+            </span>
+          </p>
         )}
       </div>
     </Link>

@@ -72,7 +72,7 @@ export function EvidenceSpotlight({ items }: EvidenceSpotlightProps) {
 
   return (
     <section
-      className="py-16 sm:py-24 px-4 bg-[var(--bg-secondary)]"
+      className="py-16 sm:py-24 px-4 bg-[var(--bg-secondary)] overflow-x-clip"
       aria-label="Evidence Spotlight"
     >
       <div className="mx-auto max-w-6xl">

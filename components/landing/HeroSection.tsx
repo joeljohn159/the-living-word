@@ -28,7 +28,7 @@ export function HeroSection({ verseText, verseRef }: HeroSectionProps) {
 
   return (
     <section
-      className="relative h-[100dvh] min-h-[500px] sm:min-h-[600px] flex items-center justify-center overflow-hidden"
+      className="relative h-[calc(100dvh-4rem)] min-h-[500px] sm:min-h-[600px] flex items-center justify-center overflow-hidden"
       aria-label="Hero"
     >
       {/* Background painting with parallax */}
