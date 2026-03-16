@@ -87,7 +87,7 @@ export function EvidenceCard({
         </div>
 
         {significanceRating > 0 && (
-          <div className="flex items-center gap-1" aria-label={`Significance: ${significanceRating} out of 5`}>
+          <div className="flex items-center gap-1" role="img" aria-label={`Significance: ${significanceRating} out of 5`}>
             {Array.from({ length: 5 }).map((_, i) => (
               <Star
                 key={i}

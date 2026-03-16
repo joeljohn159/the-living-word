@@ -210,7 +210,7 @@ describe("EvidenceCard", () => {
 
     it("does not render an img element", () => {
       render(<EvidenceCard {...noImageProps} />);
-      expect(screen.queryByRole("img")).not.toBeInTheDocument();
+      expect(screen.queryByAltText(baseProps.title)).not.toBeInTheDocument();
     });
 
     it("still shows the category badge in the text section", () => {

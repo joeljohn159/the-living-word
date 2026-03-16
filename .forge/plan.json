@@ -14,10 +14,12 @@
           "title": "Fix Hero Section for Light & Sepia Themes",
           "description": "The HeroSection has hardcoded dark overlay colors (from-[#0F0F1A]/80 via-[#0F0F1A]/70 to-[#0F0F1A]/95) that don't adapt to light/sepia themes, making text nearly invisible in light mode. The MapPreview section also has a hardcoded dark gradient background (from-[#1a1f2e] via-[#1e2438] to-[#151927]) and hardcoded grid pattern colors that ignore theme.\n\nFixes needed:\n1. In components/landing/HeroSection.tsx: Replace hardcoded #0F0F1A overlay with CSS variable-based overlay that works across all 3 themes. For light mode use a light overlay with sufficient contrast for gold/white text. Consider using theme-aware classes or CSS variables for the gradient.\n2. In components/landing/MapPreview.tsx: Replace the hardcoded dark gradient background with theme-aware CSS variables. The grid pattern overlay also uses hardcoded gold rgba - make it theme-aware.\n3. Ensure the hero text (gold heading, secondary text, verse quote, muted ref) all have sufficient contrast (WCAG AA minimum) against backgrounds in ALL three themes.\n4. The 'Begin Reading' CTA button uses bg-gold with text-[var(--bg-primary)] - verify this has sufficient contrast in light mode where bg-primary is very light (#FDFBF7) and gold is dark (#8B6914).\n\nExisting files to modify:\n- components/landing/HeroSection.tsx\n- components/landing/MapPreview.tsx\n- app/globals.css (if new CSS variables needed for overlays)\n\nAcceptance criteria:\n- Hero section is fully readable in dark, light, and sepia themes\n- Map preview section adapts to all themes\n- All text meets WCAG AA contrast ratios\n- No hardcoded dark colors remain in these components",
           "type": "ui",
-          "status": "reviewing",
+          "status": "done",
           "branch": null,
           "designApproved": true,
-          "tags": [],
+          "tags": [
+            "forge/v0.1-hero-theme-adaptive"
+          ],
           "priority": 1,
           "dependencies": []
         },
@@ -26,10 +28,12 @@
           "title": "Fix Light Mode Text Contrast Across All Pages",
           "description": "Audit and fix text contrast issues across the entire app in light mode. Key areas:\n\n1. In app/globals.css: The light theme --text-muted (#8A8278) and --text-secondary (#5C5346) may have insufficient contrast on --bg-primary (#FDFBF7). Verify and adjust. The --verse-number (#8B7D6B) is the same across all themes - needs to be darker for light mode.\n2. Section headings using 'text-gold' class - in light mode gold is #8B6914 on white bg (#FDFBF7) - verify contrast ratio, may need darkening.\n3. The BooksGrid component uses text-[var(--text-muted)] for abbreviations and text-[var(--text-primary)] for book names - verify readability.\n4. TimelinePreview uses text-[10px] and text-[11px] sizes with muted colors - extremely hard to read in light mode.\n5. EvidenceSpotlight card badges use bg-[var(--bg-primary)]/80 with gold text - in light mode this is nearly-white-on-gold, illegible.\n6. SearchSection placeholder text and hint text contrast.\n7. Footer uses text-muted-foreground extensively - verify in light mode.\n\nExisting files to modify:\n- app/globals.css (adjust light theme CSS variables)\n- components/landing/BooksGrid.tsx (if class changes needed)\n- components/landing/TimelinePreview.tsx (increase font sizes for small text)\n- components/landing/EvidenceSpotlight.tsx (fix badge contrast)\n\nAcceptance criteria:\n- All text on all landing page sections is clearly readable in light mode\n- WCAG AA contrast ratios met for all text\n- Small text (10-11px) is either enlarged or given stronger contrast\n- Category badges on evidence cards are legible in all themes",
           "type": "ui",
-          "status": "reviewing",
+          "status": "done",
           "branch": null,
           "designApproved": true,
-          "tags": [],
+          "tags": [
+            "forge/v0.2-global-light-mode-contrast"
+          ],
           "priority": 2,
           "dependencies": [
             "hero-theme-adaptive"
@@ -47,10 +51,12 @@
           "title": "Add Wikipedia Images to Landing Page Sections",
           "description": "Several landing page sections lack images or use placeholder representations. Add real Wikipedia/Wikimedia Commons images:\n\n1. MapPreview (components/landing/MapPreview.tsx): Currently uses a plain dark gradient with pin dots. Replace with an actual historical biblical map image from Wikimedia Commons as background. Good options: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Palestine_1020BC-Smith1915.jpg/800px-Palestine_1020BC-Smith1915.jpg' or similar ancient map of the Holy Land. Keep the pins and CTA overlay.\n\n2. TimelinePreview (components/landing/TimelinePreview.tsx): The timeline cards have no images. Add small representative Wikipedia images to at least the major events. Add an imageUrl field to the TimelineEvent interface and populate with appropriate Wikimedia Commons URLs:\n   - Call of Abraham: Abraham painting\n   - The Exodus: Moses/Red Sea painting\n   - David Becomes King: David painting\n   - Solomon's Temple: Temple illustration\n   - Birth of Jesus: Nativity painting\n   - Crucifixion: Crucifixion painting\n   Use Next.js Image component with proper alt text and attribution.\n\n3. BooksGrid (components/landing/BooksGrid.tsx): Add a subtle background image or decorative element - perhaps an ancient manuscript texture from Wikimedia.\n\nExisting files to modify:\n- components/landing/MapPreview.tsx\n- components/landing/TimelinePreview.tsx\n- components/landing/BooksGrid.tsx\n\nAcceptance criteria:\n- MapPreview has a real historical map as background\n- Timeline events show relevant artwork thumbnails\n- All images use Next.js Image with proper alt text\n- Images load from upload.wikimedia.org (already in remotePatterns)\n- Attribution text included where visible",
           "type": "ui",
-          "status": "reviewing",
+          "status": "done",
           "branch": null,
           "designApproved": true,
-          "tags": [],
+          "tags": [
+            "forge/v0.3-landing-section-images"
+          ],
           "priority": 3,
           "dependencies": [
             "hero-theme-adaptive"

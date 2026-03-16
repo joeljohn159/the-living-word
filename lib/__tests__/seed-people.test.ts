@@ -372,7 +372,9 @@ describe("seedPeople database insertion", () => {
         death_ref TEXT,
         father_id INTEGER,
         mother_id INTEGER,
-        tribe_or_group TEXT
+        tribe_or_group TEXT,
+        image_url TEXT,
+        source_url TEXT
       );
 
       CREATE TABLE IF NOT EXISTS people_references (
