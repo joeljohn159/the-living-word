@@ -317,6 +317,72 @@ export async function getLocationsByChapter(
     .all();
 }
 
+/** Get all locations ordered by name. */
+export async function getAllLocations() {
+  return db
+    .select({
+      id: locations.id,
+      name: locations.name,
+      slug: locations.slug,
+      description: locations.description,
+      locationType: locations.locationType,
+      latitude: locations.latitude,
+      longitude: locations.longitude,
+      modernName: locations.modernName,
+      imageUrl: locations.imageUrl,
+    })
+    .from(locations)
+    .orderBy(asc(locations.name))
+    .all();
+}
+
+/** Get all location slugs for sitemap generation. */
+export async function getAllLocationSlugs() {
+  return db.select({ slug: locations.slug }).from(locations).all();
+}
+
+/** Get all journey slugs for static params generation. */
+export async function getAllJourneySlugs() {
+  return db.select({ slug: journeys.slug }).from(journeys).all();
+}
+
+/** Get locations with their book references for testament filtering. */
+export async function getLocationsWithBookRefs() {
+  const allLocs = await getAllLocations();
+  const refs = db
+    .select({
+      locationId: locationReferences.locationId,
+      bookId: locationReferences.bookId,
+      testament: books.testament,
+      bookSlug: books.slug,
+      bookName: books.name,
+    })
+    .from(locationReferences)
+    .innerJoin(books, eq(locationReferences.bookId, books.id))
+    .all();
+
+  const refMap = new Map<number, { testaments: Set<string>; books: Set<string>; bookNames: Set<string> }>();
+  for (const ref of refs) {
+    if (!refMap.has(ref.locationId)) {
+      refMap.set(ref.locationId, { testaments: new Set(), books: new Set(), bookNames: new Set() });
+    }
+    const entry = refMap.get(ref.locationId)!;
+    if (ref.testament) entry.testaments.add(ref.testament);
+    if (ref.bookSlug) entry.books.add(ref.bookSlug);
+    if (ref.bookName) entry.bookNames.add(ref.bookName);
+  }
+
+  return allLocs.map((loc) => {
+    const entry = refMap.get(loc.id);
+    return {
+      ...loc,
+      testaments: entry ? Array.from(entry.testaments) : [],
+      bookSlugs: entry ? Array.from(entry.books) : [],
+      bookNames: entry ? Array.from(entry.bookNames) : [],
+    };
+  });
+}
+
 // ─── People ────────────────────────────────────────────────
 
 /** Get all people referenced in a specific chapter. */

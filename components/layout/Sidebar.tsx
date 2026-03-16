@@ -4,7 +4,6 @@ import { useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { PanelRightClose, PanelRightOpen } from "lucide-react";
 import { usePreferencesStore } from "@/stores/preferences";
-import { useContextPanelKeyboard } from "@/hooks/use-context-panel-keyboard";
 import { useMediaQuery } from "@/hooks/use-media-query";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
@@ -29,7 +28,8 @@ export function Sidebar() {
   const setActiveTab = usePreferencesStore((s) => s.setActiveSidebarTab);
   const isMobile = useMediaQuery("(max-width: 1023px)");
 
-  useContextPanelKeyboard();
+  // Note: F/M keyboard shortcuts are handled by the centralized
+  // KeyboardShortcutsProvider — no need to register them here.
 
   const handleTabChange = useCallback(
     (value: string) => {

@@ -85,6 +85,11 @@ async function staticAndBooksSitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "monthly",
       priority: 0.7,
     },
+    {
+      url: `${SITE_URL}/about`,
+      changeFrequency: "monthly",
+      priority: 0.5,
+    },
   ];
 
   const bookPages: MetadataRoute.Sitemap = books.map((book) => ({

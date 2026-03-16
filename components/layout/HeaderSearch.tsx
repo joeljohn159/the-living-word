@@ -4,7 +4,6 @@ import { useCallback } from "react";
 import { useRouter } from "next/navigation";
 import { Search } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { useSearchKeyboard } from "@/hooks/use-search-keyboard";
 
 /**
  * Compact search trigger button for the header.
@@ -17,7 +16,8 @@ export function HeaderSearch({ className }: { className?: string }) {
     router.push("/search");
   }, [router]);
 
-  useSearchKeyboard(openSearch);
+  // Note: Ctrl+K and / keyboard shortcuts are handled by the centralized
+  // KeyboardShortcutsProvider — no need to register them here.
 
   return (
     <button

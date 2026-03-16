@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Source_Sans_3 } from "next/font/google";
 import { ThemeProvider } from "@/components/shared/theme-provider";
+import { KeyboardShortcutsProvider } from "@/components/shared/KeyboardShortcutsProvider";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE, buildWebSiteJsonLd, jsonLdScriptProps } from "@/lib/seo";
@@ -73,6 +74,19 @@ export default function RootLayout({
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
         />
+        {/* RSS feed for daily verse */}
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="The Living Word — Daily Verse"
+          href="/feed.xml"
+        />
+        {/* Preconnect to image CDN for faster LCP */}
+        <link rel="preconnect" href="https://upload.wikimedia.org" />
+        <link
+          rel="dns-prefetch"
+          href="https://upload.wikimedia.org"
+        />
         {/* WebSite structured data for search engines */}
         <script {...jsonLdScriptProps(buildWebSiteJsonLd())} />
       </head>
@@ -80,11 +94,19 @@ export default function RootLayout({
         className={`${cormorant.variable} ${sourceSans.variable} antialiased min-h-screen`}
       >
         <ThemeProvider>
-          <div className="flex min-h-screen flex-col">
-            <Header />
-            <main className="flex-1">{children}</main>
-            <Footer />
-          </div>
+          <KeyboardShortcutsProvider>
+            <a
+              href="#main-content"
+              className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:rounded-lg focus:bg-gold focus:px-4 focus:py-2 focus:text-[var(--bg-primary)] focus:font-source-sans focus:font-semibold focus:text-sm focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2"
+            >
+              Skip to content
+            </a>
+            <div className="flex min-h-screen flex-col">
+              <Header />
+              <main id="main-content" className="flex-1">{children}</main>
+              <Footer />
+            </div>
+          </KeyboardShortcutsProvider>
         </ThemeProvider>
       </body>
     </html>
