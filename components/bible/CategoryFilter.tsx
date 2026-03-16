@@ -50,8 +50,8 @@ function CategoryChip({
       aria-checked={isActive}
       onClick={onClick}
       className={cn(
-        "rounded-full px-3 py-1 text-xs font-source-sans font-medium",
-        "border transition-all duration-200",
+        "rounded-full px-3 sm:px-4 py-2 sm:py-1.5 text-xs font-source-sans font-medium",
+        "border transition-all duration-200 whitespace-nowrap touch-target",
         isActive
           ? "border-gold bg-gold/15 text-gold"
           : "border-border text-muted-foreground hover:border-gold/50 hover:text-foreground"

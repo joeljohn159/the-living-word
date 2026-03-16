@@ -33,7 +33,7 @@ export function DictionaryBottomSheet({
         className={cn(
           "relative w-full max-w-lg mx-auto",
           "bg-[var(--bg-card)] border-t border-[var(--border)]",
-          "rounded-t-2xl p-5 pb-8",
+          "rounded-t-2xl p-5 pb-safe",
           "animate-slide-up"
         )}
         onClick={(e) => e.stopPropagation()}
@@ -54,10 +54,10 @@ export function DictionaryBottomSheet({
           </div>
           <button
             onClick={onClose}
-            className="p-1 rounded-md hover:bg-[var(--bg-secondary)] transition-colors"
+            className="p-2 rounded-md hover:bg-[var(--bg-secondary)] transition-colors touch-target flex items-center justify-center"
             aria-label="Close definition"
           >
-            <X className="w-4 h-4 text-[var(--text-muted)]" />
+            <X className="w-5 h-5 text-[var(--text-muted)]" />
           </button>
         </div>
 
@@ -77,7 +77,7 @@ export function DictionaryBottomSheet({
           className={cn(
             "inline-flex items-center gap-1.5 text-sm font-source-sans",
             "text-[var(--accent-gold)] hover:text-[var(--accent-gold-light)]",
-            "transition-colors"
+            "transition-colors touch-target py-2",
           )}
         >
           View full entry

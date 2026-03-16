@@ -45,10 +45,10 @@ export function BookGrid() {
         {filteredBooks.length === 1 ? "book" : "books"}
       </p>
 
-      {/* Grid */}
+      {/* Grid — single column on small mobile, 2 on tablet, 3 on medium, 4 on desktop */}
       <motion.div
         layout
-        className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4"
+        className="grid grid-cols-1 gap-3 sm:gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
       >
         <AnimatePresence mode="popLayout">
           {filteredBooks.map((book) => (

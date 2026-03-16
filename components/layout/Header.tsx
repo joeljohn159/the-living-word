@@ -64,7 +64,7 @@ export function Header() {
         </nav>
 
         {/* Right section: search, badge, theme toggle, mobile menu */}
-        <div className="flex items-center gap-2 sm:gap-3">
+        <div className="flex items-center gap-1.5 sm:gap-3">
           <HeaderSearch className="hidden sm:inline-flex" />
           <KjvBadge className="hidden sm:inline-flex" />
           <ThemeToggle className="hidden sm:inline-flex" />

@@ -56,9 +56,9 @@ export function MobileNav() {
                     href={href}
                     onClick={() => setOpen(false)}
                     className={cn(
-                      "flex items-center gap-3 rounded-md px-3 py-2.5",
+                      "flex items-center gap-3 rounded-md px-3 py-3",
                       "text-sm font-source-sans font-medium",
-                      "transition-colors duration-150",
+                      "transition-colors duration-150 touch-target",
                       isActive
                         ? "bg-gold/10 text-gold"
                         : "text-muted-foreground hover:text-foreground hover:bg-accent"

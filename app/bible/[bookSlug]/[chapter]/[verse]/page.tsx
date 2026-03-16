@@ -16,6 +16,12 @@ import { SurroundingVerses } from "@/components/verse/SurroundingVerses";
 import { CrossReferencesList } from "@/components/verse/CrossReferencesList";
 import { ShareButtons } from "@/components/verse/ShareButtons";
 import { VerseNavigation } from "@/components/verse/VerseNavigation";
+import {
+  SITE_URL,
+  generatePageMetadata,
+  buildBreadcrumbJsonLd,
+  jsonLdScriptProps,
+} from "@/lib/seo";
 
 // ─── Types ──────────────────────────────────────────────────
 
@@ -37,31 +43,16 @@ export async function generateMetadata({ params }: VersePageProps): Promise<Meta
 
   const reference = `${book.name} ${chapterNum}:${verseNum}`;
   const preview = truncate(verse.text, 120);
-  const title = `${reference} KJV — ${preview} | The Living Word`;
+  const title = `${reference} KJV — ${preview}`;
   const description = `${verse.text} — ${reference} (King James Version). Read with cross-references and context.`;
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://thelivingword.app";
-  const pageUrl = `${siteUrl}/bible/${params.bookSlug}/${chapterNum}/${verseNum}`;
-
-  return {
+  return generatePageMetadata({
     title,
     description,
-    openGraph: {
-      title,
-      description,
-      type: "article",
-      url: pageUrl,
-      siteName: "The Living Word",
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: `${reference} KJV — ${preview}`,
-      description,
-    },
-    alternates: {
-      canonical: pageUrl,
-    },
-  };
+    path: `/bible/${params.bookSlug}/${chapterNum}/${verseNum}`,
+    ogType: "article",
+    twitterCard: "summary_large_image",
+  });
 }
 
 // ─── Page ───────────────────────────────────────────────────
@@ -107,12 +98,11 @@ export default async function VersePage({ params }: VersePageProps) {
     verseCount,
   );
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://thelivingword.app";
-  const pageUrl = `${siteUrl}/bible/${params.bookSlug}/${chapterNum}/${verseNum}`;
+  const pageUrl = `${SITE_URL}/bible/${params.bookSlug}/${chapterNum}/${verseNum}`;
   const reference = `${book.name} ${chapterNum}:${verseNum}`;
 
-  // JSON-LD structured data
-  const jsonLd = {
+  // JSON-LD structured data — CreativeWork + Breadcrumb
+  const creativeWork = {
     "@context": "https://schema.org",
     "@type": "CreativeWork",
     name: `${reference} (KJV)`,
@@ -124,44 +114,21 @@ export default async function VersePage({ params }: VersePageProps) {
       bookEdition: "KJV",
     },
     url: pageUrl,
-    breadcrumb: {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Bible",
-          item: `${siteUrl}/bible`,
-        },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: book.name,
-          item: `${siteUrl}/bible/${book.slug}`,
-        },
-        {
-          "@type": "ListItem",
-          position: 3,
-          name: `Chapter ${chapterNum}`,
-          item: `${siteUrl}/bible/${book.slug}/${chapterNum}`,
-        },
-        {
-          "@type": "ListItem",
-          position: 4,
-          name: `Verse ${verseNum}`,
-          item: pageUrl,
-        },
-      ],
-    },
   };
+
+  const breadcrumb = buildBreadcrumbJsonLd([
+    { name: "Home", path: "/" },
+    { name: "Bible", path: "/bible" },
+    { name: book.name, path: `/bible/${book.slug}` },
+    { name: `Chapter ${chapterNum}`, path: `/bible/${book.slug}/${chapterNum}` },
+    { name: `Verse ${verseNum}`, path: `/bible/${book.slug}/${chapterNum}/${verseNum}` },
+  ]);
 
   return (
     <>
       {/* JSON-LD structured data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <script {...jsonLdScriptProps(creativeWork)} />
+      <script {...jsonLdScriptProps(breadcrumb)} />
 
       <div className="min-h-[calc(100vh-4rem)]">
         <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 animate-fade-in">

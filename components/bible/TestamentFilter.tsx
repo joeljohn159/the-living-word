@@ -21,7 +21,7 @@ const OPTIONS: { label: string; value: Testament }[] = [
 export function TestamentFilter({ value, onChange }: TestamentFilterProps) {
   return (
     <div
-      className="inline-flex rounded-lg border border-border bg-secondary p-1"
+      className="inline-flex rounded-lg border border-border bg-secondary p-1 overflow-x-auto scrollbar-hide"
       role="radiogroup"
       aria-label="Filter by testament"
     >
@@ -32,8 +32,8 @@ export function TestamentFilter({ value, onChange }: TestamentFilterProps) {
           aria-checked={value === opt.value}
           onClick={() => onChange(opt.value)}
           className={cn(
-            "rounded-md px-3 py-1.5 text-sm font-source-sans font-medium",
-            "transition-all duration-200",
+            "rounded-md px-3 sm:px-4 py-2 sm:py-1.5 text-sm font-source-sans font-medium",
+            "transition-all duration-200 whitespace-nowrap touch-target",
             value === opt.value
               ? "bg-gold text-[var(--bg-primary)] shadow-sm"
               : "text-muted-foreground hover:text-foreground"

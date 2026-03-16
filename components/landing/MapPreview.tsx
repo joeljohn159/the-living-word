@@ -53,7 +53,7 @@ export function MapPreview() {
           className="relative rounded-xl border border-[var(--border)] bg-[var(--bg-card)] overflow-hidden shadow-xl"
         >
           {/* Decorative map background */}
-          <div className="relative h-[300px] sm:h-[400px] bg-gradient-to-br from-[#1a1f2e] via-[#1e2438] to-[#151927]">
+          <div className="relative h-[250px] sm:h-[350px] md:h-[400px] bg-gradient-to-br from-[#1a1f2e] via-[#1e2438] to-[#151927]">
             {/* Grid pattern overlay */}
             <div
               className="absolute inset-0 opacity-10"
@@ -89,7 +89,7 @@ export function MapPreview() {
                       className="w-5 h-5 text-gold drop-shadow-lg group-hover:text-gold-light transition-colors"
                       aria-hidden="true"
                     />
-                    <span className="absolute top-6 whitespace-nowrap font-source-sans text-[10px] sm:text-xs text-[var(--text-secondary)] bg-[var(--bg-primary)]/80 px-1.5 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                    <span className="absolute top-6 whitespace-nowrap font-source-sans text-[10px] sm:text-xs text-[var(--text-secondary)] bg-[var(--bg-primary)]/80 px-1.5 py-0.5 rounded sm:opacity-0 sm:group-hover:opacity-100 transition-opacity">
                       {loc.name}
                     </span>
                   </div>
@@ -101,7 +101,7 @@ export function MapPreview() {
             <div className="absolute inset-0 flex items-end justify-center pb-8">
               <Link
                 href="/maps"
-                className="inline-flex items-center gap-2 bg-gold/90 hover:bg-gold text-[var(--bg-primary)] px-6 py-3 rounded-lg font-source-sans font-semibold text-sm transition-colors backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-gold"
+                className="inline-flex items-center gap-2 bg-gold/90 hover:bg-gold text-[var(--bg-primary)] px-5 sm:px-6 py-3 rounded-lg font-source-sans font-semibold text-sm transition-colors backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-gold touch-target"
               >
                 <MapPin className="w-4 h-4" aria-hidden="true" />
                 Explore Biblical World &rarr;

@@ -49,7 +49,7 @@ export function TimelinePreview() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6 }}
-          className="flex items-end justify-between mb-10"
+          className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 mb-8 sm:mb-10"
         >
           <div>
             <p className="font-source-sans text-xs uppercase tracking-[0.2em] text-[var(--accent-gold)] mb-2">
@@ -60,17 +60,17 @@ export function TimelinePreview() {
             </h2>
           </div>
 
-          <div className="hidden sm:flex gap-2">
+          <div className="hidden sm:flex gap-2 shrink-0">
             <button
               onClick={() => scroll("left")}
-              className="p-2 rounded-lg bg-[var(--bg-tertiary)] text-[var(--text-secondary)] hover:text-gold transition-colors focus:outline-none focus:ring-2 focus:ring-gold"
+              className="p-2 rounded-lg bg-[var(--bg-tertiary)] text-[var(--text-secondary)] hover:text-gold transition-colors focus:outline-none focus:ring-2 focus:ring-gold touch-target"
               aria-label="Scroll timeline left"
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
             <button
               onClick={() => scroll("right")}
-              className="p-2 rounded-lg bg-[var(--bg-tertiary)] text-[var(--text-secondary)] hover:text-gold transition-colors focus:outline-none focus:ring-2 focus:ring-gold"
+              className="p-2 rounded-lg bg-[var(--bg-tertiary)] text-[var(--text-secondary)] hover:text-gold transition-colors focus:outline-none focus:ring-2 focus:ring-gold touch-target"
               aria-label="Scroll timeline right"
             >
               <ChevronRight className="w-5 h-5" />
@@ -97,7 +97,7 @@ export function TimelinePreview() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.06 }}
-                className="relative flex flex-col items-center w-[160px] sm:w-[180px] flex-shrink-0"
+                className="relative flex flex-col items-center w-[140px] sm:w-[180px] flex-shrink-0"
               >
                 {/* Date */}
                 <span className="font-source-sans text-[10px] text-[var(--text-muted)] mb-2 whitespace-nowrap">

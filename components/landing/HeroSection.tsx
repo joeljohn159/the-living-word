@@ -28,7 +28,7 @@ export function HeroSection({ verseText, verseRef }: HeroSectionProps) {
 
   return (
     <section
-      className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden"
+      className="relative h-[100dvh] min-h-[500px] sm:min-h-[600px] flex items-center justify-center overflow-hidden"
       aria-label="Hero"
     >
       {/* Background painting with parallax */}
@@ -49,7 +49,7 @@ export function HeroSection({ verseText, verseRef }: HeroSectionProps) {
       />
 
       {/* Content */}
-      <div className="relative z-10 max-w-3xl px-4 text-center">
+      <div className="relative z-10 max-w-3xl px-4 sm:px-6 text-center">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -63,7 +63,7 @@ export function HeroSection({ verseText, verseRef }: HeroSectionProps) {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="heading text-5xl sm:text-6xl md:text-8xl tracking-wide text-gold mb-6 leading-[1.1]"
+          className="heading text-4xl sm:text-5xl md:text-6xl lg:text-8xl tracking-wide text-gold mb-4 sm:mb-6 leading-[1.1]"
         >
           The Living Word
         </motion.h1>
@@ -72,7 +72,7 @@ export function HeroSection({ verseText, verseRef }: HeroSectionProps) {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="font-source-sans text-base sm:text-lg md:text-xl text-[var(--text-secondary)] mb-8 max-w-xl mx-auto"
+          className="font-source-sans text-sm sm:text-base md:text-lg lg:text-xl text-[var(--text-secondary)] mb-6 sm:mb-8 max-w-xl mx-auto"
         >
           Illuminated with History, Art, and Archaeological Evidence
         </motion.p>
@@ -84,7 +84,7 @@ export function HeroSection({ verseText, verseRef }: HeroSectionProps) {
           transition={{ duration: 1, delay: 0.7 }}
           className="mb-3"
         >
-          <p className="scripture text-xl sm:text-2xl md:text-3xl italic text-scripture leading-relaxed">
+          <p className="scripture text-lg sm:text-xl md:text-2xl lg:text-3xl italic text-scripture leading-relaxed">
             &ldquo;{verseText}&rdquo;
           </p>
         </motion.blockquote>
@@ -93,7 +93,7 @@ export function HeroSection({ verseText, verseRef }: HeroSectionProps) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 1.0 }}
-          className="text-sm text-[var(--text-muted)] mb-10 font-source-sans"
+          className="text-xs sm:text-sm text-[var(--text-muted)] mb-8 sm:mb-10 font-source-sans"
         >
           {verseRef}
         </motion.p>
@@ -105,7 +105,7 @@ export function HeroSection({ verseText, verseRef }: HeroSectionProps) {
         >
           <Link
             href="/bible"
-            className="inline-flex items-center gap-2 bg-gold text-[var(--bg-primary)] px-8 py-3.5 rounded-lg font-source-sans font-semibold text-lg hover:bg-gold-light transition-colors focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-[var(--bg-primary)]"
+            className="inline-flex items-center gap-2 bg-gold text-[var(--bg-primary)] px-6 sm:px-8 py-3 sm:py-3.5 rounded-lg font-source-sans font-semibold text-base sm:text-lg hover:bg-gold-light transition-colors focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-[var(--bg-primary)] touch-target"
             aria-label="Begin reading the Bible"
           >
             Begin Reading &rarr;

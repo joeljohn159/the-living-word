@@ -29,11 +29,12 @@ export function BookCard({ book }: BookCardProps) {
       <Link
         href={`/bible/${book.slug}`}
         className={cn(
-          "group relative block rounded-lg p-5",
+          "group relative block rounded-lg p-4 sm:p-5",
           "bg-card border border-border",
           "hover:border-gold/50 hover:shadow-lg hover:shadow-gold/5",
           "transition-all duration-300",
-          "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+          "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold",
+          "touch-target",
         )}
         aria-label={`${book.name} — ${book.chapterCount} chapters`}
       >

@@ -10,6 +10,7 @@ interface PreferencesState {
   readingMode: ReadingMode;
   sidebarOpen: boolean;
   activeSidebarTab: string;
+  dictionaryMode: boolean;
 
   setTheme: (theme: Theme) => void;
   cycleTheme: () => void;
@@ -19,6 +20,8 @@ interface PreferencesState {
   setReadingMode: (mode: ReadingMode) => void;
   toggleSidebar: () => void;
   setActiveSidebarTab: (tab: string) => void;
+  toggleDictionaryMode: () => void;
+  setDictionaryMode: (on: boolean) => void;
 }
 
 const THEME_ORDER: Theme[] = ["dark", "light", "sepia"];
@@ -34,6 +37,7 @@ export const usePreferencesStore = create<PreferencesState>()(
       readingMode: "paragraph",
       sidebarOpen: true,
       activeSidebarTab: "visuals",
+      dictionaryMode: false,
 
       setTheme: (theme) => set({ theme }),
 
@@ -62,6 +66,9 @@ export const usePreferencesStore = create<PreferencesState>()(
       toggleSidebar: () => set((s) => ({ sidebarOpen: !s.sidebarOpen })),
 
       setActiveSidebarTab: (tab) => set({ activeSidebarTab: tab }),
+
+      toggleDictionaryMode: () => set((s) => ({ dictionaryMode: !s.dictionaryMode })),
+      setDictionaryMode: (on) => set({ dictionaryMode: on }),
     }),
     {
       name: "the-living-word-preferences",

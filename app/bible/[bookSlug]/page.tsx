@@ -6,6 +6,11 @@ import { getBookBySlug } from "@/lib/db/queries";
 import { BookHeader } from "@/components/scripture/BookHeader";
 import { ChapterGrid } from "@/components/scripture/ChapterGrid";
 import { PlaceholderSection } from "@/components/scripture/PlaceholderSection";
+import {
+  generatePageMetadata,
+  buildBreadcrumbJsonLd,
+  jsonLdScriptProps,
+} from "@/lib/seo";
 
 interface BookOverviewPageProps {
   params: { bookSlug: string };
@@ -23,40 +28,12 @@ export async function generateMetadata({
     book.description ??
     `Read the Book of ${book.name} in the King James Version. ${book.chapterCount} chapters of scripture with maps, art, and archaeological evidence.`;
 
-  return {
+  return generatePageMetadata({
     title,
     description,
-    openGraph: {
-      title: `${title} | The Living Word`,
-      description,
-      type: "article",
-    },
-    twitter: {
-      card: "summary",
-      title: `${title} | The Living Word`,
-      description,
-    },
-    other: {
-      "script:ld+json": JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          {
-            "@type": "ListItem",
-            position: 1,
-            name: "Bible",
-            item: `${process.env.NEXT_PUBLIC_SITE_URL || "https://thelivingword.app"}/bible`,
-          },
-          {
-            "@type": "ListItem",
-            position: 2,
-            name: book.name,
-            item: `${process.env.NEXT_PUBLIC_SITE_URL || "https://thelivingword.app"}/bible/${book.slug}`,
-          },
-        ],
-      }),
-    },
-  };
+    path: `/bible/${book.slug}`,
+    ogType: "article",
+  });
 }
 
 /**
@@ -69,35 +46,16 @@ export default async function BookOverviewPage({
   const book = await getBookBySlug(params.bookSlug);
   if (!book) notFound();
 
-  const siteUrl =
-    process.env.NEXT_PUBLIC_SITE_URL || "https://thelivingword.app";
+  const breadcrumb = buildBreadcrumbJsonLd([
+    { name: "Home", path: "/" },
+    { name: "Bible", path: "/bible" },
+    { name: book.name, path: `/bible/${book.slug}` },
+  ]);
 
   return (
     <>
       {/* JSON-LD Breadcrumb structured data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            itemListElement: [
-              {
-                "@type": "ListItem",
-                position: 1,
-                name: "Bible",
-                item: `${siteUrl}/bible`,
-              },
-              {
-                "@type": "ListItem",
-                position: 2,
-                name: book.name,
-                item: `${siteUrl}/bible/${book.slug}`,
-              },
-            ],
-          }),
-        }}
-      />
+      <script {...jsonLdScriptProps(breadcrumb)} />
 
       <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 animate-fade-in">
         {/* Breadcrumb navigation */}

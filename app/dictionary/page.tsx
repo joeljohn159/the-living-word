@@ -2,17 +2,18 @@ import type { Metadata } from "next";
 import { BookA } from "lucide-react";
 import { getDictionaryWords, getDictionaryLetters } from "@/lib/db/queries";
 import { DictionaryBrowser } from "@/components/dictionary/DictionaryBrowser";
+import {
+  generatePageMetadata,
+  SITE_URL,
+  jsonLdScriptProps,
+} from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = generatePageMetadata({
   title: "KJV Bible Dictionary — Archaic Words Defined",
   description:
     "Browse over 300 archaic King James Bible words with modern definitions, pronunciations, and example verses. Understand every word of the KJV.",
-  openGraph: {
-    title: "KJV Bible Dictionary — Archaic Words Defined | The Living Word",
-    description:
-      "Browse over 300 archaic King James Bible words with modern definitions, pronunciations, and example verses.",
-  },
-};
+  path: "/dictionary",
+});
 
 /**
  * Dictionary browser page — alphabetical list of all archaic KJV words
@@ -30,21 +31,18 @@ export default async function DictionaryPage() {
     name: "KJV Bible Dictionary",
     description:
       "A comprehensive dictionary of archaic words found in the King James Version of the Bible.",
-    url: "https://thelivingword.app/dictionary",
+    url: `${SITE_URL}/dictionary`,
     hasDefinedTerm: words.slice(0, 50).map((w) => ({
       "@type": "DefinedTerm",
       name: w.word,
       description: w.definition,
-      url: `https://thelivingword.app/dictionary/${w.slug}`,
+      url: `${SITE_URL}/dictionary/${w.slug}`,
     })),
   };
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <script {...jsonLdScriptProps(jsonLd)} />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         {/* Page header */}
         <div className="text-center mb-8 sm:mb-10 animate-fade-in">

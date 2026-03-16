@@ -59,7 +59,7 @@ export function BooksGrid() {
               aria-selected={testament === t}
               onClick={() => setTestament(t)}
               className={cn(
-                "px-4 py-2 rounded-lg font-source-sans text-sm font-medium transition-colors",
+                "px-3 sm:px-4 py-2 rounded-lg font-source-sans text-xs sm:text-sm font-medium transition-colors touch-target",
                 testament === t
                   ? "bg-gold text-[var(--bg-primary)]"
                   : "bg-[var(--bg-tertiary)] text-[var(--text-secondary)] hover:text-[var(--text-primary)]"
@@ -81,7 +81,7 @@ export function BooksGrid() {
             aria-selected={activeCategory === "All"}
             onClick={() => setActiveCategory("All")}
             className={cn(
-              "px-3 py-1.5 rounded-md font-source-sans text-xs font-medium transition-colors",
+              "px-3 py-2 sm:py-1.5 rounded-md font-source-sans text-xs font-medium transition-colors touch-target",
               activeCategory === "All"
                 ? "bg-[var(--accent-gold-dark)] text-[var(--bg-primary)]"
                 : "bg-[var(--bg-secondary)] text-[var(--text-muted)] hover:text-[var(--text-secondary)]"
@@ -96,7 +96,7 @@ export function BooksGrid() {
               aria-selected={activeCategory === cat}
               onClick={() => setActiveCategory(cat)}
               className={cn(
-                "px-3 py-1.5 rounded-md font-source-sans text-xs font-medium transition-colors",
+                "px-3 py-2 sm:py-1.5 rounded-md font-source-sans text-xs font-medium transition-colors touch-target",
                 activeCategory === cat
                   ? "bg-[var(--accent-gold-dark)] text-[var(--bg-primary)]"
                   : "bg-[var(--bg-secondary)] text-[var(--text-muted)] hover:text-[var(--text-secondary)]"
@@ -110,7 +110,7 @@ export function BooksGrid() {
         {/* Books grid */}
         <motion.div
           layout
-          className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-11 gap-2"
+          className="grid grid-cols-2 xs:grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-11 gap-1.5 sm:gap-2"
         >
           {filteredBooks.map((book, i) => (
             <motion.div
@@ -123,7 +123,7 @@ export function BooksGrid() {
               <Link
                 href={`/bible/${book.slug}`}
                 className={cn(
-                  "block rounded-lg p-2.5 text-center transition-all duration-200",
+                  "block rounded-lg p-2 sm:p-2.5 text-center transition-all duration-200 touch-target",
                   "bg-[var(--bg-card)] border border-[var(--border)]",
                   "hover:border-[var(--accent-gold)] hover:bg-[var(--bg-tertiary)]",
                   "focus:outline-none focus:ring-2 focus:ring-gold",

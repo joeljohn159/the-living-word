@@ -6,6 +6,12 @@ import {
   getDictionaryWordWithVerse,
   getDictionaryWords,
 } from "@/lib/db/queries";
+import {
+  generatePageMetadata,
+  SITE_URL,
+  buildBreadcrumbJsonLd,
+  jsonLdScriptProps,
+} from "@/lib/seo";
 
 interface DictionaryWordPageProps {
   params: { word: string };
@@ -29,15 +35,12 @@ export async function generateMetadata({
     entry.modernEquivalent ? ` Modern equivalent: ${entry.modernEquivalent}.` : ""
   }`;
 
-  return {
+  return generatePageMetadata({
     title,
     description,
-    openGraph: {
-      title: `${title} | The Living Word`,
-      description,
-      type: "article",
-    },
-  };
+    path: `/dictionary/${entry.slug}`,
+    ogType: "article",
+  });
 }
 
 /**
@@ -50,25 +53,29 @@ export default async function DictionaryWordPage({
   const entry = await getDictionaryWordWithVerse(params.word);
   if (!entry) notFound();
 
-  const jsonLd = {
+  const definedTerm = {
     "@context": "https://schema.org",
     "@type": "DefinedTerm",
     name: entry.word,
     description: entry.definition,
-    url: `https://thelivingword.app/dictionary/${entry.slug}`,
+    url: `${SITE_URL}/dictionary/${entry.slug}`,
     inDefinedTermSet: {
       "@type": "DefinedTermSet",
       name: "KJV Bible Dictionary",
-      url: "https://thelivingword.app/dictionary",
+      url: `${SITE_URL}/dictionary`,
     },
   };
 
+  const breadcrumb = buildBreadcrumbJsonLd([
+    { name: "Home", path: "/" },
+    { name: "Dictionary", path: "/dictionary" },
+    { name: entry.word, path: `/dictionary/${entry.slug}` },
+  ]);
+
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <script {...jsonLdScriptProps(definedTerm)} />
+      <script {...jsonLdScriptProps(breadcrumb)} />
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         {/* Back link */}
         <Link

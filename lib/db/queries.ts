@@ -172,6 +172,31 @@ export async function getCrossReferences(verseId: number) {
     .all();
 }
 
+/** Get all cross-references for every verse in a chapter. */
+export async function getChapterCrossReferences(
+  bookSlug: string,
+  chapterNum: number,
+) {
+  const chapterVerses = await getChapterVerses(bookSlug, chapterNum);
+  if (chapterVerses.length === 0) return [];
+
+  const verseIds = chapterVerses.map((v) => v.id);
+
+  const allRefs = [];
+  for (const verseId of verseIds) {
+    const refs = await getCrossReferences(verseId);
+    const verse = chapterVerses.find((v) => v.id === verseId);
+    for (const ref of refs) {
+      allRefs.push({
+        ...ref,
+        sourceVerseNumber: verse?.verseNumber ?? 0,
+      });
+    }
+  }
+
+  return allRefs;
+}
+
 // ─── Dictionary ────────────────────────────────────────────
 
 /** Get a single dictionary word by its slug. */
@@ -315,6 +340,74 @@ export async function getPeopleByChapter(
     .innerJoin(people, eq(peopleReferences.personId, people.id))
     .where(eq(peopleReferences.chapterId, chapter.id))
     .all();
+}
+
+/** Get people for a chapter with family connection names. */
+export async function getPeopleByChapterWithFamily(
+  bookSlug: string,
+  chapterNum: number,
+) {
+  const basePeople = await getPeopleByChapter(bookSlug, chapterNum);
+  if (basePeople.length === 0) return [];
+
+  // Deduplicate (a person can be referenced by multiple verses in a chapter)
+  const uniqueMap = new Map<number, (typeof basePeople)[0]>();
+  for (const p of basePeople) {
+    uniqueMap.set(p.id, p);
+  }
+  const unique = Array.from(uniqueMap.values());
+
+  // Enrich with family data via relational query
+  const enriched = await Promise.all(
+    unique.map(async (p) => {
+      const full = await db.query.people.findFirst({
+        where: eq(people.id, p.id),
+        with: { father: true, mother: true },
+      });
+
+      // Find spouse: someone who shares a child with this person
+      const children = db
+        .select({ id: people.id, motherId: people.motherId, fatherId: people.fatherId })
+        .from(people)
+        .where(eq(people.fatherId, p.id))
+        .all();
+
+      let spouseName: string | null = null;
+      if (children.length > 0 && children[0].motherId) {
+        const spouse = db
+          .select({ name: people.name })
+          .from(people)
+          .where(eq(people.id, children[0].motherId))
+          .get();
+        spouseName = spouse?.name ?? null;
+      }
+      // Also check if this person is a mother
+      if (!spouseName) {
+        const asMotherChildren = db
+          .select({ fatherId: people.fatherId })
+          .from(people)
+          .where(eq(people.motherId, p.id))
+          .all();
+        if (asMotherChildren.length > 0 && asMotherChildren[0].fatherId) {
+          const spouse = db
+            .select({ name: people.name })
+            .from(people)
+            .where(eq(people.id, asMotherChildren[0].fatherId))
+            .get();
+          spouseName = spouse?.name ?? null;
+        }
+      }
+
+      return {
+        ...p,
+        fatherName: full?.father?.name ?? null,
+        motherName: full?.mother?.name ?? null,
+        spouseName,
+      };
+    }),
+  );
+
+  return enriched;
 }
 
 // ─── Media ─────────────────────────────────────────────────
@@ -678,6 +771,32 @@ export async function getEvidenceCategoryCounts() {
     counts[item.category] = (counts[item.category] || 0) + 1;
   }
   return counts;
+}
+
+// ─── Sitemap Queries ──────────────────────────────────────
+
+/** Get all chapters with book slug for sitemap generation. */
+export async function getSitemapChapters() {
+  return db
+    .select({
+      bookSlug: books.slug,
+      chapterNumber: chapters.chapterNumber,
+      verseCount: chapters.verseCount,
+    })
+    .from(chapters)
+    .innerJoin(books, eq(chapters.bookId, books.id))
+    .orderBy(asc(books.sortOrder), asc(chapters.chapterNumber))
+    .all();
+}
+
+/** Get all evidence slugs for sitemap generation. */
+export async function getAllEvidenceSlugs() {
+  return db.select({ slug: evidence.slug }).from(evidence).all();
+}
+
+/** Get all dictionary slugs for sitemap generation. */
+export async function getAllDictionarySlugs() {
+  return db.select({ slug: dictionary.slug }).from(dictionary).all();
 }
 
 /** Get all evidence referenced in a specific book. */

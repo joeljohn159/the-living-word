@@ -164,6 +164,69 @@
       "details": "Snapshot taken before build",
       "snapshotId": "021",
       "timestamp": "2026-03-16T02:15:39.419Z"
+    },
+    {
+      "action": "build",
+      "storyId": "map-tab",
+      "details": "Snapshot taken before build",
+      "snapshotId": "024",
+      "timestamp": "2026-03-16T02:21:18.195Z"
+    },
+    {
+      "action": "build",
+      "storyId": "visuals-tab",
+      "details": "Snapshot taken before build",
+      "snapshotId": "024",
+      "timestamp": "2026-03-16T02:21:18.195Z"
+    },
+    {
+      "action": "build",
+      "storyId": "crossref-tab",
+      "details": "Snapshot taken before build",
+      "snapshotId": "024",
+      "timestamp": "2026-03-16T02:21:18.195Z"
+    },
+    {
+      "action": "build",
+      "storyId": "dictionary-mode",
+      "details": "Snapshot taken before build",
+      "snapshotId": "024",
+      "timestamp": "2026-03-16T02:21:18.195Z"
+    },
+    {
+      "action": "build",
+      "storyId": "evidence-tab",
+      "details": "Snapshot taken before build",
+      "snapshotId": "024",
+      "timestamp": "2026-03-16T02:21:18.203Z"
+    },
+    {
+      "action": "build",
+      "storyId": "seo-metadata",
+      "details": "Snapshot taken before build",
+      "snapshotId": "029",
+      "timestamp": "2026-03-16T02:21:18.260Z"
+    },
+    {
+      "action": "build",
+      "storyId": "people-tab",
+      "details": "Snapshot taken before build",
+      "snapshotId": "030",
+      "timestamp": "2026-03-16T02:21:18.264Z"
+    },
+    {
+      "action": "build",
+      "storyId": "notes-tab",
+      "details": "Snapshot taken before build",
+      "snapshotId": "031",
+      "timestamp": "2026-03-16T02:21:18.266Z"
+    },
+    {
+      "action": "build",
+      "storyId": "mobile-responsiveness",
+      "details": "Snapshot taken before build",
+      "snapshotId": "032",
+      "timestamp": "2026-03-16T02:21:18.270Z"
     }
   ]
 }

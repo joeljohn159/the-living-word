@@ -199,4 +199,125 @@ html {
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }
+
+  /* Minimum touch target size (44px) for accessibility */
+  .touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Safe area insets for notched devices */
+  .pb-safe {
+    padding-bottom: max(env(safe-area-inset-bottom, 0px), 0.5rem);
+  }
+
+  .pt-safe {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+}
+
+/* ─── Leaflet map overrides ─────────────────────────────── */
+
+/* Remove default blue border & shadow from marker icons */
+.bible-map-pin {
+  background: transparent !important;
+  border: none !important;
+}
+
+/* Style Leaflet popups to match the app theme */
+.bible-map-popup .leaflet-popup-content-wrapper {
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  font-family: var(--font-source-sans), system-ui, sans-serif;
+}
+
+.bible-map-popup .leaflet-popup-content {
+  margin: 8px 10px;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.bible-map-popup .leaflet-popup-tip {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-top: none;
+  border-left: none;
+}
+
+.bible-map-popup .leaflet-popup-close-button {
+  color: var(--text-muted) !important;
+  font-size: 18px !important;
+  width: 24px !important;
+  height: 24px !important;
+  padding: 4px !important;
+}
+
+.bible-map-popup .leaflet-popup-close-button:hover {
+  color: var(--accent-gold) !important;
+}
+
+/* Mute Leaflet zoom controls to match theme */
+.leaflet-bar {
+  border: 1px solid var(--border) !important;
+  box-shadow: none !important;
+}
+
+.leaflet-bar a {
+  background-color: var(--bg-card) !important;
+  color: var(--text-secondary) !important;
+  border-bottom-color: var(--border) !important;
+}
+
+.leaflet-bar a:hover {
+  background-color: var(--bg-tertiary) !important;
+  color: var(--accent-gold) !important;
+}
+
+/* Apply a muted/antiquity filter to map tiles */
+.leaflet-tile-pane {
+  filter: saturate(0.4) sepia(0.25) brightness(0.85) contrast(1.05);
+}
+
+.theme-light .leaflet-tile-pane {
+  filter: saturate(0.5) sepia(0.2) brightness(1.0) contrast(1.0);
+}
+
+.theme-sepia .leaflet-tile-pane {
+  filter: saturate(0.3) sepia(0.4) brightness(0.9) contrast(1.0);
+}
+
+/* Attribution styling */
+.leaflet-control-attribution {
+  background-color: var(--bg-card) !important;
+  color: var(--text-muted) !important;
+  font-size: 9px !important;
+}
+
+.leaflet-control-attribution a {
+  color: var(--accent-gold) !important;
+}
+
+/* Prevent horizontal overflow on mobile */
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* Improve touch responsiveness */
+@media (hover: none) and (pointer: coarse) {
+  /* Disable hover effects on touch devices for better perf */
+  .group:hover .group-hover\:opacity-100 {
+    opacity: 0;
+  }
+
+  /* Ensure tap highlight on touch devices */
+  button,
+  a,
+  [role="button"] {
+    -webkit-tap-highlight-color: rgba(196, 151, 92, 0.15);
+  }
 }

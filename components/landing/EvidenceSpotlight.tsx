@@ -81,7 +81,7 @@ export function EvidenceSpotlight({ items }: EvidenceSpotlightProps) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6 }}
-          className="flex items-end justify-between mb-10"
+          className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 mb-8 sm:mb-10"
         >
           <div>
             <p className="font-source-sans text-xs uppercase tracking-[0.2em] text-[var(--accent-gold)] mb-2">
@@ -92,8 +92,8 @@ export function EvidenceSpotlight({ items }: EvidenceSpotlightProps) {
             </h2>
           </div>
 
-          {/* Scroll controls (desktop) */}
-          <div className="hidden sm:flex gap-2">
+          {/* Scroll controls */}
+          <div className="hidden sm:flex gap-2 shrink-0">
             <button
               onClick={() => scroll("left")}
               className="p-2 rounded-lg bg-[var(--bg-tertiary)] text-[var(--text-secondary)] hover:text-gold transition-colors focus:outline-none focus:ring-2 focus:ring-gold"
@@ -125,7 +125,7 @@ export function EvidenceSpotlight({ items }: EvidenceSpotlightProps) {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className={cn(
-                "flex-shrink-0 w-[85vw] sm:w-[340px] snap-start",
+                "flex-shrink-0 w-[80vw] sm:w-[340px] snap-start",
                 "rounded-xl border border-[var(--border)] bg-[var(--bg-card)]",
                 "overflow-hidden hover:border-[var(--accent-gold)] transition-colors",
                 "group"

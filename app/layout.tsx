@@ -3,6 +3,7 @@ import { Cormorant_Garamond, Source_Sans_3 } from "next/font/google";
 import { ThemeProvider } from "@/components/shared/theme-provider";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE, buildWebSiteJsonLd, jsonLdScriptProps } from "@/lib/seo";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -28,22 +29,29 @@ export const metadata: Metadata = {
   },
   description:
     "Experience the King James Bible illuminated with historical art, archaeological evidence, interactive maps, and a built-in archaic word dictionary. A museum-quality Bible reading experience.",
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "https://thelivingword.app"
-  ),
+  metadataBase: new URL(SITE_URL),
   openGraph: {
     type: "website",
     locale: "en_US",
-    siteName: "The Living Word",
+    siteName: SITE_NAME,
     title: "The Living Word — King James Bible with Maps, Art & Evidence",
     description:
       "Experience the King James Bible illuminated with historical art, archaeological evidence, interactive maps, and a built-in archaic word dictionary.",
+    images: [
+      {
+        url: DEFAULT_OG_IMAGE,
+        width: 1200,
+        height: 630,
+        alt: "The Living Word — King James Bible",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "The Living Word — King James Bible with Maps, Art & Evidence",
     description:
       "Experience the King James Bible illuminated with historical art, archaeological evidence, interactive maps, and a built-in archaic word dictionary.",
+    images: [DEFAULT_OG_IMAGE],
   },
   robots: {
     index: true,
@@ -65,6 +73,8 @@ export default function RootLayout({
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
         />
+        {/* WebSite structured data for search engines */}
+        <script {...jsonLdScriptProps(buildWebSiteJsonLd())} />
       </head>
       <body
         className={`${cormorant.variable} ${sourceSans.variable} antialiased min-h-screen`}

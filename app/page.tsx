@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import {
   HeroSection,
   BooksGrid,
@@ -7,6 +8,14 @@ import {
   TimelinePreview,
   SearchSection,
 } from "@/components/landing";
+import { generatePageMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = generatePageMetadata({
+  title: "The Living Word — King James Bible with Maps, Art & Evidence",
+  description:
+    "Experience the King James Bible illuminated with historical art, archaeological evidence, interactive maps, and a built-in archaic word dictionary. A museum-quality Bible reading experience.",
+  path: "/",
+});
 
 /** Curated featured verses — one is selected daily based on the date. */
 const FEATURED_VERSES = [

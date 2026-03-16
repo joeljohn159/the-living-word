@@ -1,6 +1,7 @@
 "use client";
 
 import { usePreferencesStore } from "@/stores/preferences";
+import { CrossRefPopover } from "./CrossRefPopover";
 
 interface Verse {
   id: number;
@@ -33,7 +34,9 @@ export function ScriptureDisplay({ verses }: ScriptureDisplayProps) {
       >
         {verses.map((verse) => (
           <p key={verse.id} id={`verse-${verse.verseNumber}`} className="leading-[1.9]">
-            <sup className="verse-number">{verse.verseNumber}</sup>
+            <CrossRefPopover verseNumber={verse.verseNumber}>
+              <sup className="verse-number">{verse.verseNumber}</sup>
+            </CrossRefPopover>
             {verse.text}
           </p>
         ))}
@@ -50,7 +53,9 @@ export function ScriptureDisplay({ verses }: ScriptureDisplayProps) {
       <p>
         {verses.map((verse) => (
           <span key={verse.id} id={`verse-${verse.verseNumber}`}>
-            <sup className="verse-number">{verse.verseNumber}</sup>
+            <CrossRefPopover verseNumber={verse.verseNumber}>
+              <sup className="verse-number">{verse.verseNumber}</sup>
+            </CrossRefPopover>
             {verse.text}{" "}
           </span>
         ))}
