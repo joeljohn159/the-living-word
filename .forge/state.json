@@ -24,6 +24,20 @@
       "details": "Snapshot taken before build",
       "snapshotId": "002",
       "timestamp": "2026-03-16T01:18:43.285Z"
+    },
+    {
+      "action": "build",
+      "storyId": "seed-kjv-text",
+      "details": "Snapshot taken before build",
+      "snapshotId": "004",
+      "timestamp": "2026-03-16T01:22:13.249Z"
+    },
+    {
+      "action": "build",
+      "storyId": "layout-components",
+      "details": "Snapshot taken before build",
+      "snapshotId": "004",
+      "timestamp": "2026-03-16T01:22:13.249Z"
     }
   ]
 }
