@@ -1,4 +1,4 @@
-import { sqliteTable, text, integer, real } from "drizzle-orm/sqlite-core";
+import { sqliteTable, text, integer, real, index } from "drizzle-orm/sqlite-core";
 import { relations } from "drizzle-orm";
 
 // ─── Books ──────────────────────────────────────────────────
@@ -26,7 +26,9 @@ export const chapters = sqliteTable("chapters", {
   chapterNumber: integer("chapter_number").notNull(),
   verseCount: integer("verse_count").notNull(),
   summary: text("summary"),
-});
+}, (table) => ({
+  bookChapterIdx: index("idx_chapters_book_chapter").on(table.bookId, table.chapterNumber),
+}));
 
 // ─── Verses ─────────────────────────────────────────────────
 export const verses = sqliteTable("verses", {
@@ -40,7 +42,10 @@ export const verses = sqliteTable("verses", {
   chapterNumber: integer("chapter_number").notNull(),
   verseNumber: integer("verse_number").notNull(),
   text: text("text").notNull(),
-});
+}, (table) => ({
+  bookChapterVerseIdx: index("idx_verses_book_chapter_verse").on(table.bookId, table.chapterNumber, table.verseNumber),
+  chapterIdIdx: index("idx_verses_chapter_id").on(table.chapterId),
+}));
 
 // ─── Translations ───────────────────────────────────────────
 export const translations = sqliteTable("translations", {
@@ -90,7 +95,10 @@ export const mediaReferences = sqliteTable("media_references", {
   bookId: integer("book_id").references(() => books.id, { onDelete: "cascade" }),
   chapterId: integer("chapter_id").references(() => chapters.id, { onDelete: "cascade" }),
   verseId: integer("verse_id").references(() => verses.id, { onDelete: "cascade" }),
-});
+}, (table) => ({
+  chapterIdx: index("idx_media_refs_chapter").on(table.chapterId),
+  bookIdx: index("idx_media_refs_book").on(table.bookId),
+}));
 
 // ─── Evidence ───────────────────────────────────────────────
 export const evidence = sqliteTable("evidence", {
@@ -118,7 +126,10 @@ export const evidenceReferences = sqliteTable("evidence_references", {
   bookId: integer("book_id").references(() => books.id, { onDelete: "cascade" }),
   chapterId: integer("chapter_id").references(() => chapters.id, { onDelete: "cascade" }),
   verseId: integer("verse_id").references(() => verses.id, { onDelete: "cascade" }),
-});
+}, (table) => ({
+  chapterIdx: index("idx_evidence_refs_chapter").on(table.chapterId),
+  bookIdx: index("idx_evidence_refs_book").on(table.bookId),
+}));
 
 // ─── Locations ──────────────────────────────────────────────
 export const locations = sqliteTable("locations", {
@@ -144,7 +155,10 @@ export const locationReferences = sqliteTable("location_references", {
   bookId: integer("book_id").references(() => books.id, { onDelete: "cascade" }),
   chapterId: integer("chapter_id").references(() => chapters.id, { onDelete: "cascade" }),
   verseId: integer("verse_id").references(() => verses.id, { onDelete: "cascade" }),
-});
+}, (table) => ({
+  chapterIdx: index("idx_location_refs_chapter").on(table.chapterId),
+  bookIdx: index("idx_location_refs_book").on(table.bookId),
+}));
 
 // ─── Journeys ───────────────────────────────────────────────
 export const journeys = sqliteTable("journeys", {
@@ -199,7 +213,10 @@ export const crossReferences = sqliteTable("cross_references", {
     enum: ["parallel", "prophecy-fulfillment", "quotation", "allusion", "contrast"],
   }).notNull(),
   note: text("note"),
-});
+}, (table) => ({
+  sourceVerseIdx: index("idx_cross_refs_source").on(table.sourceVerseId),
+  targetVerseIdx: index("idx_cross_refs_target").on(table.targetVerseId),
+}));
 
 // ─── People ─────────────────────────────────────────────────
 export const people = sqliteTable("people", {
@@ -224,7 +241,10 @@ export const peopleReferences = sqliteTable("people_references", {
   bookId: integer("book_id").references(() => books.id, { onDelete: "cascade" }),
   chapterId: integer("chapter_id").references(() => chapters.id, { onDelete: "cascade" }),
   verseId: integer("verse_id").references(() => verses.id, { onDelete: "cascade" }),
-});
+}, (table) => ({
+  chapterIdx: index("idx_people_refs_chapter").on(table.chapterId),
+  bookIdx: index("idx_people_refs_book").on(table.bookId),
+}));
 
 // ─── Reading Plans ──────────────────────────────────────────
 export const readingPlans = sqliteTable("reading_plans", {
