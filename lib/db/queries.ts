@@ -97,6 +97,57 @@ export async function getChapterVerses(bookSlug: string, chapterNum: number) {
     .all();
 }
 
+/** Get surrounding verses for context (before and after a given verse). */
+export async function getSurroundingVerses(
+  bookSlug: string,
+  chapterNum: number,
+  verseNum: number,
+  range = 2,
+) {
+  const book = await getBookBySlug(bookSlug);
+  if (!book) return [];
+
+  return db
+    .select()
+    .from(verses)
+    .where(
+      and(
+        eq(verses.bookId, book.id),
+        eq(verses.chapterNumber, chapterNum),
+      ),
+    )
+    .orderBy(asc(verses.verseNumber))
+    .all()
+    .filter(
+      (v) =>
+        v.verseNumber >= verseNum - range &&
+        v.verseNumber <= verseNum + range &&
+        v.verseNumber !== verseNum,
+    );
+}
+
+/** Get the total number of verses in a chapter for a given book slug. */
+export async function getChapterVerseCount(
+  bookSlug: string,
+  chapterNum: number,
+) {
+  const book = await getBookBySlug(bookSlug);
+  if (!book) return 0;
+
+  const result = db
+    .select()
+    .from(chapters)
+    .where(
+      and(
+        eq(chapters.bookId, book.id),
+        eq(chapters.chapterNumber, chapterNum),
+      ),
+    )
+    .get();
+
+  return result?.verseCount ?? 0;
+}
+
 // ─── Cross References ──────────────────────────────────────
 
 /** Get all cross-references for a given verse ID. */
