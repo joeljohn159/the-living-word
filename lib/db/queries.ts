@@ -505,6 +505,17 @@ export async function getMediaByChapter(
     .all();
 }
 
+// ─── Gallery ──────────────────────────────────────────────
+
+/** Get all media (artwork) ordered by title. */
+export async function getAllMedia() {
+  return db
+    .select()
+    .from(media)
+    .orderBy(asc(media.title))
+    .all();
+}
+
 // ─── Evidence ──────────────────────────────────────────────
 
 /** Get all evidence referenced in a specific chapter. */

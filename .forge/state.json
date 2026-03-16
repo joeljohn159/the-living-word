@@ -290,6 +290,13 @@
       "details": "Snapshot taken before build",
       "snapshotId": "041",
       "timestamp": "2026-03-16T05:35:22.383Z"
+    },
+    {
+      "action": "build",
+      "storyId": "dead-links-missing-pages",
+      "details": "Snapshot taken before build",
+      "snapshotId": "042",
+      "timestamp": "2026-03-16T05:41:36.669Z"
     }
   ]
 }
