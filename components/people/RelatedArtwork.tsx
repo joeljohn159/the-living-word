@@ -1,0 +1,68 @@
+import { Palette } from "lucide-react";
+import { cn } from "@/lib/utils";
+
+interface ArtworkItem {
+  id: number;
+  title: string;
+  description: string | null;
+  artist: string | null;
+  yearCreated: string | null;
+  imageUrl: string | null;
+  sourceUrl: string | null;
+  attribution: string | null;
+}
+
+interface RelatedArtworkProps {
+  artwork: ArtworkItem[];
+  personName: string;
+}
+
+export function RelatedArtwork({ artwork, personName }: RelatedArtworkProps) {
+  if (artwork.length === 0) {
+    return (
+      <p className="text-sm text-[var(--text-muted)] italic">
+        No related artwork found for {personName}.
+      </p>
+    );
+  }
+
+  return (
+    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {artwork.map((item) => (
+        <div
+          key={item.id}
+          className={cn(
+            "rounded-lg border border-[var(--border)] overflow-hidden",
+            "bg-[var(--bg-card)] transition-all hover:border-[var(--accent-gold)]"
+          )}
+        >
+          {item.imageUrl ? (
+            <div className="aspect-[4/3] bg-[var(--bg-tertiary)] flex items-center justify-center">
+              <Palette className="h-8 w-8 text-[var(--text-muted)]" aria-hidden="true" />
+            </div>
+          ) : (
+            <div className="aspect-[4/3] bg-[var(--bg-tertiary)] flex items-center justify-center">
+              <Palette className="h-8 w-8 text-[var(--text-muted)]" aria-hidden="true" />
+            </div>
+          )}
+          <div className="p-3">
+            <h4 className="heading text-sm text-[var(--text-primary)]">
+              {item.title}
+            </h4>
+            {item.artist && (
+              <p className="mt-0.5 text-xs text-[var(--text-secondary)]">
+                {item.artist}
+                {item.yearCreated ? `, ${item.yearCreated}` : ""}
+              </p>
+            )}
+            {item.attribution && (
+              <p className="mt-1 text-[10px] text-[var(--text-muted)]">
+                {item.attribution}
+              </p>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}

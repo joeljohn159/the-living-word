@@ -1,29 +1,50 @@
-import Link from "next/link";
+import {
+  HeroSection,
+  BooksGrid,
+  ArtworkOfDay,
+  MapPreview,
+  EvidenceSpotlight,
+  TimelinePreview,
+  SearchSection,
+} from "@/components/landing";
 
+/** Curated featured verses — one is selected daily based on the date. */
+const FEATURED_VERSES = [
+  { text: "In the beginning God created the heaven and the earth.", ref: "Genesis 1:1 KJV" },
+  { text: "The Lord is my shepherd; I shall not want.", ref: "Psalm 23:1 KJV" },
+  { text: "For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.", ref: "John 3:16 KJV" },
+  { text: "I can do all things through Christ which strengtheneth me.", ref: "Philippians 4:13 KJV" },
+  { text: "Trust in the Lord with all thine heart; and lean not unto thine own understanding.", ref: "Proverbs 3:5 KJV" },
+  { text: "The Lord is my light and my salvation; whom shall I fear?", ref: "Psalm 27:1 KJV" },
+  { text: "Be strong and of a good courage; be not afraid, neither be thou dismayed: for the Lord thy God is with thee whithersoever thou goest.", ref: "Joshua 1:9 KJV" },
+];
+
+/** Pick a verse based on today's date so it rotates daily. */
+function getDailyVerse() {
+  const dayOfYear = Math.floor(
+    (Date.now() - new Date(new Date().getFullYear(), 0, 0).getTime()) / 86400000,
+  );
+  return FEATURED_VERSES[dayOfYear % FEATURED_VERSES.length];
+}
+
+/**
+ * Museum-quality landing page for The Living Word.
+ *
+ * Sections: Hero, Books Grid, Artwork of the Day, Map Preview,
+ * Evidence Spotlight, Timeline Preview, Search, Footer (via layout).
+ */
 export default function HomePage() {
+  const verse = getDailyVerse();
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center px-4">
-      <div className="max-w-2xl text-center animate-fade-in">
-        <h1 className="heading text-5xl md:text-7xl tracking-wide text-gold mb-6">
-          The Living Word
-        </h1>
-        <p className="font-source-sans text-lg md:text-xl text-[var(--text-secondary)] mb-4">
-          The King James Bible — Illuminated with History, Art, and Evidence
-        </p>
-        <p className="scripture text-xl md:text-2xl italic text-scripture mb-10 leading-relaxed">
-          &ldquo;In the beginning God created the heaven and the earth.&rdquo;
-        </p>
-        <p className="text-sm text-[var(--text-muted)] mb-8">
-          Genesis 1:1 KJV
-        </p>
-        <Link
-          href="/bible"
-          className="inline-flex items-center gap-2 bg-gold text-[var(--bg-primary)] px-8 py-3 rounded-lg font-source-sans font-semibold text-lg hover:bg-gold-light transition-colors"
-          aria-label="Begin reading the Bible"
-        >
-          Begin Reading &rarr;
-        </Link>
-      </div>
-    </main>
+    <>
+      <HeroSection verseText={verse.text} verseRef={verse.ref} />
+      <BooksGrid />
+      <ArtworkOfDay />
+      <MapPreview />
+      <EvidenceSpotlight />
+      <TimelinePreview />
+      <SearchSection />
+    </>
   );
 }

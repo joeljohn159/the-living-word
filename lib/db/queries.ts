@@ -141,6 +141,78 @@ export async function getDictionaryWords() {
     .all();
 }
 
+/** Get dictionary words filtered by starting letter. */
+export async function getDictionaryWordsByLetter(letter: string) {
+  const pattern = `${letter.toLowerCase()}%`;
+  return db
+    .select()
+    .from(dictionary)
+    .where(like(dictionary.slug, pattern))
+    .orderBy(asc(dictionary.word))
+    .all();
+}
+
+/** Search dictionary words by partial match. */
+export async function searchDictionaryWords(query: string) {
+  if (!query.trim()) return [];
+  const pattern = `%${query.toLowerCase()}%`;
+  return db
+    .select()
+    .from(dictionary)
+    .where(like(dictionary.word, pattern))
+    .orderBy(asc(dictionary.word))
+    .all();
+}
+
+/** Get a dictionary word by slug with its example verse and book info. */
+export async function getDictionaryWordWithVerse(wordSlug: string) {
+  const word = db
+    .select()
+    .from(dictionary)
+    .where(eq(dictionary.slug, wordSlug))
+    .get();
+
+  if (!word) return undefined;
+
+  let exampleVerse = undefined;
+  if (word.exampleVerseId) {
+    exampleVerse = db
+      .select({
+        id: verses.id,
+        bookId: verses.bookId,
+        chapterNumber: verses.chapterNumber,
+        verseNumber: verses.verseNumber,
+        text: verses.text,
+        bookName: books.name,
+        bookSlug: books.slug,
+      })
+      .from(verses)
+      .innerJoin(books, eq(verses.bookId, books.id))
+      .where(eq(verses.id, word.exampleVerseId))
+      .get();
+  }
+
+  return { ...word, exampleVerse };
+}
+
+/** Get all unique first letters in the dictionary. */
+export async function getDictionaryLetters(): Promise<string[]> {
+  const words = db
+    .select({ word: dictionary.word })
+    .from(dictionary)
+    .orderBy(asc(dictionary.word))
+    .all();
+
+  const letters = new Set<string>();
+  for (const w of words) {
+    const first = w.word.charAt(0).toUpperCase();
+    if (first >= "A" && first <= "Z") {
+      letters.add(first);
+    }
+  }
+  return Array.from(letters).sort();
+}
+
 // ─── Locations ─────────────────────────────────────────────
 
 /** Get all locations referenced in a specific chapter. */
@@ -323,6 +395,24 @@ export async function getJourneyWithStops(slug: string) {
 
 // ─── Person Detail ─────────────────────────────────────────
 
+/** Get all people ordered alphabetically with basic info. */
+export async function getAllPeople() {
+  return db
+    .select({
+      id: people.id,
+      name: people.name,
+      slug: people.slug,
+      description: people.description,
+      alsoKnownAs: people.alsoKnownAs,
+      tribeOrGroup: people.tribeOrGroup,
+      birthRef: people.birthRef,
+      deathRef: people.deathRef,
+    })
+    .from(people)
+    .orderBy(asc(people.name))
+    .all();
+}
+
 /** Get a single person by slug with parent info. */
 export async function getPerson(slug: string) {
   return db.query.people.findFirst({
@@ -339,6 +429,70 @@ export async function getPerson(slug: string) {
       },
     },
   });
+}
+
+/** Get children of a person by their ID. */
+export async function getPersonChildren(personId: number) {
+  return db
+    .select({
+      id: people.id,
+      name: people.name,
+      slug: people.slug,
+      description: people.description,
+    })
+    .from(people)
+    .where(eq(people.fatherId, personId))
+    .orderBy(asc(people.name))
+    .all();
+}
+
+/** Get siblings of a person (same father, excluding self). */
+export async function getPersonSiblings(personId: number, fatherId: number | null) {
+  if (!fatherId) return [];
+  const allChildren = await db
+    .select({ id: people.id, name: people.name, slug: people.slug })
+    .from(people)
+    .where(eq(people.fatherId, fatherId))
+    .orderBy(asc(people.name))
+    .all();
+  return allChildren.filter((c) => c.id !== personId);
+}
+
+/** Get all people slugs for static params generation. */
+export async function getAllPeopleSlugs() {
+  return db.select({ slug: people.slug }).from(people).all();
+}
+
+/** Get media related to a person via shared book references. */
+export async function getPersonMedia(personId: number) {
+  const refs = db
+    .select({ bookId: peopleReferences.bookId })
+    .from(peopleReferences)
+    .where(eq(peopleReferences.personId, personId))
+    .all();
+
+  if (refs.length === 0) return [];
+  const bookIds = Array.from(new Set(refs.map((r) => r.bookId).filter(Boolean))) as number[];
+  if (bookIds.length === 0) return [];
+
+  return db
+    .selectDistinct({
+      id: media.id,
+      title: media.title,
+      description: media.description,
+      artist: media.artist,
+      yearCreated: media.yearCreated,
+      imageUrl: media.imageUrl,
+      sourceUrl: media.sourceUrl,
+      attribution: media.attribution,
+      license: media.license,
+      mediaType: media.mediaType,
+    })
+    .from(mediaReferences)
+    .innerJoin(media, eq(mediaReferences.mediaId, media.id))
+    .where(eq(mediaReferences.bookId, bookIds[0]))
+    .limit(6)
+    .all();
 }
 
 // ─── Book-level aggregation queries ────────────────────────
@@ -411,6 +565,68 @@ export async function getBookMedia(bookSlug: string) {
     .where(eq(mediaReferences.bookId, book.id))
     .orderBy(asc(media.title))
     .all();
+}
+
+/** Get all evidence items, optionally filtered by category. */
+type EvidenceCategory = "manuscript" | "archaeology" | "inscription" | "artifact";
+
+const VALID_CATEGORIES: EvidenceCategory[] = ["manuscript", "archaeology", "inscription", "artifact"];
+
+export async function getAllEvidence(category?: string) {
+  if (category && VALID_CATEGORIES.includes(category as EvidenceCategory)) {
+    return db
+      .select()
+      .from(evidence)
+      .where(eq(evidence.category, category as EvidenceCategory))
+      .orderBy(asc(evidence.title))
+      .all();
+  }
+  return db
+    .select()
+    .from(evidence)
+    .orderBy(asc(evidence.title))
+    .all();
+}
+
+/** Get a single evidence item by slug with its related scripture references. */
+export async function getEvidenceBySlug(slug: string) {
+  const item = db
+    .select()
+    .from(evidence)
+    .where(eq(evidence.slug, slug))
+    .get();
+
+  if (!item) return undefined;
+
+  const refs = db
+    .select({
+      id: evidenceReferences.id,
+      bookId: evidenceReferences.bookId,
+      bookName: books.name,
+      bookSlug: books.slug,
+      chapterId: evidenceReferences.chapterId,
+      chapterNumber: chapters.chapterNumber,
+      verseId: evidenceReferences.verseId,
+      verseNumber: verses.verseNumber,
+    })
+    .from(evidenceReferences)
+    .leftJoin(books, eq(evidenceReferences.bookId, books.id))
+    .leftJoin(chapters, eq(evidenceReferences.chapterId, chapters.id))
+    .leftJoin(verses, eq(evidenceReferences.verseId, verses.id))
+    .where(eq(evidenceReferences.evidenceId, item.id))
+    .all();
+
+  return { ...item, references: refs };
+}
+
+/** Get evidence count per category. */
+export async function getEvidenceCategoryCounts() {
+  const all = db.select().from(evidence).all();
+  const counts: Record<string, number> = {};
+  for (const item of all) {
+    counts[item.category] = (counts[item.category] || 0) + 1;
+  }
+  return counts;
 }
 
 /** Get all evidence referenced in a specific book. */

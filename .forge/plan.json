@@ -159,7 +159,7 @@
           "title": "Reusable Database Query Functions",
           "description": "Create lib/db/queries.ts with all reusable query functions: getBooks(), getBookBySlug(), getChapter(bookSlug, chapterNum), getVerse(bookSlug, chapter, verse), getChapterVerses(), getCrossReferences(verseId), getDictionaryWord(word), getDictionaryWords(), getLocationsByChapter(), getPeopleByChapter(), getMediaByChapter(), getEvidenceByChapter(), searchVerses(), getJourneys(), getJourneyWithStops(), getPerson(), getBookPeople(), getBookLocations(), getBookMedia(), getBookEvidence(). All queries typed with Drizzle. Optimize with proper indexes.",
           "type": "backend",
-          "status": "planned",
+          "status": "reviewing",
           "branch": null,
           "designApproved": true,
           "tags": [],

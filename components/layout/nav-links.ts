@@ -6,6 +6,7 @@ import {
   Users,
   BookA,
   ShieldCheck,
+  CalendarDays,
 } from "lucide-react";
 
 export interface NavLink {
@@ -21,5 +22,6 @@ export const NAV_LINKS: NavLink[] = [
   { label: "Evidence", href: "/evidence", icon: ShieldCheck },
   { label: "People", href: "/people", icon: Users },
   { label: "Dictionary", href: "/dictionary", icon: BookA },
+  { label: "Plans", href: "/reading-plans", icon: CalendarDays },
   { label: "Search", href: "/search", icon: Search },
 ];

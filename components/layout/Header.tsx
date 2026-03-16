@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { ThemeToggle } from "@/components/shared/theme-toggle";
 import { KjvBadge } from "@/components/layout/KjvBadge";
 import { MobileNav } from "@/components/layout/MobileNav";
+import { HeaderSearch } from "@/components/layout/HeaderSearch";
 import { NAV_LINKS } from "@/components/layout/nav-links";
 import { cn } from "@/lib/utils";
 
@@ -62,8 +63,9 @@ export function Header() {
           })}
         </nav>
 
-        {/* Right section: badge, theme toggle, mobile menu */}
+        {/* Right section: search, badge, theme toggle, mobile menu */}
         <div className="flex items-center gap-2 sm:gap-3">
+          <HeaderSearch className="hidden sm:inline-flex" />
           <KjvBadge className="hidden sm:inline-flex" />
           <ThemeToggle className="hidden sm:inline-flex" />
           <MobileNav />

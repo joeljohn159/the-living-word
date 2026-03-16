@@ -80,6 +80,69 @@
       "details": "Snapshot taken before build",
       "snapshotId": "011",
       "timestamp": "2026-03-16T02:04:47.798Z"
+    },
+    {
+      "action": "build",
+      "storyId": "book-overview-page",
+      "details": "Snapshot taken before build",
+      "snapshotId": "012",
+      "timestamp": "2026-03-16T02:08:14.006Z"
+    },
+    {
+      "action": "build",
+      "storyId": "chapter-reading-page",
+      "details": "Snapshot taken before build",
+      "snapshotId": "012",
+      "timestamp": "2026-03-16T02:08:14.006Z"
+    },
+    {
+      "action": "build",
+      "storyId": "book-browser-page",
+      "details": "Snapshot taken before build",
+      "snapshotId": "012",
+      "timestamp": "2026-03-16T02:08:14.010Z"
+    },
+    {
+      "action": "build",
+      "storyId": "evidence-gallery-page",
+      "details": "Snapshot taken before build",
+      "snapshotId": "015",
+      "timestamp": "2026-03-16T02:08:14.020Z"
+    },
+    {
+      "action": "build",
+      "storyId": "reading-plans-page",
+      "details": "Snapshot taken before build",
+      "snapshotId": "016",
+      "timestamp": "2026-03-16T02:08:14.074Z"
+    },
+    {
+      "action": "build",
+      "storyId": "search-page",
+      "details": "Snapshot taken before build",
+      "snapshotId": "017",
+      "timestamp": "2026-03-16T02:08:14.078Z"
+    },
+    {
+      "action": "build",
+      "storyId": "people-directory-page",
+      "details": "Snapshot taken before build",
+      "snapshotId": "018",
+      "timestamp": "2026-03-16T02:08:14.084Z"
+    },
+    {
+      "action": "build",
+      "storyId": "dictionary-browser-page",
+      "details": "Snapshot taken before build",
+      "snapshotId": "018",
+      "timestamp": "2026-03-16T02:08:14.085Z"
+    },
+    {
+      "action": "build",
+      "storyId": "landing-page-build",
+      "details": "Snapshot taken before build",
+      "snapshotId": "020",
+      "timestamp": "2026-03-16T02:08:14.094Z"
     }
   ]
 }
