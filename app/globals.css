@@ -1,0 +1,193 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Dark Theme (default) */
+  :root,
+  .theme-dark {
+    --bg-primary: #0F0F1A;
+    --bg-secondary: #1A1A2E;
+    --bg-tertiary: #252540;
+    --bg-card: #1E1E35;
+    --text-primary: #E8E4DC;
+    --text-secondary: #A09B8C;
+    --text-muted: #6B6760;
+    --accent-gold: #C4975C;
+    --accent-gold-light: #D4A96A;
+    --accent-gold-dark: #9E7A48;
+    --accent-crimson: #8B2F3F;
+    --border: #2A2A45;
+    --scripture-text: #F0ECE2;
+    --verse-number: #8B7D6B;
+
+    /* Mapped to Tailwind conventions */
+    --background: var(--bg-primary);
+    --foreground: var(--text-primary);
+    --card: var(--bg-card);
+    --card-foreground: var(--text-primary);
+    --popover: var(--bg-secondary);
+    --popover-foreground: var(--text-primary);
+    --primary: var(--accent-gold);
+    --primary-foreground: var(--bg-primary);
+    --secondary: var(--bg-tertiary);
+    --secondary-foreground: var(--text-primary);
+    --muted: var(--bg-tertiary);
+    --muted-foreground: var(--text-muted);
+    --accent: var(--bg-tertiary);
+    --accent-foreground: var(--text-primary);
+    --destructive: var(--accent-crimson);
+    --destructive-foreground: var(--text-primary);
+    --ring: var(--accent-gold);
+    --radius: 0.5rem;
+  }
+
+  /* Light Theme */
+  .theme-light {
+    --bg-primary: #FDFBF7;
+    --bg-secondary: #F5F0E8;
+    --bg-tertiary: #EBE4D8;
+    --bg-card: #FFFFFF;
+    --text-primary: #2C2416;
+    --text-secondary: #5C5346;
+    --text-muted: #8A8278;
+    --accent-gold: #8B6914;
+    --accent-gold-light: #A07A1C;
+    --accent-gold-dark: #6B5210;
+    --accent-crimson: #8B2F3F;
+    --border: #D9D0C3;
+    --scripture-text: #2C2416;
+    --verse-number: #8B7D6B;
+
+    --background: var(--bg-primary);
+    --foreground: var(--text-primary);
+    --card: var(--bg-card);
+    --card-foreground: var(--text-primary);
+    --popover: var(--bg-secondary);
+    --popover-foreground: var(--text-primary);
+    --primary: var(--accent-gold);
+    --primary-foreground: #FFFFFF;
+    --secondary: var(--bg-tertiary);
+    --secondary-foreground: var(--text-primary);
+    --muted: var(--bg-tertiary);
+    --muted-foreground: var(--text-muted);
+    --accent: var(--bg-tertiary);
+    --accent-foreground: var(--text-primary);
+    --destructive: var(--accent-crimson);
+    --destructive-foreground: #FFFFFF;
+    --ring: var(--accent-gold);
+  }
+
+  /* Sepia Theme */
+  .theme-sepia {
+    --bg-primary: #F4ECD8;
+    --bg-secondary: #E8DFC8;
+    --bg-tertiary: #DDD4BE;
+    --bg-card: #EFE7D4;
+    --text-primary: #3E3428;
+    --text-secondary: #5E5244;
+    --text-muted: #8A7E6E;
+    --accent-gold: #7A5F2E;
+    --accent-gold-light: #8E7038;
+    --accent-gold-dark: #5E4A22;
+    --accent-crimson: #7A2D3C;
+    --border: #C9BFA8;
+    --scripture-text: #3E3428;
+    --verse-number: #8B7D6B;
+
+    --background: var(--bg-primary);
+    --foreground: var(--text-primary);
+    --card: var(--bg-card);
+    --card-foreground: var(--text-primary);
+    --popover: var(--bg-secondary);
+    --popover-foreground: var(--text-primary);
+    --primary: var(--accent-gold);
+    --primary-foreground: #FFFFFF;
+    --secondary: var(--bg-tertiary);
+    --secondary-foreground: var(--text-primary);
+    --muted: var(--bg-tertiary);
+    --muted-foreground: var(--text-muted);
+    --accent: var(--bg-tertiary);
+    --accent-foreground: var(--text-primary);
+    --destructive: var(--accent-crimson);
+    --destructive-foreground: #FFFFFF;
+    --ring: var(--accent-gold);
+  }
+
+  * {
+    border-color: var(--border);
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-source-sans), system-ui, sans-serif;
+  }
+}
+
+/* Scripture typography */
+.scripture {
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-size: 1.25rem;
+  line-height: 1.9;
+  letter-spacing: 0.01em;
+  font-weight: 400;
+  color: var(--scripture-text);
+}
+
+/* Heading typography */
+.heading {
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+/* Dictionary hotword styles */
+.dictionary-word {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: var(--verse-number);
+  text-underline-offset: 3px;
+  cursor: help;
+  transition: text-decoration-color 0.2s ease;
+}
+
+.dictionary-word:hover {
+  text-decoration-color: var(--accent-gold);
+}
+
+/* Dictionary mode active */
+.dictionary-mode .dictionary-word {
+  background-color: color-mix(in srgb, var(--accent-gold) 15%, transparent);
+  text-decoration-color: var(--accent-gold);
+  border-radius: 2px;
+  padding: 0 2px;
+}
+
+/* Verse number styles */
+.verse-number {
+  font-family: var(--font-source-sans), system-ui, sans-serif;
+  font-size: 0.7em;
+  vertical-align: super;
+  color: var(--verse-number);
+  margin-right: 0.25em;
+  font-weight: 600;
+  user-select: none;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection color */
+::selection {
+  background-color: color-mix(in srgb, var(--accent-gold) 30%, transparent);
+  color: var(--text-primary);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

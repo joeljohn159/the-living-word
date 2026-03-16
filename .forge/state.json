@@ -3,5 +3,13 @@
   "currentStory": null,
   "workerMode": null,
   "queue": [],
-  "history": []
+  "history": [
+    {
+      "action": "build",
+      "storyId": "scaffold-nextjs",
+      "details": "Snapshot taken before build",
+      "snapshotId": "001",
+      "timestamp": "2026-03-16T01:14:06.421Z"
+    }
+  ]
 }

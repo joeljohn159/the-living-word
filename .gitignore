@@ -4,3 +4,22 @@ node_modules/
 dist/
 .env
 .env.local
+
+# Database
+data/*.db
+data/*.db-wal
+data/*.db-shm
+
+# Drizzle
+drizzle/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Package lock (optional — remove if you want to lock deps)
+package-lock.json
