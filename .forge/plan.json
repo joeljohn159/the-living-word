@@ -1,18 +1,18 @@
 {
-  "project": "the-living-word-fixes",
+  "project": "the-living-word-bible",
   "framework": "nextjs",
-  "description": "Fix existing issues in The Living Word KJV Bible app: light mode text readability on home page, add Wikipedia images and references throughout, fix overlapping/alignment issues, and ensure production readiness",
-  "created": "2026-03-16T05:05:53.015Z",
+  "description": "Fix existing issues in The Living Word Bible app: light mode readability, add Wikipedia images/references, fix overlapping/alignment issues, and production hardening",
+  "created": "2026-03-16T05:22:15.903Z",
   "epics": [
     {
       "id": "light-mode-fixes",
-      "title": "Light Mode Text Readability & Theme Fixes",
+      "title": "Light Mode & Theme Readability Fixes",
       "status": "planned",
       "stories": [
         {
-          "id": "hero-light-mode",
-          "title": "Fix hero section overlay for light/sepia themes",
-          "description": "The HeroSection uses hardcoded dark overlay colors (from-[#0F0F1A]/80 via-[#0F0F1A]/70 to-[#0F0F1A]/95) that make text hard to read in light mode because the overlay stays dark but text colors change to dark text-primary. Fix by: (1) Making the overlay use CSS variables so it adapts per theme — in light mode use a lighter semi-transparent overlay with dark text that's readable, (2) Ensure the hero h1, subtitle, verse text, verse ref, and CTA button all have sufficient contrast in all 3 themes, (3) The 'King James Version' label, scroll indicator, and 'Begin Reading' button should also be visible. Files to modify: components/landing/HeroSection.tsx, app/globals.css. Acceptance criteria: All hero text is readable with WCAG AA contrast in dark, light, and sepia themes.",
+          "id": "hero-theme-adaptive",
+          "title": "Fix Hero Section for Light & Sepia Themes",
+          "description": "The HeroSection has hardcoded dark overlay colors (from-[#0F0F1A]/80 via-[#0F0F1A]/70 to-[#0F0F1A]/95) that don't adapt to light/sepia themes, making text nearly invisible in light mode. The MapPreview section also has a hardcoded dark gradient background (from-[#1a1f2e] via-[#1e2438] to-[#151927]) and hardcoded grid pattern colors that ignore theme.\n\nFixes needed:\n1. In components/landing/HeroSection.tsx: Replace hardcoded #0F0F1A overlay with CSS variable-based overlay that works across all 3 themes. For light mode use a light overlay with sufficient contrast for gold/white text. Consider using theme-aware classes or CSS variables for the gradient.\n2. In components/landing/MapPreview.tsx: Replace the hardcoded dark gradient background with theme-aware CSS variables. The grid pattern overlay also uses hardcoded gold rgba - make it theme-aware.\n3. Ensure the hero text (gold heading, secondary text, verse quote, muted ref) all have sufficient contrast (WCAG AA minimum) against backgrounds in ALL three themes.\n4. The 'Begin Reading' CTA button uses bg-gold with text-[var(--bg-primary)] - verify this has sufficient contrast in light mode where bg-primary is very light (#FDFBF7) and gold is dark (#8B6914).\n\nExisting files to modify:\n- components/landing/HeroSection.tsx\n- components/landing/MapPreview.tsx\n- app/globals.css (if new CSS variables needed for overlays)\n\nAcceptance criteria:\n- Hero section is fully readable in dark, light, and sepia themes\n- Map preview section adapts to all themes\n- All text meets WCAG AA contrast ratios\n- No hardcoded dark colors remain in these components",
           "type": "ui",
           "status": "planned",
           "branch": null,
@@ -22,9 +22,9 @@
           "dependencies": []
         },
         {
-          "id": "landing-sections-light-mode",
-          "title": "Fix light mode contrast across all landing sections",
-          "description": "Review and fix text contrast issues across BooksGrid, ArtworkOfDay, MapPreview, EvidenceSpotlight, TimelinePreview, and SearchSection in light mode. Key issues: (1) MapPreview has hardcoded dark background (from-[#1a1f2e] via-[#1e2438] to-[#151927]) — needs theme-aware background, (2) Map pin labels have bg-[var(--bg-primary)]/80 which may not contrast well, (3) Section headings using text-gold class may not have enough contrast on light backgrounds, (4) Check all text-[var(--text-muted)] and text-[var(--text-secondary)] elements for sufficient contrast. Files to modify: components/landing/MapPreview.tsx, components/landing/BooksGrid.tsx, components/landing/TimelinePreview.tsx, components/landing/SearchSection.tsx, components/landing/EvidenceSpotlight.tsx, app/globals.css (if CSS variable adjustments needed). Acceptance criteria: All landing page sections readable in all 3 themes.",
+          "id": "global-light-mode-contrast",
+          "title": "Fix Light Mode Text Contrast Across All Pages",
+          "description": "Audit and fix text contrast issues across the entire app in light mode. Key areas:\n\n1. In app/globals.css: The light theme --text-muted (#8A8278) and --text-secondary (#5C5346) may have insufficient contrast on --bg-primary (#FDFBF7). Verify and adjust. The --verse-number (#8B7D6B) is the same across all themes - needs to be darker for light mode.\n2. Section headings using 'text-gold' class - in light mode gold is #8B6914 on white bg (#FDFBF7) - verify contrast ratio, may need darkening.\n3. The BooksGrid component uses text-[var(--text-muted)] for abbreviations and text-[var(--text-primary)] for book names - verify readability.\n4. TimelinePreview uses text-[10px] and text-[11px] sizes with muted colors - extremely hard to read in light mode.\n5. EvidenceSpotlight card badges use bg-[var(--bg-primary)]/80 with gold text - in light mode this is nearly-white-on-gold, illegible.\n6. SearchSection placeholder text and hint text contrast.\n7. Footer uses text-muted-foreground extensively - verify in light mode.\n\nExisting files to modify:\n- app/globals.css (adjust light theme CSS variables)\n- components/landing/BooksGrid.tsx (if class changes needed)\n- components/landing/TimelinePreview.tsx (increase font sizes for small text)\n- components/landing/EvidenceSpotlight.tsx (fix badge contrast)\n\nAcceptance criteria:\n- All text on all landing page sections is clearly readable in light mode\n- WCAG AA contrast ratios met for all text\n- Small text (10-11px) is either enlarged or given stronger contrast\n- Category badges on evidence cards are legible in all themes",
           "type": "ui",
           "status": "planned",
           "branch": null,
@@ -32,51 +32,43 @@
           "tags": [],
           "priority": 2,
           "dependencies": [
-            "hero-light-mode"
+            "hero-theme-adaptive"
           ]
         }
       ]
     },
     {
       "id": "wikipedia-images-references",
-      "title": "Add Wikipedia Images & References Throughout",
+      "title": "Add Wikipedia Images & References",
       "status": "planned",
       "stories": [
         {
-          "id": "people-wikipedia-images",
-          "title": "Add Wikipedia images to people profiles and cards",
-          "description": "People pages currently show only a Crown icon placeholder. Add Wikipedia/Wikimedia Commons images for biblical figures. (1) Add a wikipediaImageUrl field to the people data/seed, (2) Create a helper that builds Wikimedia Commons thumbnail URLs for known biblical figures, (3) Update PersonCard component to show Wikipedia image instead of just Crown icon, (4) Update the person profile page (app/people/[slug]/page.tsx) header to show a Wikipedia portrait image alongside the Crown icon, (5) Add proper attribution text 'Image: Wikimedia Commons' below images, (6) Handle image load errors gracefully with fallback to the Crown icon. Create a data mapping file at lib/data/people-images.ts with Wikimedia Commons URLs for major biblical figures (at minimum: Abraham, Moses, David, Solomon, Jesus, Paul, Peter, Mary, Adam, Eve, Noah, Jacob, Joseph, Isaiah, Daniel, Elijah, Ruth, Esther, Samson, Joshua). Files to modify: components/people/PersonCard.tsx, app/people/[slug]/page.tsx, lib/data/people-images.ts (new). Acceptance criteria: People pages show relevant Wikipedia artwork images with attribution.",
+          "id": "landing-section-images",
+          "title": "Add Wikipedia Images to Landing Page Sections",
+          "description": "Several landing page sections lack images or use placeholder representations. Add real Wikipedia/Wikimedia Commons images:\n\n1. MapPreview (components/landing/MapPreview.tsx): Currently uses a plain dark gradient with pin dots. Replace with an actual historical biblical map image from Wikimedia Commons as background. Good options: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Palestine_1020BC-Smith1915.jpg/800px-Palestine_1020BC-Smith1915.jpg' or similar ancient map of the Holy Land. Keep the pins and CTA overlay.\n\n2. TimelinePreview (components/landing/TimelinePreview.tsx): The timeline cards have no images. Add small representative Wikipedia images to at least the major events. Add an imageUrl field to the TimelineEvent interface and populate with appropriate Wikimedia Commons URLs:\n   - Call of Abraham: Abraham painting\n   - The Exodus: Moses/Red Sea painting\n   - David Becomes King: David painting\n   - Solomon's Temple: Temple illustration\n   - Birth of Jesus: Nativity painting\n   - Crucifixion: Crucifixion painting\n   Use Next.js Image component with proper alt text and attribution.\n\n3. BooksGrid (components/landing/BooksGrid.tsx): Add a subtle background image or decorative element - perhaps an ancient manuscript texture from Wikimedia.\n\nExisting files to modify:\n- components/landing/MapPreview.tsx\n- components/landing/TimelinePreview.tsx\n- components/landing/BooksGrid.tsx\n\nAcceptance criteria:\n- MapPreview has a real historical map as background\n- Timeline events show relevant artwork thumbnails\n- All images use Next.js Image with proper alt text\n- Images load from upload.wikimedia.org (already in remotePatterns)\n- Attribution text included where visible",
           "type": "ui",
           "status": "planned",
           "branch": null,
           "designApproved": false,
           "tags": [],
           "priority": 3,
-          "dependencies": []
+          "dependencies": [
+            "hero-theme-adaptive"
+          ]
         },
         {
-          "id": "evidence-wikipedia-images",
-          "title": "Enhance evidence pages with additional Wikipedia images and source references",
-          "description": "Evidence pages already have some Wikimedia images but need: (1) Add more Wikipedia reference links — add a 'Learn More' section to evidence detail pages with links to relevant Wikipedia articles (e.g., Dead Sea Scrolls → https://en.wikipedia.org/wiki/Dead_Sea_Scrolls), (2) Create a data mapping at lib/data/evidence-references.ts mapping evidence slugs to Wikipedia article URLs, (3) Update the evidence detail page sidebar to include a 'Further Reading' card with Wikipedia links, (4) Add additional gallery images from Wikimedia Commons for each evidence item where available (multiple angles/views), (5) Ensure all images have proper Wikimedia attribution. Files to modify: app/evidence/[slug]/page.tsx, lib/data/evidence-references.ts (new), components/evidence/EvidenceCard.tsx. Acceptance criteria: Evidence detail pages show Wikipedia reference links and additional images.",
-          "type": "ui",
+          "id": "evidence-people-images",
+          "title": "Add Wikipedia Images to Evidence & People Pages",
+          "description": "The evidence and people data in the database may have missing or placeholder image URLs. Ensure real Wikipedia images are populated and displayed correctly.\n\n1. Check the seed data in data/evidence.json - verify all evidence items have valid Wikimedia image URLs. If any are missing, add appropriate URLs:\n   - Dead Sea Scrolls, Tel Dan Stele, Pilate Stone already have URLs in the fallback data\n   - Check the database entries match\n\n2. Check data/people.json - verify people entries have image URLs. Add Wikipedia portrait images for major biblical figures:\n   - Moses, David, Solomon, Abraham, Jesus, Paul, Peter, Mary, etc.\n   - Use famous paintings from Wikimedia Commons (Rembrandt, Caravaggio, Raphael, etc.)\n\n3. In components/people/PersonCard.tsx - ensure it displays the image if available, with proper fallback/placeholder for people without images.\n\n4. In components/evidence/EvidenceCard.tsx - ensure images are displayed with Next.js Image component properly.\n\n5. Add proper Wikimedia attribution/source links where images are displayed.\n\nExisting files to modify:\n- data/evidence.json (add/verify image URLs)\n- data/people.json (add image URLs for major figures)\n- components/people/PersonCard.tsx (ensure image display)\n- components/evidence/EvidenceCard.tsx (verify image display)\n- lib/db/seed.ts (if seed needs to be re-run with updated data)\n\nAcceptance criteria:\n- All evidence items display real archaeological photos from Wikipedia\n- Major biblical people show relevant artwork/portraits\n- Proper attribution on all images\n- Fallback state for people without images is visually clean",
+          "type": "fullstack",
           "status": "planned",
           "branch": null,
           "designApproved": false,
           "tags": [],
           "priority": 4,
-          "dependencies": []
-        },
-        {
-          "id": "landing-artwork-rotation",
-          "title": "Add rotating artwork with Wikipedia images on landing page",
-          "description": "Currently ArtworkOfDay only shows one hardcoded painting (Creation of Adam). Add a rotation of famous biblical artworks from Wikimedia Commons. (1) Create lib/data/artwork-gallery.ts with 10-15 famous biblical paintings from Wikimedia Commons (include: Creation of Adam, The Last Supper - Da Vinci, Moses with the Tablets - Rembrandt, David and Goliath - Caravaggio, The Annunciation - Fra Angelico, The Baptism of Christ - Verrocchio, Daniel in the Lions Den - Rubens, The Good Samaritan - Rembrandt, The Prodigal Son - Rembrandt, Judith Slaying Holofernes - Artemisia). Each entry should have: title, artist, yearCreated, imageUrl (Wikimedia Commons), description, attribution, and a wikipediaUrl, (2) Update ArtworkOfDay to rotate daily from this gallery, (3) Add the Wikipedia article link to the artwork card. Files to modify: components/landing/ArtworkOfDay.tsx, lib/data/artwork-gallery.ts (new). Acceptance criteria: Landing page shows a different artwork each day with proper attribution and Wikipedia link.",
-          "type": "ui",
-          "status": "planned",
-          "branch": null,
-          "designApproved": false,
-          "tags": [],
-          "priority": 5,
-          "dependencies": []
+          "dependencies": [
+            "landing-section-images"
+          ]
         }
       ]
     },
@@ -86,9 +78,23 @@
       "status": "planned",
       "stories": [
         {
-          "id": "header-hero-overlap",
-          "title": "Fix header overlapping hero section and mobile nav alignment",
-          "description": "The header is sticky (top-0 z-40) and the hero section is h-[100dvh] — the hero content may be hidden behind the header (64px tall). Also MobileNav hamburger may not align with other header items. Fixes: (1) Add pt-16 or adjust hero height to account for the sticky header (min-h-[calc(100dvh-4rem)]) so content isn't hidden, (2) Ensure the scroll indicator at the bottom of hero doesn't overlap with the BooksGrid section below, (3) Verify mobile nav hamburger button alignment with theme toggle and search, (4) On the chapter reading page, verify the ReadingProgress bar (sticky top-0) doesn't conflict with the header (also sticky top-0 z-40) — ReadingProgress should be top-16 or stacked below header. Files to modify: components/landing/HeroSection.tsx, components/layout/Header.tsx, components/scripture/ReadingProgress.tsx, components/layout/MobileNav.tsx. Acceptance criteria: No content hidden behind header, progress bar visible below header, mobile nav aligned.",
+          "id": "header-mobile-overlap",
+          "title": "Fix Header, Mobile Nav & Content Overlap Issues",
+          "description": "Fix overlapping and alignment issues across the app:\n\n1. Header overlap: The header is sticky (sticky top-0 z-40) but the hero section starts at h-[100dvh] from the very top. This means the header overlaps the hero content. The hero content needs a top padding or the layout needs adjusting so content doesn't hide behind the sticky header. On non-hero pages, content should also not be hidden behind the header.\n\n2. Mobile navigation (MobileNav.tsx): The SheetContent doesn't specify a side prop - verify it defaults correctly and doesn't overlap with other UI elements. The mobile nav has pt-12 which may not account for the close button properly.\n\n3. BooksGrid alignment: The grid uses xl:grid-cols-11 which is an unusual column count that may cause the last row to look unbalanced. On mobile (grid-cols-2) with 66 books, layout should be clean.\n\n4. TimelinePreview: The horizontal line (absolute top-[38px]) may not align with the dots on different screen sizes or font scaling. The timeline cards and dots need to be properly aligned.\n\n5. EvidenceSpotlight carousel: The -mx-4 px-4 trick for edge-to-edge scrolling may cause horizontal overflow issues or misalignment with the header/title above.\n\n6. Footer grid: On tablet/medium screens, the 3-column grid may create awkward wrapping. The version selector max-w-[200px] inside a grid column may look disconnected.\n\nExisting files to modify:\n- app/layout.tsx (header/content spacing)\n- components/landing/HeroSection.tsx (account for header height)\n- components/layout/MobileNav.tsx (verify sheet positioning)\n- components/landing/BooksGrid.tsx (grid column optimization)\n- components/landing/TimelinePreview.tsx (dot/line alignment)\n- components/landing/EvidenceSpotlight.tsx (overflow fix)\n- components/layout/Footer.tsx (responsive grid)\n\nAcceptance criteria:\n- No content hidden behind sticky header on any page\n- Hero section properly accounts for header height\n- Mobile nav opens without overlapping issues\n- Books grid looks balanced on all screen sizes\n- Timeline dots and line are perfectly aligned\n- No horizontal overflow on any screen size\n- Footer looks good at all breakpoints",
+          "type": "ui",
+          "status": "planned",
+          "branch": null,
+          "designApproved": false,
+          "tags": [],
+          "priority": 5,
+          "dependencies": [
+            "global-light-mode-contrast"
+          ]
+        },
+        {
+          "id": "bible-reader-alignment",
+          "title": "Fix Bible Reader & Context Panel Alignment",
+          "description": "Fix overlapping and alignment issues specific to the Bible reader pages:\n\n1. Check app/bible/[bookSlug]/[chapter]/page.tsx - the chapter reader layout with sidebar context panel. Ensure the main content area properly shrinks when the sidebar is open on desktop, and doesn't overlap.\n\n2. Check components/layout/Sidebar.tsx - verify the sidebar (380px width) doesn't overlap main content on medium screens (768-1024px). May need to switch from overlay to push layout, or reduce width on smaller screens.\n\n3. Check components/scripture/ContextPanel.tsx - ensure tabs don't overflow on mobile.\n\n4. Check ChapterToolbar.tsx (app/bible/ChapterToolbar.tsx) - the toolbar with reading mode toggle and font size controls should not overlap with navigation or chapter title.\n\n5. Cross-reference popovers (CrossRefPopover.tsx) - verify they don't go off-screen on mobile or near viewport edges.\n\n6. Dictionary tooltips (DictionaryTooltip.tsx) - verify positioning works correctly and doesn't create overflow.\n\n7. Chapter navigation (ChapterNavigation.tsx) - prev/next buttons should be properly aligned and not overlap with content.\n\nExisting files to modify:\n- app/bible/[bookSlug]/[chapter]/page.tsx\n- components/layout/Sidebar.tsx\n- components/scripture/ContextPanel.tsx\n- app/bible/ChapterToolbar.tsx\n- components/scripture/CrossRefPopover.tsx\n- components/dictionary/DictionaryTooltip.tsx\n- components/scripture/ChapterNavigation.tsx\n\nAcceptance criteria:\n- Sidebar doesn't overlap content on any screen size\n- Context panel tabs are fully accessible on mobile\n- Toolbar controls don't overlap with each other\n- Popovers and tooltips stay within viewport bounds\n- Chapter navigation is cleanly positioned",
           "type": "ui",
           "status": "planned",
           "branch": null,
@@ -96,86 +102,42 @@
           "tags": [],
           "priority": 6,
           "dependencies": [
-            "hero-light-mode"
+            "header-mobile-overlap"
           ]
-        },
-        {
-          "id": "map-pin-overlap",
-          "title": "Fix map preview pin overlaps and mobile layout issues",
-          "description": "On the landing page MapPreview, the map pins are positioned by lat/lng percentages and can overlap each other, especially on mobile. Also the 'Explore Biblical World' CTA button at the bottom may overlap with pins. Fixes: (1) Increase minimum spacing between pins — adjust the percentage calculation or hide some pins on mobile (show only 4-5 key locations on small screens), (2) Move the CTA button outside the map area or add a gradient overlay at the bottom to separate it from pins, (3) Ensure the Stats bar (100+ Locations, 5+ Journeys, 12+ Regions) text doesn't get cut off on narrow screens, (4) On the actual /maps page, verify Leaflet map controls don't overlap with location filter buttons. Files to modify: components/landing/MapPreview.tsx, components/maps/MapFilters.tsx. Acceptance criteria: Map pins don't overlap, CTA is clearly separated, stats bar readable on mobile.",
-          "type": "ui",
-          "status": "planned",
-          "branch": null,
-          "designApproved": false,
-          "tags": [],
-          "priority": 7,
-          "dependencies": []
-        },
-        {
-          "id": "context-panel-overlap",
-          "title": "Fix context panel and footer alignment on chapter pages",
-          "description": "On chapter reading pages, the mobile context panel floating button (fixed bottom-6 right-4 z-40) may overlap with the footer or the chapter navigation buttons. Also the desktop context panel width transition may cause content to jump. Fixes: (1) Add bottom padding to chapter page content to account for the floating context button on mobile, (2) Ensure the floating button doesn't overlap ChapterNavigation prev/next buttons, (3) On desktop, when context panel collapses from w-80/w-96 to w-12, ensure scripture text reflows smoothly without layout shift, (4) Fix the mobile bottom sheet — ensure it doesn't extend behind the device notch/home indicator (pb-safe is there but verify), (5) On the books grid page (app/bible/[bookSlug]/page.tsx), verify the chapter grid cards don't overlap or misalign on tablet breakpoints. Files to modify: components/scripture/ContextPanel.tsx, app/bible/[bookSlug]/[chapter]/page.tsx, components/scripture/ChapterNavigation.tsx. Acceptance criteria: No overlapping elements on chapter pages at any viewport size.",
-          "type": "ui",
-          "status": "planned",
-          "branch": null,
-          "designApproved": false,
-          "tags": [],
-          "priority": 8,
-          "dependencies": []
-        },
-        {
-          "id": "timeline-evidence-carousel-fix",
-          "title": "Fix timeline and evidence carousel scroll alignment",
-          "description": "The timeline preview and evidence spotlight use horizontal scroll carousels that may have alignment issues: (1) Timeline cards may overflow their containers on very small screens (< 360px), (2) Evidence carousel snap-x snap-mandatory may not work consistently across browsers, (3) The horizontal timeline line (absolute top-[38px]) may not align with the dots when font size changes, (4) Carousel scroll buttons hidden on mobile — add touch scroll hint or swipe indicators, (5) Evidence cards with long significance text may have inconsistent card heights due to line-clamp-3. Fixes: ensure consistent card heights, proper snap behavior, responsive dot alignment, and add a visual swipe indicator on mobile. Files to modify: components/landing/TimelinePreview.tsx, components/landing/EvidenceSpotlight.tsx. Acceptance criteria: Carousels scroll smoothly, cards have consistent heights, timeline dots align with line.",
-          "type": "ui",
-          "status": "planned",
-          "branch": null,
-          "designApproved": false,
-          "tags": [],
-          "priority": 9,
-          "dependencies": []
         }
       ]
     },
     {
-      "id": "production-readiness",
-      "title": "Production Readiness Fixes",
+      "id": "production-hardening",
+      "title": "Production Readiness & Polish",
       "status": "planned",
       "stories": [
         {
-          "id": "image-error-handling",
-          "title": "Add image error handling and loading states",
-          "description": "External Wikimedia images may fail to load. Add robust error handling: (1) Create a reusable components/shared/SafeImage.tsx wrapper around next/image that shows a styled placeholder on error (use a themed gradient with an icon instead of broken image), (2) Add loading='lazy' and proper sizes attributes to all Image components that don't have them, (3) Add blur placeholder or skeleton loading states for large images (artwork, evidence photos), (4) Update next.config.mjs to ensure all Wikimedia Commons subdomains are in the images.remotePatterns config, (5) Replace all instances of unoptimized={true} prop on Image components — these bypass Next.js image optimization. Files to modify: components/shared/SafeImage.tsx (new), next.config.mjs, components/landing/ArtworkOfDay.tsx, components/landing/EvidenceSpotlight.tsx, components/evidence/EvidenceCard.tsx, app/evidence/[slug]/page.tsx. Acceptance criteria: No broken image placeholders visible, images load with skeleton states.",
-          "type": "ui",
-          "status": "planned",
-          "branch": null,
-          "designApproved": false,
-          "tags": [],
-          "priority": 10,
-          "dependencies": [
-            "people-wikipedia-images",
-            "evidence-wikipedia-images",
-            "landing-artwork-rotation"
-          ]
-        },
-        {
-          "id": "build-lint-typecheck",
-          "title": "Fix all build errors, lint warnings, and run production build",
-          "description": "Run the full production pipeline to ensure everything compiles: (1) Run 'npm run lint' and fix all ESLint errors/warnings, (2) Run 'npx tsc --noEmit' and fix all TypeScript errors, (3) Run 'npm run build' and fix any Next.js build errors (especially generateStaticParams issues, missing data, or SSR-incompatible code), (4) Check for any hydration mismatches (client/server rendering differences) — especially in components that use useMediaQuery, localStorage, or Date.now(), (5) Verify the database file exists and seed script works, (6) Test that all pages render without crashing. Fix all issues found. Files to modify: any files with errors. Acceptance criteria: 'npm run build' completes successfully with zero errors.",
+          "id": "dead-links-missing-pages",
+          "title": "Fix Dead Links & Missing Pages",
+          "description": "Fix broken links and create missing pages that are referenced but don't exist:\n\n1. The ArtworkOfDay component links to '/gallery' which doesn't exist. Either:\n   a. Create a basic gallery page at app/gallery/page.tsx that displays artwork from the database, OR\n   b. Change the link to point to an existing page (like /bible or /evidence)\n   Recommendation: Create a simple gallery page since artwork data exists in the media table.\n\n2. The Footer links to '/privacy' which likely doesn't exist. Create a minimal privacy policy page at app/privacy/page.tsx.\n\n3. Verify all navigation links in NAV_LINKS (components/layout/nav-links.ts) point to existing pages.\n\n4. Verify all internal links on the landing page work: /bible, /maps, /evidence, /timeline, /search, /about.\n\n5. Check for any 404s from evidence/[slug] or people/[slug] links.\n\nExisting files to modify:\n- components/landing/ArtworkOfDay.tsx (fix gallery link)\n- components/layout/nav-links.ts (verify all links)\n\nNew files to create:\n- app/gallery/page.tsx (artwork gallery page)\n- app/privacy/page.tsx (privacy policy page)\n\nAcceptance criteria:\n- No dead links anywhere in the app\n- Gallery page exists and shows artwork\n- Privacy page exists with basic content\n- All nav links verified working",
           "type": "fullstack",
           "status": "planned",
           "branch": null,
           "designApproved": false,
           "tags": [],
-          "priority": 11,
+          "priority": 7,
           "dependencies": [
-            "image-error-handling",
-            "hero-light-mode",
-            "landing-sections-light-mode",
-            "header-hero-overlap",
-            "map-pin-overlap",
-            "context-panel-overlap",
-            "timeline-evidence-carousel-fix"
+            "bible-reader-alignment"
+          ]
+        },
+        {
+          "id": "production-polish",
+          "title": "Production Polish: Error States, Loading, SEO & Performance",
+          "description": "Final production hardening pass:\n\n1. Error handling: Create app/not-found.tsx and app/error.tsx with themed, branded error pages that match the museum aesthetic.\n\n2. Loading states: Create app/loading.tsx with a skeleton/spinner that matches the gold theme. Also add loading.tsx for key dynamic routes: app/bible/[bookSlug]/[chapter]/loading.tsx, app/evidence/loading.tsx, app/people/loading.tsx.\n\n3. Add proper favicon: Check if favicon.ico exists in app/ directory. If not, create one or add a link to the existing og-image.\n\n4. Verify SEO: Run through the sitemap.ts and ensure all routes are included. Verify robots.ts allows indexing.\n\n5. Performance: Add loading='lazy' to below-fold images on the landing page (ArtworkOfDay, EvidenceSpotlight images). The HeroSection image should have priority={true}.\n\n6. Accessibility: Ensure all interactive elements have visible focus indicators in all themes. Verify skip-to-content link works.\n\n7. Build verification: Run `npm run build` to ensure zero errors. Fix any TypeScript or build errors.\n\nExisting files to modify:\n- components/landing/ArtworkOfDay.tsx (lazy loading)\n- components/landing/EvidenceSpotlight.tsx (lazy loading)\n- components/landing/HeroSection.tsx (priority image loading)\n\nNew files to create:\n- app/not-found.tsx\n- app/error.tsx\n- app/loading.tsx\n- app/bible/[bookSlug]/[chapter]/loading.tsx\n\nAcceptance criteria:\n- Custom 404 and error pages with themed design\n- Loading skeletons for major routes\n- `npm run build` completes with zero errors\n- All images have proper loading strategy (priority vs lazy)\n- Focus indicators visible in all themes\n- No console errors or warnings in browser",
+          "type": "fullstack",
+          "status": "planned",
+          "branch": null,
+          "designApproved": false,
+          "tags": [],
+          "priority": 8,
+          "dependencies": [
+            "dead-links-missing-pages"
           ]
         }
       ]
