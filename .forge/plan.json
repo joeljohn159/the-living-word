@@ -363,7 +363,7 @@
           "title": "Context Panel — Notes & Highlights Tab (localStorage)",
           "description": "Build the Notes tab for user's personal annotations. Store in localStorage via Zustand. Allow: highlighting verse text (select text → color picker), adding notes per verse (text area), bookmarking verses (BookmarkButton.tsx). Show list of highlights and notes for current chapter. Create hooks/useBookmarks.ts. Export/clear functionality. Persist across sessions.",
           "type": "ui",
-          "status": "reviewing",
+          "status": "testing",
           "branch": null,
           "designApproved": true,
           "tags": [],
