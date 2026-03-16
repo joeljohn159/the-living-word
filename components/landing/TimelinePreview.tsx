@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -11,19 +12,93 @@ interface TimelineEvent {
   title: string;
   description: string;
   era: string;
+  imageUrl?: string;
+  imageAlt?: string;
 }
 
 const TIMELINE_EVENTS: TimelineEvent[] = [
-  { date: "c. 2000 BC", title: "Call of Abraham", description: "God calls Abraham to leave Ur and travel to the Promised Land", era: "Patriarchs" },
-  { date: "c. 1446 BC", title: "The Exodus", description: "Moses leads Israel out of Egyptian bondage", era: "Exodus" },
-  { date: "c. 1400 BC", title: "Conquest of Canaan", description: "Joshua leads Israel into the Promised Land", era: "Conquest" },
-  { date: "c. 1010 BC", title: "David Becomes King", description: "David unites the twelve tribes of Israel", era: "United Kingdom" },
-  { date: "c. 966 BC", title: "Solomon's Temple", description: "Construction of the First Temple in Jerusalem", era: "United Kingdom" },
-  { date: "586 BC", title: "Fall of Jerusalem", description: "Babylon destroys the Temple and exiles Judah", era: "Exile" },
-  { date: "c. 5 BC", title: "Birth of Jesus", description: "The Messiah is born in Bethlehem of Judea", era: "New Testament" },
-  { date: "c. AD 30", title: "Crucifixion & Resurrection", description: "Jesus is crucified and rises from the dead", era: "New Testament" },
-  { date: "c. AD 50", title: "Paul's Missionary Journeys", description: "The Gospel spreads throughout the Roman Empire", era: "Early Church" },
-  { date: "c. AD 95", title: "Book of Revelation", description: "John receives visions on the isle of Patmos", era: "Early Church" },
+  {
+    date: "c. 2000 BC",
+    title: "Call of Abraham",
+    description: "God calls Abraham to leave Ur and travel to the Promised Land",
+    era: "Patriarchs",
+    imageUrl:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Herrad_von_Landsberg_-_Abrahams_Bosom.jpg/256px-Herrad_von_Landsberg_-_Abrahams_Bosom.jpg",
+    imageAlt:
+      "Abraham, from Hortus Deliciarum by Herrad of Landsberg (12th century)",
+  },
+  {
+    date: "c. 1446 BC",
+    title: "The Exodus",
+    description: "Moses leads Israel out of Egyptian bondage",
+    era: "Exodus",
+    imageUrl:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Crossing_the_Red_Sea.jpg/256px-Crossing_the_Red_Sea.jpg",
+    imageAlt: "Crossing the Red Sea, illustration from a medieval manuscript",
+  },
+  {
+    date: "c. 1400 BC",
+    title: "Conquest of Canaan",
+    description: "Joshua leads Israel into the Promised Land",
+    era: "Conquest",
+  },
+  {
+    date: "c. 1010 BC",
+    title: "David Becomes King",
+    description: "David unites the twelve tribes of Israel",
+    era: "United Kingdom",
+    imageUrl:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/David_SM_Maggiore.jpg/256px-David_SM_Maggiore.jpg",
+    imageAlt:
+      "King David playing the harp, 13th-century fresco from Santa Maria Maggiore",
+  },
+  {
+    date: "c. 966 BC",
+    title: "Solomon's Temple",
+    description: "Construction of the First Temple in Jerusalem",
+    era: "United Kingdom",
+    imageUrl:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Solomon%27s_Temple.jpg/256px-Solomon%27s_Temple.jpg",
+    imageAlt: "Illustration of Solomon's Temple in Jerusalem",
+  },
+  {
+    date: "586 BC",
+    title: "Fall of Jerusalem",
+    description: "Babylon destroys the Temple and exiles Judah",
+    era: "Exile",
+  },
+  {
+    date: "c. 5 BC",
+    title: "Birth of Jesus",
+    description: "The Messiah is born in Bethlehem of Judea",
+    era: "New Testament",
+    imageUrl:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Giotto_-_Scrovegni_-_-17-_-_Nativity%2C_Birth_of_Jesus.jpg/256px-Giotto_-_Scrovegni_-_-17-_-_Nativity%2C_Birth_of_Jesus.jpg",
+    imageAlt:
+      "Nativity of Jesus by Giotto di Bondone, Scrovegni Chapel (c. 1305)",
+  },
+  {
+    date: "c. AD 30",
+    title: "Crucifixion & Resurrection",
+    description: "Jesus is crucified and rises from the dead",
+    era: "New Testament",
+    imageUrl:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Giotto_-_Scrovegni_-_-35-_-_Crucifixion.jpg/256px-Giotto_-_Scrovegni_-_-35-_-_Crucifixion.jpg",
+    imageAlt:
+      "Crucifixion of Jesus by Giotto di Bondone, Scrovegni Chapel (c. 1305)",
+  },
+  {
+    date: "c. AD 50",
+    title: "Paul's Missionary Journeys",
+    description: "The Gospel spreads throughout the Roman Empire",
+    era: "Early Church",
+  },
+  {
+    date: "c. AD 95",
+    title: "Book of Revelation",
+    description: "John receives visions on the isle of Patmos",
+    era: "Early Church",
+  },
 ];
 
 /**
@@ -100,7 +175,7 @@ export function TimelinePreview() {
                 className="relative flex flex-col items-center w-[140px] sm:w-[180px] flex-shrink-0"
               >
                 {/* Date */}
-                <span className="font-source-sans text-[10px] text-[var(--text-muted)] mb-2 whitespace-nowrap">
+                <span className="font-source-sans text-[11px] text-[var(--text-secondary)] mb-2 whitespace-nowrap font-medium">
                   {event.date}
                 </span>
 
@@ -113,20 +188,38 @@ export function TimelinePreview() {
                 {/* Card */}
                 <div
                   className={cn(
-                    "w-full rounded-lg p-3 text-center",
+                    "w-full rounded-lg overflow-hidden text-center",
                     "bg-[var(--bg-card)] border border-[var(--border)]",
                     "hover:border-[var(--accent-gold)] transition-colors"
                   )}
                 >
-                  <span className="block font-source-sans text-[9px] uppercase tracking-wider text-[var(--accent-gold)] mb-1">
-                    {event.era}
-                  </span>
-                  <h3 className="font-cormorant text-sm font-semibold text-[var(--text-primary)] mb-1">
-                    {event.title}
-                  </h3>
-                  <p className="font-source-sans text-[11px] text-[var(--text-muted)] leading-snug">
-                    {event.description}
-                  </p>
+                  {/* Thumbnail image */}
+                  {event.imageUrl && (
+                    <div className="relative w-full h-[60px] sm:h-[80px] overflow-hidden">
+                      <Image
+                        src={event.imageUrl}
+                        alt={event.imageAlt || event.title}
+                        fill
+                        className="object-cover"
+                        sizes="180px"
+                      />
+                      <div
+                        className="absolute inset-0 bg-gradient-to-t from-[var(--bg-card)] to-transparent opacity-40"
+                        aria-hidden="true"
+                      />
+                    </div>
+                  )}
+                  <div className="p-3">
+                    <span className="block font-source-sans text-[10px] uppercase tracking-wider text-[var(--accent-gold)] mb-1 font-semibold">
+                      {event.era}
+                    </span>
+                    <h3 className="font-cormorant text-sm font-semibold text-[var(--text-primary)] mb-1">
+                      {event.title}
+                    </h3>
+                    <p className="font-source-sans text-xs text-[var(--text-secondary)] leading-snug">
+                      {event.description}
+                    </p>
+                  </div>
                 </div>
               </motion.div>
             ))}

@@ -58,15 +58,15 @@
     --bg-tertiary: #EBE4D8;
     --bg-card: #FFFFFF;
     --text-primary: #2C2416;
-    --text-secondary: #5C5346;
-    --text-muted: #8A8278;
-    --accent-gold: #8B6914;
-    --accent-gold-light: #A07A1C;
-    --accent-gold-dark: #6B5210;
+    --text-secondary: #4A4238;
+    --text-muted: #736B61;
+    --accent-gold: #7B5B0E;
+    --accent-gold-light: #8B6914;
+    --accent-gold-dark: #5C4408;
     --accent-crimson: #8B2F3F;
     --border: #D9D0C3;
     --scripture-text: #2C2416;
-    --verse-number: #8B7D6B;
+    --verse-number: #6B5D4D;
 
     /* Hero & map overlay colors */
     --hero-overlay-from: rgba(253, 251, 247, 0.85);

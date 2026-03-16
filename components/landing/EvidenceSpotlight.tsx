@@ -142,7 +142,7 @@ export function EvidenceSpotlight({ items }: EvidenceSpotlightProps) {
                   sizes="(max-width: 640px) 85vw, 340px"
                 />
                 <div className="absolute top-3 left-3">
-                  <span className="font-source-sans text-[10px] uppercase tracking-wider bg-[var(--bg-primary)]/80 text-[var(--accent-gold)] px-2 py-1 rounded backdrop-blur-sm">
+                  <span className="font-source-sans text-[11px] uppercase tracking-wider bg-[var(--accent-gold)] text-white px-2 py-1 rounded backdrop-blur-sm font-medium">
                     {item.category}
                   </span>
                 </div>

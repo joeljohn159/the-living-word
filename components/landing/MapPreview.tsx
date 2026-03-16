@@ -1,8 +1,12 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { MapPin } from "lucide-react";
+
+const MAP_IMAGE_URL =
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Palestine_1020BC-Smith1915.jpg/800px-Palestine_1020BC-Smith1915.jpg";
 
 interface LocationPin {
   name: string;
@@ -53,14 +57,29 @@ export function MapPreview() {
           transition={{ duration: 0.7, delay: 0.1 }}
           className="relative rounded-xl border border-[var(--border)] bg-[var(--bg-card)] overflow-hidden shadow-xl"
         >
-          {/* Decorative map background — theme-aware gradient */}
-          <div
-            className="relative h-[250px] sm:h-[350px] md:h-[400px]"
-            style={{
-              background:
-                "linear-gradient(to bottom right, var(--map-bg-from), var(--map-bg-via), var(--map-bg-to))",
-            }}
-          >
+          {/* Historical map background with theme-aware overlay */}
+          <div className="relative h-[250px] sm:h-[350px] md:h-[400px]">
+            {/* Real historical map image */}
+            <Image
+              src={MAP_IMAGE_URL}
+              alt="Historical map of Palestine circa 1020 BC by William Smith, 1915"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 1152px"
+              priority={false}
+            />
+
+            {/* Theme-aware overlay gradient */}
+            <div
+              className="absolute inset-0"
+              style={{
+                background:
+                  "linear-gradient(to bottom right, var(--map-bg-from), var(--map-bg-via), var(--map-bg-to))",
+                opacity: 0.55,
+              }}
+              aria-hidden="true"
+            />
+
             {/* Grid pattern overlay — theme-aware color */}
             <div
               className="absolute inset-0 opacity-10"
@@ -115,6 +134,11 @@ export function MapPreview() {
               </Link>
             </div>
           </div>
+
+          {/* Attribution */}
+          <p className="text-right px-3 py-1 font-source-sans text-[9px] text-[var(--text-muted)] opacity-70">
+            Map: William Smith, <em>Historical Atlas</em>, 1915 — Wikimedia Commons (Public Domain)
+          </p>
 
           {/* Stats bar */}
           <div className="grid grid-cols-3 divide-x divide-[var(--border)] border-t border-[var(--border)]">

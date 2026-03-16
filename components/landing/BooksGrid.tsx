@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import {
@@ -10,6 +11,9 @@ import {
   toDisplayCategory,
   type DisplayCategory,
 } from "@/lib/data/books";
+
+const MANUSCRIPT_BG_URL =
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Codex_Vaticanus_B%2C_2Thess._3%2C11-18%2C_Hebr._1%2C1-2%2C2.jpg/800px-Codex_Vaticanus_B%2C_2Thess._3%2C11-18%2C_Hebr._1%2C1-2%2C2.jpg";
 
 type Testament = "all" | "OT" | "NT";
 
@@ -31,10 +35,29 @@ export function BooksGrid() {
 
   return (
     <section
-      className="py-16 sm:py-24 px-4"
+      className="py-16 sm:py-24 px-4 relative overflow-hidden"
       aria-label="Quick Navigation"
     >
-      <div className="mx-auto max-w-7xl">
+      {/* Subtle manuscript texture background */}
+      <div className="absolute inset-0" aria-hidden="true">
+        <Image
+          src={MANUSCRIPT_BG_URL}
+          alt=""
+          fill
+          className="object-cover"
+          sizes="100vw"
+          priority={false}
+        />
+        <div
+          className="absolute inset-0"
+          style={{
+            background: "var(--bg-primary)",
+            opacity: 0.92,
+          }}
+        />
+      </div>
+
+      <div className="relative mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -131,7 +154,7 @@ export function BooksGrid() {
                 )}
                 title={book.name}
               >
-                <span className="block font-source-sans text-[10px] uppercase tracking-wider text-[var(--text-muted)] mb-0.5 group-hover:text-[var(--accent-gold)] transition-colors">
+                <span className="block font-source-sans text-[11px] uppercase tracking-wider text-[var(--text-secondary)] mb-0.5 group-hover:text-[var(--accent-gold)] transition-colors font-medium">
                   {book.abbreviation}
                 </span>
                 <span className="block font-cormorant text-xs sm:text-sm text-[var(--text-primary)] truncate group-hover:text-gold transition-colors">
