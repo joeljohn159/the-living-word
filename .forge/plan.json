@@ -117,7 +117,7 @@
           "title": "Fix Dead Links & Missing Pages",
           "description": "Fix broken links and create missing pages that are referenced but don't exist:\n\n1. The ArtworkOfDay component links to '/gallery' which doesn't exist. Either:\n   a. Create a basic gallery page at app/gallery/page.tsx that displays artwork from the database, OR\n   b. Change the link to point to an existing page (like /bible or /evidence)\n   Recommendation: Create a simple gallery page since artwork data exists in the media table.\n\n2. The Footer links to '/privacy' which likely doesn't exist. Create a minimal privacy policy page at app/privacy/page.tsx.\n\n3. Verify all navigation links in NAV_LINKS (components/layout/nav-links.ts) point to existing pages.\n\n4. Verify all internal links on the landing page work: /bible, /maps, /evidence, /timeline, /search, /about.\n\n5. Check for any 404s from evidence/[slug] or people/[slug] links.\n\nExisting files to modify:\n- components/landing/ArtworkOfDay.tsx (fix gallery link)\n- components/layout/nav-links.ts (verify all links)\n\nNew files to create:\n- app/gallery/page.tsx (artwork gallery page)\n- app/privacy/page.tsx (privacy policy page)\n\nAcceptance criteria:\n- No dead links anywhere in the app\n- Gallery page exists and shows artwork\n- Privacy page exists with basic content\n- All nav links verified working",
           "type": "fullstack",
-          "status": "planned",
+          "status": "reviewing",
           "branch": null,
           "designApproved": true,
           "tags": [],

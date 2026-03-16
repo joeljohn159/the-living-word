@@ -140,6 +140,7 @@ export function EvidenceSpotlight({ items }: EvidenceSpotlightProps) {
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                   sizes="(max-width: 640px) 85vw, 340px"
+                  loading="lazy"
                 />
                 <div className="absolute top-3 left-3">
                   <span className="font-source-sans text-[11px] uppercase tracking-wider bg-[var(--accent-gold)] text-white px-2 py-1 rounded backdrop-blur-sm font-medium">

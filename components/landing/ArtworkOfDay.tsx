@@ -70,7 +70,7 @@ export function ArtworkOfDay({ artwork }: ArtworkOfDayProps) {
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 50vw"
-              priority={false}
+              loading="lazy"
             />
           </div>
 

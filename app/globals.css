@@ -145,6 +145,17 @@
     border-color: var(--border);
   }
 
+  /* Visible focus indicators for all interactive elements across themes */
+  :focus-visible {
+    outline: 2px solid var(--accent-gold);
+    outline-offset: 2px;
+  }
+
+  /* Remove default outline to rely on focus-visible */
+  :focus:not(:focus-visible) {
+    outline: none;
+  }
+
   body {
     background-color: var(--bg-primary);
     color: var(--text-primary);
