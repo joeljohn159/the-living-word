@@ -25,6 +25,7 @@ const KEY_LOCATIONS: LocationPin[] = [
  * Stylised map preview with key biblical location pins.
  * Uses a decorative representation (not a real Leaflet map)
  * for the landing page, with a link to the full interactive map.
+ * Theme-aware: adapts background and grid colors to dark/light/sepia.
  */
 export function MapPreview() {
   return (
@@ -52,14 +53,20 @@ export function MapPreview() {
           transition={{ duration: 0.7, delay: 0.1 }}
           className="relative rounded-xl border border-[var(--border)] bg-[var(--bg-card)] overflow-hidden shadow-xl"
         >
-          {/* Decorative map background */}
-          <div className="relative h-[250px] sm:h-[350px] md:h-[400px] bg-gradient-to-br from-[#1a1f2e] via-[#1e2438] to-[#151927]">
-            {/* Grid pattern overlay */}
+          {/* Decorative map background — theme-aware gradient */}
+          <div
+            className="relative h-[250px] sm:h-[350px] md:h-[400px]"
+            style={{
+              background:
+                "linear-gradient(to bottom right, var(--map-bg-from), var(--map-bg-via), var(--map-bg-to))",
+            }}
+          >
+            {/* Grid pattern overlay — theme-aware color */}
             <div
               className="absolute inset-0 opacity-10"
               style={{
                 backgroundImage:
-                  "linear-gradient(rgba(196,151,92,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(196,151,92,0.3) 1px, transparent 1px)",
+                  "linear-gradient(var(--map-grid-color) 1px, transparent 1px), linear-gradient(90deg, var(--map-grid-color) 1px, transparent 1px)",
                 backgroundSize: "40px 40px",
               }}
               aria-hidden="true"
@@ -101,7 +108,7 @@ export function MapPreview() {
             <div className="absolute inset-0 flex items-end justify-center pb-8">
               <Link
                 href="/maps"
-                className="inline-flex items-center gap-2 bg-gold/90 hover:bg-gold text-[var(--bg-primary)] px-5 sm:px-6 py-3 rounded-lg font-source-sans font-semibold text-sm transition-colors backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-gold touch-target"
+                className="inline-flex items-center gap-2 bg-gold/90 hover:bg-gold text-[var(--primary-foreground)] px-5 sm:px-6 py-3 rounded-lg font-source-sans font-semibold text-sm transition-colors backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-gold touch-target"
               >
                 <MapPin className="w-4 h-4" aria-hidden="true" />
                 Explore Biblical World &rarr;

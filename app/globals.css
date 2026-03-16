@@ -21,6 +21,15 @@
     --scripture-text: #F0ECE2;
     --verse-number: #8B7D6B;
 
+    /* Hero & map overlay colors */
+    --hero-overlay-from: rgba(15, 15, 26, 0.80);
+    --hero-overlay-via: rgba(15, 15, 26, 0.70);
+    --hero-overlay-to: rgba(15, 15, 26, 0.95);
+    --map-bg-from: #1a1f2e;
+    --map-bg-via: #1e2438;
+    --map-bg-to: #151927;
+    --map-grid-color: rgba(196, 151, 92, 0.3);
+
     /* Mapped to Tailwind conventions */
     --background: var(--bg-primary);
     --foreground: var(--text-primary);
@@ -59,6 +68,15 @@
     --scripture-text: #2C2416;
     --verse-number: #8B7D6B;
 
+    /* Hero & map overlay colors */
+    --hero-overlay-from: rgba(253, 251, 247, 0.85);
+    --hero-overlay-via: rgba(253, 251, 247, 0.75);
+    --hero-overlay-to: rgba(253, 251, 247, 0.92);
+    --map-bg-from: #E8E0D0;
+    --map-bg-via: #EDE5D5;
+    --map-bg-to: #E0D8C8;
+    --map-grid-color: rgba(139, 105, 20, 0.25);
+
     --background: var(--bg-primary);
     --foreground: var(--text-primary);
     --card: var(--bg-card);
@@ -94,6 +112,15 @@
     --border: #C9BFA8;
     --scripture-text: #3E3428;
     --verse-number: #8B7D6B;
+
+    /* Hero & map overlay colors */
+    --hero-overlay-from: rgba(244, 236, 216, 0.85);
+    --hero-overlay-via: rgba(244, 236, 216, 0.75);
+    --hero-overlay-to: rgba(244, 236, 216, 0.92);
+    --map-bg-from: #DDD4BE;
+    --map-bg-via: #E2D9C4;
+    --map-bg-to: #D5CCB6;
+    --map-grid-color: rgba(122, 95, 46, 0.25);
 
     --background: var(--bg-primary);
     --foreground: var(--text-primary);

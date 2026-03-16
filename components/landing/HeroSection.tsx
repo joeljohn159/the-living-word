@@ -10,7 +10,7 @@ interface HeroSectionProps {
 }
 
 /**
- * Full-viewport hero with Bible painting background, dark overlay,
+ * Full-viewport hero with Bible painting background, theme-aware overlay,
  * parallax scroll effect, featured verse, and CTA.
  */
 export function HeroSection({ verseText, verseRef }: HeroSectionProps) {
@@ -42,9 +42,13 @@ export function HeroSection({ verseText, verseRef }: HeroSectionProps) {
         aria-hidden="true"
       />
 
-      {/* Dark overlay */}
+      {/* Theme-aware overlay using CSS variables */}
       <div
-        className="absolute inset-0 bg-gradient-to-b from-[#0F0F1A]/80 via-[#0F0F1A]/70 to-[#0F0F1A]/95"
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(to bottom, var(--hero-overlay-from), var(--hero-overlay-via), var(--hero-overlay-to))",
+        }}
         aria-hidden="true"
       />
 
@@ -105,7 +109,7 @@ export function HeroSection({ verseText, verseRef }: HeroSectionProps) {
         >
           <Link
             href="/bible"
-            className="inline-flex items-center gap-2 bg-gold text-[var(--bg-primary)] px-6 sm:px-8 py-3 sm:py-3.5 rounded-lg font-source-sans font-semibold text-base sm:text-lg hover:bg-gold-light transition-colors focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-[var(--bg-primary)] touch-target"
+            className="inline-flex items-center gap-2 bg-gold text-[var(--primary-foreground)] px-6 sm:px-8 py-3 sm:py-3.5 rounded-lg font-source-sans font-semibold text-base sm:text-lg hover:bg-gold-light transition-colors focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-[var(--bg-primary)] touch-target"
             aria-label="Begin reading the Bible"
           >
             Begin Reading &rarr;

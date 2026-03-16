@@ -248,6 +248,13 @@
       "details": "Snapshot taken before build",
       "snapshotId": "033",
       "timestamp": "2026-03-16T02:31:47.796Z"
+    },
+    {
+      "action": "build",
+      "storyId": "hero-theme-adaptive",
+      "details": "Snapshot taken before build",
+      "snapshotId": "036",
+      "timestamp": "2026-03-16T05:22:16.428Z"
     }
   ]
 }
