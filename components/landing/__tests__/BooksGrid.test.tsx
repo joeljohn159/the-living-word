@@ -197,6 +197,44 @@ describe("BooksGrid", () => {
     ).toBeInTheDocument();
   });
 
+  // ── Manuscript background image ──────────────────────────────────
+
+  it("renders a background manuscript image from Wikimedia Commons", () => {
+    const { container } = render(<BooksGrid />);
+    // The decorative background image has empty alt text
+    const bgImage = container.querySelector("img[alt='']");
+    expect(bgImage).toBeInTheDocument();
+    expect(bgImage).toHaveAttribute(
+      "src",
+      expect.stringContaining("upload.wikimedia.org")
+    );
+  });
+
+  it("background manuscript image has empty alt (decorative)", () => {
+    const { container } = render(<BooksGrid />);
+    const bgImage = container.querySelector("img[alt='']");
+    expect(bgImage).toBeInTheDocument();
+    // Empty alt marks it as decorative for screen readers
+    expect(bgImage).toHaveAttribute("alt", "");
+  });
+
+  it("background manuscript image is inside an aria-hidden container", () => {
+    const { container } = render(<BooksGrid />);
+    const ariaHiddenDiv = container.querySelector("div[aria-hidden='true']");
+    expect(ariaHiddenDiv).toBeInTheDocument();
+    const imgInside = ariaHiddenDiv?.querySelector("img");
+    expect(imgInside).toBeInTheDocument();
+  });
+
+  it("background image uses Codex Vaticanus manuscript URL", () => {
+    const { container } = render(<BooksGrid />);
+    const bgImage = container.querySelector("img[alt='']");
+    expect(bgImage).toHaveAttribute(
+      "src",
+      expect.stringContaining("Codex_Vaticanus")
+    );
+  });
+
   // ── Accessibility ─────────────────────────────────────────────────
 
   it("testament filter has role='tablist' with aria-label", () => {

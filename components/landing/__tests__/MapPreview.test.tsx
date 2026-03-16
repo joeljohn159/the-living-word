@@ -148,6 +148,21 @@ describe("MapPreview", () => {
     expect(img).toBeInTheDocument();
   });
 
+  it("loads the map image from Wikimedia Commons", () => {
+    render(<MapPreview />);
+    const img = screen.getByAltText(/historical map of palestine/i);
+    expect(img).toHaveAttribute(
+      "src",
+      expect.stringContaining("upload.wikimedia.org")
+    );
+  });
+
+  it("map image alt text includes artist attribution (William Smith)", () => {
+    render(<MapPreview />);
+    const img = screen.getByAltText(/william smith/i);
+    expect(img).toBeInTheDocument();
+  });
+
   // ── Theme-aware overlay (no hardcoded dark colors) ────────────────
 
   it("uses CSS variables for map overlay gradient, not hardcoded hex", () => {

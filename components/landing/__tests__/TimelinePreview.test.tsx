@@ -165,11 +165,73 @@ describe("TimelinePreview", () => {
     ).toBeInTheDocument();
   });
 
+  // ── Wikipedia images on timeline cards ────────────────────────────
+
+  it("renders thumbnail images for events that have imageUrl", () => {
+    render(<TimelinePreview />);
+    // Events with images: Abraham, Exodus, David, Solomon's Temple, Birth of Jesus, Crucifixion
+    const abrahamImg = screen.getByAltText(/abraham/i);
+    const exodusImg = screen.getByAltText(/red sea/i);
+    const davidImg = screen.getByAltText(/king david/i);
+    const templeImg = screen.getByAltText(/solomon.*temple/i);
+    const nativityImg = screen.getByAltText(/nativity/i);
+    const crucifixionImg = screen.getByAltText(/crucifixion/i);
+
+    expect(abrahamImg).toBeInTheDocument();
+    expect(exodusImg).toBeInTheDocument();
+    expect(davidImg).toBeInTheDocument();
+    expect(templeImg).toBeInTheDocument();
+    expect(nativityImg).toBeInTheDocument();
+    expect(crucifixionImg).toBeInTheDocument();
+  });
+
+  it("all timeline images load from Wikimedia Commons", () => {
+    render(<TimelinePreview />);
+    const images = [
+      screen.getByAltText(/abraham/i),
+      screen.getByAltText(/red sea/i),
+      screen.getByAltText(/king david/i),
+      screen.getByAltText(/solomon.*temple/i),
+      screen.getByAltText(/nativity/i),
+      screen.getByAltText(/crucifixion/i),
+    ];
+    images.forEach((img) => {
+      expect(img).toHaveAttribute(
+        "src",
+        expect.stringContaining("upload.wikimedia.org")
+      );
+    });
+  });
+
+  it("events without imageUrl do not render an img element", () => {
+    const { container } = render(<TimelinePreview />);
+    // There are 10 events total but only 6 have images
+    const allImages = container.querySelectorAll("img");
+    expect(allImages.length).toBe(6);
+  });
+
+  it("timeline image alt text includes artwork attribution details", () => {
+    render(<TimelinePreview />);
+    // Both Giotto paintings should include artist attribution in alt text
+    const giottoImages = screen.getAllByAltText(/giotto/i);
+    expect(giottoImages.length).toBe(2);
+    // Abraham image should reference the manuscript source
+    const abrahamImg = screen.getByAltText(/hortus deliciarum/i);
+    expect(abrahamImg).toBeInTheDocument();
+  });
+
   // ── Accessibility ─────────────────────────────────────────────────
 
   it("timeline dot decorations are marked aria-hidden", () => {
     const { container } = render(<TimelinePreview />);
     const hiddenElements = container.querySelectorAll("[aria-hidden='true']");
     expect(hiddenElements.length).toBeGreaterThan(0);
+  });
+
+  it("image overlay gradients on timeline cards are aria-hidden", () => {
+    const { container } = render(<TimelinePreview />);
+    const hiddenDivs = container.querySelectorAll("div[aria-hidden='true']");
+    // Each event with an image has an overlay gradient + dot decorations
+    expect(hiddenDivs.length).toBeGreaterThanOrEqual(6);
   });
 });
