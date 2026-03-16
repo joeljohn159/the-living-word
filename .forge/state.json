@@ -38,6 +38,41 @@
       "details": "Snapshot taken before build",
       "snapshotId": "004",
       "timestamp": "2026-03-16T01:22:13.249Z"
+    },
+    {
+      "action": "build",
+      "storyId": "seed-locations-journeys",
+      "details": "Snapshot taken before build",
+      "snapshotId": "006",
+      "timestamp": "2026-03-16T01:32:21.990Z"
+    },
+    {
+      "action": "build",
+      "storyId": "seed-cross-references",
+      "details": "Snapshot taken before build",
+      "snapshotId": "006",
+      "timestamp": "2026-03-16T01:32:21.990Z"
+    },
+    {
+      "action": "build",
+      "storyId": "seed-people",
+      "details": "Snapshot taken before build",
+      "snapshotId": "006",
+      "timestamp": "2026-03-16T01:32:21.993Z"
+    },
+    {
+      "action": "build",
+      "storyId": "seed-media-evidence",
+      "details": "Snapshot taken before build",
+      "snapshotId": "009",
+      "timestamp": "2026-03-16T01:32:21.997Z"
+    },
+    {
+      "action": "build",
+      "storyId": "seed-dictionary",
+      "details": "Snapshot taken before build",
+      "snapshotId": "009",
+      "timestamp": "2026-03-16T01:32:21.999Z"
     }
   ]
 }

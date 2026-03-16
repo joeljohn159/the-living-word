@@ -11,6 +11,13 @@ import { seedTranslation } from "./seed-data/seed-translation";
 import { seedBooks } from "./seed-data/seed-books";
 import { seedChaptersAndVerses } from "./seed-data/seed-chapters-verses";
 import { fetchKjvData } from "./seed-data/fetch-kjv";
+import { seedPeople } from "./seed-data/seed-people";
+import { seedMedia } from "./seed-data/seed-media";
+import { seedEvidence } from "./seed-data/seed-evidence";
+import { seedLocations } from "./seed-data/seed-locations";
+import { seedJourneys } from "./seed-data/seed-journeys";
+import { seedLocationReferences } from "./seed-data/seed-location-references";
+import { seedCrossReferences } from "./seed-data/seed-cross-references";
 
 async function main() {
   console.log("╔══════════════════════════════════════════════╗");
@@ -30,6 +37,27 @@ async function main() {
 
     // Step 4: Insert chapters and verses
     seedChaptersAndVerses(kjvVerses, bookIdMap);
+
+    // Step 5: Insert biblical people and references
+    seedPeople();
+
+    // Step 6: Insert media (paintings & art)
+    seedMedia();
+
+    // Step 7: Insert archaeological evidence
+    seedEvidence();
+
+    // Step 8: Insert biblical locations
+    const locationIdMap = seedLocations();
+
+    // Step 9: Insert journeys with stops
+    seedJourneys(locationIdMap);
+
+    // Step 10: Insert location-to-scripture references
+    seedLocationReferences(locationIdMap);
+
+    // Step 11: Insert cross-references (500+ entries)
+    seedCrossReferences();
 
     console.log();
     console.log("✅ Seed complete! The Living Word database is ready.");

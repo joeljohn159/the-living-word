@@ -1,0 +1,175 @@
+[
+  {
+    "name": "Abraham's Journey from Ur to Canaan",
+    "slug": "abrahams-journey-ur-to-canaan",
+    "description": "Abraham's call by God to leave his homeland in Ur of the Chaldees and journey to the Promised Land of Canaan, establishing the covenant that would shape the history of Israel.",
+    "personName": "Abraham",
+    "color": "#D4A76A",
+    "stops": [
+      { "name": "Ur of the Chaldees", "description": "Abraham's birthplace and homeland, a major Sumerian city. God called Abraham to leave his country and kindred.", "scriptureRef": "Genesis 11:31", "latitude": 30.9627, "longitude": 46.1031, "stopOrder": 1 },
+      { "name": "Haran", "description": "Abraham's family settled here after leaving Ur. Abraham's father Terah died here before Abraham continued the journey.", "scriptureRef": "Genesis 11:31-32", "latitude": 36.8644, "longitude": 39.0303, "stopOrder": 2 },
+      { "name": "Shechem", "description": "First stop in Canaan where God appeared to Abraham and promised, 'To your offspring I will give this land.' Abraham built an altar here.", "scriptureRef": "Genesis 12:6-7", "latitude": 32.2133, "longitude": 35.2856, "stopOrder": 3 },
+      { "name": "Bethel", "description": "Abraham pitched his tent between Bethel and Ai and built an altar to the Lord, calling on His name.", "scriptureRef": "Genesis 12:8", "latitude": 31.9333, "longitude": 35.2333, "stopOrder": 4 },
+      { "name": "Negev", "description": "Abraham continued journeying toward the Negev, the southern desert region of Canaan.", "scriptureRef": "Genesis 12:9", "latitude": 30.8, "longitude": 34.8, "stopOrder": 5 },
+      { "name": "Egypt", "description": "A famine drove Abraham to Egypt where he told Pharaoh that Sarah was his sister.", "scriptureRef": "Genesis 12:10-20", "latitude": 30.0444, "longitude": 31.2357, "stopOrder": 6 },
+      { "name": "Hebron", "description": "Abraham settled at the oaks of Mamre in Hebron, built an altar, and received God's covenant promises. Later purchased the Cave of Machpelah as a burial site.", "scriptureRef": "Genesis 13:18", "latitude": 31.5326, "longitude": 35.0998, "stopOrder": 7 },
+      { "name": "Mount Moriah", "description": "God tested Abraham by asking him to sacrifice Isaac. Abraham's faith was confirmed and God provided a ram.", "scriptureRef": "Genesis 22:1-14", "latitude": 31.7781, "longitude": 35.2353, "stopOrder": 8 },
+      { "name": "Beersheba", "description": "Abraham made a covenant with Abimelech and planted a tamarisk tree, calling on the name of the Lord.", "scriptureRef": "Genesis 21:31-33", "latitude": 31.2518, "longitude": 34.7913, "stopOrder": 9 }
+    ]
+  },
+  {
+    "name": "The Exodus from Egypt to the Promised Land",
+    "slug": "exodus-egypt-to-promised-land",
+    "description": "The epic journey of the Israelites from slavery in Egypt through the wilderness to the edge of the Promised Land, led by Moses over 40 years.",
+    "personName": "Moses",
+    "color": "#8B4513",
+    "stops": [
+      { "name": "Goshen (Rameses)", "description": "Starting point of the Exodus. The Israelites departed from Rameses in Goshen after the tenth plague killed Egypt's firstborn.", "scriptureRef": "Exodus 12:37", "latitude": 30.7833, "longitude": 31.9, "stopOrder": 1 },
+      { "name": "Succoth", "description": "First encampment after leaving Egypt, where about 600,000 men plus women and children gathered.", "scriptureRef": "Exodus 12:37", "latitude": 30.55, "longitude": 32.2, "stopOrder": 2 },
+      { "name": "Etham", "description": "Encampment at the edge of the wilderness where the pillar of cloud by day and fire by night first appeared.", "scriptureRef": "Exodus 13:20", "latitude": 30.4, "longitude": 32.35, "stopOrder": 3 },
+      { "name": "Red Sea Crossing", "description": "God parted the Red Sea for Israel to cross on dry ground, then drowned Pharaoh's pursuing army.", "scriptureRef": "Exodus 14:21-28", "latitude": 29.95, "longitude": 32.55, "stopOrder": 4 },
+      { "name": "Marah", "description": "The bitter waters were made sweet when Moses threw in a piece of wood as God instructed.", "scriptureRef": "Exodus 15:23-25", "latitude": 29.55, "longitude": 32.75, "stopOrder": 5 },
+      { "name": "Elim", "description": "An oasis with twelve springs and seventy palm trees where Israel camped and rested.", "scriptureRef": "Exodus 15:27", "latitude": 29.2, "longitude": 32.9, "stopOrder": 6 },
+      { "name": "Wilderness of Sin", "description": "Where God provided manna and quail to feed the people; Israel grumbled against Moses.", "scriptureRef": "Exodus 16:1-15", "latitude": 28.9, "longitude": 33.3, "stopOrder": 7 },
+      { "name": "Rephidim", "description": "Water from the rock at Horeb; Israel fought and defeated the Amalekites while Moses held up his arms.", "scriptureRef": "Exodus 17:1-13", "latitude": 28.7, "longitude": 33.6, "stopOrder": 8 },
+      { "name": "Mount Sinai", "description": "God gave the Ten Commandments and the Law. Israel camped here nearly a year. The golden calf incident occurred here.", "scriptureRef": "Exodus 19-34", "latitude": 28.5394, "longitude": 33.9753, "stopOrder": 9 },
+      { "name": "Kadesh Barnea", "description": "Twelve spies sent into Canaan; ten gave bad reports. God condemned Israel to wander 40 years in the wilderness.", "scriptureRef": "Numbers 13-14", "latitude": 30.63, "longitude": 34.4, "stopOrder": 10 },
+      { "name": "Wilderness of Paran", "description": "Area of extended wandering during the 40 years of wilderness punishment.", "scriptureRef": "Numbers 12:16", "latitude": 29.5, "longitude": 34.6, "stopOrder": 11 },
+      { "name": "Mount Hor", "description": "Where Aaron died and was buried. His priestly garments were transferred to his son Eleazar.", "scriptureRef": "Numbers 20:22-29", "latitude": 30.3203, "longitude": 35.4178, "stopOrder": 12 },
+      { "name": "Plains of Moab", "description": "Final encampment before entering the Promised Land. Moses delivered his farewell addresses (Deuteronomy). Balaam tried to curse Israel.", "scriptureRef": "Numbers 22-24; Deuteronomy 1:1", "latitude": 31.77, "longitude": 35.58, "stopOrder": 13 },
+      { "name": "Mount Nebo", "description": "Where Moses viewed the Promised Land from the summit of Pisgah. Moses died here and God buried him.", "scriptureRef": "Deuteronomy 34:1-6", "latitude": 31.7672, "longitude": 35.7253, "stopOrder": 14 }
+    ]
+  },
+  {
+    "name": "David's Flight from Saul",
+    "slug": "davids-flight-from-saul",
+    "description": "David's years as a fugitive fleeing from King Saul's jealous rage, hiding in the wilderness and among Israel's enemies until Saul's death.",
+    "personName": "David",
+    "color": "#4A6741",
+    "stops": [
+      { "name": "Gibeah", "description": "Saul's capital, where David served in the court and played the harp. Saul first attempted to kill David with a spear.", "scriptureRef": "1 Samuel 18:10-11", "latitude": 31.8194, "longitude": 35.2292, "stopOrder": 1 },
+      { "name": "Ramah", "description": "David fled to Samuel at Ramah. When Saul sent men to capture him, the Spirit of God came upon them.", "scriptureRef": "1 Samuel 19:18-24", "latitude": 31.8833, "longitude": 35.2083, "stopOrder": 2 },
+      { "name": "Nob", "description": "David came to Ahimelech the priest and received the holy bread and Goliath's sword.", "scriptureRef": "1 Samuel 21:1-9", "latitude": 31.79, "longitude": 35.24, "stopOrder": 3 },
+      { "name": "Gath", "description": "David fled to Achish king of Gath and feigned madness to escape.", "scriptureRef": "1 Samuel 21:10-15", "latitude": 31.6133, "longitude": 34.8428, "stopOrder": 4 },
+      { "name": "Cave of Adullam", "description": "David hid in this cave and about 400 discontented men gathered to him, becoming his band of warriors.", "scriptureRef": "1 Samuel 22:1-2", "latitude": 31.6547, "longitude": 34.9778, "stopOrder": 5 },
+      { "name": "Keilah", "description": "David rescued the town from Philistine attack, but learned the townspeople would betray him to Saul.", "scriptureRef": "1 Samuel 23:1-13", "latitude": 31.6167, "longitude": 34.935, "stopOrder": 6 },
+      { "name": "Wilderness of Ziph", "description": "Jonathan visited David and they renewed their covenant. The Ziphites betrayed David's location to Saul.", "scriptureRef": "1 Samuel 23:14-24", "latitude": 31.4667, "longitude": 35.1, "stopOrder": 7 },
+      { "name": "En Gedi", "description": "David hid in a cave. When Saul entered the same cave, David cut off a corner of his robe but spared his life.", "scriptureRef": "1 Samuel 24:1-22", "latitude": 31.4597, "longitude": 35.3917, "stopOrder": 8 },
+      { "name": "Wilderness of Maon", "description": "David narrowly escaped Saul when a Philistine raid forced Saul to break off pursuit.", "scriptureRef": "1 Samuel 23:24-28", "latitude": 31.3833, "longitude": 35.1167, "stopOrder": 9 },
+      { "name": "Ziklag", "description": "Philistine city given to David by Achish. David used it as a base while Saul hunted him. Later burned by Amalekites.", "scriptureRef": "1 Samuel 27:6", "latitude": 31.35, "longitude": 34.6833, "stopOrder": 10 },
+      { "name": "Hebron", "description": "After Saul's death, David was anointed king of Judah at Hebron, where he reigned seven years before becoming king of all Israel.", "scriptureRef": "2 Samuel 2:1-4", "latitude": 31.5326, "longitude": 35.0998, "stopOrder": 11 }
+    ]
+  },
+  {
+    "name": "Paul's First Missionary Journey",
+    "slug": "pauls-first-missionary-journey",
+    "description": "Paul and Barnabas' first major missionary expedition (c. AD 46-48), commissioned by the church at Antioch, taking the gospel to Cyprus and southern Asia Minor.",
+    "personName": "Paul",
+    "color": "#2E5090",
+    "stops": [
+      { "name": "Antioch of Syria", "description": "The sending church. The Holy Spirit said, 'Set apart for me Barnabas and Saul for the work to which I have called them.'", "scriptureRef": "Acts 13:1-3", "latitude": 36.2, "longitude": 36.15, "stopOrder": 1 },
+      { "name": "Seleucia", "description": "Port city near Antioch from which Paul and Barnabas sailed to Cyprus.", "scriptureRef": "Acts 13:4", "latitude": 36.12, "longitude": 35.93, "stopOrder": 2 },
+      { "name": "Salamis", "description": "First stop in Cyprus where they proclaimed the word of God in the Jewish synagogues with John Mark as helper.", "scriptureRef": "Acts 13:5", "latitude": 35.1847, "longitude": 33.9022, "stopOrder": 3 },
+      { "name": "Paphos", "description": "Paul confronted the sorcerer Bar-Jesus (Elymas) before the proconsul Sergius Paulus, who believed.", "scriptureRef": "Acts 13:6-12", "latitude": 34.7556, "longitude": 32.4031, "stopOrder": 4 },
+      { "name": "Perga", "description": "Arrived in Pamphylia. John Mark departed and returned to Jerusalem.", "scriptureRef": "Acts 13:13", "latitude": 36.9614, "longitude": 30.8542, "stopOrder": 5 },
+      { "name": "Antioch of Pisidia", "description": "Paul preached in the synagogue, declaring Jesus as the fulfillment of God's promises to Israel. Many believed but Jewish leaders drove them out.", "scriptureRef": "Acts 13:14-52", "latitude": 38.3019, "longitude": 31.1947, "stopOrder": 6 },
+      { "name": "Iconium", "description": "Paul and Barnabas spent considerable time speaking boldly. The city was divided; they fled when a plot to stone them was discovered.", "scriptureRef": "Acts 14:1-6", "latitude": 37.8714, "longitude": 32.4846, "stopOrder": 7 },
+      { "name": "Lystra", "description": "Paul healed a crippled man and was called Hermes by the crowds. Then Jews from Antioch stoned Paul and left him for dead.", "scriptureRef": "Acts 14:8-20", "latitude": 37.5667, "longitude": 32.3333, "stopOrder": 8 },
+      { "name": "Derbe", "description": "Paul and Barnabas preached the gospel and won a large number of disciples.", "scriptureRef": "Acts 14:20-21", "latitude": 37.3611, "longitude": 33.3264, "stopOrder": 9 },
+      { "name": "Return through Lystra, Iconium, Antioch of Pisidia", "description": "Returned through the cities, strengthening the disciples and appointing elders in every church.", "scriptureRef": "Acts 14:21-23", "latitude": 37.8714, "longitude": 32.4846, "stopOrder": 10 },
+      { "name": "Attalia", "description": "Port city from which Paul and Barnabas sailed back to Antioch of Syria.", "scriptureRef": "Acts 14:25", "latitude": 36.8842, "longitude": 30.7056, "stopOrder": 11 },
+      { "name": "Antioch of Syria (Return)", "description": "Reported to the church all that God had done and how He had opened the door of faith to the Gentiles.", "scriptureRef": "Acts 14:26-28", "latitude": 36.2, "longitude": 36.15, "stopOrder": 12 }
+    ]
+  },
+  {
+    "name": "Paul's Second Missionary Journey",
+    "slug": "pauls-second-missionary-journey",
+    "description": "Paul's second expedition (c. AD 49-52) with Silas, taking the gospel into Europe for the first time, establishing churches in Philippi, Thessalonica, and Corinth.",
+    "personName": "Paul",
+    "color": "#7B2D8E",
+    "stops": [
+      { "name": "Antioch of Syria", "description": "Paul proposed revisiting the churches. He and Barnabas separated over John Mark; Paul chose Silas.", "scriptureRef": "Acts 15:36-41", "latitude": 36.2, "longitude": 36.15, "stopOrder": 1 },
+      { "name": "Derbe and Lystra", "description": "Paul recruited Timothy, who was well spoken of by the brethren. Timothy was circumcised because of the Jews.", "scriptureRef": "Acts 16:1-5", "latitude": 37.5667, "longitude": 32.3333, "stopOrder": 2 },
+      { "name": "Troas", "description": "Paul had a vision of a man from Macedonia calling, 'Come over and help us.' Luke joined the team here.", "scriptureRef": "Acts 16:8-10", "latitude": 39.7517, "longitude": 26.1592, "stopOrder": 3 },
+      { "name": "Philippi", "description": "First European city evangelized. Lydia was converted; Paul and Silas were imprisoned, and the jailer was saved after the earthquake.", "scriptureRef": "Acts 16:11-40", "latitude": 41.0114, "longitude": 24.2872, "stopOrder": 4 },
+      { "name": "Thessalonica", "description": "Paul reasoned from the Scriptures in the synagogue for three Sabbaths. Some Jews and many Greeks believed, but a mob formed.", "scriptureRef": "Acts 17:1-9", "latitude": 40.6401, "longitude": 22.9444, "stopOrder": 5 },
+      { "name": "Berea", "description": "The Bereans were more noble-minded, examining the Scriptures daily. Many believed, but Thessalonian agitators followed.", "scriptureRef": "Acts 17:10-14", "latitude": 40.5256, "longitude": 22.3508, "stopOrder": 6 },
+      { "name": "Athens", "description": "Paul preached at the Areopagus (Mars Hill), proclaiming the unknown God. Some mocked, but Dionysius and Damaris believed.", "scriptureRef": "Acts 17:15-34", "latitude": 37.9838, "longitude": 23.7275, "stopOrder": 7 },
+      { "name": "Corinth", "description": "Paul stayed 18 months, working with Aquila and Priscilla as tentmakers. Many Corinthians believed. Paul wrote 1 & 2 Thessalonians here.", "scriptureRef": "Acts 18:1-18", "latitude": 37.9063, "longitude": 22.8803, "stopOrder": 8 },
+      { "name": "Ephesus", "description": "Brief stop where Paul left Aquila and Priscilla. He reasoned in the synagogue and promised to return.", "scriptureRef": "Acts 18:19-21", "latitude": 37.9392, "longitude": 27.341, "stopOrder": 9 },
+      { "name": "Caesarea Maritima", "description": "Paul landed and went up to greet the church before returning to Antioch.", "scriptureRef": "Acts 18:22", "latitude": 32.4998, "longitude": 34.8903, "stopOrder": 10 },
+      { "name": "Antioch of Syria (Return)", "description": "Paul returned to his sending church, completing the second missionary journey.", "scriptureRef": "Acts 18:22", "latitude": 36.2, "longitude": 36.15, "stopOrder": 11 }
+    ]
+  },
+  {
+    "name": "Paul's Third Missionary Journey",
+    "slug": "pauls-third-missionary-journey",
+    "description": "Paul's third expedition (c. AD 53-57), centered on a three-year ministry in Ephesus, followed by visits to Greece and a return to Jerusalem where he was arrested.",
+    "personName": "Paul",
+    "color": "#C0392B",
+    "stops": [
+      { "name": "Antioch of Syria", "description": "Paul departed after spending some time strengthening the disciples.", "scriptureRef": "Acts 18:23", "latitude": 36.2, "longitude": 36.15, "stopOrder": 1 },
+      { "name": "Galatia and Phrygia", "description": "Paul traveled through the region strengthening all the disciples in the churches he had established.", "scriptureRef": "Acts 18:23", "latitude": 39.6333, "longitude": 32.15, "stopOrder": 2 },
+      { "name": "Ephesus", "description": "Paul's longest ministry at one location — nearly three years. The word of the Lord spread throughout Asia. The silversmiths' riot occurred. He wrote 1 Corinthians here.", "scriptureRef": "Acts 19:1-41", "latitude": 37.9392, "longitude": 27.341, "stopOrder": 3 },
+      { "name": "Troas", "description": "Paul came to preach the gospel. On the return, Eutychus fell from a window during Paul's long sermon and was raised.", "scriptureRef": "Acts 20:5-12; 2 Corinthians 2:12", "latitude": 39.7517, "longitude": 26.1592, "stopOrder": 4 },
+      { "name": "Philippi", "description": "Paul visited the church and celebrated the Feast of Unleavened Bread.", "scriptureRef": "Acts 20:6", "latitude": 41.0114, "longitude": 24.2872, "stopOrder": 5 },
+      { "name": "Thessalonica", "description": "Paul passed through Macedonia, giving much encouragement to the believers.", "scriptureRef": "Acts 20:1-2", "latitude": 40.6401, "longitude": 22.9444, "stopOrder": 6 },
+      { "name": "Corinth", "description": "Paul spent three months in Greece. He wrote the Epistle to the Romans from Corinth.", "scriptureRef": "Acts 20:2-3", "latitude": 37.9063, "longitude": 22.8803, "stopOrder": 7 },
+      { "name": "Assos", "description": "Paul walked overland from Troas to Assos, where his companions picked him up by ship.", "scriptureRef": "Acts 20:13-14", "latitude": 39.4903, "longitude": 26.3347, "stopOrder": 8 },
+      { "name": "Miletus", "description": "Paul summoned the Ephesian elders and gave his emotional farewell address, warning of future dangers.", "scriptureRef": "Acts 20:17-38", "latitude": 37.5306, "longitude": 27.2778, "stopOrder": 9 },
+      { "name": "Tyre", "description": "Paul stayed seven days. Disciples urged him through the Spirit not to go to Jerusalem.", "scriptureRef": "Acts 21:3-6", "latitude": 33.2705, "longitude": 35.2038, "stopOrder": 10 },
+      { "name": "Ptolemais", "description": "Paul stopped for one day and greeted the brethren.", "scriptureRef": "Acts 21:7", "latitude": 32.9261, "longitude": 35.0728, "stopOrder": 11 },
+      { "name": "Caesarea Maritima", "description": "Paul stayed with Philip the evangelist. The prophet Agabus warned Paul of his coming arrest in Jerusalem.", "scriptureRef": "Acts 21:8-14", "latitude": 32.4998, "longitude": 34.8903, "stopOrder": 12 },
+      { "name": "Jerusalem", "description": "Paul arrived and was arrested in the Temple after being accused of bringing Greeks into the inner courts.", "scriptureRef": "Acts 21:15-36", "latitude": 31.7683, "longitude": 35.2137, "stopOrder": 13 }
+    ]
+  },
+  {
+    "name": "Paul's Voyage to Rome",
+    "slug": "pauls-voyage-to-rome",
+    "description": "Paul's perilous journey as a prisoner from Caesarea to Rome (c. AD 59-60), including shipwreck on Malta, fulfilling his desire to preach the gospel in the imperial capital.",
+    "personName": "Paul",
+    "color": "#1A5276",
+    "stops": [
+      { "name": "Caesarea Maritima", "description": "Paul had been imprisoned here for two years. He appealed to Caesar and was sent to Rome under the centurion Julius.", "scriptureRef": "Acts 27:1", "latitude": 32.4998, "longitude": 34.8903, "stopOrder": 1 },
+      { "name": "Sidon", "description": "Julius kindly allowed Paul to visit friends and receive their care.", "scriptureRef": "Acts 27:3", "latitude": 33.5575, "longitude": 35.3714, "stopOrder": 2 },
+      { "name": "Myra", "description": "The centurion found an Alexandrian ship sailing for Italy and transferred the prisoners.", "scriptureRef": "Acts 27:5-6", "latitude": 36.2589, "longitude": 29.9839, "stopOrder": 3 },
+      { "name": "Fair Havens, Crete", "description": "Paul warned that the voyage would be disastrous, but the centurion followed the pilot's advice to continue.", "scriptureRef": "Acts 27:8-12", "latitude": 34.9667, "longitude": 24.8, "stopOrder": 4 },
+      { "name": "Storm at Sea (Euraquilo)", "description": "A violent northeaster drove the ship for fourteen days. All hope of survival was abandoned until an angel assured Paul.", "scriptureRef": "Acts 27:13-26", "latitude": 36.0, "longitude": 20.0, "stopOrder": 5 },
+      { "name": "Malta (Shipwreck)", "description": "The ship ran aground and broke apart, but all 276 people survived. Paul was bitten by a viper but unharmed. He healed Publius' father and many others.", "scriptureRef": "Acts 27:39-28:10", "latitude": 35.9375, "longitude": 14.3754, "stopOrder": 6 },
+      { "name": "Syracuse", "description": "After three months on Malta, they sailed on an Alexandrian ship and stopped at Syracuse for three days.", "scriptureRef": "Acts 28:11-12", "latitude": 37.0755, "longitude": 15.2866, "stopOrder": 7 },
+      { "name": "Rhegium", "description": "The ship stopped at the southern tip of Italy before sailing north to Puteoli.", "scriptureRef": "Acts 28:13", "latitude": 38.1147, "longitude": 15.6437, "stopOrder": 8 },
+      { "name": "Puteoli", "description": "Paul found believers and stayed seven days before continuing to Rome.", "scriptureRef": "Acts 28:13-14", "latitude": 40.8264, "longitude": 14.1214, "stopOrder": 9 },
+      { "name": "Forum of Appius", "description": "Brothers from Rome traveled south to meet Paul. He thanked God and took courage.", "scriptureRef": "Acts 28:15", "latitude": 41.325, "longitude": 13.095, "stopOrder": 10 },
+      { "name": "Rome", "description": "Paul lived under house arrest for two years, preaching the kingdom of God and teaching about Jesus boldly and without hindrance.", "scriptureRef": "Acts 28:16-31", "latitude": 41.9028, "longitude": 12.4964, "stopOrder": 11 }
+    ]
+  },
+  {
+    "name": "Jesus' Ministry in Galilee and Judea",
+    "slug": "jesus-ministry-galilee-judea",
+    "description": "The earthly ministry of Jesus Christ from his baptism to his crucifixion and resurrection, traveling throughout Galilee, Judea, and surrounding regions.",
+    "personName": "Jesus",
+    "color": "#DAA520",
+    "stops": [
+      { "name": "Bethlehem", "description": "Jesus was born in a manger in Bethlehem, the city of David, fulfilling the prophecy of Micah.", "scriptureRef": "Matthew 2:1; Luke 2:4-7", "latitude": 31.7054, "longitude": 35.2024, "stopOrder": 1 },
+      { "name": "Egypt", "description": "Joseph and Mary fled to Egypt with the infant Jesus to escape Herod's slaughter of the innocents.", "scriptureRef": "Matthew 2:13-15", "latitude": 30.0444, "longitude": 31.2357, "stopOrder": 2 },
+      { "name": "Nazareth", "description": "Jesus grew up in Nazareth, working as a carpenter. He was rejected when he taught in the synagogue here.", "scriptureRef": "Luke 2:39-40; 4:16-30", "latitude": 32.6996, "longitude": 35.3035, "stopOrder": 3 },
+      { "name": "Jordan River (Baptism)", "description": "Jesus was baptized by John the Baptist. The Holy Spirit descended like a dove and God's voice declared, 'This is my beloved Son.'", "scriptureRef": "Matthew 3:13-17", "latitude": 31.8367, "longitude": 35.5508, "stopOrder": 4 },
+      { "name": "Wilderness of Judea (Temptation)", "description": "Jesus fasted 40 days and was tempted three times by Satan, overcoming each temptation with Scripture.", "scriptureRef": "Matthew 4:1-11", "latitude": 31.6, "longitude": 35.35, "stopOrder": 5 },
+      { "name": "Cana", "description": "Jesus performed his first miracle, turning water into wine at a wedding feast.", "scriptureRef": "John 2:1-11", "latitude": 32.7472, "longitude": 35.3411, "stopOrder": 6 },
+      { "name": "Capernaum", "description": "Center of Jesus' Galilean ministry. He healed Peter's mother-in-law, the paralytic lowered through the roof, and called Matthew.", "scriptureRef": "Matthew 4:13; Mark 2:1-12", "latitude": 32.8803, "longitude": 35.5753, "stopOrder": 7 },
+      { "name": "Sea of Galilee", "description": "Jesus calmed the storm, walked on water, and called his first disciples — Peter, Andrew, James, and John — from fishing here.", "scriptureRef": "Mark 4:35-41; Matthew 14:22-33", "latitude": 32.8231, "longitude": 35.5831, "stopOrder": 8 },
+      { "name": "Mount of Beatitudes", "description": "Jesus delivered the Sermon on the Mount, teaching the Beatitudes, the Lord's Prayer, and the Golden Rule.", "scriptureRef": "Matthew 5-7", "latitude": 32.8806, "longitude": 35.5569, "stopOrder": 9 },
+      { "name": "Bethsaida", "description": "Jesus fed the 5,000 with five loaves and two fish near Bethsaida.", "scriptureRef": "Luke 9:10-17", "latitude": 32.9078, "longitude": 35.6311, "stopOrder": 10 },
+      { "name": "Caesarea Philippi", "description": "Peter confessed Jesus as the Christ. Jesus revealed he must suffer, die, and rise again.", "scriptureRef": "Matthew 16:13-28", "latitude": 33.2481, "longitude": 35.6933, "stopOrder": 11 },
+      { "name": "Nain", "description": "Jesus raised a widow's only son from the dead as the funeral procession was leaving the town.", "scriptureRef": "Luke 7:11-17", "latitude": 32.6306, "longitude": 35.3472, "stopOrder": 12 },
+      { "name": "Sychar (Jacob's Well)", "description": "Jesus spoke with the Samaritan woman at the well, revealing himself as the Messiah and offering living water.", "scriptureRef": "John 4:1-42", "latitude": 32.2139, "longitude": 35.2858, "stopOrder": 13 },
+      { "name": "Bethany", "description": "Jesus raised Lazarus from the dead after four days in the tomb. Home of Mary, Martha, and Lazarus.", "scriptureRef": "John 11:1-44", "latitude": 31.7701, "longitude": 35.2555, "stopOrder": 14 },
+      { "name": "Jerusalem (Triumphal Entry)", "description": "Jesus entered Jerusalem on a donkey as crowds waved palm branches and shouted 'Hosanna!'", "scriptureRef": "Matthew 21:1-11", "latitude": 31.7683, "longitude": 35.2137, "stopOrder": 15 },
+      { "name": "Gethsemane", "description": "Jesus prayed in agony, 'Not my will, but yours be done.' He was betrayed by Judas and arrested.", "scriptureRef": "Matthew 26:36-56", "latitude": 31.7792, "longitude": 35.2403, "stopOrder": 16 },
+      { "name": "Golgotha (Crucifixion)", "description": "Jesus was crucified at the Place of the Skull, bearing the sins of the world. He cried, 'It is finished!'", "scriptureRef": "John 19:17-30", "latitude": 31.7786, "longitude": 35.2297, "stopOrder": 17 },
+      { "name": "Empty Tomb (Resurrection)", "description": "On the third day, the tomb was found empty. The risen Jesus appeared to Mary Magdalene and the disciples.", "scriptureRef": "Matthew 28:1-10; John 20:1-18", "latitude": 31.7786, "longitude": 35.2297, "stopOrder": 18 },
+      { "name": "Emmaus", "description": "The risen Jesus walked with two disciples on the road to Emmaus, opening the Scriptures to them.", "scriptureRef": "Luke 24:13-35", "latitude": 31.8389, "longitude": 34.9892, "stopOrder": 19 },
+      { "name": "Mount of Olives (Ascension)", "description": "Jesus gave the Great Commission and ascended to heaven. Angels promised he would return in the same way.", "scriptureRef": "Acts 1:6-12", "latitude": 31.7781, "longitude": 35.2469, "stopOrder": 20 }
+    ]
+  }
+]
