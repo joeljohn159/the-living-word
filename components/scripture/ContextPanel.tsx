@@ -79,8 +79,8 @@ function DesktopContextPanel({ isOpen, toggle, activeTab, setTab, mediaItems }: 
   return (
     <aside
       className={cn(
-        "hidden lg:flex flex-col border-l border-[var(--border)] bg-[var(--bg-secondary)] transition-all duration-300",
-        isOpen ? "w-80 xl:w-96" : "w-12",
+        "hidden lg:flex flex-col shrink-0 border-l border-[var(--border)] bg-[var(--bg-secondary)] transition-all duration-300 overflow-hidden",
+        isOpen ? "w-72 xl:w-80 2xl:w-96" : "w-12",
       )}
       aria-label="Context panel"
     >
@@ -202,13 +202,17 @@ function MobileContextPanel({ isOpen, toggle, activeTab, setTab, mediaItems }: P
 
 function TabBar({ activeTab, setTab }: { activeTab: string; setTab: (t: string) => void }) {
   return (
-    <div className="flex border-b border-[var(--border)] overflow-x-auto scrollbar-hide">
+    <div
+      className="flex border-b border-[var(--border)] overflow-x-auto scrollbar-hide shrink-0"
+      role="tablist"
+      aria-label="Context panel tabs"
+    >
       {TABS.map(({ id, label, icon: Icon }) => (
         <button
           key={id}
           onClick={() => setTab(id)}
           className={cn(
-            "flex-1 flex flex-col items-center gap-1 py-3 text-xs transition-colors touch-target min-w-[3.5rem]",
+            "flex-1 shrink-0 flex flex-col items-center gap-1 py-3 text-xs whitespace-nowrap transition-colors touch-target min-w-[3.5rem]",
             activeTab === id
               ? "text-[var(--accent-gold)] border-b-2 border-[var(--accent-gold)]"
               : "text-[var(--text-muted)] hover:text-[var(--text-secondary)]",

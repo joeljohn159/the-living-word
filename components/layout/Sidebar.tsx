@@ -11,7 +11,9 @@ import { ContextPanelContent } from "@/components/layout/ContextPanelContent";
 import { CONTEXT_TABS } from "@/components/layout/context-panel-tabs";
 import { cn } from "@/lib/utils";
 
-const PANEL_WIDTH = "w-[380px]";
+/** Responsive panel width: narrower on lg, full on xl+ */
+const PANEL_WIDTH_CLASS = "w-[320px] xl:w-[380px]";
+const PANEL_WIDTH_PX_XL = 380;
 
 /**
  * Right-side context panel for the chapter reading page.
@@ -86,7 +88,12 @@ function DesktopSidebar({
   onTabChange,
 }: DesktopSidebarProps) {
   return (
-    <>
+    <div
+      className={cn(
+        "hidden lg:flex shrink-0 transition-all duration-300",
+        open ? PANEL_WIDTH_CLASS : "w-0",
+      )}
+    >
       {/* Toggle button — always visible */}
       <button
         onClick={onToggle}
@@ -96,7 +103,7 @@ function DesktopSidebar({
           "text-muted-foreground hover:text-foreground",
           "transition-all duration-300",
           "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
-          open ? "right-[380px]" : "right-0"
+          open ? "right-[320px] xl:right-[380px]" : "right-0"
         )}
         aria-label={open ? "Close context panel (F)" : "Open context panel (F)"}
         title={open ? "Close panel (F)" : "Open panel (F)"}
@@ -112,15 +119,15 @@ function DesktopSidebar({
       <AnimatePresence>
         {open && (
           <motion.aside
-            initial={{ x: 380 }}
+            initial={{ x: PANEL_WIDTH_PX_XL }}
             animate={{ x: 0 }}
-            exit={{ x: 380 }}
+            exit={{ x: PANEL_WIDTH_PX_XL }}
             transition={{ duration: 0.3, ease: "easeOut" }}
             className={cn(
               "fixed top-16 right-0 bottom-0 z-20",
-              PANEL_WIDTH,
+              PANEL_WIDTH_CLASS,
               "bg-card border-l border-border shadow-xl",
-              "flex flex-col"
+              "flex flex-col overflow-hidden"
             )}
             role="complementary"
             aria-label="Context panel"
@@ -131,7 +138,7 @@ function DesktopSidebar({
           </motion.aside>
         )}
       </AnimatePresence>
-    </>
+    </div>
   );
 }
 
@@ -203,11 +210,14 @@ interface PanelHeaderProps {
 function PanelHeader({ activeTab, onTabChange }: PanelHeaderProps) {
   return (
     <Tabs value={activeTab} onValueChange={onTabChange}>
-      <TabsList aria-label="Context panel tabs">
+      <TabsList
+        className="overflow-x-auto scrollbar-hide"
+        aria-label="Context panel tabs"
+      >
         {CONTEXT_TABS.map(({ key, label, icon: Icon }) => (
-          <TabsTrigger key={key} value={key}>
+          <TabsTrigger key={key} value={key} className="shrink-0">
             <Icon className="h-3.5 w-3.5" aria-hidden="true" />
-            <span className="hidden sm:inline">{label}</span>
+            <span className="hidden sm:inline truncate">{label}</span>
           </TabsTrigger>
         ))}
       </TabsList>

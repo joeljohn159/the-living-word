@@ -101,10 +101,10 @@ export default async function ChapterPage({ params }: ChapterPageProps) {
         bookName={book.name}
         chapter={chapterNum}
       >
-        <div className="flex flex-col lg:flex-row min-h-[calc(100vh-4rem)]">
+        <div className="flex flex-col lg:flex-row min-h-[calc(100vh-4rem)] overflow-x-hidden">
           {/* Main scripture area — single column on mobile */}
           <SwipeableChapter prev={prev} next={next}>
-            <main className="flex-1 min-w-0">
+            <main className="flex-1 min-w-0 overflow-hidden">
               {/* Chapter header */}
               <header className="pt-6 sm:pt-8 pb-4 sm:pb-6 px-4 sm:px-6 lg:px-12 text-center">
                 <p className="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-[var(--text-muted)] mb-1.5 sm:mb-2">

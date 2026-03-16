@@ -9,11 +9,11 @@ export function ChapterToolbar() {
   return (
     <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 pb-6">
       <div
-        className="flex items-center justify-between py-3 px-4
+        className="flex flex-wrap items-center justify-between gap-2 py-3 px-3 sm:px-4
                     rounded-lg border border-[var(--border)] bg-[var(--bg-secondary)]"
       >
         <ReadingModeToggle />
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1.5 sm:gap-2">
           <DictionaryModeToggle />
           <FontSizeControls />
         </div>

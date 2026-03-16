@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useEffect } from "react";
+import { useState, useCallback, useEffect, useRef, useLayoutEffect } from "react";
 import { cn } from "@/lib/utils";
 import type { DictionaryEntry } from "@/lib/dictionary";
 import { DictionaryBottomSheet } from "./DictionaryBottomSheet";
@@ -89,14 +89,34 @@ export function DictionaryTooltip({ entry, children }: DictionaryTooltipProps) {
   );
 }
 
-/** Desktop tooltip card positioned above the hotword. */
+/** Desktop tooltip card positioned above the hotword, clamped to viewport. */
 function TooltipCard({ entry }: { entry: DictionaryEntry }) {
+  const tooltipRef = useRef<HTMLSpanElement>(null);
+  const [offset, setOffset] = useState(0);
+
+  useLayoutEffect(() => {
+    const el = tooltipRef.current;
+    if (!el) return;
+    const rect = el.getBoundingClientRect();
+    const vw = window.innerWidth;
+    const margin = 8;
+
+    if (rect.right > vw - margin) {
+      setOffset(-(rect.right - vw + margin));
+    } else if (rect.left < margin) {
+      setOffset(margin - rect.left);
+    }
+  }, []);
+
   return (
     <span
+      ref={tooltipRef}
       role="tooltip"
+      style={offset !== 0 ? { transform: `translateX(calc(-50% + ${offset}px))` } : undefined}
       className={cn(
-        "absolute bottom-full left-1/2 -translate-x-1/2 mb-2 z-50",
-        "w-64 p-3 rounded-lg",
+        "absolute bottom-full left-1/2 mb-2 z-50",
+        offset === 0 && "-translate-x-1/2",
+        "w-64 max-w-[calc(100vw-1rem)] p-3 rounded-lg",
         "bg-[var(--bg-card)] border border-[var(--border)]",
         "shadow-lg shadow-black/20",
         "animate-fade-in",

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useEffect, useRef } from "react";
+import { useState, useCallback, useEffect, useRef, forwardRef, useLayoutEffect } from "react";
 import Link from "next/link";
 import { ArrowRight, Link2 } from "lucide-react";
 import { cn, truncate } from "@/lib/utils";
@@ -123,21 +123,67 @@ interface PopoverCardProps {
   onViewAll: () => void;
 }
 
-import { forwardRef } from "react";
+/** Clamp the popover within the viewport horizontally. */
+function usePopoverPosition(ref: React.RefObject<HTMLDivElement | null>) {
+  const [style, setStyle] = useState<React.CSSProperties>({});
+
+  useLayoutEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const rect = el.getBoundingClientRect();
+    const vw = window.innerWidth;
+    const adjustments: React.CSSProperties = {};
+
+    // If overflowing right edge
+    if (rect.right > vw - 8) {
+      adjustments.left = "auto";
+      adjustments.right = "0";
+    }
+    // If overflowing left edge
+    if (rect.left < 8) {
+      adjustments.left = "0";
+      adjustments.right = "auto";
+    }
+    // On mobile, constrain width and center
+    if (vw < 640) {
+      adjustments.position = "fixed";
+      adjustments.left = "8px";
+      adjustments.right = "8px";
+      adjustments.width = "auto";
+      adjustments.maxWidth = `${vw - 16}px`;
+    }
+    setStyle(adjustments);
+  }, [ref]);
+
+  return style;
+}
 
 const PopoverCard = forwardRef<HTMLDivElement, PopoverCardProps>(
   function PopoverCard({ verseRefs, onViewAll }, ref) {
     const preview = verseRefs.slice(0, MAX_PREVIEW_REFS);
     const remaining = verseRefs.length - MAX_PREVIEW_REFS;
+    const innerRef = useRef<HTMLDivElement>(null);
+    const positionStyle = usePopoverPosition(innerRef);
+
+    // Merge refs
+    const setRefs = useCallback(
+      (node: HTMLDivElement | null) => {
+        (innerRef as React.MutableRefObject<HTMLDivElement | null>).current = node;
+        if (typeof ref === "function") ref(node);
+        else if (ref) (ref as React.MutableRefObject<HTMLDivElement | null>).current = node;
+      },
+      [ref],
+    );
 
     return (
       <div
-        ref={ref}
+        ref={setRefs}
         role="dialog"
         aria-label="Cross-references preview"
+        style={positionStyle}
         className={cn(
           "absolute top-full left-0 mt-1.5 z-50",
-          "w-72 rounded-lg",
+          "w-72 max-w-[calc(100vw-1rem)] rounded-lg",
           "bg-[var(--bg-card)] border border-[var(--border)]",
           "shadow-lg shadow-black/20",
           "animate-fade-in",
