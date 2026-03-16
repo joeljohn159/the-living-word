@@ -1,579 +1,181 @@
 {
-  "project": "the-living-word",
-  "framework": "nextjs-14-app-router",
-  "description": "A world-class KJV Bible website with museum-quality UI, interactive maps, archaeological evidence, art gallery, dictionary for archaic words, and comprehensive SEO — built with Next.js 14, Tailwind CSS 4, shadcn/ui, SQLite/Drizzle, Leaflet.js, FlexSearch, and Zustand",
-  "created": "2026-03-16T01:14:05.885Z",
+  "project": "the-living-word-fixes",
+  "framework": "nextjs",
+  "description": "Fix existing issues in The Living Word KJV Bible app: light mode text readability on home page, add Wikipedia images and references throughout, fix overlapping/alignment issues, and ensure production readiness",
+  "created": "2026-03-16T05:05:53.015Z",
   "epics": [
     {
-      "id": "project-setup",
-      "title": "Project Setup & Foundation",
+      "id": "light-mode-fixes",
+      "title": "Light Mode Text Readability & Theme Fixes",
       "status": "planned",
       "stories": [
         {
-          "id": "scaffold-nextjs",
-          "title": "Scaffold Next.js 14 Project with Core Dependencies",
-          "description": "Initialize Next.js 14 App Router project with TypeScript. Install and configure: Tailwind CSS 4, shadcn/ui, Drizzle ORM, better-sqlite3, Zustand, Framer Motion, Lucide React. Set up Google Fonts (Cormorant Garamond + Source Sans 3). Create the root layout.tsx with font providers. Set up the CSS custom properties for the dark/light/sepia color palette as specified. Create the full folder structure: app/, components/, lib/, hooks/, stores/, data/, public/images/. Add .env.example and basic tsconfig paths.",
-          "type": "fullstack",
-          "status": "reviewing",
+          "id": "hero-light-mode",
+          "title": "Fix hero section overlay for light/sepia themes",
+          "description": "The HeroSection uses hardcoded dark overlay colors (from-[#0F0F1A]/80 via-[#0F0F1A]/70 to-[#0F0F1A]/95) that make text hard to read in light mode because the overlay stays dark but text colors change to dark text-primary. Fix by: (1) Making the overlay use CSS variables so it adapts per theme — in light mode use a lighter semi-transparent overlay with dark text that's readable, (2) Ensure the hero h1, subtitle, verse text, verse ref, and CTA button all have sufficient contrast in all 3 themes, (3) The 'King James Version' label, scroll indicator, and 'Begin Reading' button should also be visible. Files to modify: components/landing/HeroSection.tsx, app/globals.css. Acceptance criteria: All hero text is readable with WCAG AA contrast in dark, light, and sepia themes.",
+          "type": "ui",
+          "status": "planned",
           "branch": null,
-          "designApproved": true,
+          "designApproved": false,
           "tags": [],
           "priority": 1,
           "dependencies": []
         },
         {
-          "id": "theme-provider",
-          "title": "Theme System with Dark/Light/Sepia Modes",
-          "description": "Build the theme provider using Zustand + localStorage persistence. Implement the three themes (dark default, light, sepia) with CSS custom properties matching the exact color palette from the spec. Create ThemeToggle component. Create the Zustand preferences store (stores/preferences.ts) handling theme, fontSize, readingMode. Wire theme class to <html> element. Keyboard shortcut 'T' cycles themes.",
+          "id": "landing-sections-light-mode",
+          "title": "Fix light mode contrast across all landing sections",
+          "description": "Review and fix text contrast issues across BooksGrid, ArtworkOfDay, MapPreview, EvidenceSpotlight, TimelinePreview, and SearchSection in light mode. Key issues: (1) MapPreview has hardcoded dark background (from-[#1a1f2e] via-[#1e2438] to-[#151927]) — needs theme-aware background, (2) Map pin labels have bg-[var(--bg-primary)]/80 which may not contrast well, (3) Section headings using text-gold class may not have enough contrast on light backgrounds, (4) Check all text-[var(--text-muted)] and text-[var(--text-secondary)] elements for sufficient contrast. Files to modify: components/landing/MapPreview.tsx, components/landing/BooksGrid.tsx, components/landing/TimelinePreview.tsx, components/landing/SearchSection.tsx, components/landing/EvidenceSpotlight.tsx, app/globals.css (if CSS variable adjustments needed). Acceptance criteria: All landing page sections readable in all 3 themes.",
           "type": "ui",
-          "status": "reviewing",
+          "status": "planned",
           "branch": null,
-          "designApproved": true,
+          "designApproved": false,
           "tags": [],
           "priority": 2,
           "dependencies": [
-            "scaffold-nextjs"
-          ]
-        },
-        {
-          "id": "layout-components",
-          "title": "Header, Footer, and Navigation Shell",
-          "description": "Build the site-wide Header (components/layout/Header.tsx) with: site logo/title 'The Living Word' in Cormorant Garamond, main nav links (Bible, Maps, Timeline, Evidence, People, Dictionary, Search), theme toggle, KJV badge with 'More translations coming soon' tooltip, mobile hamburger menu. Build Footer with nav links, about section, copyright, version selector. Build MobileNav with slide-out drawer. Use shadcn/ui Sheet for mobile nav. Dark museum-quality aesthetic — deep charcoal with warm gold accents.",
-          "type": "ui",
-          "status": "reviewing",
-          "branch": null,
-          "designApproved": true,
-          "tags": [],
-          "priority": 3,
-          "dependencies": [
-            "theme-provider"
+            "hero-light-mode"
           ]
         }
       ]
     },
     {
-      "id": "database-seed",
-      "title": "Database Schema & Seed Data",
+      "id": "wikipedia-images-references",
+      "title": "Add Wikipedia Images & References Throughout",
       "status": "planned",
       "stories": [
         {
-          "id": "db-schema",
-          "title": "Drizzle ORM Schema & SQLite Connection",
-          "description": "Create lib/db/schema.ts with Drizzle schema definitions for ALL tables: books, chapters, verses, translations, verse_translations, media, media_references, evidence, evidence_references, locations, location_references, journeys, journey_stops, dictionary, cross_references, people, people_references, reading_plans. Create lib/db/connection.ts with better-sqlite3 singleton connection. Create drizzle.config.ts. Add migration generation script to package.json. Run initial migration to create all tables.",
-          "type": "backend",
-          "status": "reviewing",
+          "id": "people-wikipedia-images",
+          "title": "Add Wikipedia images to people profiles and cards",
+          "description": "People pages currently show only a Crown icon placeholder. Add Wikipedia/Wikimedia Commons images for biblical figures. (1) Add a wikipediaImageUrl field to the people data/seed, (2) Create a helper that builds Wikimedia Commons thumbnail URLs for known biblical figures, (3) Update PersonCard component to show Wikipedia image instead of just Crown icon, (4) Update the person profile page (app/people/[slug]/page.tsx) header to show a Wikipedia portrait image alongside the Crown icon, (5) Add proper attribution text 'Image: Wikimedia Commons' below images, (6) Handle image load errors gracefully with fallback to the Crown icon. Create a data mapping file at lib/data/people-images.ts with Wikimedia Commons URLs for major biblical figures (at minimum: Abraham, Moses, David, Solomon, Jesus, Paul, Peter, Mary, Adam, Eve, Noah, Jacob, Joseph, Isaiah, Daniel, Elijah, Ruth, Esther, Samson, Joshua). Files to modify: components/people/PersonCard.tsx, app/people/[slug]/page.tsx, lib/data/people-images.ts (new). Acceptance criteria: People pages show relevant Wikipedia artwork images with attribution.",
+          "type": "ui",
+          "status": "planned",
           "branch": null,
-          "designApproved": true,
-          "tags": [],
-          "priority": 1,
-          "dependencies": [
-            "scaffold-nextjs"
-          ]
-        },
-        {
-          "id": "seed-kjv-text",
-          "title": "Seed Full KJV Bible Text (31,102 Verses)",
-          "description": "Download KJV Bible text from a public domain source (e.g., scrollmapper/bible_databases on GitHub). Create data/kjv.json or use CSV. Build lib/db/seed.ts script that: inserts all 66 books with name, abbreviation, testament, chapter_count, category, description, author, date_written, key_themes, slug. Inserts all 1,189 chapters with summaries. Inserts all 31,102 verses. Include proper book metadata (categories: Law, History, Poetry, Major Prophets, Minor Prophets, Gospels, Pauline Epistles, General Epistles, Apocalyptic). Add 'KJV' to translations table. Add npm script 'db:seed'.",
-          "type": "backend",
-          "status": "reviewing",
-          "branch": null,
-          "designApproved": true,
-          "tags": [],
-          "priority": 2,
-          "dependencies": [
-            "db-schema"
-          ]
-        },
-        {
-          "id": "seed-dictionary",
-          "title": "Seed Archaic KJV Dictionary (300+ Words)",
-          "description": "Create data/dictionary.json with 300+ archaic KJV words including all specified words (begat, behold, betwixt, thee, thou, thy, thine, ye, etc.). Each entry needs: word, definition, modern_equivalent, part_of_speech, pronunciation, usage_notes, example_verse_id (link to an actual verse). Include ALL thee/thou/thy/thine/ye forms with grammar explanations. Add to seed script. Focus on words modern English readers would struggle with.",
-          "type": "backend",
-          "status": "blocked",
-          "branch": null,
-          "designApproved": true,
+          "designApproved": false,
           "tags": [],
           "priority": 3,
-          "dependencies": [
-            "seed-kjv-text"
-          ]
+          "dependencies": []
         },
         {
-          "id": "seed-cross-references",
-          "title": "Seed Cross-References (500+ Entries)",
-          "description": "Create data/cross-references.json with 500+ major cross-references. Include: all major OT prophecy → NT fulfillment pairs, Synoptic Gospel parallels, Kings/Chronicles parallels, key theological connections. Each entry has: source_verse_id, target_verse_id, relationship type (parallel, prophecy-fulfillment, quotation, allusion, contrast), and a brief note. Add to seed script.",
-          "type": "backend",
-          "status": "reviewing",
+          "id": "evidence-wikipedia-images",
+          "title": "Enhance evidence pages with additional Wikipedia images and source references",
+          "description": "Evidence pages already have some Wikimedia images but need: (1) Add more Wikipedia reference links — add a 'Learn More' section to evidence detail pages with links to relevant Wikipedia articles (e.g., Dead Sea Scrolls → https://en.wikipedia.org/wiki/Dead_Sea_Scrolls), (2) Create a data mapping at lib/data/evidence-references.ts mapping evidence slugs to Wikipedia article URLs, (3) Update the evidence detail page sidebar to include a 'Further Reading' card with Wikipedia links, (4) Add additional gallery images from Wikimedia Commons for each evidence item where available (multiple angles/views), (5) Ensure all images have proper Wikimedia attribution. Files to modify: app/evidence/[slug]/page.tsx, lib/data/evidence-references.ts (new), components/evidence/EvidenceCard.tsx. Acceptance criteria: Evidence detail pages show Wikipedia reference links and additional images.",
+          "type": "ui",
+          "status": "planned",
           "branch": null,
-          "designApproved": true,
+          "designApproved": false,
           "tags": [],
           "priority": 4,
-          "dependencies": [
-            "seed-kjv-text"
-          ]
+          "dependencies": []
         },
         {
-          "id": "seed-locations-journeys",
-          "title": "Seed Biblical Locations (100+) & Journeys",
-          "description": "Create data/locations.json with 100+ biblical locations with real coordinates: cities (Jerusalem, Bethlehem, Nazareth, Babylon, Rome, Antioch, Corinth), mountains (Sinai, Ararat, Carmel, Olivet, Zion, Moriah), water bodies (Jordan, Sea of Galilee, Red Sea, Dead Sea, Mediterranean), regions (Canaan, Judah, Samaria, Galilee, Mesopotamia). Create data/journeys.json with 5+ key journeys (Abraham Ur→Canaan, Exodus route, David's flight, Paul's 3 missionary journeys + Rome, Jesus' ministry). Include stop descriptions and scripture refs. Add location_references linking to verses. Add to seed script.",
-          "type": "backend",
-          "status": "reviewing",
+          "id": "landing-artwork-rotation",
+          "title": "Add rotating artwork with Wikipedia images on landing page",
+          "description": "Currently ArtworkOfDay only shows one hardcoded painting (Creation of Adam). Add a rotation of famous biblical artworks from Wikimedia Commons. (1) Create lib/data/artwork-gallery.ts with 10-15 famous biblical paintings from Wikimedia Commons (include: Creation of Adam, The Last Supper - Da Vinci, Moses with the Tablets - Rembrandt, David and Goliath - Caravaggio, The Annunciation - Fra Angelico, The Baptism of Christ - Verrocchio, Daniel in the Lions Den - Rubens, The Good Samaritan - Rembrandt, The Prodigal Son - Rembrandt, Judith Slaying Holofernes - Artemisia). Each entry should have: title, artist, yearCreated, imageUrl (Wikimedia Commons), description, attribution, and a wikipediaUrl, (2) Update ArtworkOfDay to rotate daily from this gallery, (3) Add the Wikipedia article link to the artwork card. Files to modify: components/landing/ArtworkOfDay.tsx, lib/data/artwork-gallery.ts (new). Acceptance criteria: Landing page shows a different artwork each day with proper attribution and Wikipedia link.",
+          "type": "ui",
+          "status": "planned",
           "branch": null,
-          "designApproved": true,
-          "tags": [],
-          "priority": 4,
-          "dependencies": [
-            "seed-kjv-text"
-          ]
-        },
-        {
-          "id": "seed-people",
-          "title": "Seed Biblical People (100+ Figures)",
-          "description": "Create data/people.json with 100+ key biblical figures. Include: name, also_known_as, description, birth_ref, death_ref, father_id, mother_id, spouse_ids, tribe_or_group. Cover: patriarchs (Adam→Joseph), Moses, judges, kings (Saul, David, Solomon), prophets (Isaiah, Jeremiah, Elijah, Elisha), NT figures (Jesus, Mary, apostles, Paul). Add people_references linking to verses. Add to seed script.",
-          "type": "backend",
-          "status": "reviewing",
-          "branch": null,
-          "designApproved": true,
-          "tags": [],
-          "priority": 4,
-          "dependencies": [
-            "seed-kjv-text"
-          ]
-        },
-        {
-          "id": "seed-media-evidence",
-          "title": "Seed Media (Paintings/Art) & Archaeological Evidence",
-          "description": "Create data/media-references.json with 1-2 paintings/images per book (Michelangelo, Rembrandt, Doré, Caravaggio, Raphael). Use Wikimedia Commons URLs as source_url. Include title, description, attribution, license (Public Domain), year_created. Create data/evidence.json with 50+ items: Dead Sea Scrolls, Rosetta Stone, Tel Dan Inscription, Cyrus Cylinder, Pilate Inscription, James Ossuary, Hezekiah's Tunnel, Babylonian Chronicles, Moabite Stone, Merneptah Stele, Codex Sinaiticus, Codex Vaticanus. Each with title, description, category, date_discovered, location_found, current_location, significance. Link via media_references and evidence_references. Add to seed script.",
-          "type": "backend",
-          "status": "reviewing",
-          "branch": null,
-          "designApproved": true,
+          "designApproved": false,
           "tags": [],
           "priority": 5,
-          "dependencies": [
-            "seed-kjv-text"
-          ]
-        },
-        {
-          "id": "db-queries",
-          "title": "Reusable Database Query Functions",
-          "description": "Create lib/db/queries.ts with all reusable query functions: getBooks(), getBookBySlug(), getChapter(bookSlug, chapterNum), getVerse(bookSlug, chapter, verse), getChapterVerses(), getCrossReferences(verseId), getDictionaryWord(word), getDictionaryWords(), getLocationsByChapter(), getPeopleByChapter(), getMediaByChapter(), getEvidenceByChapter(), searchVerses(), getJourneys(), getJourneyWithStops(), getPerson(), getBookPeople(), getBookLocations(), getBookMedia(), getBookEvidence(). All queries typed with Drizzle. Optimize with proper indexes.",
-          "type": "backend",
-          "status": "reviewing",
-          "branch": null,
-          "designApproved": true,
-          "tags": [],
-          "priority": 6,
-          "dependencies": [
-            "seed-kjv-text",
-            "seed-dictionary",
-            "seed-cross-references",
-            "seed-locations-journeys",
-            "seed-people",
-            "seed-media-evidence"
-          ]
+          "dependencies": []
         }
       ]
     },
     {
-      "id": "core-reading",
-      "title": "Core Reading Experience",
+      "id": "layout-alignment-fixes",
+      "title": "Fix Overlapping & Alignment Issues",
       "status": "planned",
       "stories": [
         {
-          "id": "chapter-reading-page",
-          "title": "Chapter Reading Page — Core Scripture Display",
-          "description": "Build the most important page: app/bible/[bookSlug]/[chapter]/page.tsx. Server component that fetches chapter verses from DB. Render scripture in Cormorant Garamond at 20px with 1.9 line-height. Verse numbers as superscript muted gold. Paragraph-mode reading (default) with toggle to verse-per-line mode. Previous/next chapter navigation arrows. Keyboard shortcuts ← → for chapter nav. Reading progress bar at top (components/scripture/ReadingProgress.tsx). Font size controls (A- A+) persisted in Zustand. Two-panel layout on desktop (scripture left, context panel placeholder right). Single column on mobile. Beautiful dark theme styling matching spec.",
-          "type": "fullstack",
-          "status": "reviewing",
-          "branch": null,
-          "designApproved": true,
-          "tags": [],
-          "priority": 1,
-          "dependencies": [
-            "db-queries",
-            "layout-components"
-          ]
-        },
-        {
-          "id": "dictionary-hotwords",
-          "title": "Dictionary Hotword Detection & Tooltips",
-          "description": "Build the signature dictionary feature. Create lib/dictionary.ts with word matching logic — build a Set of dictionary words for O(1) lookup. During SSR, match verse text against dictionary and embed word positions as data attributes. Create components/scripture/VerseText.tsx that renders verse text with archaic words wrapped in interactive spans. Create components/dictionary/DictionaryTooltip.tsx — hover shows tooltip with definition + modern equivalent. Mobile: tap shows bottom sheet. Subtle dotted underline in muted gold on dictionary words. Test the word matching logic.",
-          "type": "fullstack",
-          "status": "reviewing",
-          "branch": null,
-          "designApproved": true,
-          "tags": [],
-          "priority": 2,
-          "dependencies": [
-            "chapter-reading-page"
-          ]
-        },
-        {
-          "id": "dictionary-mode",
-          "title": "Dictionary Mode (D Key Toggle)",
-          "description": "Build the full Dictionary Mode feature. Create hooks/useDictionaryMode.ts. Press 'D' on desktop (or tap 📖 button on mobile) to activate. When active: ALL difficult words illuminate with warm highlight background. Floating badge: 'Dictionary Mode ON — press D or Esc to exit'. Clicking any highlighted word opens DictionaryPanel (components/dictionary/DictionaryPanel.tsx) — side panel showing: word, pronunciation, definition, modern equivalent, part of speech, usage notes, example verse, 'See in Dictionary →' link. Press 'D' again or 'Esc' to exit. Create DictionaryModeToggle.tsx for mobile button. Animate transitions with Framer Motion.",
+          "id": "header-hero-overlap",
+          "title": "Fix header overlapping hero section and mobile nav alignment",
+          "description": "The header is sticky (top-0 z-40) and the hero section is h-[100dvh] — the hero content may be hidden behind the header (64px tall). Also MobileNav hamburger may not align with other header items. Fixes: (1) Add pt-16 or adjust hero height to account for the sticky header (min-h-[calc(100dvh-4rem)]) so content isn't hidden, (2) Ensure the scroll indicator at the bottom of hero doesn't overlap with the BooksGrid section below, (3) Verify mobile nav hamburger button alignment with theme toggle and search, (4) On the chapter reading page, verify the ReadingProgress bar (sticky top-0) doesn't conflict with the header (also sticky top-0 z-40) — ReadingProgress should be top-16 or stacked below header. Files to modify: components/landing/HeroSection.tsx, components/layout/Header.tsx, components/scripture/ReadingProgress.tsx, components/layout/MobileNav.tsx. Acceptance criteria: No content hidden behind header, progress bar visible below header, mobile nav aligned.",
           "type": "ui",
-          "status": "reviewing",
+          "status": "planned",
           "branch": null,
-          "designApproved": true,
-          "tags": [],
-          "priority": 3,
-          "dependencies": [
-            "dictionary-hotwords"
-          ]
-        },
-        {
-          "id": "book-browser-page",
-          "title": "Book Browser Page (/bible)",
-          "description": "Build app/bible/page.tsx — visual grid/list of all 66 books. Filter by testament (OT/NT toggle) and category (Law, History, Poetry, Prophets, Gospels, Epistles, Apocalyptic). Each book card shows: name, chapter count, author, key theme, category badge. Animated transitions between filter states with Framer Motion. Grid layout responsive: 4 cols desktop, 2 cols tablet, 1 col mobile. Cards styled with museum-quality dark aesthetic, gold accents. Link each card to /bible/[book-slug].",
-          "type": "fullstack",
-          "status": "reviewing",
-          "branch": null,
-          "designApproved": true,
-          "tags": [],
-          "priority": 4,
-          "dependencies": [
-            "db-queries",
-            "layout-components"
-          ]
-        },
-        {
-          "id": "book-overview-page",
-          "title": "Book Overview Page (/bible/[bookSlug])",
-          "description": "Build app/bible/[bookSlug]/page.tsx. Server component. Show: book name as large heading, metadata (author, date, key themes, description), chapter grid for navigation (clickable numbered grid), category badge. Placeholder sections for: related evidence items, key people in this book, map of locations mentioned (these will be wired up later). SEO: generateMetadata with title 'Genesis KJV — Book Overview | The Living Word', meta description, JSON-LD BreadcrumbList.",
-          "type": "fullstack",
-          "status": "reviewing",
-          "branch": null,
-          "designApproved": true,
-          "tags": [],
-          "priority": 5,
-          "dependencies": [
-            "db-queries",
-            "layout-components"
-          ]
-        },
-        {
-          "id": "single-verse-page",
-          "title": "Single Verse Page (/bible/[bookSlug]/[chapter]/[verse])",
-          "description": "Build app/bible/[bookSlug]/[chapter]/[verse]/page.tsx. Large beautiful typography for the verse. Surrounding verses shown muted for context. Cross-references list. Share buttons (copy link, social media). Dictionary tooltips active on this page too. SEO critical: generateMetadata with title like 'Genesis 1:1 KJV — In the beginning God created... | The Living Word'. JSON-LD structured data for the verse. Open Graph tags. Each of 31,102 verses gets its own indexable page.",
-          "type": "fullstack",
-          "status": "reviewing",
-          "branch": null,
-          "designApproved": true,
+          "designApproved": false,
           "tags": [],
           "priority": 6,
           "dependencies": [
-            "chapter-reading-page"
+            "hero-light-mode"
           ]
-        }
-      ]
-    },
-    {
-      "id": "context-panel",
-      "title": "Context Panel & Visual Richness",
-      "status": "planned",
-      "stories": [
+        },
         {
-          "id": "context-panel-shell",
-          "title": "Context Panel Shell with Tab Navigation",
-          "description": "Build the right-side context panel (components/layout/Sidebar.tsx) for the chapter reading page. Tabbed interface with 6 tabs: Visuals, Evidence, Map, Cross-References, People, Notes. Use shadcn/ui Tabs. On desktop: fixed right panel (collapsible). On mobile: bottom sheet/drawer using shadcn/ui Sheet. Animated tab transitions with Framer Motion. Keyboard shortcut 'F' toggles fullscreen reading (hides panel). 'M' toggles map tab. Remember last active tab in Zustand.",
+          "id": "map-pin-overlap",
+          "title": "Fix map preview pin overlaps and mobile layout issues",
+          "description": "On the landing page MapPreview, the map pins are positioned by lat/lng percentages and can overlap each other, especially on mobile. Also the 'Explore Biblical World' CTA button at the bottom may overlap with pins. Fixes: (1) Increase minimum spacing between pins — adjust the percentage calculation or hide some pins on mobile (show only 4-5 key locations on small screens), (2) Move the CTA button outside the map area or add a gradient overlay at the bottom to separate it from pins, (3) Ensure the Stats bar (100+ Locations, 5+ Journeys, 12+ Regions) text doesn't get cut off on narrow screens, (4) On the actual /maps page, verify Leaflet map controls don't overlap with location filter buttons. Files to modify: components/landing/MapPreview.tsx, components/maps/MapFilters.tsx. Acceptance criteria: Map pins don't overlap, CTA is clearly separated, stats bar readable on mobile.",
           "type": "ui",
-          "status": "reviewing",
+          "status": "planned",
           "branch": null,
-          "designApproved": true,
-          "tags": [],
-          "priority": 1,
-          "dependencies": [
-            "chapter-reading-page"
-          ]
-        },
-        {
-          "id": "visuals-tab",
-          "title": "Context Panel — Visuals Tab (Paintings/Art)",
-          "description": "Build the Visuals tab content. Fetch media linked to current chapter from DB. Create components/media/ArtworkCard.tsx showing: painting image (lazy-loaded via next/image), title, artist, date, source link, attribution, license. Create MediaGallery.tsx for the tab content — scrollable grid of artwork cards. Link images to Wikimedia Commons sources. If no media for chapter, show tasteful empty state. Click card for expanded view.",
-          "type": "fullstack",
-          "status": "reviewing",
-          "branch": null,
-          "designApproved": true,
-          "tags": [],
-          "priority": 2,
-          "dependencies": [
-            "context-panel-shell"
-          ]
-        },
-        {
-          "id": "evidence-tab",
-          "title": "Context Panel — Evidence Tab",
-          "description": "Build the Evidence tab content. Fetch evidence linked to current chapter from DB. Create components/media/EvidenceCard.tsx showing: title, image, category badge, date discovered, current location, significance summary. Scrollable list of evidence cards. Click to navigate to full evidence page (/evidence/[slug]). If no evidence for chapter, show empty state.",
-          "type": "fullstack",
-          "status": "reviewing",
-          "branch": null,
-          "designApproved": true,
-          "tags": [],
-          "priority": 3,
-          "dependencies": [
-            "context-panel-shell"
-          ]
-        },
-        {
-          "id": "map-tab",
-          "title": "Context Panel — Map Tab with Leaflet",
-          "description": "Build the Map tab with Leaflet.js integration. Create components/maps/BibleMap.tsx — Leaflet map wrapper (dynamic import, no SSR). Use OpenStreetMap tiles with custom muted/ancient-feeling tile styling. Fetch locations mentioned in current chapter from DB. Create components/maps/LocationPin.tsx — clickable pins with popup cards showing location name, description, scripture refs. Auto-fit bounds to show all relevant locations. No API key required.",
-          "type": "fullstack",
-          "status": "reviewing",
-          "branch": null,
-          "designApproved": true,
-          "tags": [],
-          "priority": 4,
-          "dependencies": [
-            "context-panel-shell"
-          ]
-        },
-        {
-          "id": "crossref-tab",
-          "title": "Context Panel — Cross-References Tab",
-          "description": "Build the Cross-References tab. When user clicks a verse number, show cross-references for that verse. Group by relationship type (parallel, prophecy-fulfillment, quotation, allusion, contrast). Each cross-ref shows: target verse reference, verse text preview, relationship badge, brief note. Click to navigate to target verse. Create components/scripture/CrossRefPopover.tsx for inline verse-click interaction. Also show chapter-level cross-refs in the tab.",
-          "type": "fullstack",
-          "status": "reviewing",
-          "branch": null,
-          "designApproved": true,
-          "tags": [],
-          "priority": 5,
-          "dependencies": [
-            "context-panel-shell"
-          ]
-        },
-        {
-          "id": "people-tab",
-          "title": "Context Panel — People Tab",
-          "description": "Build the People tab. Fetch people mentioned in current chapter from DB. Create components/people/PersonCard.tsx — mini card with: name, description snippet, role/tribe, family connections (father, mother, spouse). Click to navigate to full profile (/people/[slug]). Scrollable list. If no people for chapter, show empty state.",
-          "type": "fullstack",
-          "status": "reviewing",
-          "branch": null,
-          "designApproved": true,
-          "tags": [],
-          "priority": 6,
-          "dependencies": [
-            "context-panel-shell"
-          ]
-        },
-        {
-          "id": "notes-tab",
-          "title": "Context Panel — Notes & Highlights Tab (localStorage)",
-          "description": "Build the Notes tab for user's personal annotations. Store in localStorage via Zustand. Allow: highlighting verse text (select text → color picker), adding notes per verse (text area), bookmarking verses (BookmarkButton.tsx). Show list of highlights and notes for current chapter. Create hooks/useBookmarks.ts. Export/clear functionality. Persist across sessions.",
-          "type": "ui",
-          "status": "testing",
-          "branch": null,
-          "designApproved": true,
+          "designApproved": false,
           "tags": [],
           "priority": 7,
-          "dependencies": [
-            "context-panel-shell"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "standalone-pages",
-      "title": "Standalone Feature Pages",
-      "status": "planned",
-      "stories": [
-        {
-          "id": "maps-hub-page",
-          "title": "Interactive Maps Hub (/maps)",
-          "description": "Build app/maps/page.tsx — full-screen Leaflet map with custom muted tile styling. Toggle overlays: modern borders, terrain. All 100+ biblical locations as clickable pins with popup cards (image, description, scripture refs). Journey selector dropdown — selecting a journey shows the route on map. Filter by testament, book, time period. Search locations. Create app/maps/[journeySlug]/page.tsx for specific journey view with animated route using components/maps/JourneyRoute.tsx. List all journey stops with descriptions and scripture links.",
-          "type": "fullstack",
-          "status": "reviewing",
-          "branch": null,
-          "designApproved": true,
-          "tags": [],
-          "priority": 1,
-          "dependencies": [
-            "map-tab"
-          ]
+          "dependencies": []
         },
         {
-          "id": "timeline-page",
-          "title": "Interactive Biblical Timeline (/timeline)",
-          "description": "Build app/timeline/page.tsx. Horizontal scrollable timeline from Creation to Revelation. Era markers: Patriarchs, Exodus, Judges, United Kingdom, Divided Kingdom, Exile, Return, Intertestamental, New Testament. Major events plotted with icons and scripture references. Zoom in/out for detail. Click events to navigate to related scripture. Use Framer Motion for smooth scrolling/zooming. Responsive — vertical layout on mobile. Seed timeline events data.",
-          "type": "fullstack",
-          "status": "reviewing",
-          "branch": null,
-          "designApproved": true,
-          "tags": [],
-          "priority": 2,
-          "dependencies": [
-            "db-queries",
-            "layout-components"
-          ]
-        },
-        {
-          "id": "evidence-gallery-page",
-          "title": "Evidence Gallery & Detail Pages (/evidence)",
-          "description": "Build app/evidence/page.tsx — masonry grid of evidence cards with images. Filter by category (manuscripts, archaeology, inscriptions, artifacts). Each card: title, image, date, location, significance rating. Build app/evidence/[slug]/page.tsx — detail page with full description, high-res image, related scriptures with links, source links, attribution. SEO metadata for each evidence page.",
-          "type": "fullstack",
-          "status": "reviewing",
-          "branch": null,
-          "designApproved": true,
-          "tags": [],
-          "priority": 3,
-          "dependencies": [
-            "db-queries",
-            "layout-components"
-          ]
-        },
-        {
-          "id": "people-directory-page",
-          "title": "People Directory & Profile Pages (/people)",
-          "description": "Build app/people/page.tsx — alphabetical listing with search. Filter by testament, role (king, prophet, apostle, etc.). Build app/people/[slug]/page.tsx — profile page with: description, simple family tree visualization (SVG), key events, all verse references with links, related artwork. Create components/people/FamilyTree.tsx — simple SVG showing parent/child/spouse relationships. SEO metadata for each person page.",
-          "type": "fullstack",
-          "status": "reviewing",
-          "branch": null,
-          "designApproved": true,
-          "tags": [],
-          "priority": 4,
-          "dependencies": [
-            "db-queries",
-            "layout-components"
-          ]
-        },
-        {
-          "id": "dictionary-browser-page",
-          "title": "Full Dictionary Browser (/dictionary)",
-          "description": "Build app/dictionary/page.tsx — alphabetical browser with letter navigation (A-Z bar). Search by word. Paginated/virtualized list of all 300+ words. Build app/dictionary/[word]/page.tsx — individual word page with: word, pronunciation, part of speech, definition, modern equivalent, usage notes, example verse with link to verse page. SEO: title like 'What does begat mean in the KJV Bible? | The Living Word'. JSON-LD structured data.",
-          "type": "fullstack",
-          "status": "reviewing",
-          "branch": null,
-          "designApproved": true,
-          "tags": [],
-          "priority": 5,
-          "dependencies": [
-            "db-queries",
-            "layout-components"
-          ]
-        },
-        {
-          "id": "search-page",
-          "title": "Full-Text Search with FlexSearch (/search)",
-          "description": "Build app/search/page.tsx. Set up FlexSearch (lib/search.ts) — build search index at build time, serve as static JSON. Full-text search across all verses with highlighted matches. Results show verse text with highlights, book/chapter context, click to navigate. Filter by testament, book. Search suggestions/autocomplete as user types. Also search dictionary, people, places with tabbed results. Create components/search/SearchBar.tsx (also used in Header with Ctrl+K / '/' shortcut), SearchResults.tsx, SearchSuggestions.tsx. Debounced input.",
-          "type": "fullstack",
-          "status": "reviewing",
-          "branch": null,
-          "designApproved": true,
-          "tags": [],
-          "priority": 6,
-          "dependencies": [
-            "db-queries",
-            "layout-components"
-          ]
-        },
-        {
-          "id": "reading-plans-page",
-          "title": "Reading Plans Page (/reading-plans)",
-          "description": "Build app/reading-plans/page.tsx. Show available reading plans with: name, description, duration. Seed at least 3 plans: Bible in a Year, New Testament in 90 Days, Psalms & Proverbs 31 Days. Each plan card links to a day-by-day view with scripture references that link to the reading pages. Track progress in localStorage via Zustand.",
-          "type": "fullstack",
-          "status": "reviewing",
-          "branch": null,
-          "designApproved": true,
-          "tags": [],
-          "priority": 7,
-          "dependencies": [
-            "db-queries",
-            "layout-components"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "landing-page",
-      "title": "Landing Page",
-      "status": "planned",
-      "stories": [
-        {
-          "id": "landing-page-build",
-          "title": "Museum-Quality Landing Page (/)",
-          "description": "Build app/page.tsx — the stunning landing page. Sections: 1) Full-viewport Hero with Bible painting background (tasteful dark overlay), 'The Living Word' title in Cormorant Garamond, subtitle, daily featured verse with beautiful typography, parallax scroll effect, CTA 'Begin Reading →'. 2) Quick Navigation grid of 66 books organized by category with OT/NT toggle. 3) Artwork of the Day — rotating painting with context and attribution. 4) Mini Leaflet map preview showing key locations, 'Explore Biblical World →' link. 5) Evidence Spotlight — 3-card carousel of archaeological evidence. 6) Timeline Preview — horizontal scrollable mini-timeline. 7) Prominent search bar. 8) Footer. Use Framer Motion for entrance animations. Dark charcoal #0F0F1A with gold #C4975C accents throughout.",
-          "type": "fullstack",
-          "status": "reviewing",
-          "branch": null,
-          "designApproved": true,
-          "tags": [],
-          "priority": 1,
-          "dependencies": [
-            "layout-components",
-            "db-queries"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "seo-performance",
-      "title": "SEO, Performance & Polish",
-      "status": "planned",
-      "stories": [
-        {
-          "id": "seo-metadata",
-          "title": "SEO Metadata, Sitemaps & Structured Data",
-          "description": "Create lib/seo.ts with metadata generator helpers following the title patterns in spec. Add generateMetadata to ALL page.tsx files with: unique title, meta description (150-160 chars), canonical URL, Open Graph tags (og:title, og:description, og:image, og:url), Twitter Card tags. Create app/sitemap.ts — dynamic sitemap generation using sitemap index (all 31,102 verse pages + 1,189 chapters + 66 books + evidence + people + dictionary). Create app/robots.ts allowing all crawlers, referencing sitemap. Add JSON-LD structured data (WebSite, BreadcrumbList, Article) to all pages. Create default og-image.jpg in public/.",
-          "type": "fullstack",
-          "status": "reviewing",
-          "branch": null,
-          "designApproved": true,
-          "tags": [],
-          "priority": 1,
-          "dependencies": [
-            "single-verse-page",
-            "book-overview-page",
-            "evidence-gallery-page",
-            "people-directory-page",
-            "dictionary-browser-page"
-          ]
-        },
-        {
-          "id": "keyboard-shortcuts",
-          "title": "Global Keyboard Shortcuts System",
-          "description": "Create hooks/useKeyboardShortcuts.ts as a centralized keyboard shortcut handler. Implement ALL shortcuts: D (dictionary mode), ← → (chapter nav), T (theme cycle), F (fullscreen reading), / or Ctrl+K (focus search), Esc (close panels/modals), B (open book browser), M (toggle map panel), +/- (font size). Register shortcuts in root layout. Show keyboard shortcut help dialog (? key). Ensure shortcuts don't fire when typing in inputs/textareas.",
+          "id": "context-panel-overlap",
+          "title": "Fix context panel and footer alignment on chapter pages",
+          "description": "On chapter reading pages, the mobile context panel floating button (fixed bottom-6 right-4 z-40) may overlap with the footer or the chapter navigation buttons. Also the desktop context panel width transition may cause content to jump. Fixes: (1) Add bottom padding to chapter page content to account for the floating context button on mobile, (2) Ensure the floating button doesn't overlap ChapterNavigation prev/next buttons, (3) On desktop, when context panel collapses from w-80/w-96 to w-12, ensure scripture text reflows smoothly without layout shift, (4) Fix the mobile bottom sheet — ensure it doesn't extend behind the device notch/home indicator (pb-safe is there but verify), (5) On the books grid page (app/bible/[bookSlug]/page.tsx), verify the chapter grid cards don't overlap or misalign on tablet breakpoints. Files to modify: components/scripture/ContextPanel.tsx, app/bible/[bookSlug]/[chapter]/page.tsx, components/scripture/ChapterNavigation.tsx. Acceptance criteria: No overlapping elements on chapter pages at any viewport size.",
           "type": "ui",
-          "status": "reviewing",
+          "status": "planned",
           "branch": null,
-          "designApproved": true,
+          "designApproved": false,
           "tags": [],
-          "priority": 2,
-          "dependencies": [
-            "chapter-reading-page",
-            "dictionary-mode"
-          ]
+          "priority": 8,
+          "dependencies": []
         },
         {
-          "id": "mobile-responsiveness",
-          "title": "Mobile Responsiveness & Polish",
-          "description": "Audit and polish ALL pages for mobile. Chapter reading page: single column, context panel as bottom sheet drawer, swipe gestures for chapter navigation. Book browser: responsive grid. Landing page: stacked sections, touch-friendly. Maps: full-screen with floating controls. Dictionary tooltips: bottom sheet on mobile instead of hover. Ensure all touch targets are 44px minimum. Test at 320px, 375px, 428px, 768px, 1024px, 1440px breakpoints. Fix any overflow, text sizing, or layout issues.",
+          "id": "timeline-evidence-carousel-fix",
+          "title": "Fix timeline and evidence carousel scroll alignment",
+          "description": "The timeline preview and evidence spotlight use horizontal scroll carousels that may have alignment issues: (1) Timeline cards may overflow their containers on very small screens (< 360px), (2) Evidence carousel snap-x snap-mandatory may not work consistently across browsers, (3) The horizontal timeline line (absolute top-[38px]) may not align with the dots when font size changes, (4) Carousel scroll buttons hidden on mobile — add touch scroll hint or swipe indicators, (5) Evidence cards with long significance text may have inconsistent card heights due to line-clamp-3. Fixes: ensure consistent card heights, proper snap behavior, responsive dot alignment, and add a visual swipe indicator on mobile. Files to modify: components/landing/TimelinePreview.tsx, components/landing/EvidenceSpotlight.tsx. Acceptance criteria: Carousels scroll smoothly, cards have consistent heights, timeline dots align with line.",
           "type": "ui",
-          "status": "blocked",
+          "status": "planned",
           "branch": null,
-          "designApproved": true,
+          "designApproved": false,
           "tags": [],
-          "priority": 3,
+          "priority": 9,
+          "dependencies": []
+        }
+      ]
+    },
+    {
+      "id": "production-readiness",
+      "title": "Production Readiness Fixes",
+      "status": "planned",
+      "stories": [
+        {
+          "id": "image-error-handling",
+          "title": "Add image error handling and loading states",
+          "description": "External Wikimedia images may fail to load. Add robust error handling: (1) Create a reusable components/shared/SafeImage.tsx wrapper around next/image that shows a styled placeholder on error (use a themed gradient with an icon instead of broken image), (2) Add loading='lazy' and proper sizes attributes to all Image components that don't have them, (3) Add blur placeholder or skeleton loading states for large images (artwork, evidence photos), (4) Update next.config.mjs to ensure all Wikimedia Commons subdomains are in the images.remotePatterns config, (5) Replace all instances of unoptimized={true} prop on Image components — these bypass Next.js image optimization. Files to modify: components/shared/SafeImage.tsx (new), next.config.mjs, components/landing/ArtworkOfDay.tsx, components/landing/EvidenceSpotlight.tsx, components/evidence/EvidenceCard.tsx, app/evidence/[slug]/page.tsx. Acceptance criteria: No broken image placeholders visible, images load with skeleton states.",
+          "type": "ui",
+          "status": "planned",
+          "branch": null,
+          "designApproved": false,
+          "tags": [],
+          "priority": 10,
           "dependencies": [
-            "landing-page-build",
-            "chapter-reading-page",
-            "context-panel-shell"
+            "people-wikipedia-images",
+            "evidence-wikipedia-images",
+            "landing-artwork-rotation"
           ]
         },
         {
-          "id": "about-page",
-          "title": "About Page & Final Polish",
-          "description": "Build app/about/page.tsx — about the project, attribution policy, data sources, open source credits. Add RSS feed for daily verse. Performance optimization: ensure static generation for all scripture pages, lazy-load images, preconnect to Google Fonts, verify Core Web Vitals (LCP < 2.5s, CLS < 0.1). Accessibility audit: WCAG AA compliance, keyboard navigation, screen reader friendly, proper ARIA labels. Final visual polish pass across all pages.",
+          "id": "build-lint-typecheck",
+          "title": "Fix all build errors, lint warnings, and run production build",
+          "description": "Run the full production pipeline to ensure everything compiles: (1) Run 'npm run lint' and fix all ESLint errors/warnings, (2) Run 'npx tsc --noEmit' and fix all TypeScript errors, (3) Run 'npm run build' and fix any Next.js build errors (especially generateStaticParams issues, missing data, or SSR-incompatible code), (4) Check for any hydration mismatches (client/server rendering differences) — especially in components that use useMediaQuery, localStorage, or Date.now(), (5) Verify the database file exists and seed script works, (6) Test that all pages render without crashing. Fix all issues found. Files to modify: any files with errors. Acceptance criteria: 'npm run build' completes successfully with zero errors.",
           "type": "fullstack",
-          "status": "reviewing",
+          "status": "planned",
           "branch": null,
-          "designApproved": true,
+          "designApproved": false,
           "tags": [],
-          "priority": 4,
+          "priority": 11,
           "dependencies": [
-            "seo-metadata",
-            "mobile-responsiveness"
+            "image-error-handling",
+            "hero-light-mode",
+            "landing-sections-light-mode",
+            "header-hero-overlap",
+            "map-pin-overlap",
+            "context-panel-overlap",
+            "timeline-evidence-carousel-fix"
           ]
         }
       ]
