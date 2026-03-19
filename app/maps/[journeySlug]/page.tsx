@@ -5,19 +5,26 @@ import {
   getAllJourneySlugs,
 } from "@/lib/db/queries";
 import { JourneyView } from "@/components/maps/JourneyView";
+
 import {
   generatePageMetadata,
   buildBreadcrumbJsonLd,
   jsonLdScriptProps,
 } from "@/lib/seo";
 
+export const dynamic = "force-dynamic";
+
 interface PageProps {
   params: Promise<{ journeySlug: string }>;
 }
 
 export async function generateStaticParams() {
-  const slugs = await getAllJourneySlugs();
-  return slugs.map(({ slug }) => ({ journeySlug: slug }));
+  try {
+    const slugs = await getAllJourneySlugs();
+    return slugs.map(({ slug }) => ({ journeySlug: slug }));
+  } catch {
+    return [];
+  }
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {

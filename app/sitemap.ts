@@ -16,21 +16,26 @@ import { SITE_URL } from "@/lib/seo";
  * 3+ = verse pages (batched by ~5000 per sitemap)
  */
 export async function generateSitemaps() {
-  const chapters = await getSitemapChapters();
-  const totalVerses = chapters.reduce((sum, c) => sum + c.verseCount, 0);
-  const verseSitemapCount = Math.ceil(totalVerses / 5000);
+  try {
+    const chapters = await getSitemapChapters();
+    const totalVerses = chapters.reduce((sum, c) => sum + c.verseCount, 0);
+    const verseSitemapCount = Math.ceil(totalVerses / 5000);
 
-  const ids = [
-    { id: 0 }, // static + books
-    { id: 1 }, // chapters
-    { id: 2 }, // dictionary + people + evidence
-  ];
+    const ids = [
+      { id: 0 }, // static + books
+      { id: 1 }, // chapters
+      { id: 2 }, // dictionary + people + evidence
+    ];
 
-  for (let i = 0; i < verseSitemapCount; i++) {
-    ids.push({ id: 3 + i });
+    for (let i = 0; i < verseSitemapCount; i++) {
+      ids.push({ id: 3 + i });
+    }
+
+    return ids;
+  } catch {
+    // DB not available at build time — return minimal sitemap
+    return [{ id: 0 }];
   }
-
-  return ids;
 }
 
 export default async function sitemap({
@@ -38,10 +43,22 @@ export default async function sitemap({
 }: {
   id: number;
 }): Promise<MetadataRoute.Sitemap> {
-  if (id === 0) return staticAndBooksSitemap();
-  if (id === 1) return chaptersSitemap();
-  if (id === 2) return collectionsSitemap();
-  return versesSitemap(id - 3);
+  try {
+    if (id === 0) return staticAndBooksSitemap();
+    if (id === 1) return chaptersSitemap();
+    if (id === 2) return collectionsSitemap();
+    return versesSitemap(id - 3);
+  } catch {
+    return staticOnlySitemap();
+  }
+}
+
+/** Minimal sitemap when DB is unavailable. */
+function staticOnlySitemap(): MetadataRoute.Sitemap {
+  return [
+    { url: SITE_URL, changeFrequency: "daily", priority: 1.0 },
+    { url: `${SITE_URL}/bible`, changeFrequency: "monthly", priority: 0.9 },
+  ];
 }
 
 /** Sitemap 0: static pages + all 66 books. */

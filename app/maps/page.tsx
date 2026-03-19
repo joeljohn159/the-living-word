@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { getLocationsWithBookRefs, getJourneys } from "@/lib/db/queries";
 import { MapsHub } from "@/components/maps/MapsHub";
+
+export const dynamic = "force-dynamic";
 import {
   generatePageMetadata,
   buildBreadcrumbJsonLd,

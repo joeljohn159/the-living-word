@@ -4,6 +4,8 @@ import { Suspense } from "react";
 import { getAllEvidence, getEvidenceCategoryCounts } from "@/lib/db/queries";
 import { EvidenceFilters } from "@/components/evidence/EvidenceFilters";
 import { EvidenceGrid } from "@/components/evidence/EvidenceGrid";
+
+export const dynamic = "force-dynamic";
 import {
   generatePageMetadata,
   buildBreadcrumbJsonLd,

@@ -11,6 +11,8 @@ import { ContextPanel } from "@/components/scripture/ContextPanel";
 import { CrossRefProvider } from "@/components/scripture/CrossRefProvider";
 import { DictionaryModeProvider } from "@/components/dictionary/DictionaryModeProvider";
 import { ChapterToolbar } from "./ChapterToolbar";
+
+export const dynamic = "force-dynamic";
 import {
   generatePageMetadata,
   buildBreadcrumbJsonLd,

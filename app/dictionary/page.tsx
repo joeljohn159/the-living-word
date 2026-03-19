@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { BookA } from "lucide-react";
 import { getDictionaryWords, getDictionaryLetters } from "@/lib/db/queries";
 import { DictionaryBrowser } from "@/components/dictionary/DictionaryBrowser";
+
+export const dynamic = "force-dynamic";
 import {
   generatePageMetadata,
   SITE_URL,

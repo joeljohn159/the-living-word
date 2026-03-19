@@ -6,6 +6,8 @@ import { getBookBySlug } from "@/lib/db/queries";
 import { BookHeader } from "@/components/scripture/BookHeader";
 import { ChapterGrid } from "@/components/scripture/ChapterGrid";
 import { PlaceholderSection } from "@/components/scripture/PlaceholderSection";
+
+export const dynamic = "force-dynamic";
 import {
   generatePageMetadata,
   buildBreadcrumbJsonLd,

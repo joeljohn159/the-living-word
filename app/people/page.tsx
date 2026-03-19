@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Users } from "lucide-react";
 import { getAllPeople } from "@/lib/db/queries";
 import { PersonSearch } from "@/components/people/PersonSearch";
+
+export const dynamic = "force-dynamic";
 import {
   generatePageMetadata,
   buildBreadcrumbJsonLd,

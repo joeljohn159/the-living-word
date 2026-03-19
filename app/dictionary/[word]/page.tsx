@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, BookOpen, Volume2 } from "lucide-react";
+
 import {
   getDictionaryWordWithVerse,
   getDictionaryWords,
@@ -13,14 +14,20 @@ import {
   jsonLdScriptProps,
 } from "@/lib/seo";
 
+export const dynamic = "force-dynamic";
+
 interface DictionaryWordPageProps {
   params: { word: string };
 }
 
 /** Generate static params for all dictionary words. */
 export async function generateStaticParams() {
-  const words = await getDictionaryWords();
-  return words.map((w) => ({ word: w.slug }));
+  try {
+    const words = await getDictionaryWords();
+    return words.map((w) => ({ word: w.slug }));
+  } catch {
+    return [];
+  }
 }
 
 /** Generate SEO metadata for each word page. */

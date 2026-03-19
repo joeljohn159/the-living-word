@@ -16,6 +16,8 @@ import { SurroundingVerses } from "@/components/verse/SurroundingVerses";
 import { CrossReferencesList } from "@/components/verse/CrossReferencesList";
 import { ShareButtons } from "@/components/verse/ShareButtons";
 import { VerseNavigation } from "@/components/verse/VerseNavigation";
+
+export const dynamic = "force-dynamic";
 import {
   SITE_URL,
   generatePageMetadata,

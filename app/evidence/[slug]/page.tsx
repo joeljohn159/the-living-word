@@ -13,12 +13,15 @@ import {
 import { getEvidenceBySlug, getAllEvidence } from "@/lib/db/queries";
 import { CategoryBadge } from "@/components/evidence/CategoryBadge";
 import { SignificanceStars } from "@/components/evidence/SignificanceStars";
+
 import {
   generatePageMetadata,
   buildBreadcrumbJsonLd,
   buildArticleJsonLd,
   jsonLdScriptProps,
 } from "@/lib/seo";
+
+export const dynamic = "force-dynamic";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -40,8 +43,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 export async function generateStaticParams() {
-  const items = await getAllEvidence();
-  return items.map((item) => ({ slug: item.slug }));
+  try {
+    const items = await getAllEvidence();
+    return items.map((item) => ({ slug: item.slug }));
+  } catch {
+    return [];
+  }
 }
 
 export default async function EvidenceDetailPage({ params }: PageProps) {

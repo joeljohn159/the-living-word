@@ -7,6 +7,8 @@ import {
 } from "@/lib/seo";
 import { getAllMedia } from "@/lib/db/queries";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = generatePageMetadata({
   title: "Gallery",
   description:

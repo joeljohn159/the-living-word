@@ -14,6 +14,7 @@ import { KeyEvents } from "@/components/people/KeyEvents";
 import { VerseReferences } from "@/components/people/VerseReferences";
 import { RelatedArtwork } from "@/components/people/RelatedArtwork";
 import { PersonPortrait } from "@/components/people/PersonPortrait";
+
 import {
   generatePageMetadata,
   buildBreadcrumbJsonLd,
@@ -21,13 +22,19 @@ import {
   jsonLdScriptProps,
 } from "@/lib/seo";
 
+export const dynamic = "force-dynamic";
+
 interface PageProps {
   params: { slug: string };
 }
 
 export async function generateStaticParams() {
-  const slugs = await getAllPeopleSlugs();
-  return slugs.map((s) => ({ slug: s.slug }));
+  try {
+    const slugs = await getAllPeopleSlugs();
+    return slugs.map((s) => ({ slug: s.slug }));
+  } catch {
+    return [];
+  }
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
