@@ -174,8 +174,41 @@ function DesktopTimeline({
   getEventPosition,
   totalRange,
 }: DesktopTimelineProps) {
-  const baseWidth = 2400;
+  const CARD_WIDTH = 200; // px width of each card (w-48 = 192px + margin)
+  const baseWidth = Math.max(2400, events.length * CARD_WIDTH * 0.7);
   const timelineWidth = baseWidth * zoom;
+
+  // Compute non-overlapping left positions for event cards
+  // Split into top row (even index) and bottom row (odd index)
+  const cardPositions = useMemo(() => {
+    const positions: number[] = [];
+    const topUsed: number[] = []; // right edges of placed top cards
+    const bottomUsed: number[] = []; // right edges of placed bottom cards
+
+    for (let i = 0; i < events.length; i++) {
+      const naturalLeft =
+        (getEventPosition(events[i]) / 100) * timelineWidth;
+      const used = i % 2 === 0 ? topUsed : bottomUsed;
+
+      // Find the minimum left that doesn't overlap any card in this row
+      let left = naturalLeft;
+      for (const rightEdge of used) {
+        if (left < rightEdge + 8) {
+          // 8px gap between cards
+          left = rightEdge + 8;
+        }
+      }
+      positions.push(left);
+      used.push(left + CARD_WIDTH);
+    }
+    return positions;
+  }, [events, getEventPosition, timelineWidth]);
+
+  // Ensure timeline is wide enough for all positioned cards
+  const maxRight = Math.max(
+    timelineWidth,
+    ...cardPositions.map((l) => l + CARD_WIDTH + 40)
+  );
 
   return (
     <div
@@ -188,7 +221,7 @@ function DesktopTimeline({
       <motion.div
         layout
         transition={{ duration: 0.3 }}
-        style={{ width: `${timelineWidth}px` }}
+        style={{ width: `${maxRight}px` }}
         className="relative min-h-[420px]"
       >
         {/* Era bar at the top */}
@@ -227,7 +260,6 @@ function DesktopTimeline({
         {/* Event cards */}
         {events.map((event, i) => {
           const era = TIMELINE_ERAS.find((e) => e.id === event.eraId)!;
-          const leftPercent = getEventPosition(event);
 
           return (
             <div
@@ -236,7 +268,7 @@ function DesktopTimeline({
               style={
                 {
                   "--event-left": "0px",
-                  left: `${leftPercent}%`,
+                  left: `${cardPositions[i]}px`,
                   top: i % 2 === 0 ? "40px" : "220px",
                 } as React.CSSProperties
               }

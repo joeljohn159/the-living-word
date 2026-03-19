@@ -6,18 +6,8 @@ import { usePreferencesStore } from "@/stores/preferences";
 // Mock framer-motion to render elements synchronously
 vi.mock("framer-motion", () => ({
   motion: {
-    div: ({
-      children,
-      ...props
-    }: React.PropsWithChildren<Record<string, unknown>>) => {
-      // Filter out framer-motion specific props
-      const {
-        initial,
-        animate,
-        exit,
-        transition,
-        ...htmlProps
-      } = props as Record<string, unknown>;
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    div: ({ children, initial, animate, exit, transition, ...htmlProps }: React.PropsWithChildren<Record<string, unknown>>) => {
       return <div {...(htmlProps as React.HTMLAttributes<HTMLDivElement>)}>{children}</div>;
     },
   },

@@ -265,7 +265,7 @@ describe("ChapterToolbar — layout and alignment", () => {
   });
 
   it("groups dictionary toggle and font controls together on the right", () => {
-    const { container } = render(<ChapterToolbar />);
+    render(<ChapterToolbar />);
     const rightGroup = screen
       .getByTestId("dictionary-mode-toggle")
       .closest("[class*='flex'][class*='items-center']");

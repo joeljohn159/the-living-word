@@ -12,8 +12,7 @@ import {
   type DisplayCategory,
 } from "@/lib/data/books";
 
-const MANUSCRIPT_BG_URL =
-  "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Codex_Vaticanus_B%2C_2Thess._3%2C11-18%2C_Hebr._1%2C1-2%2C2.jpg/800px-Codex_Vaticanus_B%2C_2Thess._3%2C11-18%2C_Hebr._1%2C1-2%2C2.jpg";
+const MANUSCRIPT_BG_URL = "/images/landing/codex-vaticanus.jpg";
 
 type Testament = "all" | "OT" | "NT";
 

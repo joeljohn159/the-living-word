@@ -67,10 +67,12 @@
           "title": "Add Wikipedia Images to Evidence & People Pages",
           "description": "The evidence and people data in the database may have missing or placeholder image URLs. Ensure real Wikipedia images are populated and displayed correctly.\n\n1. Check the seed data in data/evidence.json - verify all evidence items have valid Wikimedia image URLs. If any are missing, add appropriate URLs:\n   - Dead Sea Scrolls, Tel Dan Stele, Pilate Stone already have URLs in the fallback data\n   - Check the database entries match\n\n2. Check data/people.json - verify people entries have image URLs. Add Wikipedia portrait images for major biblical figures:\n   - Moses, David, Solomon, Abraham, Jesus, Paul, Peter, Mary, etc.\n   - Use famous paintings from Wikimedia Commons (Rembrandt, Caravaggio, Raphael, etc.)\n\n3. In components/people/PersonCard.tsx - ensure it displays the image if available, with proper fallback/placeholder for people without images.\n\n4. In components/evidence/EvidenceCard.tsx - ensure images are displayed with Next.js Image component properly.\n\n5. Add proper Wikimedia attribution/source links where images are displayed.\n\nExisting files to modify:\n- data/evidence.json (add/verify image URLs)\n- data/people.json (add image URLs for major figures)\n- components/people/PersonCard.tsx (ensure image display)\n- components/evidence/EvidenceCard.tsx (verify image display)\n- lib/db/seed.ts (if seed needs to be re-run with updated data)\n\nAcceptance criteria:\n- All evidence items display real archaeological photos from Wikipedia\n- Major biblical people show relevant artwork/portraits\n- Proper attribution on all images\n- Fallback state for people without images is visually clean",
           "type": "fullstack",
-          "status": "reviewing",
+          "status": "done",
           "branch": null,
           "designApproved": true,
-          "tags": [],
+          "tags": [
+            "forge/v0.4-evidence-people-images"
+          ],
           "priority": 4,
           "dependencies": [
             "landing-section-images"
@@ -88,10 +90,12 @@
           "title": "Fix Header, Mobile Nav & Content Overlap Issues",
           "description": "Fix overlapping and alignment issues across the app:\n\n1. Header overlap: The header is sticky (sticky top-0 z-40) but the hero section starts at h-[100dvh] from the very top. This means the header overlaps the hero content. The hero content needs a top padding or the layout needs adjusting so content doesn't hide behind the sticky header. On non-hero pages, content should also not be hidden behind the header.\n\n2. Mobile navigation (MobileNav.tsx): The SheetContent doesn't specify a side prop - verify it defaults correctly and doesn't overlap with other UI elements. The mobile nav has pt-12 which may not account for the close button properly.\n\n3. BooksGrid alignment: The grid uses xl:grid-cols-11 which is an unusual column count that may cause the last row to look unbalanced. On mobile (grid-cols-2) with 66 books, layout should be clean.\n\n4. TimelinePreview: The horizontal line (absolute top-[38px]) may not align with the dots on different screen sizes or font scaling. The timeline cards and dots need to be properly aligned.\n\n5. EvidenceSpotlight carousel: The -mx-4 px-4 trick for edge-to-edge scrolling may cause horizontal overflow issues or misalignment with the header/title above.\n\n6. Footer grid: On tablet/medium screens, the 3-column grid may create awkward wrapping. The version selector max-w-[200px] inside a grid column may look disconnected.\n\nExisting files to modify:\n- app/layout.tsx (header/content spacing)\n- components/landing/HeroSection.tsx (account for header height)\n- components/layout/MobileNav.tsx (verify sheet positioning)\n- components/landing/BooksGrid.tsx (grid column optimization)\n- components/landing/TimelinePreview.tsx (dot/line alignment)\n- components/landing/EvidenceSpotlight.tsx (overflow fix)\n- components/layout/Footer.tsx (responsive grid)\n\nAcceptance criteria:\n- No content hidden behind sticky header on any page\n- Hero section properly accounts for header height\n- Mobile nav opens without overlapping issues\n- Books grid looks balanced on all screen sizes\n- Timeline dots and line are perfectly aligned\n- No horizontal overflow on any screen size\n- Footer looks good at all breakpoints",
           "type": "ui",
-          "status": "reviewing",
+          "status": "done",
           "branch": null,
           "designApproved": true,
-          "tags": [],
+          "tags": [
+            "forge/v0.5-header-mobile-overlap"
+          ],
           "priority": 5,
           "dependencies": [
             "global-light-mode-contrast"
@@ -102,7 +106,7 @@
           "title": "Fix Bible Reader & Context Panel Alignment",
           "description": "Fix overlapping and alignment issues specific to the Bible reader pages:\n\n1. Check app/bible/[bookSlug]/[chapter]/page.tsx - the chapter reader layout with sidebar context panel. Ensure the main content area properly shrinks when the sidebar is open on desktop, and doesn't overlap.\n\n2. Check components/layout/Sidebar.tsx - verify the sidebar (380px width) doesn't overlap main content on medium screens (768-1024px). May need to switch from overlay to push layout, or reduce width on smaller screens.\n\n3. Check components/scripture/ContextPanel.tsx - ensure tabs don't overflow on mobile.\n\n4. Check ChapterToolbar.tsx (app/bible/ChapterToolbar.tsx) - the toolbar with reading mode toggle and font size controls should not overlap with navigation or chapter title.\n\n5. Cross-reference popovers (CrossRefPopover.tsx) - verify they don't go off-screen on mobile or near viewport edges.\n\n6. Dictionary tooltips (DictionaryTooltip.tsx) - verify positioning works correctly and doesn't create overflow.\n\n7. Chapter navigation (ChapterNavigation.tsx) - prev/next buttons should be properly aligned and not overlap with content.\n\nExisting files to modify:\n- app/bible/[bookSlug]/[chapter]/page.tsx\n- components/layout/Sidebar.tsx\n- components/scripture/ContextPanel.tsx\n- app/bible/ChapterToolbar.tsx\n- components/scripture/CrossRefPopover.tsx\n- components/dictionary/DictionaryTooltip.tsx\n- components/scripture/ChapterNavigation.tsx\n\nAcceptance criteria:\n- Sidebar doesn't overlap content on any screen size\n- Context panel tabs are fully accessible on mobile\n- Toolbar controls don't overlap with each other\n- Popovers and tooltips stay within viewport bounds\n- Chapter navigation is cleanly positioned",
           "type": "ui",
-          "status": "reviewing",
+          "status": "blocked",
           "branch": null,
           "designApproved": true,
           "tags": [],
@@ -123,10 +127,12 @@
           "title": "Fix Dead Links & Missing Pages",
           "description": "Fix broken links and create missing pages that are referenced but don't exist:\n\n1. The ArtworkOfDay component links to '/gallery' which doesn't exist. Either:\n   a. Create a basic gallery page at app/gallery/page.tsx that displays artwork from the database, OR\n   b. Change the link to point to an existing page (like /bible or /evidence)\n   Recommendation: Create a simple gallery page since artwork data exists in the media table.\n\n2. The Footer links to '/privacy' which likely doesn't exist. Create a minimal privacy policy page at app/privacy/page.tsx.\n\n3. Verify all navigation links in NAV_LINKS (components/layout/nav-links.ts) point to existing pages.\n\n4. Verify all internal links on the landing page work: /bible, /maps, /evidence, /timeline, /search, /about.\n\n5. Check for any 404s from evidence/[slug] or people/[slug] links.\n\nExisting files to modify:\n- components/landing/ArtworkOfDay.tsx (fix gallery link)\n- components/layout/nav-links.ts (verify all links)\n\nNew files to create:\n- app/gallery/page.tsx (artwork gallery page)\n- app/privacy/page.tsx (privacy policy page)\n\nAcceptance criteria:\n- No dead links anywhere in the app\n- Gallery page exists and shows artwork\n- Privacy page exists with basic content\n- All nav links verified working",
           "type": "fullstack",
-          "status": "reviewing",
+          "status": "done",
           "branch": null,
           "designApproved": true,
-          "tags": [],
+          "tags": [
+            "forge/v0.6-dead-links-missing-pages"
+          ],
           "priority": 7,
           "dependencies": [
             "bible-reader-alignment"
@@ -137,7 +143,7 @@
           "title": "Production Polish: Error States, Loading, SEO & Performance",
           "description": "Final production hardening pass:\n\n1. Error handling: Create app/not-found.tsx and app/error.tsx with themed, branded error pages that match the museum aesthetic.\n\n2. Loading states: Create app/loading.tsx with a skeleton/spinner that matches the gold theme. Also add loading.tsx for key dynamic routes: app/bible/[bookSlug]/[chapter]/loading.tsx, app/evidence/loading.tsx, app/people/loading.tsx.\n\n3. Add proper favicon: Check if favicon.ico exists in app/ directory. If not, create one or add a link to the existing og-image.\n\n4. Verify SEO: Run through the sitemap.ts and ensure all routes are included. Verify robots.ts allows indexing.\n\n5. Performance: Add loading='lazy' to below-fold images on the landing page (ArtworkOfDay, EvidenceSpotlight images). The HeroSection image should have priority={true}.\n\n6. Accessibility: Ensure all interactive elements have visible focus indicators in all themes. Verify skip-to-content link works.\n\n7. Build verification: Run `npm run build` to ensure zero errors. Fix any TypeScript or build errors.\n\nExisting files to modify:\n- components/landing/ArtworkOfDay.tsx (lazy loading)\n- components/landing/EvidenceSpotlight.tsx (lazy loading)\n- components/landing/HeroSection.tsx (priority image loading)\n\nNew files to create:\n- app/not-found.tsx\n- app/error.tsx\n- app/loading.tsx\n- app/bible/[bookSlug]/[chapter]/loading.tsx\n\nAcceptance criteria:\n- Custom 404 and error pages with themed design\n- Loading skeletons for major routes\n- `npm run build` completes with zero errors\n- All images have proper loading strategy (priority vs lazy)\n- Focus indicators visible in all themes\n- No console errors or warnings in browser",
           "type": "fullstack",
-          "status": "reviewing",
+          "status": "blocked",
           "branch": null,
           "designApproved": true,
           "tags": [],

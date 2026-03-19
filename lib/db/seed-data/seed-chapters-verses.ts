@@ -3,7 +3,7 @@
  * Uses batched inserts inside transactions for performance.
  */
 
-import { db, getRawDb } from "../connection";
+import { seedDb as db, getRawDb } from "../seed-connection";
 import { chapters, verses } from "../schema";
 import type { KjvVerse } from "./fetch-kjv";
 import { CHAPTER_SUMMARIES } from "./chapter-summaries";

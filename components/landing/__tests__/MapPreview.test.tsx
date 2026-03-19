@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
-import { render, screen, within } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import { MapPreview } from "../MapPreview";
 
 // Mock framer-motion
@@ -9,6 +9,7 @@ vi.mock("framer-motion", () => ({
       children,
       ...props
     }: React.PropsWithChildren<Record<string, unknown>>) => {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const { initial, animate, transition, whileInView, viewport, ...rest } =
         props as Record<string, unknown>;
       return <div {...(rest as React.HTMLAttributes<HTMLDivElement>)}>{children}</div>;
@@ -36,8 +37,9 @@ vi.mock("next/link", () => ({
 // Mock next/image
 vi.mock("next/image", () => ({
   default: (props: Record<string, unknown>) => {
-    // eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { fill, priority, sizes, ...rest } = props;
+    // eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text
     return <img {...(rest as React.ImgHTMLAttributes<HTMLImageElement>)} />;
   },
 }));

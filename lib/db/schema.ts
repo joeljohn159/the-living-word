@@ -248,6 +248,20 @@ export const peopleReferences = sqliteTable("people_references", {
   bookIdx: index("idx_people_refs_book").on(table.bookId),
 }));
 
+// ─── Verse Notes ────────────────────────────────────────────
+export const verseNotes = sqliteTable("verse_notes", {
+  id: integer("id").primaryKey({ autoIncrement: true }),
+  bookSlug: text("book_slug").notNull(),
+  chapterNumber: integer("chapter_number").notNull(),
+  verseNumber: integer("verse_number").notNull(),
+  content: text("content").notNull(),
+  createdAt: text("created_at").notNull(),
+  updatedAt: text("updated_at").notNull(),
+}, (table) => ({
+  bookChapterIdx: index("idx_verse_notes_book_chapter").on(table.bookSlug, table.chapterNumber),
+  verseIdx: index("idx_verse_notes_verse").on(table.bookSlug, table.chapterNumber, table.verseNumber),
+}));
+
 // ─── Reading Plans ──────────────────────────────────────────
 export const readingPlans = sqliteTable("reading_plans", {
   id: integer("id").primaryKey({ autoIncrement: true }),

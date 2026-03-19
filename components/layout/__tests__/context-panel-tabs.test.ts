@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { CONTEXT_TABS, type ContextTab } from "../context-panel-tabs";
+import { CONTEXT_TABS } from "../context-panel-tabs";
 
 describe("CONTEXT_TABS", () => {
   it("defines exactly 6 tabs", () => {

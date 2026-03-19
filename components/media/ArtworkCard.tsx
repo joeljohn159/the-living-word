@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import { Paintbrush, Calendar, ExternalLink } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { SmartImage } from "@/components/shared/SmartImage";
 import type { MediaItem } from "./types";
 
 interface ArtworkCardProps {
@@ -29,24 +29,19 @@ export function ArtworkCard({ item, onSelect }: ArtworkCardProps) {
       aria-label={`View ${item.title}${item.artist ? ` by ${item.artist}` : ""}`}
     >
       {/* Image */}
-      {item.imageUrl ? (
-        <div className="relative aspect-[4/3] overflow-hidden bg-[var(--bg-secondary)]">
-          <Image
-            src={item.imageUrl}
-            alt={item.title}
-            fill
-            sizes="(max-width: 1280px) 50vw, 200px"
-            className="object-cover transition-transform duration-500 group-hover:scale-105"
-            loading="lazy"
-            unoptimized
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-        </div>
-      ) : (
-        <div className="aspect-[4/3] bg-[var(--bg-secondary)] flex items-center justify-center">
-          <Paintbrush className="w-8 h-8 text-[var(--text-muted)]" aria-hidden="true" />
-        </div>
-      )}
+      <div className="relative aspect-[4/3] overflow-hidden bg-[var(--bg-secondary)]">
+        <SmartImage
+          src={item.imageUrl}
+          alt={item.title}
+          fill
+          sizes="(max-width: 1280px) 50vw, 200px"
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          fallbackLabel={item.title}
+          fallbackIcon={<Paintbrush className="h-8 w-8" />}
+          fallbackClassName="absolute inset-0"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+      </div>
 
       {/* Info */}
       <div className="p-3 space-y-1.5">

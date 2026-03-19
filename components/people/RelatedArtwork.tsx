@@ -1,5 +1,8 @@
+"use client";
+
 import { Palette } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { SmartImage } from "@/components/shared/SmartImage";
 
 interface ArtworkItem {
   id: number;
@@ -36,15 +39,18 @@ export function RelatedArtwork({ artwork, personName }: RelatedArtworkProps) {
             "bg-[var(--bg-card)] transition-all hover:border-[var(--accent-gold)]"
           )}
         >
-          {item.imageUrl ? (
-            <div className="aspect-[4/3] bg-[var(--bg-tertiary)] flex items-center justify-center">
-              <Palette className="h-8 w-8 text-[var(--text-muted)]" aria-hidden="true" />
-            </div>
-          ) : (
-            <div className="aspect-[4/3] bg-[var(--bg-tertiary)] flex items-center justify-center">
-              <Palette className="h-8 w-8 text-[var(--text-muted)]" aria-hidden="true" />
-            </div>
-          )}
+          <div className="relative aspect-[4/3] overflow-hidden bg-[var(--bg-tertiary)]">
+            <SmartImage
+              src={item.imageUrl}
+              alt={item.title}
+              fill
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              className="object-cover"
+              fallbackLabel={item.title}
+              fallbackIcon={<Palette className="h-8 w-8" />}
+              fallbackClassName="absolute inset-0"
+            />
+          </div>
           <div className="p-3">
             <h4 className="heading text-sm text-[var(--text-primary)]">
               {item.title}

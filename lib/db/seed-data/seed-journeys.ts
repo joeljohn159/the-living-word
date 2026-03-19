@@ -3,7 +3,7 @@
  * Links journey stops to existing locations when available.
  */
 
-import { db } from "../connection";
+import { seedDb as db } from "../seed-connection";
 import { journeys, journeyStops } from "../schema";
 import journeysData from "../../../data/journeys.json";
 

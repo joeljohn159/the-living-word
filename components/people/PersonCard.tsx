@@ -1,7 +1,9 @@
+"use client";
+
 import Link from "next/link";
-import Image from "next/image";
 import { Users } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { SmartImage } from "@/components/shared/SmartImage";
 
 interface PersonCardProps {
   name: string;
@@ -33,64 +35,41 @@ export function PersonCard({
       )}
       aria-label={`View profile of ${name}`}
     >
-      {/* Portrait image */}
-      {imageUrl ? (
-        <div className="relative aspect-[3/2] overflow-hidden bg-[var(--bg-secondary)]">
-          <Image
-            src={imageUrl}
-            alt={`Portrait of ${name}`}
-            fill
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-            className="object-cover transition-transform duration-500 group-hover:scale-105"
-            unoptimized
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-          {tribeOrGroup && (
-            <span className="absolute top-2 left-2 inline-block text-[10px] font-medium px-2 py-0.5 rounded-full bg-black/50 text-white backdrop-blur-sm">
-              {tribeOrGroup}
-            </span>
-          )}
-        </div>
-      ) : (
-        /* Fallback: icon-based avatar when no image */
-        null
-      )}
+      {/* Portrait image or decorative fallback */}
+      <div className="relative aspect-[3/2] overflow-hidden bg-[var(--bg-secondary)]">
+        <SmartImage
+          src={imageUrl}
+          alt={`Portrait of ${name}`}
+          fill
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          fallbackLabel={name}
+          fallbackIcon={<Users className="h-8 w-8" />}
+          fallbackClassName="absolute inset-0"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+        {tribeOrGroup && (
+          <span className="absolute top-2 left-2 inline-block text-[10px] font-medium px-2 py-0.5 rounded-full bg-black/50 text-white backdrop-blur-sm z-20">
+            {tribeOrGroup}
+          </span>
+        )}
+      </div>
 
       <div className="p-4">
-        <div className="flex items-start gap-3">
-          {!imageUrl && (
-            <div
-              className={cn(
-                "flex h-10 w-10 shrink-0 items-center justify-center rounded-full",
-                "bg-[var(--bg-tertiary)] text-[var(--accent-gold)]",
-                "group-hover:bg-[var(--accent-gold)] group-hover:text-[var(--bg-primary)]",
-                "transition-colors duration-200"
-              )}
-              aria-hidden="true"
-            >
-              <Users className="h-5 w-5" />
-            </div>
+        <div className="min-w-0 flex-1">
+          <h3 className="heading text-lg text-[var(--text-primary)] group-hover:text-[var(--accent-gold)] transition-colors">
+            {name}
+          </h3>
+          {alsoKnownAs && (
+            <p className="text-xs text-[var(--text-muted)] mt-0.5">
+              Also known as: {alsoKnownAs}
+            </p>
           )}
-          <div className="min-w-0 flex-1">
-            <h3 className="heading text-lg text-[var(--text-primary)] group-hover:text-[var(--accent-gold)] transition-colors">
-              {name}
-            </h3>
-            {alsoKnownAs && (
-              <p className="text-xs text-[var(--text-muted)] mt-0.5">
-                Also known as: {alsoKnownAs}
-              </p>
-            )}
-            {!imageUrl && tribeOrGroup && (
-              <span className="inline-block mt-1 text-xs font-medium px-2 py-0.5 rounded-full bg-[var(--bg-tertiary)] text-[var(--accent-gold)]">
-                {tribeOrGroup}
-              </span>
-            )}
-            {description && (
-              <p className="mt-2 text-sm text-[var(--text-secondary)] line-clamp-2">
-                {description}
-              </p>
-            )}
-          </div>
+          {description && (
+            <p className="mt-2 text-sm text-[var(--text-secondary)] line-clamp-2">
+              {description}
+            </p>
+          )}
         </div>
 
         {/* Wikimedia attribution */}

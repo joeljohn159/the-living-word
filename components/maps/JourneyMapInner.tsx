@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { MapContainer, TileLayer } from "react-leaflet";
+import { MapContainer, TileLayer, ZoomControl } from "react-leaflet";
 import type { Map as LeafletMap } from "leaflet";
 import { JourneyRoute } from "./JourneyRoute";
 import type { JourneyWithStops } from "./types";
@@ -29,9 +29,12 @@ export default function JourneyMapInner({ journey }: JourneyMapInnerProps) {
       className="h-full w-full"
       ref={mapRef}
       scrollWheelZoom={true}
-      zoomControl={true}
+      zoomControl={false}
       attributionControl={true}
     >
+      {/* Zoom control — bottom right */}
+      <ZoomControl position="bottomright" />
+
       <TileLayer
         url="https://tiles.stadiamaps.com/tiles/stamen_terrain/{z}/{x}/{y}{r}.png"
         attribution='&copy; <a href="https://stadiamaps.com/">Stadia</a> &copy; <a href="https://stamen.com/">Stamen</a> &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OSM</a>'

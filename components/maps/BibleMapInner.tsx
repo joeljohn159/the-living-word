@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { MapContainer, TileLayer, useMap } from "react-leaflet";
+import { MapContainer, TileLayer, useMap, ZoomControl } from "react-leaflet";
 import L from "leaflet";
 import type { Map as LeafletMap } from "leaflet";
 import { LocationPin } from "./LocationPin";
@@ -65,9 +65,12 @@ export default function BibleMapInner({ locations }: BibleMapInnerProps) {
       className="h-full w-full"
       ref={mapRef}
       scrollWheelZoom={true}
-      zoomControl={true}
+      zoomControl={false}
       attributionControl={true}
     >
+      {/* Zoom control — bottom right */}
+      <ZoomControl position="bottomright" />
+
       {/* Muted antiquity-style tiles — Stamen Toner Lite via Stadia Maps (free, no key) */}
       <TileLayer
         url="https://tiles.stadiamaps.com/tiles/stamen_terrain/{z}/{x}/{y}{r}.png"

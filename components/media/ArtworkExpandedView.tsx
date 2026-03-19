@@ -1,9 +1,9 @@
 "use client";
 
-import Image from "next/image";
 import * as Dialog from "@radix-ui/react-dialog";
 import { X, ExternalLink, Paintbrush, Calendar, Scale } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { SmartImage } from "@/components/shared/SmartImage";
 import type { MediaItem } from "./types";
 
 interface ArtworkExpandedViewProps {
@@ -62,21 +62,17 @@ export function ArtworkExpandedView({ item, onClose }: ArtworkExpandedViewProps)
 
               {/* Image area */}
               <div className="flex-1 relative min-h-0 bg-black/40">
-                {item.imageUrl ? (
-                  <Image
-                    src={item.imageUrl}
-                    alt={item.title}
-                    fill
-                    sizes="90vw"
-                    className="object-contain"
-                    priority
-                    unoptimized
-                  />
-                ) : (
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <Paintbrush className="w-16 h-16 text-[var(--text-muted)]" aria-hidden="true" />
-                  </div>
-                )}
+                <SmartImage
+                  src={item.imageUrl}
+                  alt={item.title}
+                  fill
+                  sizes="90vw"
+                  className="object-contain"
+                  priority
+                  fallbackLabel={item.title}
+                  fallbackIcon={<Paintbrush className="h-16 w-16" />}
+                  fallbackClassName="absolute inset-0"
+                />
               </div>
 
               {/* Footer metadata */}

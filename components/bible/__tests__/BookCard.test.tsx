@@ -6,9 +6,8 @@ import type { BookWithSlug } from "@/lib/data/books";
 // Mock framer-motion to render plain divs (avoids animation complexity in tests)
 vi.mock("framer-motion", () => ({
   motion: {
-    div: ({ children, ...props }: React.PropsWithChildren<Record<string, unknown>>) => {
-      // Strip framer-motion-specific props
-      const { layout, initial, animate, exit, transition, ...rest } = props;
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    div: ({ children, layout, initial, animate, exit, transition, ...rest }: React.PropsWithChildren<Record<string, unknown>>) => {
       return <div {...rest}>{children}</div>;
     },
   },

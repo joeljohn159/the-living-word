@@ -72,7 +72,7 @@ async function searchVersesHandler(
     conditions.push(eq(books.slug, bookSlug));
   }
 
-  const results = db
+  const results = await db
     .select({
       id: verses.id,
       bookId: verses.bookId,
@@ -96,7 +96,7 @@ async function searchVersesHandler(
 async function searchDictionaryHandler(query: string, limit: number) {
   const pattern = `%${query}%`;
 
-  const results = db
+  const results = await db
     .select({
       id: dictionary.id,
       word: dictionary.word,
@@ -112,7 +112,7 @@ async function searchDictionaryHandler(query: string, limit: number) {
 
   // Also search definitions if word search returns few results
   if (results.length < 5) {
-    const defResults = db
+    const defResults = await db
       .select({
         id: dictionary.id,
         word: dictionary.word,
@@ -138,7 +138,7 @@ async function searchDictionaryHandler(query: string, limit: number) {
 async function searchPeopleHandler(query: string, limit: number) {
   const pattern = `%${query}%`;
 
-  const nameResults = db
+  const nameResults = await db
     .select({
       id: people.id,
       name: people.name,
@@ -153,7 +153,7 @@ async function searchPeopleHandler(query: string, limit: number) {
     .all();
 
   if (nameResults.length < 5) {
-    const descResults = db
+    const descResults = await db
       .select({
         id: people.id,
         name: people.name,
@@ -179,7 +179,7 @@ async function searchPeopleHandler(query: string, limit: number) {
 async function searchPlacesHandler(query: string, limit: number) {
   const pattern = `%${query}%`;
 
-  const results = db
+  const results = await db
     .select({
       id: locations.id,
       name: locations.name,
@@ -210,7 +210,7 @@ export async function POST(request: NextRequest) {
     const limit = MAX_SUGGESTIONS;
 
     // Get verse suggestions (unique book+chapter combos)
-    const verseSuggestions = db
+    const verseSuggestions = await db
       .select({
         bookName: books.name,
         bookSlug: books.slug,
@@ -223,7 +223,7 @@ export async function POST(request: NextRequest) {
       .all();
 
     // Get people suggestions
-    const peopleSuggestions = db
+    const peopleSuggestions = await db
       .select({ name: people.name, slug: people.slug })
       .from(people)
       .where(like(people.name, pattern))
@@ -231,7 +231,7 @@ export async function POST(request: NextRequest) {
       .all();
 
     // Get dictionary suggestions
-    const dictSuggestions = db
+    const dictSuggestions = await db
       .select({ word: dictionary.word, slug: dictionary.slug })
       .from(dictionary)
       .where(like(dictionary.word, pattern))

@@ -9,7 +9,7 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Patriarch",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Sistine_Chapel_Adam_crop.jpg/800px-Sistine_Chapel_Adam_crop.jpg",
+      "image_url": "/images/people/adam.jpg",
       "source_url": "https://commons.wikimedia.org/wiki/File:Sistine_Chapel_Adam_crop.jpg"
     },
     {
@@ -21,7 +21,7 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Patriarch",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Lucas_Cranach_the_Elder_-_Adam_and_Eve_-_Google_Art_Project.jpg/800px-Lucas_Cranach_the_Elder_-_Adam_and_Eve_-_Google_Art_Project.jpg",
+      "image_url": "/images/people/eve.jpg",
       "source_url": "https://commons.wikimedia.org/wiki/File:Lucas_Cranach_the_Elder_-_Adam_and_Eve_-_Google_Art_Project.jpg"
     },
     {
@@ -33,8 +33,8 @@
       "father_slug": "adam",
       "mother_slug": "eve",
       "tribe_or_group": "Patriarch",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/cain.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Abel",
@@ -45,8 +45,8 @@
       "father_slug": "adam",
       "mother_slug": "eve",
       "tribe_or_group": "Patriarch",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/abel.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Seth",
@@ -57,8 +57,8 @@
       "father_slug": "adam",
       "mother_slug": "eve",
       "tribe_or_group": "Patriarch",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/seth.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Enoch",
@@ -69,8 +69,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Patriarch",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/enoch.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Methuselah",
@@ -81,8 +81,8 @@
       "father_slug": "enoch",
       "mother_slug": null,
       "tribe_or_group": "Patriarch",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/methuselah.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Noah",
@@ -93,7 +93,7 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Patriarch",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Edward_Hicks_-_Noah%27s_Ark.jpg/800px-Edward_Hicks_-_Noah%27s_Ark.jpg",
+      "image_url": "/images/people/noah.jpg",
       "source_url": "https://commons.wikimedia.org/wiki/File:Edward_Hicks_-_Noah%27s_Ark.jpg"
     },
     {
@@ -105,8 +105,8 @@
       "father_slug": "noah",
       "mother_slug": null,
       "tribe_or_group": "Patriarch",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/shem.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Ham",
@@ -117,8 +117,8 @@
       "father_slug": "noah",
       "mother_slug": null,
       "tribe_or_group": "Patriarch",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/ham.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Japheth",
@@ -129,8 +129,8 @@
       "father_slug": "noah",
       "mother_slug": null,
       "tribe_or_group": "Patriarch",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/japheth.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Abraham",
@@ -141,7 +141,7 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Patriarch",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Rembrandt_-_Sacrifice_of_Isaac_-_1635.jpg/800px-Rembrandt_-_Sacrifice_of_Isaac_-_1635.jpg",
+      "image_url": "/images/people/abraham.jpg",
       "source_url": "https://commons.wikimedia.org/wiki/File:Rembrandt_-_Sacrifice_of_Isaac_-_1635.jpg"
     },
     {
@@ -153,7 +153,7 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Patriarch",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/James_Jacques_Joseph_Tissot_-_Sarah_Hears_and_Laughs.jpg/800px-James_Jacques_Joseph_Tissot_-_Sarah_Hears_and_Laughs.jpg",
+      "image_url": "/images/people/sarah.jpg",
       "source_url": "https://commons.wikimedia.org/wiki/File:James_Jacques_Joseph_Tissot_-_Sarah_Hears_and_Laughs.jpg"
     },
     {
@@ -165,8 +165,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Patriarch",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/hagar.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Ishmael",
@@ -177,8 +177,8 @@
       "father_slug": "abraham",
       "mother_slug": "hagar",
       "tribe_or_group": "Patriarch",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/ishmael.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Lot",
@@ -189,8 +189,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Patriarch",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/lot.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Isaac",
@@ -201,7 +201,7 @@
       "father_slug": "abraham",
       "mother_slug": "sarah",
       "tribe_or_group": "Patriarch",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Caravaggio_-_Sacrifice_of_Isaac_-_Google_Art_Project.jpg/800px-Caravaggio_-_Sacrifice_of_Isaac_-_Google_Art_Project.jpg",
+      "image_url": "/images/people/isaac.jpg",
       "source_url": "https://commons.wikimedia.org/wiki/File:Caravaggio_-_Sacrifice_of_Isaac_-_Google_Art_Project.jpg"
     },
     {
@@ -213,8 +213,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Patriarch",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/rebekah.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Esau",
@@ -225,8 +225,8 @@
       "father_slug": "isaac",
       "mother_slug": "rebekah",
       "tribe_or_group": "Edomite",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/esau.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Jacob",
@@ -237,7 +237,7 @@
       "father_slug": "isaac",
       "mother_slug": "rebekah",
       "tribe_or_group": "Patriarch",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Rembrandt_-_Jacob_Wrestling_with_the_Angel_-_Google_Art_Project.jpg/800px-Rembrandt_-_Jacob_Wrestling_with_the_Angel_-_Google_Art_Project.jpg",
+      "image_url": "/images/people/jacob.jpg",
       "source_url": "https://commons.wikimedia.org/wiki/File:Rembrandt_-_Jacob_Wrestling_with_the_Angel_-_Google_Art_Project.jpg"
     },
     {
@@ -249,8 +249,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Patriarch",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/leah.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Rachel",
@@ -261,8 +261,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Patriarch",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/rachel.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Reuben",
@@ -273,8 +273,8 @@
       "father_slug": "jacob",
       "mother_slug": "leah",
       "tribe_or_group": "Tribe of Reuben",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/reuben.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Simeon",
@@ -285,8 +285,8 @@
       "father_slug": "jacob",
       "mother_slug": "leah",
       "tribe_or_group": "Tribe of Simeon",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/simeon.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Levi",
@@ -297,8 +297,8 @@
       "father_slug": "jacob",
       "mother_slug": "leah",
       "tribe_or_group": "Tribe of Levi",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/levi.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Judah",
@@ -309,8 +309,8 @@
       "father_slug": "jacob",
       "mother_slug": "leah",
       "tribe_or_group": "Tribe of Judah",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/judah.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Dan",
@@ -321,8 +321,8 @@
       "father_slug": "jacob",
       "mother_slug": null,
       "tribe_or_group": "Tribe of Dan",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/dan.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Naphtali",
@@ -333,8 +333,8 @@
       "father_slug": "jacob",
       "mother_slug": null,
       "tribe_or_group": "Tribe of Naphtali",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/naphtali.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Gad",
@@ -345,8 +345,8 @@
       "father_slug": "jacob",
       "mother_slug": null,
       "tribe_or_group": "Tribe of Gad",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/gad.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Asher",
@@ -357,8 +357,8 @@
       "father_slug": "jacob",
       "mother_slug": null,
       "tribe_or_group": "Tribe of Asher",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/asher.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Issachar",
@@ -369,8 +369,8 @@
       "father_slug": "jacob",
       "mother_slug": "leah",
       "tribe_or_group": "Tribe of Issachar",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/issachar.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Zebulun",
@@ -381,8 +381,8 @@
       "father_slug": "jacob",
       "mother_slug": "leah",
       "tribe_or_group": "Tribe of Zebulun",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/zebulun.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Joseph",
@@ -393,7 +393,7 @@
       "father_slug": "jacob",
       "mother_slug": "rachel",
       "tribe_or_group": "Tribe of Joseph",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Pharaoh%27s_Dream_-_James_Tissot.jpg/800px-Pharaoh%27s_Dream_-_James_Tissot.jpg",
+      "image_url": "/images/people/joseph.jpg",
       "source_url": "https://commons.wikimedia.org/wiki/File:Pharaoh%27s_Dream_-_James_Tissot.jpg"
     },
     {
@@ -405,8 +405,8 @@
       "father_slug": "jacob",
       "mother_slug": "rachel",
       "tribe_or_group": "Tribe of Benjamin",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/benjamin.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Dinah",
@@ -417,8 +417,8 @@
       "father_slug": "jacob",
       "mother_slug": "leah",
       "tribe_or_group": "Patriarch",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/dinah.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Tamar",
@@ -429,8 +429,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Tribe of Judah",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/tamar.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Ephraim",
@@ -441,8 +441,8 @@
       "father_slug": "joseph",
       "mother_slug": null,
       "tribe_or_group": "Tribe of Ephraim",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/ephraim.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Manasseh",
@@ -453,8 +453,8 @@
       "father_slug": "joseph",
       "mother_slug": null,
       "tribe_or_group": "Tribe of Manasseh",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/manasseh.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Moses",
@@ -465,7 +465,7 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Tribe of Levi",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Guido_Reni_-_Moses_with_the_Tables_of_the_Law_-_Google_Art_Project.jpg/800px-Guido_Reni_-_Moses_with_the_Tables_of_the_Law_-_Google_Art_Project.jpg",
+      "image_url": "/images/people/moses.jpg",
       "source_url": "https://commons.wikimedia.org/wiki/File:Guido_Reni_-_Moses_with_the_Tables_of_the_Law_-_Google_Art_Project.jpg"
     },
     {
@@ -477,7 +477,7 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Tribe of Levi",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Tissot_Moses_and_Aaron_Speak_to_the_People.jpg/800px-Tissot_Moses_and_Aaron_Speak_to_the_People.jpg",
+      "image_url": "/images/people/aaron.jpg",
       "source_url": "https://commons.wikimedia.org/wiki/File:Tissot_Moses_and_Aaron_Speak_to_the_People.jpg"
     },
     {
@@ -489,7 +489,7 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Tribe of Levi",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Miriam%27s_Song_of_Triumph.jpg/800px-Miriam%27s_Song_of_Triumph.jpg",
+      "image_url": "/images/people/miriam.jpg",
       "source_url": "https://commons.wikimedia.org/wiki/File:Miriam%27s_Song_of_Triumph.jpg"
     },
     {
@@ -501,8 +501,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Egyptian",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/pharaoh-s-daughter.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Joshua",
@@ -513,7 +513,7 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Tribe of Ephraim",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Joshua_at_the_walls_of_Jericho.jpg/800px-Joshua_at_the_walls_of_Jericho.jpg",
+      "image_url": "/images/people/joshua.jpg",
       "source_url": "https://commons.wikimedia.org/wiki/File:Joshua_at_the_walls_of_Jericho.jpg"
     },
     {
@@ -525,8 +525,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Tribe of Judah",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/caleb.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Rahab",
@@ -537,7 +537,7 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Canaanite",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Frederick_Richard_Pickersgill_-_The_spies_find_Rahab.jpg/800px-Frederick_Richard_Pickersgill_-_The_spies_find_Rahab.jpg",
+      "image_url": "/images/people/rahab.jpg",
       "source_url": "https://commons.wikimedia.org/wiki/File:Frederick_Richard_Pickersgill_-_The_spies_find_Rahab.jpg"
     },
     {
@@ -549,7 +549,7 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Judge",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Gustave_Dor%C3%A9_-_Deborah.jpg/800px-Gustave_Dor%C3%A9_-_Deborah.jpg",
+      "image_url": "/images/people/deborah.jpg",
       "source_url": "https://commons.wikimedia.org/wiki/File:Gustave_Dor%C3%A9_-_Deborah.jpg"
     },
     {
@@ -561,8 +561,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Tribe of Manasseh",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/gideon.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Jephthah",
@@ -573,8 +573,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Judge",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/jephthah.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Samson",
@@ -585,7 +585,7 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Tribe of Dan",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Samson_and_Delilah_by_Rubens.jpg/800px-Samson_and_Delilah_by_Rubens.jpg",
+      "image_url": "/images/people/samson.jpg",
       "source_url": "https://commons.wikimedia.org/wiki/File:Samson_and_Delilah_by_Rubens.jpg"
     },
     {
@@ -597,7 +597,7 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Philistine",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Samson_and_Delilah_by_Rubens.jpg/800px-Samson_and_Delilah_by_Rubens.jpg",
+      "image_url": "/images/people/delilah.jpg",
       "source_url": "https://commons.wikimedia.org/wiki/File:Samson_and_Delilah_by_Rubens.jpg"
     },
     {
@@ -609,7 +609,7 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Moabite",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Julius_Schnorr_von_Carolsfeld-_Ruth_im_Feld_des_Boaz.jpg/800px-Julius_Schnorr_von_Carolsfeld-_Ruth_im_Feld_des_Boaz.jpg",
+      "image_url": "/images/people/ruth.jpg",
       "source_url": "https://commons.wikimedia.org/wiki/File:Julius_Schnorr_von_Carolsfeld-_Ruth_im_Feld_des_Boaz.jpg"
     },
     {
@@ -621,8 +621,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Tribe of Judah",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/boaz.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Naomi",
@@ -633,8 +633,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Tribe of Judah",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/naomi.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Hannah",
@@ -645,8 +645,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Tribe of Ephraim",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/hannah.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Samuel",
@@ -657,7 +657,7 @@
       "father_slug": null,
       "mother_slug": "hannah",
       "tribe_or_group": "Tribe of Levi",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Joshua_Reynolds_-_The_Infant_Samuel_at_Prayer_-_Google_Art_Project.jpg/800px-Joshua_Reynolds_-_The_Infant_Samuel_at_Prayer_-_Google_Art_Project.jpg",
+      "image_url": "/images/people/samuel.jpg",
       "source_url": "https://commons.wikimedia.org/wiki/File:Joshua_Reynolds_-_The_Infant_Samuel_at_Prayer_-_Google_Art_Project.jpg"
     },
     {
@@ -669,8 +669,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Tribe of Levi",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/eli.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Saul",
@@ -681,7 +681,7 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Tribe of Benjamin",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Ernst_Josephson-David_och_Saul.jpg/800px-Ernst_Josephson-David_och_Saul.jpg",
+      "image_url": "/images/people/saul.jpg",
       "source_url": "https://commons.wikimedia.org/wiki/File:Ernst_Josephson-David_och_Saul.jpg"
     },
     {
@@ -693,8 +693,8 @@
       "father_slug": "saul",
       "mother_slug": null,
       "tribe_or_group": "Tribe of Benjamin",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/jonathan.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "David",
@@ -705,7 +705,7 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Tribe of Judah",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Rembrandt_Harmensz._van_Rijn_-_David_Playing_the_Harp_-_Google_Art_Project.jpg/800px-Rembrandt_Harmensz._van_Rijn_-_David_Playing_the_Harp_-_Google_Art_Project.jpg",
+      "image_url": "/images/people/david.jpg",
       "source_url": "https://commons.wikimedia.org/wiki/File:Rembrandt_Harmensz._van_Rijn_-_David_Playing_the_Harp_-_Google_Art_Project.jpg"
     },
     {
@@ -717,7 +717,7 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Philistine",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Caravaggio_-_David_with_the_Head_of_Goliath_-_Vienna.jpg/800px-Caravaggio_-_David_with_the_Head_of_Goliath_-_Vienna.jpg",
+      "image_url": "/images/people/goliath.jpg",
       "source_url": "https://commons.wikimedia.org/wiki/File:Caravaggio_-_David_with_the_Head_of_Goliath_-_Vienna.jpg"
     },
     {
@@ -729,8 +729,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Tribe of Judah",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/abigail.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Bathsheba",
@@ -741,7 +741,7 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Kingdom of Israel",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Rembrandt_Bathsheba_at_Her_Bath_%281654%29.jpg/800px-Rembrandt_Bathsheba_at_Her_Bath_%281654%29.jpg",
+      "image_url": "/images/people/bathsheba.jpg",
       "source_url": "https://commons.wikimedia.org/wiki/File:Rembrandt_Bathsheba_at_Her_Bath_(1654).jpg"
     },
     {
@@ -753,8 +753,8 @@
       "father_slug": "david",
       "mother_slug": null,
       "tribe_or_group": "Tribe of Judah",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/absalom.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Solomon",
@@ -765,7 +765,7 @@
       "father_slug": "david",
       "mother_slug": "bathsheba",
       "tribe_or_group": "Tribe of Judah",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Ingobertus_-_Salomon.jpg/800px-Ingobertus_-_Salomon.jpg",
+      "image_url": "/images/people/solomon.jpg",
       "source_url": "https://commons.wikimedia.org/wiki/File:Ingobertus_-_Salomon.jpg"
     },
     {
@@ -777,8 +777,8 @@
       "father_slug": "solomon",
       "mother_slug": null,
       "tribe_or_group": "Kingdom of Judah",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/rehoboam.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Jeroboam",
@@ -789,8 +789,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Tribe of Ephraim",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/jeroboam.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Ahab",
@@ -801,8 +801,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Kingdom of Israel",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/ahab.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Jezebel",
@@ -813,8 +813,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Phoenician",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/jezebel.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Hezekiah",
@@ -825,7 +825,7 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Kingdom of Judah",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Hezekiah%27s_prayer.jpg/800px-Hezekiah%27s_prayer.jpg",
+      "image_url": "/images/people/hezekiah.jpg",
       "source_url": "https://commons.wikimedia.org/wiki/File:Hezekiah%27s_prayer.jpg"
     },
     {
@@ -837,8 +837,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Kingdom of Judah",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/josiah.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Elijah",
@@ -849,7 +849,7 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Prophet",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Washington_Allston_-_Elijah_in_the_Desert_-_Google_Art_Project.jpg/800px-Washington_Allston_-_Elijah_in_the_Desert_-_Google_Art_Project.jpg",
+      "image_url": "/images/people/elijah.jpg",
       "source_url": "https://commons.wikimedia.org/wiki/File:Washington_Allston_-_Elijah_in_the_Desert_-_Google_Art_Project.jpg"
     },
     {
@@ -861,7 +861,7 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Prophet",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Frederic_Leighton_-_Elisha_raising_the_Son_of_the_Shunamite.jpg/800px-Frederic_Leighton_-_Elisha_raising_the_Son_of_the_Shunamite.jpg",
+      "image_url": "/images/people/elisha.jpg",
       "source_url": "https://commons.wikimedia.org/wiki/File:Frederic_Leighton_-_Elisha_raising_the_Son_of_the_Shunamite.jpg"
     },
     {
@@ -873,7 +873,7 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Prophet",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Raphael_-_The_Prophet_Isaiah_-_Google_Art_Project.jpg/800px-Raphael_-_The_Prophet_Isaiah_-_Google_Art_Project.jpg",
+      "image_url": "/images/people/isaiah.jpg",
       "source_url": "https://commons.wikimedia.org/wiki/File:Raphael_-_The_Prophet_Isaiah_-_Google_Art_Project.jpg"
     },
     {
@@ -885,7 +885,7 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Prophet",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Rembrandt_-_Jeremiah_lamenting.jpg/800px-Rembrandt_-_Jeremiah_lamenting.jpg",
+      "image_url": "/images/people/jeremiah.jpg",
       "source_url": "https://commons.wikimedia.org/wiki/File:Rembrandt_-_Jeremiah_lamenting.jpg"
     },
     {
@@ -897,7 +897,7 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Prophet",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Sistine_Chapel_-_Ezekiel.jpg/800px-Sistine_Chapel_-_Ezekiel.jpg",
+      "image_url": "/images/people/ezekiel.jpg",
       "source_url": "https://commons.wikimedia.org/wiki/File:Sistine_Chapel_-_Ezekiel.jpg"
     },
     {
@@ -909,7 +909,7 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Tribe of Judah",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Peter_Paul_Rubens_-_Daniel_in_the_Lions%27_Den_-_Google_Art_Project.jpg/800px-Peter_Paul_Rubens_-_Daniel_in_the_Lions%27_Den_-_Google_Art_Project.jpg",
+      "image_url": "/images/people/daniel.jpg",
       "source_url": "https://commons.wikimedia.org/wiki/File:Peter_Paul_Rubens_-_Daniel_in_the_Lions%27_Den_-_Google_Art_Project.jpg"
     },
     {
@@ -921,8 +921,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Tribe of Judah",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/shadrach.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Meshach",
@@ -933,8 +933,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Tribe of Judah",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/meshach.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Abednego",
@@ -945,8 +945,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Tribe of Judah",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/abednego.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Nebuchadnezzar",
@@ -957,7 +957,7 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Babylonian",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/William_Blake_-_Nebuchadnezzar_%28Tate_Britain%29.jpg/800px-William_Blake_-_Nebuchadnezzar_%28Tate_Britain%29.jpg",
+      "image_url": "/images/people/nebuchadnezzar.jpg",
       "source_url": "https://commons.wikimedia.org/wiki/File:William_Blake_-_Nebuchadnezzar_(Tate_Britain).jpg"
     },
     {
@@ -969,8 +969,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Prophet",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/hosea.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Joel",
@@ -981,8 +981,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Prophet",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/joel.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Amos",
@@ -993,8 +993,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Prophet",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/amos.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Jonah",
@@ -1005,7 +1005,7 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Prophet",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Pieter_Lastman_-_Jonah_and_the_Whale_-_Google_Art_Project.jpg/800px-Pieter_Lastman_-_Jonah_and_the_Whale_-_Google_Art_Project.jpg",
+      "image_url": "/images/people/jonah.jpg",
       "source_url": "https://commons.wikimedia.org/wiki/File:Pieter_Lastman_-_Jonah_and_the_Whale_-_Google_Art_Project.jpg"
     },
     {
@@ -1017,8 +1017,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Prophet",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/micah.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Nahum",
@@ -1029,8 +1029,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Prophet",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/nahum.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Habakkuk",
@@ -1041,8 +1041,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Prophet",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/habakkuk.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Zephaniah",
@@ -1053,8 +1053,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Prophet",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/zephaniah.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Haggai",
@@ -1065,8 +1065,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Prophet",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/haggai.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Zechariah",
@@ -1077,8 +1077,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Prophet",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/zechariah.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Malachi",
@@ -1089,8 +1089,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Prophet",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/malachi.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Ezra",
@@ -1101,8 +1101,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Tribe of Levi",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/ezra.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Nehemiah",
@@ -1113,8 +1113,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Tribe of Judah",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/nehemiah.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Esther",
@@ -1125,7 +1125,7 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Tribe of Benjamin",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/John_Everett_Millais_-_Esther_%281865%29.jpg/800px-John_Everett_Millais_-_Esther_%281865%29.jpg",
+      "image_url": "/images/people/esther.jpg",
       "source_url": "https://commons.wikimedia.org/wiki/File:John_Everett_Millais_-_Esther_(1865).jpg"
     },
     {
@@ -1137,8 +1137,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Tribe of Benjamin",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/mordecai.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Job",
@@ -1149,7 +1149,7 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Patriarch",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/L%C3%A9on_Bonnat_-_Job.jpg/800px-L%C3%A9on_Bonnat_-_Job.jpg",
+      "image_url": "/images/people/job.jpg",
       "source_url": "https://commons.wikimedia.org/wiki/File:L%C3%A9on_Bonnat_-_Job.jpg"
     },
     {
@@ -1161,7 +1161,7 @@
       "father_slug": null,
       "mother_slug": "mary-mother-of-jesus",
       "tribe_or_group": "Tribe of Judah",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/El_Greco_-_Christ_Carrying_the_Cross_-_Google_Art_Project.jpg/800px-El_Greco_-_Christ_Carrying_the_Cross_-_Google_Art_Project.jpg",
+      "image_url": "/images/people/jesus.jpg",
       "source_url": "https://commons.wikimedia.org/wiki/File:El_Greco_-_Christ_Carrying_the_Cross_-_Google_Art_Project.jpg"
     },
     {
@@ -1173,7 +1173,7 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Tribe of Judah",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Sassoferrato_-_Jungfrun_i_b%C3%B6n.jpg/800px-Sassoferrato_-_Jungfrun_i_b%C3%B6n.jpg",
+      "image_url": "/images/people/mary-mother-of-jesus.jpg",
       "source_url": "https://commons.wikimedia.org/wiki/File:Sassoferrato_-_Jungfrun_i_b%C3%B6n.jpg"
     },
     {
@@ -1185,7 +1185,7 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Tribe of Judah",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Guido_Reni_-_St_Joseph_with_the_Infant_Jesus_-_Google_Art_Project.jpg/800px-Guido_Reni_-_St_Joseph_with_the_Infant_Jesus_-_Google_Art_Project.jpg",
+      "image_url": "/images/people/joseph-of-nazareth.jpg",
       "source_url": "https://commons.wikimedia.org/wiki/File:Guido_Reni_-_St_Joseph_with_the_Infant_Jesus_-_Google_Art_Project.jpg"
     },
     {
@@ -1197,7 +1197,7 @@
       "father_slug": null,
       "mother_slug": "elizabeth",
       "tribe_or_group": "Tribe of Levi",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Caravaggio_-_Saint_John_the_Baptist_-_Google_Art_Project.jpg/800px-Caravaggio_-_Saint_John_the_Baptist_-_Google_Art_Project.jpg",
+      "image_url": "/images/people/john-the-baptist.jpg",
       "source_url": "https://commons.wikimedia.org/wiki/File:Caravaggio_-_Saint_John_the_Baptist_-_Google_Art_Project.jpg"
     },
     {
@@ -1209,8 +1209,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Tribe of Levi",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/elizabeth.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Zacharias",
@@ -1221,8 +1221,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Tribe of Levi",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/zacharias.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Simon Peter",
@@ -1233,7 +1233,7 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Apostle",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Rubens_apostel_petrus.jpg/800px-Rubens_apostel_petrus.jpg",
+      "image_url": "/images/people/simon-peter.jpg",
       "source_url": "https://commons.wikimedia.org/wiki/File:Rubens_apostel_petrus.jpg"
     },
     {
@@ -1245,8 +1245,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Apostle",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/andrew.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "James son of Zebedee",
@@ -1257,8 +1257,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Apostle",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/james-son-of-zebedee.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "John the Apostle",
@@ -1269,7 +1269,7 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Apostle",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/El_Greco_-_St._John_the_Evangelist_-_Google_Art_Project.jpg/800px-El_Greco_-_St._John_the_Evangelist_-_Google_Art_Project.jpg",
+      "image_url": "/images/people/john-the-apostle.jpg",
       "source_url": "https://commons.wikimedia.org/wiki/File:El_Greco_-_St._John_the_Evangelist_-_Google_Art_Project.jpg"
     },
     {
@@ -1281,8 +1281,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Apostle",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/philip-the-apostle.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Bartholomew",
@@ -1293,8 +1293,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Apostle",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/bartholomew.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Matthew the Apostle",
@@ -1305,7 +1305,7 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Apostle",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/The_Calling_of_Saint_Matthew-Caravaggo_%281599-1600%29.jpg/800px-The_Calling_of_Saint_Matthew-Caravaggo_%281599-1600%29.jpg",
+      "image_url": "/images/people/matthew-the-apostle.jpg",
       "source_url": "https://commons.wikimedia.org/wiki/File:The_Calling_of_Saint_Matthew-Caravaggo_(1599-1600).jpg"
     },
     {
@@ -1317,8 +1317,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Apostle",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/thomas.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "James son of Alphaeus",
@@ -1329,8 +1329,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Apostle",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/james-son-of-alphaeus.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Thaddaeus",
@@ -1341,8 +1341,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Apostle",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/thaddaeus.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Simon the Zealot",
@@ -1353,8 +1353,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Apostle",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/simon-the-zealot.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Judas Iscariot",
@@ -1365,7 +1365,7 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Apostle",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Giotto_-_Scrovegni_-_-31-_-_Kiss_of_Judas.jpg/800px-Giotto_-_Scrovegni_-_-31-_-_Kiss_of_Judas.jpg",
+      "image_url": "/images/people/judas-iscariot.jpg",
       "source_url": "https://commons.wikimedia.org/wiki/File:Giotto_-_Scrovegni_-_-31-_-_Kiss_of_Judas.jpg"
     },
     {
@@ -1377,8 +1377,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Apostle",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/matthias.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Paul",
@@ -1389,7 +1389,7 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Tribe of Benjamin",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Rembrandt_-_Apostle_Paul_-_Google_Art_Project.jpg/800px-Rembrandt_-_Apostle_Paul_-_Google_Art_Project.jpg",
+      "image_url": "/images/people/paul.jpg",
       "source_url": "https://commons.wikimedia.org/wiki/File:Rembrandt_-_Apostle_Paul_-_Google_Art_Project.jpg"
     },
     {
@@ -1401,8 +1401,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Tribe of Levi",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/barnabas.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Timothy",
@@ -1413,8 +1413,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Early Church",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/timothy.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Titus",
@@ -1425,8 +1425,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Early Church",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/titus.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Luke",
@@ -1437,8 +1437,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Early Church",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/luke.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Mark",
@@ -1449,8 +1449,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Early Church",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/mark.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Silas",
@@ -1461,8 +1461,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Early Church",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/silas.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Stephen",
@@ -1473,7 +1473,7 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Early Church",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Stoning_of_Saint_Stephen_by_Rembrandt.jpg/800px-Stoning_of_Saint_Stephen_by_Rembrandt.jpg",
+      "image_url": "/images/people/stephen.jpg",
       "source_url": "https://commons.wikimedia.org/wiki/File:Stoning_of_Saint_Stephen_by_Rembrandt.jpg"
     },
     {
@@ -1485,8 +1485,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Early Church",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/philip-the-evangelist.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Mary Magdalene",
@@ -1497,7 +1497,7 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Follower of Jesus",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Georges_de_La_Tour_-_The_Penitent_Magdalen_-_Google_Art_Project.jpg/800px-Georges_de_La_Tour_-_The_Penitent_Magdalen_-_Google_Art_Project.jpg",
+      "image_url": "/images/people/mary-magdalene.jpg",
       "source_url": "https://commons.wikimedia.org/wiki/File:Georges_de_La_Tour_-_The_Penitent_Magdalen_-_Google_Art_Project.jpg"
     },
     {
@@ -1509,8 +1509,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Follower of Jesus",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/martha.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Mary of Bethany",
@@ -1521,8 +1521,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Follower of Jesus",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/mary-of-bethany.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Lazarus",
@@ -1533,7 +1533,7 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Follower of Jesus",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Rembrandt_The_Raising_of_Lazarus.jpg/800px-Rembrandt_The_Raising_of_Lazarus.jpg",
+      "image_url": "/images/people/lazarus.jpg",
       "source_url": "https://commons.wikimedia.org/wiki/File:Rembrandt_The_Raising_of_Lazarus.jpg"
     },
     {
@@ -1545,8 +1545,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Pharisee",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/nicodemus.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Joseph of Arimathaea",
@@ -1557,8 +1557,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Follower of Jesus",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/joseph-of-arimathaea.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Pontius Pilate",
@@ -1569,7 +1569,7 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Roman",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Ecce_homo_by_Antonio_Ciseri_%281%29.jpg/800px-Ecce_homo_by_Antonio_Ciseri_%281%29.jpg",
+      "image_url": "/images/people/pontius-pilate.jpg",
       "source_url": "https://commons.wikimedia.org/wiki/File:Ecce_homo_by_Antonio_Ciseri_(1).jpg"
     },
     {
@@ -1581,7 +1581,7 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Idumean",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/15th-century_painters_-_Massacre_of_the_Innocents_-_WGA23640.jpg/800px-15th-century_painters_-_Massacre_of_the_Innocents_-_WGA23640.jpg",
+      "image_url": "/images/people/herod-the-great.jpg",
       "source_url": "https://commons.wikimedia.org/wiki/File:15th-century_painters_-_Massacre_of_the_Innocents_-_WGA23640.jpg"
     },
     {
@@ -1593,8 +1593,8 @@
       "father_slug": "herod-the-great",
       "mother_slug": null,
       "tribe_or_group": "Idumean",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/herod-antipas.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Caiaphas",
@@ -1605,8 +1605,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Tribe of Levi",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/caiaphas.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Barabbas",
@@ -1617,8 +1617,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Judean",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/barabbas.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Priscilla",
@@ -1629,8 +1629,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Early Church",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/priscilla.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Aquila",
@@ -1641,8 +1641,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Early Church",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/aquila.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Apollos",
@@ -1653,8 +1653,8 @@
       "father_slug": null,
       "mother_slug": null,
       "tribe_or_group": "Early Church",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/apollos.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "James brother of Jesus",
@@ -1665,8 +1665,8 @@
       "father_slug": "joseph-of-nazareth",
       "mother_slug": "mary-mother-of-jesus",
       "tribe_or_group": "Early Church",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/james-brother-of-jesus.jpg",
+      "source_url": "https://commons.wikimedia.org"
     },
     {
       "name": "Jude brother of Jesus",
@@ -1677,8 +1677,8 @@
       "father_slug": "joseph-of-nazareth",
       "mother_slug": "mary-mother-of-jesus",
       "tribe_or_group": "Early Church",
-      "image_url": null,
-      "source_url": null
+      "image_url": "/images/people/jude-brother-of-jesus.jpg",
+      "source_url": "https://commons.wikimedia.org"
     }
   ],
   "people_references": [

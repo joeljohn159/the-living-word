@@ -104,7 +104,7 @@ export default async function ChapterPage({ params }: ChapterPageProps) {
         <div className="flex flex-col lg:flex-row min-h-[calc(100vh-4rem)] overflow-x-hidden">
           {/* Main scripture area — single column on mobile */}
           <SwipeableChapter prev={prev} next={next}>
-            <main className="flex-1 min-w-0 overflow-hidden">
+            <div className="flex-1 min-w-0 overflow-hidden">
               {/* Chapter header */}
               <header className="pt-6 sm:pt-8 pb-4 sm:pb-6 px-4 sm:px-6 lg:px-12 text-center">
                 <p className="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-[var(--text-muted)] mb-1.5 sm:mb-2">
@@ -143,7 +143,7 @@ export default async function ChapterPage({ params }: ChapterPageProps) {
               <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 pb-8 sm:pb-12">
                 <ChapterNavigation prev={prev} next={next} />
               </div>
-            </main>
+            </div>
           </SwipeableChapter>
 
           {/* Context panel: bottom sheet on mobile, side panel on desktop */}

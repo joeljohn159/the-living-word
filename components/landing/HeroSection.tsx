@@ -37,7 +37,7 @@ export function HeroSection({ verseText, verseRef }: HeroSectionProps) {
         className="absolute inset-0 -top-20 -bottom-20 bg-cover bg-center will-change-transform"
         style={{
           backgroundImage:
-            "url('https://upload.wikimedia.org/wikipedia/commons/5/5b/Michelangelo_-_Creation_of_Adam_%28cropped%29.jpg')",
+            "url('/images/landing/creation-of-adam.jpg')",
         }}
         aria-hidden="true"
       />

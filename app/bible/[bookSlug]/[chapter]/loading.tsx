@@ -1,3 +1,7 @@
+/** Deterministic widths for skeleton lines to avoid non-deterministic renders. */
+const LINE_WIDTHS = [85, 92, 78, 95, 88, 72, 90, 82, 97, 76, 93, 80];
+const SECOND_LINE_WIDTHS = [55, 68, 48, 62];
+
 /**
  * Chapter loading skeleton — mimics the verse layout with
  * gold-themed placeholder bars.
@@ -23,12 +27,12 @@ export default function ChapterLoading() {
             <div className="flex-1 space-y-2">
               <div
                 className="h-4 rounded bg-[var(--bg-tertiary)]"
-                style={{ width: `${70 + Math.random() * 30}%` }}
+                style={{ width: `${LINE_WIDTHS[i]}%` }}
               />
               {i % 3 === 0 && (
                 <div
                   className="h-4 rounded bg-[var(--bg-tertiary)]"
-                  style={{ width: `${40 + Math.random() * 40}%` }}
+                  style={{ width: `${SECOND_LINE_WIDTHS[i / 3]}%` }}
                 />
               )}
             </div>

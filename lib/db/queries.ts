@@ -1,4 +1,4 @@
-import { eq, and, like, asc } from "drizzle-orm";
+import { eq, and, like, asc, desc } from "drizzle-orm";
 import { db } from "./connection";
 import {
   books,
@@ -16,6 +16,7 @@ import {
   evidenceReferences,
   journeys,
   journeyStops,
+  verseNotes,
 } from "./schema";
 
 // ─── Books ──────────────────────────────────────────────────
@@ -107,7 +108,7 @@ export async function getSurroundingVerses(
   const book = await getBookBySlug(bookSlug);
   if (!book) return [];
 
-  return db
+  const allVerses = await db
     .select()
     .from(verses)
     .where(
@@ -117,13 +118,14 @@ export async function getSurroundingVerses(
       ),
     )
     .orderBy(asc(verses.verseNumber))
-    .all()
-    .filter(
-      (v) =>
-        v.verseNumber >= verseNum - range &&
-        v.verseNumber <= verseNum + range &&
-        v.verseNumber !== verseNum,
-    );
+    .all();
+
+  return allVerses.filter(
+    (v) =>
+      v.verseNumber >= verseNum - range &&
+      v.verseNumber <= verseNum + range &&
+      v.verseNumber !== verseNum,
+  );
 }
 
 /** Get the total number of verses in a chapter for a given book slug. */
@@ -134,7 +136,7 @@ export async function getChapterVerseCount(
   const book = await getBookBySlug(bookSlug);
   if (!book) return 0;
 
-  const result = db
+  const result = await db
     .select()
     .from(chapters)
     .where(
@@ -242,7 +244,7 @@ export async function searchDictionaryWords(query: string) {
 
 /** Get a dictionary word by slug with its example verse and book info. */
 export async function getDictionaryWordWithVerse(wordSlug: string) {
-  const word = db
+  const word = await db
     .select()
     .from(dictionary)
     .where(eq(dictionary.slug, wordSlug))
@@ -252,7 +254,7 @@ export async function getDictionaryWordWithVerse(wordSlug: string) {
 
   let exampleVerse = undefined;
   if (word.exampleVerseId) {
-    exampleVerse = db
+    exampleVerse = await db
       .select({
         id: verses.id,
         bookId: verses.bookId,
@@ -273,7 +275,7 @@ export async function getDictionaryWordWithVerse(wordSlug: string) {
 
 /** Get all unique first letters in the dictionary. */
 export async function getDictionaryLetters(): Promise<string[]> {
-  const words = db
+  const words = await db
     .select({ word: dictionary.word })
     .from(dictionary)
     .orderBy(asc(dictionary.word))
@@ -291,30 +293,40 @@ export async function getDictionaryLetters(): Promise<string[]> {
 
 // ─── Locations ─────────────────────────────────────────────
 
-/** Get all locations referenced in a specific chapter. */
+/** Get all locations referenced in a specific chapter, falling back to book-level locations. */
 export async function getLocationsByChapter(
   bookSlug: string,
   chapterNum: number,
 ) {
-  const chapter = await getChapter(bookSlug, chapterNum);
-  if (!chapter) return [];
+  const book = await getBookBySlug(bookSlug);
+  if (!book) return [];
 
-  return db
-    .select({
-      id: locations.id,
-      name: locations.name,
-      slug: locations.slug,
-      description: locations.description,
-      locationType: locations.locationType,
-      latitude: locations.latitude,
-      longitude: locations.longitude,
-      modernName: locations.modernName,
-      imageUrl: locations.imageUrl,
-    })
-    .from(locationReferences)
-    .innerJoin(locations, eq(locationReferences.locationId, locations.id))
-    .where(eq(locationReferences.chapterId, chapter.id))
-    .all();
+  const chapter = await getChapter(bookSlug, chapterNum);
+
+  // First try chapter-specific locations
+  if (chapter) {
+    const chapterLocations = await db
+      .select({
+        id: locations.id,
+        name: locations.name,
+        slug: locations.slug,
+        description: locations.description,
+        locationType: locations.locationType,
+        latitude: locations.latitude,
+        longitude: locations.longitude,
+        modernName: locations.modernName,
+        imageUrl: locations.imageUrl,
+      })
+      .from(locationReferences)
+      .innerJoin(locations, eq(locationReferences.locationId, locations.id))
+      .where(eq(locationReferences.chapterId, chapter.id))
+      .all();
+
+    if (chapterLocations.length > 0) return chapterLocations;
+  }
+
+  // No chapter-specific locations found; return empty rather than overwhelming with book-level data
+  return [];
 }
 
 /** Get all locations ordered by name. */
@@ -349,7 +361,7 @@ export async function getAllJourneySlugs() {
 /** Get locations with their book references for testament filtering. */
 export async function getLocationsWithBookRefs() {
   const allLocs = await getAllLocations();
-  const refs = db
+  const refs = await db
     .select({
       locationId: locationReferences.locationId,
       bookId: locationReferences.bookId,
@@ -432,7 +444,7 @@ export async function getPeopleByChapterWithFamily(
       });
 
       // Find spouse: someone who shares a child with this person
-      const children = db
+      const children = await db
         .select({ id: people.id, motherId: people.motherId, fatherId: people.fatherId })
         .from(people)
         .where(eq(people.fatherId, p.id))
@@ -440,7 +452,7 @@ export async function getPeopleByChapterWithFamily(
 
       let spouseName: string | null = null;
       if (children.length > 0 && children[0].motherId) {
-        const spouse = db
+        const spouse = await db
           .select({ name: people.name })
           .from(people)
           .where(eq(people.id, children[0].motherId))
@@ -449,13 +461,13 @@ export async function getPeopleByChapterWithFamily(
       }
       // Also check if this person is a mother
       if (!spouseName) {
-        const asMotherChildren = db
+        const asMotherChildren = await db
           .select({ fatherId: people.fatherId })
           .from(people)
           .where(eq(people.motherId, p.id))
           .all();
         if (asMotherChildren.length > 0 && asMotherChildren[0].fatherId) {
-          const spouse = db
+          const spouse = await db
             .select({ name: people.name })
             .from(people)
             .where(eq(people.id, asMotherChildren[0].fatherId))
@@ -478,16 +490,42 @@ export async function getPeopleByChapterWithFamily(
 
 // ─── Media ─────────────────────────────────────────────────
 
-/** Get all media referenced in a specific chapter. */
+/** Get all media referenced in a specific chapter, falling back to book-level media. */
 export async function getMediaByChapter(
   bookSlug: string,
   chapterNum: number,
 ) {
-  const chapter = await getChapter(bookSlug, chapterNum);
-  if (!chapter) return [];
+  const book = await getBookBySlug(bookSlug);
+  if (!book) return [];
 
+  const chapter = await getChapter(bookSlug, chapterNum);
+
+  // First try chapter-specific media
+  if (chapter) {
+    const chapterMedia = await db
+      .selectDistinct({
+        id: media.id,
+        title: media.title,
+        description: media.description,
+        artist: media.artist,
+        yearCreated: media.yearCreated,
+        sourceUrl: media.sourceUrl,
+        imageUrl: media.imageUrl,
+        attribution: media.attribution,
+        license: media.license,
+        mediaType: media.mediaType,
+      })
+      .from(mediaReferences)
+      .innerJoin(media, eq(mediaReferences.mediaId, media.id))
+      .where(eq(mediaReferences.chapterId, chapter.id))
+      .all();
+
+    if (chapterMedia.length > 0) return chapterMedia;
+  }
+
+  // Fall back to book-level media (deduplicated)
   return db
-    .select({
+    .selectDistinct({
       id: media.id,
       title: media.title,
       description: media.description,
@@ -501,7 +539,7 @@ export async function getMediaByChapter(
     })
     .from(mediaReferences)
     .innerJoin(media, eq(mediaReferences.mediaId, media.id))
-    .where(eq(mediaReferences.chapterId, chapter.id))
+    .where(eq(mediaReferences.bookId, book.id))
     .all();
 }
 
@@ -518,14 +556,41 @@ export async function getAllMedia() {
 
 // ─── Evidence ──────────────────────────────────────────────
 
-/** Get all evidence referenced in a specific chapter. */
+/** Get all evidence referenced in a specific chapter, falling back to book-level evidence. */
 export async function getEvidenceByChapter(
   bookSlug: string,
   chapterNum: number,
 ) {
-  const chapter = await getChapter(bookSlug, chapterNum);
-  if (!chapter) return [];
+  const book = await getBookBySlug(bookSlug);
+  if (!book) return [];
 
+  const chapter = await getChapter(bookSlug, chapterNum);
+
+  // First try chapter-specific evidence
+  if (chapter) {
+    const chapterEvidence = await db
+      .select({
+        id: evidence.id,
+        title: evidence.title,
+        slug: evidence.slug,
+        description: evidence.description,
+        category: evidence.category,
+        dateDiscovered: evidence.dateDiscovered,
+        locationFound: evidence.locationFound,
+        currentLocation: evidence.currentLocation,
+        significance: evidence.significance,
+        imageUrl: evidence.imageUrl,
+        sourceUrl: evidence.sourceUrl,
+      })
+      .from(evidenceReferences)
+      .innerJoin(evidence, eq(evidenceReferences.evidenceId, evidence.id))
+      .where(eq(evidenceReferences.chapterId, chapter.id))
+      .all();
+
+    if (chapterEvidence.length > 0) return chapterEvidence;
+  }
+
+  // Fall back to book-level evidence
   return db
     .select({
       id: evidence.id,
@@ -542,7 +607,7 @@ export async function getEvidenceByChapter(
     })
     .from(evidenceReferences)
     .innerJoin(evidence, eq(evidenceReferences.evidenceId, evidence.id))
-    .where(eq(evidenceReferences.chapterId, chapter.id))
+    .where(eq(evidenceReferences.bookId, book.id))
     .all();
 }
 
@@ -584,7 +649,7 @@ export async function getJourneys() {
 
 /** Get a journey with all its stops by slug. */
 export async function getJourneyWithStops(slug: string) {
-  const journey = db
+  const journey = await db
     .select()
     .from(journeys)
     .where(eq(journeys.slug, slug))
@@ -592,7 +657,7 @@ export async function getJourneyWithStops(slug: string) {
 
   if (!journey) return undefined;
 
-  const stops = db
+  const stops = await db
     .select({
       id: journeyStops.id,
       stopOrder: journeyStops.stopOrder,
@@ -688,7 +753,7 @@ export async function getAllPeopleSlugs() {
 
 /** Get media related to a person via shared book references. */
 export async function getPersonMedia(personId: number) {
-  const refs = db
+  const refs = await db
     .select({ bookId: peopleReferences.bookId })
     .from(peopleReferences)
     .where(eq(peopleReferences.personId, personId))
@@ -813,7 +878,7 @@ export async function getAllEvidence(category?: string) {
 
 /** Get a single evidence item by slug with its related scripture references. */
 export async function getEvidenceBySlug(slug: string) {
-  const item = db
+  const item = await db
     .select()
     .from(evidence)
     .where(eq(evidence.slug, slug))
@@ -821,7 +886,7 @@ export async function getEvidenceBySlug(slug: string) {
 
   if (!item) return undefined;
 
-  const refs = db
+  const refs = await db
     .select({
       id: evidenceReferences.id,
       bookId: evidenceReferences.bookId,
@@ -844,7 +909,7 @@ export async function getEvidenceBySlug(slug: string) {
 
 /** Get evidence count per category. */
 export async function getEvidenceCategoryCounts() {
-  const all = db.select().from(evidence).all();
+  const all = await db.select().from(evidence).all();
   const counts: Record<string, number> = {};
   for (const item of all) {
     counts[item.category] = (counts[item.category] || 0) + 1;
@@ -902,4 +967,59 @@ export async function getBookEvidence(bookSlug: string) {
     .where(eq(evidenceReferences.bookId, book.id))
     .orderBy(asc(evidence.title))
     .all();
+}
+
+// ─── Verse Notes ──────────────────────────────────────────
+
+/** Get all notes for a specific chapter (all verses). */
+export async function getChapterVerseNotes(bookSlug: string, chapterNum: number) {
+  return db
+    .select()
+    .from(verseNotes)
+    .where(
+      and(
+        eq(verseNotes.bookSlug, bookSlug),
+        eq(verseNotes.chapterNumber, chapterNum),
+      ),
+    )
+    .orderBy(verseNotes.verseNumber, desc(verseNotes.updatedAt))
+    .all();
+}
+
+/** Create a new verse note. */
+export async function createVerseNote(
+  bookSlug: string,
+  chapterNum: number,
+  verseNum: number,
+  content: string,
+) {
+  const now = new Date().toISOString();
+  return db
+    .insert(verseNotes)
+    .values({
+      bookSlug,
+      chapterNumber: chapterNum,
+      verseNumber: verseNum,
+      content,
+      createdAt: now,
+      updatedAt: now,
+    })
+    .returning()
+    .get();
+}
+
+/** Update an existing verse note. */
+export async function updateVerseNote(id: number, content: string) {
+  const now = new Date().toISOString();
+  return db
+    .update(verseNotes)
+    .set({ content, updatedAt: now })
+    .where(eq(verseNotes.id, id))
+    .returning()
+    .get();
+}
+
+/** Delete a verse note. */
+export async function deleteVerseNote(id: number) {
+  return db.delete(verseNotes).where(eq(verseNotes.id, id)).run();
 }

@@ -388,8 +388,6 @@ describe("journeys.json — journey data completeness", () => {
 });
 
 describe("journeys.json — required journeys", () => {
-  const journeyNames = () => journeys.map((j) => j.name);
-
   it("should include Abraham's journey from Ur to Canaan", () => {
     const abraham = journeys.find((j) => j.personName === "Abraham");
     expect(abraham).toBeDefined();
@@ -567,6 +565,7 @@ describe("seedLocations — inserting locations into the database", () => {
           name: loc.name,
           slug: slugify(loc.name),
           description: loc.description ?? null,
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
           locationType: loc.locationType as any,
           latitude: loc.latitude,
           longitude: loc.longitude,
@@ -604,6 +603,7 @@ describe("seedLocations — inserting locations into the database", () => {
           name: loc.name,
           slug: slugify(loc.name),
           description: loc.description ?? null,
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
           locationType: loc.locationType as any,
           latitude: loc.latitude,
           longitude: loc.longitude,
@@ -691,6 +691,7 @@ describe("seedLocations — idempotency and partial data handling", () => {
         .values({
           name: loc.name,
           slug: slugify(loc.name),
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
           locationType: loc.locationType as any,
           latitude: loc.latitude,
           longitude: loc.longitude,
@@ -712,6 +713,7 @@ describe("seedLocations — idempotency and partial data handling", () => {
         .values({
           name: loc.name,
           slug: slugify(loc.name),
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
           locationType: loc.locationType as any,
           latitude: loc.latitude,
           longitude: loc.longitude,
@@ -752,6 +754,7 @@ describe("seedJourneys — inserting journeys and stops into the database", () =
           name: loc.name,
           slug: slugify(loc.name),
           description: loc.description ?? null,
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
           locationType: loc.locationType as any,
           latitude: loc.latitude,
           longitude: loc.longitude,

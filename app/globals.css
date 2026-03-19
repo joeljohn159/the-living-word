@@ -338,6 +338,153 @@ html {
   color: var(--accent-gold) !important;
 }
 
+/* ── Page loader animations ── */
+@keyframes loadBar {
+  0%   { width: 0%; margin-left: 0%; }
+  50%  { width: 70%; margin-left: 15%; }
+  100% { width: 0%; margin-left: 100%; }
+}
+
+/* ── Ascension loader ── */
+
+/* Atmospheric background glow */
+.loader-atmosphere {
+  background: radial-gradient(
+    ellipse 50% 60% at 50% 40%,
+    color-mix(in srgb, var(--accent-gold) 8%, transparent),
+    transparent
+  );
+  animation: loaderAtmosphere 4s ease-in-out infinite;
+}
+
+@keyframes loaderAtmosphere {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50%      { opacity: 1;   transform: scale(1.05); }
+}
+
+/* Figure — slow, reverent rise */
+.loader-figure {
+  animation: loaderAscend 4s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+  transform-origin: center bottom;
+}
+
+@keyframes loaderAscend {
+  0%, 100% { transform: translateY(0);    opacity: 0.85; }
+  50%      { transform: translateY(-8px); opacity: 1; }
+}
+
+/* Halo — gentle breathe */
+.loader-halo {
+  animation: loaderHalo 4s ease-in-out infinite;
+}
+
+@keyframes loaderHalo {
+  0%, 100% { opacity: 0.7; transform: scale(1); }
+  50%      { opacity: 1;   transform: scale(1.15); }
+}
+
+/* Light beam — slow pulse */
+.loader-beam {
+  animation: loaderBeam 5s ease-in-out infinite;
+}
+
+@keyframes loaderBeam {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.5; }
+}
+
+.loader-beam-core {
+  animation: loaderBeamCore 5s ease-in-out infinite;
+}
+
+@keyframes loaderBeamCore {
+  0%, 100% { opacity: 0.04; }
+  50%      { opacity: 0.1; }
+}
+
+/* Clouds parting */
+.loader-cloud-l {
+  animation: loaderCloudL 6s ease-in-out infinite;
+}
+
+.loader-cloud-r {
+  animation: loaderCloudR 6s ease-in-out infinite;
+}
+
+@keyframes loaderCloudL {
+  0%, 100% { transform: translateX(0); opacity: 1; }
+  50%      { transform: translateX(-8px); opacity: 0.6; }
+}
+
+@keyframes loaderCloudR {
+  0%, 100% { transform: translateX(0); opacity: 1; }
+  50%      { transform: translateX(8px); opacity: 0.6; }
+}
+
+/* Wings — slow, majestic beat */
+.loader-wing-l {
+  animation: loaderWingL 5s ease-in-out infinite;
+  transform-origin: 82px 80px;
+}
+
+.loader-wing-r {
+  animation: loaderWingR 5s ease-in-out infinite;
+  transform-origin: 118px 80px;
+}
+
+@keyframes loaderWingL {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  35%      { transform: rotate(-4deg) scale(1.02); }
+  65%      { transform: rotate(-2deg) scale(1.01); }
+}
+
+@keyframes loaderWingR {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  35%      { transform: rotate(4deg) scale(1.02); }
+  65%      { transform: rotate(2deg) scale(1.01); }
+}
+
+/* Light particles rising */
+.loader-particle {
+  animation: loaderParticle 3.6s ease-out infinite;
+}
+
+@keyframes loaderParticle {
+  0%   { transform: translateY(0);     opacity: 0; }
+  10%  { opacity: 0.6; }
+  80%  { opacity: 0.2; }
+  100% { transform: translateY(-100px); opacity: 0; }
+}
+
+/* Page turning animation */
+.loader-page-turn {
+  animation: loaderPageTurn 3s ease-in-out infinite;
+  transform-origin: left center;
+}
+
+@keyframes loaderPageTurn {
+  0%, 100% { transform: scaleX(1); opacity: 0.15; }
+  50%      { transform: scaleX(-0.3); opacity: 0.05; }
+}
+
+/* Smart image shimmer */
+.smart-image-shimmer {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    color-mix(in srgb, var(--accent-gold) 6%, transparent) 40%,
+    color-mix(in srgb, var(--accent-gold) 12%, transparent) 50%,
+    color-mix(in srgb, var(--accent-gold) 6%, transparent) 60%,
+    transparent 100%
+  );
+  animation: shimmerSlide 1.8s ease-in-out infinite;
+}
+
+@keyframes shimmerSlide {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
 /* Prevent horizontal overflow on mobile */
 html,
 body {

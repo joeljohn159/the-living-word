@@ -131,7 +131,7 @@ export default async function VersePage({ params }: VersePageProps) {
       <script {...jsonLdScriptProps(breadcrumb)} />
 
       <div className="min-h-[calc(100vh-4rem)]">
-        <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 animate-fade-in">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 animate-fade-in">
           {/* Breadcrumb navigation */}
           <nav aria-label="Breadcrumb" className="pt-8 mb-6">
             <ol className="flex items-center gap-1.5 text-sm font-source-sans text-[var(--text-muted)]">
@@ -235,7 +235,7 @@ export default async function VersePage({ params }: VersePageProps) {
               </Link>
             </div>
           </div>
-        </main>
+        </div>
       </div>
     </>
   );

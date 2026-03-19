@@ -9,7 +9,11 @@
     "attribution": "Michelangelo, Public domain, via Wikimedia Commons",
     "license": "Public Domain",
     "media_type": "painting",
-    "book_ref": "Genesis"
+    "book_ref": "Genesis",
+    "chapter_refs": [
+      1,
+      2
+    ]
   },
   {
     "title": "The Deluge",
@@ -17,11 +21,107 @@
     "artist": "Michelangelo",
     "year_created": "1512",
     "source_url": "https://commons.wikimedia.org/wiki/File:Michelangelo_Buonarroti_-_The_Deluge_-_Sistine_Chapel_ceiling.jpg",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Michelangelo_Buonarroti_-_The_Deluge_-_Sistine_Chapel_ceiling.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/22/Deluge%2C_Michelangelo.png",
     "attribution": "Michelangelo, Public domain, via Wikimedia Commons",
     "license": "Public Domain",
     "media_type": "painting",
-    "book_ref": "Genesis"
+    "book_ref": "Genesis",
+    "chapter_refs": [
+      6,
+      7,
+      8
+    ]
+  },
+  {
+    "title": "The Fall of Man",
+    "description": "Michelangelo's Sistine Chapel fresco showing the temptation and expulsion of Adam and Eve from the Garden of Eden.",
+    "artist": "Michelangelo",
+    "year_created": "1512",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Michelangelo,_Fall_and_Expulsion_from_Garden_of_Eden_00.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Michelangelo%2C_Fall_and_Expulsion_from_Garden_of_Eden_00.jpg",
+    "attribution": "Michelangelo, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "painting",
+    "book_ref": "Genesis",
+    "chapter_refs": [
+      3
+    ]
+  },
+  {
+    "title": "The Sacrifice of Isaac",
+    "description": "Abraham prepares to sacrifice his son Isaac on Mount Moriah before the angel intervenes, as told in Genesis 22.",
+    "artist": "Caravaggio",
+    "year_created": "1603",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Sacrifice_of_Isaac-Caravaggio_(Uffizi).jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/60/Sacrifice_of_Isaac-Caravaggio_%28Uffizi%29.jpg",
+    "attribution": "Caravaggio, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "painting",
+    "book_ref": "Genesis",
+    "chapter_refs": [
+      22
+    ]
+  },
+  {
+    "title": "Abraham Journeying into the Land of Canaan",
+    "description": "Abraham leads his family and flocks toward the Promised Land at God's command, the beginning of the covenant journey.",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:019.Abraham_Journeying_into_the_Land_of_Canaan.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Abraham_Journeying_into_the_Land_of_Canaan.png",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Genesis",
+    "chapter_refs": [
+      12,
+      13
+    ]
+  },
+  {
+    "title": "Jacob Wrestling with the Angel",
+    "description": "Jacob wrestles with a mysterious figure through the night at Peniel, receiving the name Israel (Genesis 32).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:030.Jacob_Wrestling_with_the_Angel.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/45/Jacob_Wrestling_with_the_Angel.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Genesis",
+    "chapter_refs": [
+      32
+    ]
+  },
+  {
+    "title": "Joseph Makes Himself Known to His Brethren",
+    "description": "The emotional moment when Joseph reveals his identity to his brothers in Egypt, a story of forgiveness and providence.",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:040.Joseph_Makes_Himself_Known_to_His_Brethren.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Dore_Bible_Joseph_Makes_Himself_Known_to_His_Brethren.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Genesis",
+    "chapter_refs": [
+      45
+    ]
+  },
+  {
+    "title": "The Tower of Babel",
+    "description": "The ambitious tower reaching toward heaven, scattered by God's confusion of languages (Genesis 11).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:016.The_Confusion_of_Tongues.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/35/Arabia%2C_Egypt%2C_India_-_A_Narrative_of_Travel.djvu",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Genesis",
+    "chapter_refs": [
+      11
+    ]
   },
   {
     "title": "Moses Breaking the Tablets of the Law",
@@ -29,11 +129,14 @@
     "artist": "Rembrandt",
     "year_created": "1659",
     "source_url": "https://commons.wikimedia.org/wiki/File:Rembrandt_-_Moses_with_the_Ten_Commandments_-_Google_Art_Project.jpg",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Rembrandt_-_Moses_with_the_Ten_Commandments_-_Google_Art_Project.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Rembrandt_-_Moses_with_the_Ten_Commandments_-_Google_Art_Project.jpg",
     "attribution": "Rembrandt, Public domain, via Wikimedia Commons",
     "license": "Public Domain",
     "media_type": "painting",
-    "book_ref": "Exodus"
+    "book_ref": "Exodus",
+    "chapter_refs": [
+      32
+    ]
   },
   {
     "title": "The Finding of Moses",
@@ -41,11 +144,74 @@
     "artist": "Gustave Doré",
     "year_created": "1866",
     "source_url": "https://commons.wikimedia.org/wiki/File:Dor%C3%A9_-_The_Finding_of_Moses.jpg",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/50/Gustave_Dor%C3%A9_-_The_Finding_of_Moses.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/031.The_Finding_of_Moses.jpg",
     "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
     "license": "Public Domain",
     "media_type": "illustration",
-    "book_ref": "Exodus"
+    "book_ref": "Exodus",
+    "chapter_refs": [
+      2
+    ]
+  },
+  {
+    "title": "Moses and the Burning Bush",
+    "description": "Moses encounters God in the burning bush on Mount Horeb, receiving his divine commission to free Israel (Exodus 3).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:046.Moses_and_the_Burning_Bush.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/98/Book_of_Exodus_Chapter_5-10_%28Bible_Illustrations_by_Sweet_Media%29.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Exodus",
+    "chapter_refs": [
+      3
+    ]
+  },
+  {
+    "title": "The Crossing of the Red Sea",
+    "description": "The Israelites pass through the parted Red Sea as Pharaoh's army is engulfed by the returning waters (Exodus 14).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:064.The_Israelites_Crossing_the_Red_Sea.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/96/Aivazovsky_Passage_of_the_Jews_through_the_Red_Sea.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Exodus",
+    "chapter_refs": [
+      14
+    ]
+  },
+  {
+    "title": "The Plague of Darkness",
+    "description": "The ninth plague descends upon Egypt as impenetrable darkness covers the land for three days (Exodus 10:21-23).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:058.The_Plague_of_Darkness.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/35/034.The_Ninth_Plague._Darkness.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Exodus",
+    "chapter_refs": [
+      10
+    ]
+  },
+  {
+    "title": "The Golden Calf",
+    "description": "The Israelites worship the golden calf while Moses is on Mount Sinai receiving the Law from God (Exodus 32).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:073.The_Golden_Calf.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/51/The_Dial_%28Volume_9%29.djvu",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Exodus",
+    "chapter_refs": [
+      32
+    ]
   },
   {
     "title": "The Levites Bearing the Ark",
@@ -53,11 +219,14 @@
     "artist": "Gustave Doré",
     "year_created": "1866",
     "source_url": "https://commons.wikimedia.org/wiki/File:Foster_Bible_Pictures_0074-1_The_Ark_of_the_Covenant.jpg",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Foster_Bible_Pictures_0074-1_The_Ark_of_the_Covenant.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/80/Foster_Bible_Pictures_0072-1_Things_that_Were_Made_To_Go_into_the_Tabernacle.jpg",
     "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
     "license": "Public Domain",
     "media_type": "illustration",
-    "book_ref": "Leviticus"
+    "book_ref": "Leviticus",
+    "chapter_refs": [
+      16
+    ]
   },
   {
     "title": "The Brazen Serpent",
@@ -65,11 +234,29 @@
     "artist": "Gustave Doré",
     "year_created": "1866",
     "source_url": "https://commons.wikimedia.org/wiki/File:081.The_Brazen_Serpent.jpg",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/2c/081.The_Brazen_Serpent.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Great_Men_and_Famous_Women_Volume_8.djvu",
     "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
     "license": "Public Domain",
     "media_type": "illustration",
-    "book_ref": "Numbers"
+    "book_ref": "Numbers",
+    "chapter_refs": [
+      21
+    ]
+  },
+  {
+    "title": "Balaam and the Angel",
+    "description": "The prophet Balaam's donkey sees the angel of the Lord blocking the road, while Balaam himself is blind to the divine messenger (Numbers 22).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:079.Balaam_and_the_Angel.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/80/043.An_Angel_Appears_to_Balaam.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Numbers",
+    "chapter_refs": [
+      22
+    ]
   },
   {
     "title": "Moses Viewing the Promised Land",
@@ -77,11 +264,29 @@
     "artist": "Gustave Doré",
     "year_created": "1866",
     "source_url": "https://commons.wikimedia.org/wiki/File:088.Moses_Views_the_Promised_Land.jpg",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/088.Moses_Views_the_Promised_Land.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/52/Jollain_Moses_Views_the_Promised_Land.jpg",
     "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
     "license": "Public Domain",
     "media_type": "illustration",
-    "book_ref": "Deuteronomy"
+    "book_ref": "Deuteronomy",
+    "chapter_refs": [
+      34
+    ]
+  },
+  {
+    "title": "The Death of Moses",
+    "description": "Moses dies on Mount Nebo after viewing the Promised Land, ending the Pentateuch (Deuteronomy 34).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:089.The_Death_of_Moses.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/The_Story_of_Mexico.djvu",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Deuteronomy",
+    "chapter_refs": [
+      34
+    ]
   },
   {
     "title": "The Walls of Jericho Fall Down",
@@ -89,11 +294,29 @@
     "artist": "Gustave Doré",
     "year_created": "1866",
     "source_url": "https://commons.wikimedia.org/wiki/File:095.The_Walls_of_Jericho_Fall_Down.jpg",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/4b/095.The_Walls_of_Jericho_Fall_Down.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/ed/046.The_Walls_of_Jericho_Fall_Down.jpg",
     "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
     "license": "Public Domain",
     "media_type": "illustration",
-    "book_ref": "Joshua"
+    "book_ref": "Joshua",
+    "chapter_refs": [
+      6
+    ]
+  },
+  {
+    "title": "Joshua Commanding the Sun to Stand Still",
+    "description": "Joshua commands the sun and moon to stand still during the battle at Gibeon, granting Israel victory (Joshua 10:12-13).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:093.Joshua_Commanding_the_Sun_to_Stand_Still.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Great_Men_and_Famous_Women_Volume_8.djvu",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Joshua",
+    "chapter_refs": [
+      10
+    ]
   },
   {
     "title": "Samson Destroying the Temple",
@@ -101,11 +324,45 @@
     "artist": "Gustave Doré",
     "year_created": "1866",
     "source_url": "https://commons.wikimedia.org/wiki/File:115.The_Death_of_Samson.jpg",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/3a/115.The_Death_of_Samson.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Bray%2C_Salomon_de_-_Samson_destroying_the_Temple_of_Dagon_-_Kunstmuseum_Basel.jpg",
     "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
     "license": "Public Domain",
     "media_type": "illustration",
-    "book_ref": "Judges"
+    "book_ref": "Judges",
+    "chapter_refs": [
+      16
+    ]
+  },
+  {
+    "title": "Deborah Beneath the Palm Tree",
+    "description": "The prophetess and judge Deborah holds court beneath her palm tree, leading Israel to victory over the Canaanites (Judges 4).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:098.Deborah_Beneath_the_Palm_Tree.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Tissot_Deborah_Beneath_the_Palm_Tree.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Judges",
+    "chapter_refs": [
+      4,
+      5
+    ]
+  },
+  {
+    "title": "Gideon Choosing His Soldiers",
+    "description": "Gideon selects his army by observing how the men drink water from the stream, as commanded by God (Judges 7).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:103.Gideon_Choosing_His_Soldiers.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/054.Gideon_Chooses_300_Soldiers.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Judges",
+    "chapter_refs": [
+      7
+    ]
   },
   {
     "title": "Ruth and Boaz",
@@ -113,11 +370,15 @@
     "artist": "Gustave Doré",
     "year_created": "1866",
     "source_url": "https://commons.wikimedia.org/wiki/File:118.Ruth_and_Boaz.jpg",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/118.Ruth_and_Boaz.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/069.Ruth_and_Boaz.jpg",
     "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
     "license": "Public Domain",
     "media_type": "illustration",
-    "book_ref": "Ruth"
+    "book_ref": "Ruth",
+    "chapter_refs": [
+      2,
+      3
+    ]
   },
   {
     "title": "David and Goliath",
@@ -125,11 +386,44 @@
     "artist": "Caravaggio",
     "year_created": "1610",
     "source_url": "https://commons.wikimedia.org/wiki/File:Caravaggio_-_David_con_la_testa_di_Golia.jpg",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Caravaggio_-_David_con_la_testa_di_Golia.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/70/Caravaggio_-_David_with_the_Head_of_Goliath_-_Vienna.jpg",
     "attribution": "Caravaggio, Public domain, via Wikimedia Commons",
     "license": "Public Domain",
     "media_type": "painting",
-    "book_ref": "1 Samuel"
+    "book_ref": "1 Samuel",
+    "chapter_refs": [
+      17
+    ]
+  },
+  {
+    "title": "Hannah's Prayer",
+    "description": "Hannah prays fervently at the tabernacle in Shiloh, vowing to dedicate her son to God's service (1 Samuel 1).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:120.Hannah%27s_Prayer.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Hanna_book_cover.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "1 Samuel",
+    "chapter_refs": [
+      1
+    ]
+  },
+  {
+    "title": "David Slays Goliath",
+    "description": "David strikes down the Philistine giant with a stone from his sling, one of the most celebrated victories in scripture.",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:127.David_Slays_Goliath.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/00/071A.David_Slays_Goliath.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "1 Samuel",
+    "chapter_refs": [
+      17
+    ]
   },
   {
     "title": "The Anointing of David",
@@ -137,11 +431,30 @@
     "artist": "Gustave Doré",
     "year_created": "1866",
     "source_url": "https://commons.wikimedia.org/wiki/File:132.The_Anointing_of_David.jpg",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/132.The_Anointing_of_David.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/42/Anointing_of_David_as_king%2C_from_the_Olomouc_Bible%2C_Part_I%2C_folio_264r_%28Bible_olomouck%C3%A1%2C_I._d%C3%ADl%2C_I._1417%2C_s._264r%29.jpg",
     "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
     "license": "Public Domain",
     "media_type": "illustration",
-    "book_ref": "2 Samuel"
+    "book_ref": "2 Samuel",
+    "chapter_refs": [
+      2,
+      5
+    ]
+  },
+  {
+    "title": "The Death of Absalom",
+    "description": "Absalom is caught by his hair in the branches of an oak tree and killed by Joab, ending his rebellion against David (2 Samuel 18).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:141.The_Death_of_Absalom.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/080.The_Death_of_Absalom.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "2 Samuel",
+    "chapter_refs": [
+      18
+    ]
   },
   {
     "title": "The Judgment of Solomon",
@@ -149,11 +462,44 @@
     "artist": "Raphael",
     "year_created": "1519",
     "source_url": "https://commons.wikimedia.org/wiki/File:Raphael_-_The_Judgment_of_Solomon.jpg",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Raphael_-_The_Judgment_of_Solomon.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Giuseppe_Cades_Judgment_of_Solomon.jpg",
     "attribution": "Raphael, Public domain, via Wikimedia Commons",
     "license": "Public Domain",
     "media_type": "painting",
-    "book_ref": "1 Kings"
+    "book_ref": "1 Kings",
+    "chapter_refs": [
+      3
+    ]
+  },
+  {
+    "title": "Elijah Fed by Ravens",
+    "description": "The prophet Elijah is sustained by ravens bringing food during the drought at the brook Cherith (1 Kings 17:4-6).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:146.Elijah_Fed_by_Ravens.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/88/1697_Jan_Luyken_Elijah_Fed_by_Ravens.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "1 Kings",
+    "chapter_refs": [
+      17
+    ]
+  },
+  {
+    "title": "The Prophets of Baal Are Slaughtered",
+    "description": "Elijah's triumph on Mount Carmel as fire from heaven consumes his sacrifice, proving the Lord is God (1 Kings 18).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:148.The_Prophets_of_Baal_Are_Slaughtered.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/26/090.The_Prophets_of_Baal_Are_Slaughtered.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "1 Kings",
+    "chapter_refs": [
+      18
+    ]
   },
   {
     "title": "Elijah Taken Up in a Chariot of Fire",
@@ -161,11 +507,45 @@
     "artist": "Gustave Doré",
     "year_created": "1866",
     "source_url": "https://commons.wikimedia.org/wiki/File:158.Elijah_Taken_Up_in_a_Chariot_of_Fire.jpg",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/52/158.Elijah_Taken_Up_in_a_Chariot_of_Fire.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/095.Elijah_Ascends_to_Heaven_in_a_Chariot_of_Fire.jpg",
     "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
     "license": "Public Domain",
     "media_type": "illustration",
-    "book_ref": "2 Kings"
+    "book_ref": "2 Kings",
+    "chapter_refs": [
+      2
+    ]
+  },
+  {
+    "title": "Naaman Cured of Leprosy",
+    "description": "The Syrian general Naaman washes seven times in the Jordan River and is healed of his leprosy at Elisha's instruction (2 Kings 5).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:160.Naaman_Is_Cured_of_Leprosy.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Augustin_Hirschvogel%2C_Naaman_is_Cured_of_Leprosy%2C_1547%2C_NGA_39365.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "2 Kings",
+    "chapter_refs": [
+      5
+    ]
+  },
+  {
+    "title": "David Brings the Ark to Jerusalem",
+    "description": "King David leads the joyful procession bringing the Ark of the Covenant into Jerusalem with music and dancing (1 Chronicles 15-16).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Foster_Bible_Pictures_0074-1_The_Ark_of_the_Covenant.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/80/Foster_Bible_Pictures_0072-1_Things_that_Were_Made_To_Go_into_the_Tabernacle.jpg",
+    "attribution": "Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "1 Chronicles",
+    "chapter_refs": [
+      15,
+      16
+    ]
   },
   {
     "title": "The Destruction of the Temple of Jerusalem",
@@ -173,11 +553,14 @@
     "artist": "Francesco Hayez",
     "year_created": "1867",
     "source_url": "https://commons.wikimedia.org/wiki/File:Francesco_Hayez_017.jpg",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Francesco_Hayez_017.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Francesco_Hayez_017.jpg",
     "attribution": "Francesco Hayez, Public domain, via Wikimedia Commons",
     "license": "Public Domain",
     "media_type": "painting",
-    "book_ref": "2 Chronicles"
+    "book_ref": "2 Chronicles",
+    "chapter_refs": [
+      36
+    ]
   },
   {
     "title": "Ezra Reading the Law",
@@ -185,11 +568,15 @@
     "artist": "Gustave Doré",
     "year_created": "1866",
     "source_url": "https://commons.wikimedia.org/wiki/File:170.Ezra_Reads_the_Law_to_the_People.jpg",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/58/170.Ezra_Reads_the_Law_to_the_People.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b0/109.Ezra_Reads_the_Law_to_the_People.jpg",
     "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
     "license": "Public Domain",
     "media_type": "illustration",
-    "book_ref": "Ezra"
+    "book_ref": "Ezra",
+    "chapter_refs": [
+      7,
+      8
+    ]
   },
   {
     "title": "Nehemiah Views the Ruins of Jerusalem",
@@ -197,11 +584,14 @@
     "artist": "Gustave Doré",
     "year_created": "1866",
     "source_url": "https://commons.wikimedia.org/wiki/File:169.Nehemiah_Views_the_Ruins_of_Jerusalem%27s_Walls.jpg",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/33/169.Nehemiah_Views_the_Ruins_of_Jerusalem%27s_Walls.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/53/108.Nehemiah_Views_the_Ruins_of_Jerusalem%27s_Walls.jpg",
     "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
     "license": "Public Domain",
     "media_type": "illustration",
-    "book_ref": "Nehemiah"
+    "book_ref": "Nehemiah",
+    "chapter_refs": [
+      2
+    ]
   },
   {
     "title": "Esther Before the King",
@@ -209,11 +599,15 @@
     "artist": "Gustave Doré",
     "year_created": "1866",
     "source_url": "https://commons.wikimedia.org/wiki/File:172.Esther_Before_the_King.jpg",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/172.Esther_Before_the_King.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/13/115.Esther_Before_the_King.jpg",
     "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
     "license": "Public Domain",
     "media_type": "illustration",
-    "book_ref": "Esther"
+    "book_ref": "Esther",
+    "chapter_refs": [
+      5,
+      7
+    ]
   },
   {
     "title": "Job and His Friends",
@@ -221,11 +615,31 @@
     "artist": "Gustave Doré",
     "year_created": "1866",
     "source_url": "https://commons.wikimedia.org/wiki/File:174.Job_and_His_Friends.jpg",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/ba/174.Job_and_His_Friends.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/79/119.Job_Speaks_with_His_Friends.jpg",
     "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
     "license": "Public Domain",
     "media_type": "illustration",
-    "book_ref": "Job"
+    "book_ref": "Job",
+    "chapter_refs": [
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "title": "Job Hearing of His Ruin",
+    "description": "Job receives the devastating news of the destruction of his family and possessions, testing his faith (Job 1).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:173.Job_Hearing_of_His_Ruin.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f8/The_Bible_panorama%2C_or_The_Holy_Scriptures_in_picture_and_story_%281891%29_%2814761938386%29.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Job",
+    "chapter_refs": [
+      1
+    ]
   },
   {
     "title": "King David Playing the Harp",
@@ -233,11 +647,17 @@
     "artist": "Gerard van Honthorst",
     "year_created": "1622",
     "source_url": "https://commons.wikimedia.org/wiki/File:Gerard_van_Honthorst_-_King_David_Playing_the_Harp_-_Google_Art_Project.jpg",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/21/Gerard_van_Honthorst_-_King_David_Playing_the_Harp_-_Google_Art_Project.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Gerard_van_Honthorst_-_King_David_Playing_the_Harp_-_Google_Art_Project.jpg",
     "attribution": "Gerard van Honthorst, Public domain, via Wikimedia Commons",
     "license": "Public Domain",
     "media_type": "painting",
-    "book_ref": "Psalms"
+    "book_ref": "Psalms",
+    "chapter_refs": [
+      23,
+      51,
+      100,
+      150
+    ]
   },
   {
     "title": "King Solomon in Old Age",
@@ -245,11 +665,16 @@
     "artist": "Gustave Doré",
     "year_created": "1866",
     "source_url": "https://commons.wikimedia.org/wiki/File:162.Solomon.jpg",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/79/162.Solomon.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/39/087.King_Solomon_in_Old_Age.jpg",
     "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
     "license": "Public Domain",
     "media_type": "illustration",
-    "book_ref": "Proverbs"
+    "book_ref": "Proverbs",
+    "chapter_refs": [
+      1,
+      8,
+      31
+    ]
   },
   {
     "title": "Vanitas Still Life",
@@ -257,11 +682,16 @@
     "artist": "Pieter Claesz",
     "year_created": "1630",
     "source_url": "https://commons.wikimedia.org/wiki/File:Pieter_Claesz_-_Vanitas_Still_Life_-_WGA04974.jpg",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Pieter_Claesz_-_Vanitas_Still_Life_-_WGA04974.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Den_Haag_-_Mauritshuis_-_Pieter_Claesz_%281597-1660%29_-_Vanitas_Still_Life_1630.jpg",
     "attribution": "Pieter Claesz, Public domain, via Wikimedia Commons",
     "license": "Public Domain",
     "media_type": "painting",
-    "book_ref": "Ecclesiastes"
+    "book_ref": "Ecclesiastes",
+    "chapter_refs": [
+      1,
+      3,
+      12
+    ]
   },
   {
     "title": "The Song of Solomon",
@@ -269,11 +699,16 @@
     "artist": "Gustave Doré",
     "year_created": "1866",
     "source_url": "https://commons.wikimedia.org/wiki/File:Song_of_Songs_(Bible_Illustrations_by_Sweet_Media).jpg",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Song_of_Songs_%28Bible_Illustrations_by_Sweet_Media%29.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/64/Llyfr_Caniad_Solomon_-_Caerwynt_2.jpg",
     "attribution": "Public domain, via Wikimedia Commons",
     "license": "Public Domain",
     "media_type": "illustration",
-    "book_ref": "Song of Solomon"
+    "book_ref": "Song of Solomon",
+    "chapter_refs": [
+      1,
+      2,
+      4
+    ]
   },
   {
     "title": "The Vision of Isaiah",
@@ -281,11 +716,31 @@
     "artist": "Gustave Doré",
     "year_created": "1866",
     "source_url": "https://commons.wikimedia.org/wiki/File:Isaiah%27s_vision_%28Bible_Illustrations_by_Sweet_Media%29.jpg",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/58/Isaiah%27s_vision_%28Bible_Illustrations_by_Sweet_Media%29.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/121.Isaiah%27s_Vision_of_the_Destruction_of_Babylon.jpg",
     "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
     "license": "Public Domain",
     "media_type": "illustration",
-    "book_ref": "Isaiah"
+    "book_ref": "Isaiah",
+    "chapter_refs": [
+      6
+    ]
+  },
+  {
+    "title": "Isaiah's Prophecy of the Destruction of Babylon",
+    "description": "The prophet Isaiah foretells the devastating fall of Babylon, a major prophetic oracle (Isaiah 13-14).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:176.Isaiah.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Samuel_Colman_%281780-1845%29_-_The_Coming_of_the_Messiah_and_the_Destruction_of_Babylon_-_K4219_-_Bristol_City_Museum_%5E_Art_Gallery.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Isaiah",
+    "chapter_refs": [
+      13,
+      14,
+      53
+    ]
   },
   {
     "title": "Jeremiah Lamenting the Destruction of Jerusalem",
@@ -293,11 +748,16 @@
     "artist": "Rembrandt",
     "year_created": "1630",
     "source_url": "https://commons.wikimedia.org/wiki/File:Rembrandt_-_Jeremiah_lamenting_the_destruction_of_Jerusalem_-_Google_Art_Project.jpg",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/60/Rembrandt_-_Jeremiah_lamenting_the_destruction_of_Jerusalem_-_Google_Art_Project.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Jeremia_treurend_over_de_verwoesting_van_Jeruzalem_Rijksmuseum_SK-A-3276.jpeg",
     "attribution": "Rembrandt, Public domain, via Wikimedia Commons",
     "license": "Public Domain",
     "media_type": "painting",
-    "book_ref": "Jeremiah"
+    "book_ref": "Jeremiah",
+    "chapter_refs": [
+      1,
+      39,
+      52
+    ]
   },
   {
     "title": "The Destruction of Jerusalem",
@@ -305,11 +765,16 @@
     "artist": "Gustave Doré",
     "year_created": "1866",
     "source_url": "https://commons.wikimedia.org/wiki/File:166.The_Destruction_of_the_Temple.jpg",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/2c/166.The_Destruction_of_the_Temple.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/9f/124.People_Mourn_over_the_Destruction_of_Jerusalem.jpg",
     "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
     "license": "Public Domain",
     "media_type": "illustration",
-    "book_ref": "Lamentations"
+    "book_ref": "Lamentations",
+    "chapter_refs": [
+      1,
+      2,
+      5
+    ]
   },
   {
     "title": "The Vision of Ezekiel",
@@ -317,11 +782,29 @@
     "artist": "Raphael",
     "year_created": "1518",
     "source_url": "https://commons.wikimedia.org/wiki/File:Raffaello_Sanzio_-_Vision_of_Ezekiel_-_WGA18308.jpg",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/84/Raffaello_Sanzio_-_Vision_of_Ezekiel_-_WGA18308.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/ad/%22Vision_of_Ezekiel%27.jpg",
     "attribution": "Raphael, Public domain, via Wikimedia Commons",
     "license": "Public Domain",
     "media_type": "painting",
-    "book_ref": "Ezekiel"
+    "book_ref": "Ezekiel",
+    "chapter_refs": [
+      1
+    ]
+  },
+  {
+    "title": "The Valley of Dry Bones",
+    "description": "Ezekiel's vision of the valley filled with dry bones that are restored to life by the breath of God (Ezekiel 37).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:179.The_Vision_of_the_Valley_of_Dry_Bones.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/The_Story_of_Mexico.djvu",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Ezekiel",
+    "chapter_refs": [
+      37
+    ]
   },
   {
     "title": "Daniel in the Lions' Den",
@@ -329,11 +812,59 @@
     "artist": "Gustave Doré",
     "year_created": "1866",
     "source_url": "https://commons.wikimedia.org/wiki/File:180.Daniel_in_the_Lions%27_Den.jpg",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/39/180.Daniel_in_the_Lions%27_Den.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a7/131.Daniel_in_the_Lions%27_Den.jpg",
     "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
     "license": "Public Domain",
     "media_type": "illustration",
-    "book_ref": "Daniel"
+    "book_ref": "Daniel",
+    "chapter_refs": [
+      6
+    ]
+  },
+  {
+    "title": "Daniel in the Lions' Den (Rubens)",
+    "description": "Rubens' dramatic painting of Daniel surrounded by lions in the den, unharmed through God's protection.",
+    "artist": "Peter Paul Rubens",
+    "year_created": "1616",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Peter_Paul_Rubens_-_Daniel_in_the_Lions%27_Den_-_WGA20197.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/86/Daniel_in_the_Lion%27s_Den_c1615_Peter_Paul_Rubens.jpg",
+    "attribution": "Peter Paul Rubens, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "painting",
+    "book_ref": "Daniel",
+    "chapter_refs": [
+      6
+    ]
+  },
+  {
+    "title": "Shadrach, Meshach, and Abednego in the Fiery Furnace",
+    "description": "The three faithful Hebrews stand unburned in Nebuchadnezzar's fiery furnace, accompanied by a fourth divine figure (Daniel 3).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:177.Shadrach,_Meshach,_and_Abednego_in_the_Furnace.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/129.Shadrach%2C_Meshach_and_Abednego_in_the_Furnace.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Daniel",
+    "chapter_refs": [
+      3
+    ]
+  },
+  {
+    "title": "Belshazzar's Feast",
+    "description": "The mysterious hand writes on the wall during Belshazzar's feast, foretelling the fall of Babylon (Daniel 5).",
+    "artist": "Rembrandt",
+    "year_created": "1635",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Rembrandt-Belshazzar%27s-Feast.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Belshazzar%27s_Feast.jpg",
+    "attribution": "Rembrandt, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "painting",
+    "book_ref": "Daniel",
+    "chapter_refs": [
+      5
+    ]
   },
   {
     "title": "Hosea and Gomer",
@@ -341,11 +872,15 @@
     "artist": "Gustave Doré",
     "year_created": "1866",
     "source_url": "https://commons.wikimedia.org/wiki/File:Hosea_(Bible_Card).jpg",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/02/Hosea_%28Bible_Card%29.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Hosea_%28Menologion_of_Basil_II%29.jpg",
     "attribution": "Public domain, via Wikimedia Commons",
     "license": "Public Domain",
     "media_type": "illustration",
-    "book_ref": "Hosea"
+    "book_ref": "Hosea",
+    "chapter_refs": [
+      1,
+      3
+    ]
   },
   {
     "title": "The Plague of Locusts",
@@ -353,11 +888,15 @@
     "artist": "Gustave Doré",
     "year_created": "1866",
     "source_url": "https://commons.wikimedia.org/wiki/File:Joel_(Bible_Illustrations_by_Sweet_Media).jpg",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Joel_%28Bible_Illustrations_by_Sweet_Media%29.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/83/God_Sends_the_Locusts_to_Egypt_%28recto%29%3B_God_Sends_Hail_to_Egypt_%28verso%29_LACMA_61.24.1a-b.jpg",
     "attribution": "Public domain, via Wikimedia Commons",
     "license": "Public Domain",
     "media_type": "illustration",
-    "book_ref": "Joel"
+    "book_ref": "Joel",
+    "chapter_refs": [
+      1,
+      2
+    ]
   },
   {
     "title": "The Prophet Amos",
@@ -365,11 +904,30 @@
     "artist": "Gustave Doré",
     "year_created": "1866",
     "source_url": "https://commons.wikimedia.org/wiki/File:Amos_(Bible_Card).jpg",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Amos_%28Bible_Card%29.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/51/The_Dial_%28Volume_9%29.djvu",
     "attribution": "Public domain, via Wikimedia Commons",
     "license": "Public Domain",
     "media_type": "illustration",
-    "book_ref": "Amos"
+    "book_ref": "Amos",
+    "chapter_refs": [
+      1,
+      7
+    ]
+  },
+  {
+    "title": "The Destruction of Edom",
+    "description": "The prophesied destruction of Edom for its violence against Israel, the central theme of Obadiah's oracle.",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:166.The_Destruction_of_the_Temple.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Illustrated_Bible_Dictionary_%281893%29.djvu",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Obadiah",
+    "chapter_refs": [
+      1
+    ]
   },
   {
     "title": "Jonah Cast into the Sea",
@@ -377,11 +935,30 @@
     "artist": "Gustave Doré",
     "year_created": "1866",
     "source_url": "https://commons.wikimedia.org/wiki/File:182.Jonah_Cast_Forth_By_the_Whale.jpg",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/182.Jonah_Cast_Forth_By_the_Whale.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Initial_E-_Jonah_Cast_into_the_Sea_-_Google_Art_Project.jpg",
     "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
     "license": "Public Domain",
     "media_type": "illustration",
-    "book_ref": "Jonah"
+    "book_ref": "Jonah",
+    "chapter_refs": [
+      1,
+      2
+    ]
+  },
+  {
+    "title": "Jonah Preaching to the Ninevites",
+    "description": "The prophet Jonah reluctantly preaches to the great city of Nineveh, calling them to repentance (Jonah 3).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:183.Jonah_Preaching_to_the_Ninevites.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e9/138.Jonah_Preaches_to_the_Ninevites.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Jonah",
+    "chapter_refs": [
+      3
+    ]
   },
   {
     "title": "The Prophet Micah",
@@ -389,11 +966,113 @@
     "artist": "Gustave Doré",
     "year_created": "1866",
     "source_url": "https://commons.wikimedia.org/wiki/File:Micah_(Bible_Card).jpg",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Micah_%28Bible_Card%29.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Initial_U_-_An_Angel_before_Micah_-_Google_Art_Project.jpg",
     "attribution": "Public domain, via Wikimedia Commons",
     "license": "Public Domain",
     "media_type": "illustration",
-    "book_ref": "Micah"
+    "book_ref": "Micah",
+    "chapter_refs": [
+      1,
+      5
+    ]
+  },
+  {
+    "title": "The Fall of Nineveh",
+    "description": "The prophet Nahum's vision of the destruction of Nineveh, capital of the cruel Assyrian Empire, by divine judgment.",
+    "artist": "John Martin",
+    "year_created": "1829",
+    "source_url": "https://commons.wikimedia.org/wiki/File:John_Martin_-_The_Fall_of_Nineveh.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Fall_of_nineveh.jpg",
+    "attribution": "John Martin, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "painting",
+    "book_ref": "Nahum",
+    "chapter_refs": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "title": "The Prophet Habakkuk",
+    "description": "The prophet Habakkuk wrestles with God over the problem of evil and injustice, crying out for divine answers.",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:176.Isaiah.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Annie_Besant%2C_Is_the_Bible_Indictable.djvu",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Habakkuk",
+    "chapter_refs": [
+      1,
+      3
+    ]
+  },
+  {
+    "title": "The Day of the Lord",
+    "description": "Zephaniah proclaims the coming Day of the Lord, a time of judgment and purification for Judah and the nations.",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:166.The_Destruction_of_the_Temple.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Cartoon_portraits_and_biographical_sketches_of_men_of_the_day.djvu",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Zephaniah",
+    "chapter_refs": [
+      1,
+      3
+    ]
+  },
+  {
+    "title": "The Rebuilding of the Temple",
+    "description": "The prophet Haggai encourages the returned exiles to resume building the second temple in Jerusalem.",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:170.Ezra_Reads_the_Law_to_the_People.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/9e/105.The_Rebuilding_of_the_Temple_Is_Begun.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Haggai",
+    "chapter_refs": [
+      1,
+      2
+    ]
+  },
+  {
+    "title": "Zechariah's Vision of the Lampstand",
+    "description": "The prophet Zechariah receives visions of the future restoration of Israel, including the golden lampstand (Zechariah 4).",
+    "artist": "Julius Schnorr von Carolsfeld",
+    "year_created": "1860",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Schnorr_von_Carolsfeld_Bibel_in_Bildern_1860_185.png",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/65/Schnorr_von_Carolsfeld_Bibel_in_Bildern_1860_185.png",
+    "attribution": "Julius Schnorr von Carolsfeld, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Zechariah",
+    "chapter_refs": [
+      1,
+      4,
+      14
+    ]
+  },
+  {
+    "title": "The Messenger of the Covenant",
+    "description": "Malachi prophesies the coming messenger who will prepare the way before the Lord, the last prophetic voice of the Old Testament.",
+    "artist": "Julius Schnorr von Carolsfeld",
+    "year_created": "1860",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Schnorr_von_Carolsfeld_Bibel_in_Bildern_1860_186.png",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/89/Schnorr_von_Carolsfeld_Bibel_in_Bildern_1860_186.png",
+    "attribution": "Julius Schnorr von Carolsfeld, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Malachi",
+    "chapter_refs": [
+      3,
+      4
+    ]
   },
   {
     "title": "The Nativity",
@@ -401,11 +1080,15 @@
     "artist": "Caravaggio",
     "year_created": "1609",
     "source_url": "https://commons.wikimedia.org/wiki/File:Caravaggio_-_Nativity_with_St_Francis_and_St_Lawrence_-_1609.jpg",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Caravaggio_-_Nativity_with_St_Francis_and_St_Lawrence_-_1609.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Caravaggio-Nativity%281600%29.jpg",
     "attribution": "Caravaggio, Public domain, via Wikimedia Commons",
     "license": "Public Domain",
     "media_type": "painting",
-    "book_ref": "Matthew"
+    "book_ref": "Matthew",
+    "chapter_refs": [
+      1,
+      2
+    ]
   },
   {
     "title": "The Sermon on the Mount",
@@ -413,11 +1096,106 @@
     "artist": "Carl Bloch",
     "year_created": "1877",
     "source_url": "https://commons.wikimedia.org/wiki/File:Bloch-SermonOnTheMount.jpg",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Bloch-SermonOnTheMount.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/96/Bloch-SermonOnTheMount.jpg",
     "attribution": "Carl Bloch, Public domain, via Wikimedia Commons",
     "license": "Public Domain",
     "media_type": "painting",
-    "book_ref": "Matthew"
+    "book_ref": "Matthew",
+    "chapter_refs": [
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "title": "The Adoration of the Magi",
+    "description": "The wise men from the East present their gifts of gold, frankincense, and myrrh to the infant Jesus (Matthew 2).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:190.The_Wise_Men_Guided_by_the_Star.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Bowyer_Bible_artists_image_2_of_10._adoration_of_the_Magi._Von_Aachen.gif",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Matthew",
+    "chapter_refs": [
+      2
+    ]
+  },
+  {
+    "title": "The Flight into Egypt",
+    "description": "Joseph leads Mary and the infant Jesus on the journey to Egypt, fleeing from Herod's massacre of the innocents (Matthew 2:13-15).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:191.The_Flight_into_Egypt.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/40/Bowyer_Bible_etching_by_Jan_Luyken_3_of_12_Jesus_goes_down_into_Egypt.gif",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Matthew",
+    "chapter_refs": [
+      2
+    ]
+  },
+  {
+    "title": "The Temptation of Christ",
+    "description": "Jesus is tempted by Satan in the wilderness after fasting forty days and forty nights (Matthew 4:1-11).",
+    "artist": "Carl Bloch",
+    "year_created": "1870",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Christus_und_der_Teufel.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/44/Carl_Heinrich_Bloch_-_Jesus_Tempted.jpg",
+    "attribution": "Carl Bloch, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "painting",
+    "book_ref": "Matthew",
+    "chapter_refs": [
+      4
+    ]
+  },
+  {
+    "title": "The Transfiguration",
+    "description": "Jesus is transfigured on the mountain, his face shining like the sun, with Moses and Elijah appearing beside him (Matthew 17).",
+    "artist": "Raphael",
+    "year_created": "1520",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Transfiguration_Raphael.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/51/Transfiguration_Raphael.jpg",
+    "attribution": "Raphael, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "painting",
+    "book_ref": "Matthew",
+    "chapter_refs": [
+      17
+    ]
+  },
+  {
+    "title": "Jesus Entering Jerusalem",
+    "description": "Christ's triumphal entry into Jerusalem on Palm Sunday, greeted by crowds waving palm branches (Matthew 21).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:213.Triumphal_Entry_of_Jesus_into_Jerusalem.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/71/Jesus_entering_Jerusalem.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Matthew",
+    "chapter_refs": [
+      21
+    ]
+  },
+  {
+    "title": "The Crucifixion (Matthew)",
+    "description": "The crucifixion of Christ at Golgotha with darkness covering the land, the culminating event of Matthew's passion narrative.",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:225.Jesus_on_the_Cross.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/70/Cyclopedia_of_painters_and_paintings_-_Volume_I.djvu",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Matthew",
+    "chapter_refs": [
+      27
+    ]
   },
   {
     "title": "The Baptism of Christ",
@@ -425,11 +1203,76 @@
     "artist": "Gustave Doré",
     "year_created": "1866",
     "source_url": "https://commons.wikimedia.org/wiki/File:193.The_Baptism_of_Jesus.jpg",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c4/193.The_Baptism_of_Jesus.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/70/Cyclopedia_of_painters_and_paintings_-_Volume_I.djvu",
     "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
     "license": "Public Domain",
     "media_type": "illustration",
-    "book_ref": "Mark"
+    "book_ref": "Mark",
+    "chapter_refs": [
+      1
+    ]
+  },
+  {
+    "title": "Jesus Healing the Sick",
+    "description": "Jesus heals the multitudes who come to him, demonstrating his compassion and divine power over illness.",
+    "artist": "Carl Bloch",
+    "year_created": "1885",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Carl_Bloch_-_Healing_at_the_Pool_of_Bethesda.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/48/Christhealingthesick.jpg",
+    "attribution": "Carl Bloch, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "painting",
+    "book_ref": "Mark",
+    "chapter_refs": [
+      1,
+      2,
+      5
+    ]
+  },
+  {
+    "title": "Jesus Calming the Storm",
+    "description": "Jesus rebukes the wind and waves, calming the stormy Sea of Galilee while his terrified disciples watch in awe (Mark 4:35-41).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:198.Jesus_Stilling_the_Tempest.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/03/28_Mark%E2%80%99s_Gospel_I._Jesus_commands_the_waves_image_1_of_4._Christ_stills_the_storm._Parros.png",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Mark",
+    "chapter_refs": [
+      4
+    ]
+  },
+  {
+    "title": "The Feeding of the Five Thousand",
+    "description": "Jesus multiplies five loaves and two fish to feed a multitude of five thousand people in the wilderness (Mark 6:30-44).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:201.Jesus_Feeds_the_Multitude.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/59/John_Martin_-_Feeding_the_Five_Thousand_-_B1977.14.4260_-_Yale_Center_for_British_Art.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Mark",
+    "chapter_refs": [
+      6
+    ]
+  },
+  {
+    "title": "Jesus Walking on Water",
+    "description": "Jesus walks on the Sea of Galilee toward his disciples' boat during a storm, calling Peter to come to him (Mark 6:45-52).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:202.Jesus_Walking_on_the_Sea.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/29_Mark%E2%80%99s_Gospel_I._Jesus_commands_the_waves_image_2_of_4._walking_on_the_sea._Schellenberg.png",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Mark",
+    "chapter_refs": [
+      6
+    ]
   },
   {
     "title": "The Prodigal Son",
@@ -437,11 +1280,14 @@
     "artist": "Rembrandt",
     "year_created": "1669",
     "source_url": "https://commons.wikimedia.org/wiki/File:Rembrandt_Harmensz._van_Rijn_-_The_Return_of_the_Prodigal_Son.jpg",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/93/Rembrandt_Harmensz._van_Rijn_-_The_Return_of_the_Prodigal_Son.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Rembrandt_Harmensz._van_Rijn_-_The_Return_of_the_Prodigal_Son.jpg",
     "attribution": "Rembrandt, Public domain, via Wikimedia Commons",
     "license": "Public Domain",
     "media_type": "painting",
-    "book_ref": "Luke"
+    "book_ref": "Luke",
+    "chapter_refs": [
+      15
+    ]
   },
   {
     "title": "The Annunciation",
@@ -449,11 +1295,74 @@
     "artist": "Raphael",
     "year_created": "1514",
     "source_url": "https://commons.wikimedia.org/wiki/File:Raphael_-_The_Annunciation_(Oddi_altar).jpg",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Raphael_-_The_Annunciation_%28Oddi_altar%29.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Raphael_-_The_Annunciation_%28Oddi_altar%29.jpg",
     "attribution": "Raphael, Public domain, via Wikimedia Commons",
     "license": "Public Domain",
     "media_type": "painting",
-    "book_ref": "Luke"
+    "book_ref": "Luke",
+    "chapter_refs": [
+      1
+    ]
+  },
+  {
+    "title": "The Good Samaritan",
+    "description": "The parable of the Good Samaritan who stops to help a wounded stranger on the road from Jerusalem to Jericho (Luke 10:25-37).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:206.The_Good_Samaritan.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/af/Harold_Copping_-_The_Good_Samaritan_-_%28MeisterDrucke-108196%29.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Luke",
+    "chapter_refs": [
+      10
+    ]
+  },
+  {
+    "title": "The Nativity (Luke)",
+    "description": "The shepherds visit the newborn Jesus lying in a manger in Bethlehem, as announced by the angels (Luke 2).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:188.The_Birth_of_Jesus.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f4/The_art_Bible%2C_comprising_the_Old_and_new_Testaments_-_with_numerous_illustrations_%281896%29_%2814760158316%29.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Luke",
+    "chapter_refs": [
+      2
+    ]
+  },
+  {
+    "title": "Jesus Among the Doctors",
+    "description": "The twelve-year-old Jesus astonishes the teachers in the temple with his understanding and answers (Luke 2:41-52).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:192.Jesus_Among_the_Doctors.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Bowyer_Bible_etching_by_Jan_Luyken_4_of_12_Jesus_confounds_the_scholars_in_the_Temple.gif",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Luke",
+    "chapter_refs": [
+      2
+    ]
+  },
+  {
+    "title": "The Resurrection",
+    "description": "The risen Christ emerges from the tomb, the central event of Christian faith as described in Luke 24.",
+    "artist": "Carl Bloch",
+    "year_created": "1881",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Carl_Heinrich_Bloch_-_The_Resurrection.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/87/Carl_Heinrich_Bloch_-_The_Resurrection.jpg",
+    "attribution": "Carl Bloch, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "painting",
+    "book_ref": "Luke",
+    "chapter_refs": [
+      24
+    ]
   },
   {
     "title": "The Last Supper",
@@ -465,7 +1374,10 @@
     "attribution": "Leonardo da Vinci, Public domain, via Wikimedia Commons",
     "license": "Public Domain",
     "media_type": "painting",
-    "book_ref": "John"
+    "book_ref": "John",
+    "chapter_refs": [
+      13
+    ]
   },
   {
     "title": "The Crucifixion",
@@ -473,11 +1385,89 @@
     "artist": "Raphael",
     "year_created": "1503",
     "source_url": "https://commons.wikimedia.org/wiki/File:Raffaello_Sanzio_-_Crucifixion_-_WGA18578.jpg",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/85/Raffaello_Sanzio_-_Crucifixion_-_WGA18578.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/18/CrocefissioneRaffaello.jpg",
     "attribution": "Raphael, Public domain, via Wikimedia Commons",
     "license": "Public Domain",
     "media_type": "painting",
-    "book_ref": "John"
+    "book_ref": "John",
+    "chapter_refs": [
+      19
+    ]
+  },
+  {
+    "title": "The Raising of Lazarus",
+    "description": "Jesus calls Lazarus forth from the tomb after four days, one of the greatest miracles recorded in John's Gospel (John 11).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:209.The_Resurrection_of_Lazarus.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/db/Bowyer_Bible_Volume_1_Print_8._Frontispiece_to_Mortier_and_Covens._Jan_and_Caspar_Luyken.png",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "John",
+    "chapter_refs": [
+      11
+    ]
+  },
+  {
+    "title": "The Woman at the Well",
+    "description": "Jesus speaks with the Samaritan woman at Jacob's well, revealing himself as the source of living water (John 4).",
+    "artist": "Carl Bloch",
+    "year_created": "1872",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Carl_Heinrich_Bloch_-_Woman_at_the_Well.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/51/Carl_Heinrich_Bloch_-_Woman_at_the_Well.jpg",
+    "attribution": "Carl Bloch, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "painting",
+    "book_ref": "John",
+    "chapter_refs": [
+      4
+    ]
+  },
+  {
+    "title": "The Doubting Thomas",
+    "description": "The risen Jesus invites Thomas to touch his wounds, leading to Thomas's confession 'My Lord and my God!' (John 20:24-29).",
+    "artist": "Caravaggio",
+    "year_created": "1602",
+    "source_url": "https://commons.wikimedia.org/wiki/File:The_Incredulity_of_Saint_Thomas-Caravaggio_(1601-2).jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/The_Incredulity_of_Saint_Thomas-Caravaggio_%281601-2%29.jpg",
+    "attribution": "Caravaggio, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "painting",
+    "book_ref": "John",
+    "chapter_refs": [
+      20
+    ]
+  },
+  {
+    "title": "Christ Washing the Disciples' Feet",
+    "description": "Jesus humbly washes his disciples' feet, demonstrating servant leadership on the night before his crucifixion (John 13:1-17).",
+    "artist": "Carl Bloch",
+    "year_created": "1876",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Carl_Bloch_-_Washing_of_Feet.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Accademia_-_Lavanda_dei_piedi_di_Giovanni_Agostino_da_Lodi.jpg",
+    "attribution": "Carl Bloch, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "painting",
+    "book_ref": "John",
+    "chapter_refs": [
+      13
+    ]
+  },
+  {
+    "title": "Christ in Gethsemane",
+    "description": "Jesus prays in agony in the Garden of Gethsemane on the night of his arrest, sweating drops of blood (John 18; Luke 22).",
+    "artist": "Carl Bloch",
+    "year_created": "1879",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Carl_Heinrich_Bloch_-_Gethsemane.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/54/Carl_Heinrich_Bloch_-_Gethsemane.jpg",
+    "attribution": "Carl Bloch, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "painting",
+    "book_ref": "John",
+    "chapter_refs": [
+      18
+    ]
   },
   {
     "title": "The Conversion of Saint Paul",
@@ -485,11 +1475,75 @@
     "artist": "Caravaggio",
     "year_created": "1601",
     "source_url": "https://commons.wikimedia.org/wiki/File:Caravaggio_-_La_conversione_di_San_Paolo.jpg",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/67/Caravaggio_-_La_conversione_di_San_Paolo.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Caravaggio_-_La_conversione_di_San_Paolo.jpg",
     "attribution": "Caravaggio, Public domain, via Wikimedia Commons",
     "license": "Public Domain",
     "media_type": "painting",
-    "book_ref": "Acts"
+    "book_ref": "Acts",
+    "chapter_refs": [
+      9
+    ]
+  },
+  {
+    "title": "The Descent of the Holy Spirit at Pentecost",
+    "description": "The Holy Spirit descends upon the apostles as tongues of fire on the day of Pentecost, empowering them to preach (Acts 2).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:230.The_Descent_of_the_Spirit.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/16/Initial_V-_The_Descent_of_the_Holy_Spirit_-_Google_Art_Project.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Acts",
+    "chapter_refs": [
+      2
+    ]
+  },
+  {
+    "title": "The Stoning of Stephen",
+    "description": "Stephen, the first Christian martyr, is stoned to death while praying for his persecutors (Acts 7:54-60).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:231.The_Martyrdom_of_St._Stephen.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b1/John_Martin_-_The_Stoning_of_Saint_Stephen_-_B1977.14.4252_-_Yale_Center_for_British_Art.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Acts",
+    "chapter_refs": [
+      7
+    ]
+  },
+  {
+    "title": "Paul Preaching at Athens",
+    "description": "Paul addresses the Athenian philosophers at the Areopagus, proclaiming the unknown God (Acts 17:22-34).",
+    "artist": "Raphael",
+    "year_created": "1515",
+    "source_url": "https://commons.wikimedia.org/wiki/File:V%26A_-_Raphael,_St_Paul_Preaching_in_Athens_(1515).jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/56/V%26A_-_Raphael%2C_St_Paul_Preaching_in_Athens_%281515%29.jpg",
+    "attribution": "Raphael, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "painting",
+    "book_ref": "Acts",
+    "chapter_refs": [
+      17
+    ]
+  },
+  {
+    "title": "Paul's Shipwreck on Malta",
+    "description": "Paul's ship is wrecked in a storm on the way to Rome, and the survivors escape to the island of Malta (Acts 27-28).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:234.Paul%27s_Shipwreck.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/De_schipbreuk_van_Paulus_Paulus_Schipbrekinghe_%28titel_op_object%29%2C_RP-P-BI-7153.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Acts",
+    "chapter_refs": [
+      27,
+      28
+    ]
   },
   {
     "title": "Saint Paul Writing His Epistles",
@@ -497,11 +1551,16 @@
     "artist": "Rembrandt",
     "year_created": "1627",
     "source_url": "https://commons.wikimedia.org/wiki/File:Rembrandt_-_Apostle_Paul_-_WGA19120.jpg",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Rembrandt_-_Apostle_Paul_-_WGA19120.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Rembrandt_-_Apostle_Paul_-_WGA19120.jpg",
     "attribution": "Rembrandt, Public domain, via Wikimedia Commons",
     "license": "Public Domain",
     "media_type": "painting",
-    "book_ref": "Romans"
+    "book_ref": "Romans",
+    "chapter_refs": [
+      1,
+      8,
+      12
+    ]
   },
   {
     "title": "Saint Paul Preaching in Athens",
@@ -509,11 +1568,343 @@
     "artist": "Raphael",
     "year_created": "1515",
     "source_url": "https://commons.wikimedia.org/wiki/File:V%26A_-_Raphael,_St_Paul_Preaching_in_Athens_(1515).jpg",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/30/V%26A_-_Raphael%2C_St_Paul_Preaching_in_Athens_%281515%29.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/56/V%26A_-_Raphael%2C_St_Paul_Preaching_in_Athens_%281515%29.jpg",
     "attribution": "Raphael, Public domain, via Wikimedia Commons",
     "license": "Public Domain",
     "media_type": "painting",
-    "book_ref": "1 Corinthians"
+    "book_ref": "1 Corinthians",
+    "chapter_refs": [
+      1,
+      13,
+      15
+    ]
+  },
+  {
+    "title": "Saint Paul (2 Corinthians)",
+    "description": "Paul the Apostle, depicted in contemplation as he writes his second letter to the Corinthian church, defending his apostleship.",
+    "artist": "Rembrandt",
+    "year_created": "1627",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Rembrandt_-_Apostle_Paul_-_WGA19120.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Rembrandt_-_Apostle_Paul_-_WGA19120.jpg",
+    "attribution": "Rembrandt, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "painting",
+    "book_ref": "2 Corinthians",
+    "chapter_refs": [
+      1,
+      4,
+      12
+    ]
+  },
+  {
+    "title": "Saint Paul and the Epistle to the Galatians",
+    "description": "Paul writes passionately to the Galatians about justification by faith, not by works of the law.",
+    "artist": "Rembrandt",
+    "year_created": "1627",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Rembrandt_-_Apostle_Paul_-_WGA19120.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Rembrandt_-_Apostle_Paul_-_WGA19120.jpg",
+    "attribution": "Rembrandt, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "painting",
+    "book_ref": "Galatians",
+    "chapter_refs": [
+      1,
+      3,
+      5
+    ]
+  },
+  {
+    "title": "Saint Paul in Prison",
+    "description": "Paul writes from prison to the Ephesian church about the mystery of Christ and the unity of all believers in one body.",
+    "artist": "Rembrandt",
+    "year_created": "1627",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Probably_Rembrandt_-_Saint_Paul_in_Prison_-_72.PA.15_-_J._Paul_Getty_Museum.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/77/1627_Rembrandt_Paulus_im_Gef%C3%A4ngnis_Staatsgalerie_Stuttgart_anagoria.JPG",
+    "attribution": "Rembrandt (attributed), Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "painting",
+    "book_ref": "Ephesians",
+    "chapter_refs": [
+      1,
+      2,
+      6
+    ]
+  },
+  {
+    "title": "Saint Paul Writing to the Philippians",
+    "description": "Paul writes his letter of joy to the Philippian church from imprisonment, encouraging them to rejoice in the Lord always.",
+    "artist": "Valentin de Boulogne",
+    "year_created": "1620",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Valentin_de_Boulogne_-_Saint_Paul_Writing_His_Epistles_-_Google_Art_Project.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Initial_P-_Saint_Paul%3B_Initial_P-_A_Bishop_Giving_a_Letter_to_a_Messenger_-_Google_Art_Project.jpg",
+    "attribution": "Valentin de Boulogne, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "painting",
+    "book_ref": "Philippians",
+    "chapter_refs": [
+      1,
+      2,
+      4
+    ]
+  },
+  {
+    "title": "Saint Paul Writing to the Colossians",
+    "description": "Paul writes to the church at Colossae about the supremacy of Christ over all creation and all spiritual powers.",
+    "artist": "Valentin de Boulogne",
+    "year_created": "1620",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Valentin_de_Boulogne_-_Saint_Paul_Writing_His_Epistles_-_Google_Art_Project.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/ec/File%22-Saint_Paul_Writing_His_Epistles%22_by_Valentin_de_Boulogne.jpg",
+    "attribution": "Valentin de Boulogne, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "painting",
+    "book_ref": "Colossians",
+    "chapter_refs": [
+      1,
+      3
+    ]
+  },
+  {
+    "title": "Saint Paul and the Thessalonians",
+    "description": "Paul writes to the church at Thessalonica about the second coming of Christ and encouragement for faithful living.",
+    "artist": "Valentin de Boulogne",
+    "year_created": "1620",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Valentin_de_Boulogne_-_Saint_Paul_Writing_His_Epistles_-_Google_Art_Project.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Southern_France%2C_Toulouse%28%3F%29%2C_13th_century_-_Fol._454v%2CThessalonians_I%2C_historiated_initial_P%2C_Paul_seated_with_a_sword_-_2008.2.454.b_-_Cleveland_Museum_of_Art.jpg",
+    "attribution": "Valentin de Boulogne, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "painting",
+    "book_ref": "1 Thessalonians",
+    "chapter_refs": [
+      1,
+      4,
+      5
+    ]
+  },
+  {
+    "title": "The Second Coming",
+    "description": "Paul writes his second letter to the Thessalonians about the Day of the Lord and the man of lawlessness.",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:236.The_New_Jerusalem.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/60/The_Last_Judgement_and_Second_Coming_of_the_Lord_Illustrated.djvu",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "2 Thessalonians",
+    "chapter_refs": [
+      1,
+      2
+    ]
+  },
+  {
+    "title": "Saint Paul Writing to Timothy",
+    "description": "Paul writes to his young protege Timothy, giving instructions for church leadership and sound doctrine.",
+    "artist": "Rembrandt",
+    "year_created": "1627",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Rembrandt_-_Apostle_Paul_-_WGA19120.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Rembrandt_-_Apostle_Paul_-_WGA19120.jpg",
+    "attribution": "Rembrandt, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "painting",
+    "book_ref": "1 Timothy",
+    "chapter_refs": [
+      1,
+      3,
+      6
+    ]
+  },
+  {
+    "title": "Paul's Final Letter to Timothy",
+    "description": "Paul writes his final epistle from prison to Timothy, passing the torch of ministry before his expected martyrdom.",
+    "artist": "Rembrandt",
+    "year_created": "1627",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Probably_Rembrandt_-_Saint_Paul_in_Prison_-_72.PA.15_-_J._Paul_Getty_Museum.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/71/Saint_Paul_at_his_Writing-Desk%2C_by_Rembrandt.jpg",
+    "attribution": "Rembrandt (attributed), Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "painting",
+    "book_ref": "2 Timothy",
+    "chapter_refs": [
+      1,
+      4
+    ]
+  },
+  {
+    "title": "Saint Paul's Letter to Titus",
+    "description": "Paul instructs Titus on appointing elders and maintaining sound teaching in the churches of Crete.",
+    "artist": "Valentin de Boulogne",
+    "year_created": "1620",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Valentin_de_Boulogne_-_Saint_Paul_Writing_His_Epistles_-_Google_Art_Project.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Arch_Titus%2C_relief_triumph%2C_Forum_Romanum%2C_Rome%2C_Italy.jpg",
+    "attribution": "Valentin de Boulogne, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "painting",
+    "book_ref": "Titus",
+    "chapter_refs": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "title": "Saint Paul's Letter to Philemon",
+    "description": "Paul appeals to Philemon on behalf of the runaway slave Onesimus, urging forgiveness and brotherhood in Christ.",
+    "artist": "Rembrandt",
+    "year_created": "1627",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Rembrandt_-_Apostle_Paul_-_WGA19120.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Rembrandt_-_Apostle_Paul_-_WGA19120.jpg",
+    "attribution": "Rembrandt, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "painting",
+    "book_ref": "Philemon",
+    "chapter_refs": [
+      1
+    ]
+  },
+  {
+    "title": "Melchizedek Blesses Abraham",
+    "description": "The priest-king Melchizedek blesses Abraham, a key typological figure discussed at length in the Epistle to the Hebrews.",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:023.Melchizedek_Blesses_Abraham.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Figures_015_Melchisedec_King_of_Salem_blesses_Abram.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Hebrews",
+    "chapter_refs": [
+      7,
+      11
+    ]
+  },
+  {
+    "title": "The Hall of Faith",
+    "description": "Abraham sets out in faith toward an unknown land, exemplifying the faith chapter of Hebrews 11.",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:019.Abraham_Journeying_into_the_Land_of_Canaan.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/The_Bible_of_Amiens.djvu",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Hebrews",
+    "chapter_refs": [
+      11,
+      12
+    ]
+  },
+  {
+    "title": "Saint James the Apostle",
+    "description": "James, the brother of Jesus, who wrote the epistle calling for faith demonstrated through works and practical holiness.",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:230.The_Descent_of_the_Spirit.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/35/Gospel_of_John_Chapter_1-8_%28Bible_Illustrations_by_Sweet_Media%29.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "James",
+    "chapter_refs": [
+      1,
+      2,
+      5
+    ]
+  },
+  {
+    "title": "Saint Peter Preaching",
+    "description": "Peter preaches to the early church, embodying the pastoral leadership reflected in his first epistle.",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:230.The_Descent_of_the_Spirit.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f9/The_Dial_%28Volume_79%29.djvu",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "1 Peter",
+    "chapter_refs": [
+      1,
+      2,
+      5
+    ]
+  },
+  {
+    "title": "Saint Peter's Warning",
+    "description": "Peter warns the early church against false teachers and reminds them of the coming Day of the Lord in his second epistle.",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:231.The_Martyrdom_of_St._Stephen.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Basilica_di_San_Pietro_in_Vaticano_September_2015-1a.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "2 Peter",
+    "chapter_refs": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "title": "Saint John the Evangelist on Patmos",
+    "description": "The apostle John on the island of Patmos, author of the epistles proclaiming that God is love and light.",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:235.St._John_on_Patmos.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/71/Houghton_MS_Typ_252_-_St_John_on_Patmos.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "1 John",
+    "chapter_refs": [
+      1,
+      3,
+      4
+    ]
+  },
+  {
+    "title": "Saint John's Second Epistle",
+    "description": "John writes a brief letter to the 'chosen lady' and her children, urging them to walk in truth and love.",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:235.St._John_on_Patmos.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Grandes_Heures_Anne_de_Bretagne_Saint_Jean.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "2 John",
+    "chapter_refs": [
+      1
+    ]
+  },
+  {
+    "title": "Saint John's Third Epistle",
+    "description": "John writes to Gaius commending his hospitality toward traveling missionaries and warning against the controlling Diotrephes.",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:235.St._John_on_Patmos.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/15/2_John%2C_3_John%2C_and_Jude_in_Sinaiticus.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "3 John",
+    "chapter_refs": [
+      1
+    ]
+  },
+  {
+    "title": "The Epistle of Jude",
+    "description": "Jude warns against ungodly people who have crept into the church, urging believers to contend for the faith once delivered to the saints.",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:230.The_Descent_of_the_Spirit.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/ba/The_art_Bible%2C_comprising_the_Old_and_new_Testaments_-_with_numerous_illustrations_%281896%29_%2814596470368%29.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Jude",
+    "chapter_refs": [
+      1
+    ]
   },
   {
     "title": "The Four Horsemen of the Apocalypse",
@@ -521,11 +1912,14 @@
     "artist": "Albrecht Dürer",
     "year_created": "1498",
     "source_url": "https://commons.wikimedia.org/wiki/File:Dürer_-_Apocalypse_4.jpg",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/29/Albrecht_D%C3%BCrer_-_The_Four_Horsemen_of_the_Apocalypse.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/4e/BL_Royal_MS_19_D_III_f._596v_-_Apocalypse.jpg",
     "attribution": "Albrecht Dürer, Public domain, via Wikimedia Commons",
     "license": "Public Domain",
     "media_type": "illustration",
-    "book_ref": "Revelation"
+    "book_ref": "Revelation",
+    "chapter_refs": [
+      6
+    ]
   },
   {
     "title": "The New Jerusalem",
@@ -533,10 +1927,1169 @@
     "artist": "Gustave Doré",
     "year_created": "1866",
     "source_url": "https://commons.wikimedia.org/wiki/File:236.The_New_Jerusalem.jpg",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/40/236.The_New_Jerusalem.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Gustave_Dor%C3%A9_-_Christ%27s_Entry_into_Jerusalem.jpg",
     "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
     "license": "Public Domain",
     "media_type": "illustration",
-    "book_ref": "Revelation"
+    "book_ref": "Revelation",
+    "chapter_refs": [
+      21,
+      22
+    ]
+  },
+  {
+    "title": "Saint John's Vision on Patmos",
+    "description": "The apostle John receives the apocalyptic visions on the island of Patmos, beginning the Book of Revelation (Revelation 1).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:235.St._John_on_Patmos.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/71/Houghton_MS_Typ_252_-_St_John_on_Patmos.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Revelation",
+    "chapter_refs": [
+      1
+    ]
+  },
+  {
+    "title": "The Whore of Babylon",
+    "description": "The great harlot seated on a scarlet beast, representing the corrupt worldly power destined for judgment (Revelation 17).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Whore_of_Babylon_(XIV).jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Whore_of_Babylon_%28XIV%29.jpg",
+    "attribution": "Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Revelation",
+    "chapter_refs": [
+      17
+    ]
+  },
+  {
+    "title": "The Last Judgment",
+    "description": "Michelangelo's monumental fresco of the final judgment, when Christ separates the righteous from the wicked (Revelation 20).",
+    "artist": "Michelangelo",
+    "year_created": "1541",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Last_Judgement_(Michelangelo).jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/18/Last_Judgement_%28Michelangelo%29.jpg",
+    "attribution": "Michelangelo, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "painting",
+    "book_ref": "Revelation",
+    "chapter_refs": [
+      20
+    ]
+  },
+  {
+    "title": "The Separation of Light from Darkness",
+    "description": "Michelangelo's Sistine Chapel panel showing God creating light and separating it from darkness on the first day.",
+    "artist": "Michelangelo",
+    "year_created": "1512",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Creación_de_los_Astros_y_Plantas.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Dividing_Light_from_Darkness.jpg",
+    "attribution": "Michelangelo, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "painting",
+    "book_ref": "Genesis",
+    "chapter_refs": [
+      1
+    ]
+  },
+  {
+    "title": "Lot Fleeing from Sodom",
+    "description": "Lot and his family flee the destruction of Sodom by fire and brimstone as his wife looks back and becomes a pillar of salt (Genesis 19).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:024.Lot_Flees_as_Sodom_and_Gomorrah_Burn.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Illustration_of_Lot_fleeing_Sodom%2C_1873_Holy_Bible_%28Eyre_and_Spottiswoode%2C_London%29._After_Raphael%2C_adapted_by_Robert_Dudley_01.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Genesis",
+    "chapter_refs": [
+      19
+    ]
+  },
+  {
+    "title": "Noah's Ark",
+    "description": "The animals enter Noah's ark in pairs before the great flood covers the earth (Genesis 7).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:012.The_Flood.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/The_Story_of_Mexico.djvu",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Genesis",
+    "chapter_refs": [
+      7,
+      8,
+      9
+    ]
+  },
+  {
+    "title": "Moses Receives the Law on Sinai",
+    "description": "Moses receives the Ten Commandments from God on Mount Sinai amid thunder, lightning, and smoke (Exodus 19-20).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:072.Moses_Receives_the_Ten_Commandments.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a7/William_de_Brailes_-_The_Israelites_Worship_the_Golden_Calf_and_Moses_Breaks_the_Tablets_%28Exodus_32_-1-19%29_-_Walters_W10613R_-_Full_Page.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Exodus",
+    "chapter_refs": [
+      19,
+      20
+    ]
+  },
+  {
+    "title": "The Destruction of Pharaoh's Army",
+    "description": "The waters of the Red Sea close over Pharaoh's chariots and horsemen as Israel watches from the far shore (Exodus 14-15).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:065.The_Egyptians_Are_Destroyed.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Illustrated_Bible_Dictionary_%281893%29.djvu",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Exodus",
+    "chapter_refs": [
+      14,
+      15
+    ]
+  },
+  {
+    "title": "The Stoning of Achan",
+    "description": "Achan is punished for taking forbidden spoils from Jericho, a lesson in obedience from Joshua 7.",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:094.The_Stoning_of_Achan.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/8a/AchanStone-MaciejowskiBible.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Joshua",
+    "chapter_refs": [
+      7
+    ]
+  },
+  {
+    "title": "Jephthah's Daughter",
+    "description": "Jephthah's daughter comes out to meet her father after his tragic vow, a poignant story from Judges 11.",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:108.Jephthah%27s_Daughter_Coming_to_Meet_Her_Father.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/058.Jephthah%27s_Daughter_Comes_to_Meet_Her_Father.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Judges",
+    "chapter_refs": [
+      11
+    ]
+  },
+  {
+    "title": "Samson and Delilah",
+    "description": "Delilah betrays Samson by having his hair cut while he sleeps, robbing him of his God-given strength (Judges 16).",
+    "artist": "Peter Paul Rubens",
+    "year_created": "1610",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Peter_Paul_Rubens_-_Samson_and_Delilah_-_Google_Art_Project.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Peter_Paul_Rubens_-_Samson_and_Delilah_-_Google_Art_Project.jpg",
+    "attribution": "Peter Paul Rubens, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "painting",
+    "book_ref": "Judges",
+    "chapter_refs": [
+      16
+    ]
+  },
+  {
+    "title": "Saul Attacks David",
+    "description": "King Saul hurls a javelin at David as the young musician plays the harp, driven by jealousy and an evil spirit (1 Samuel 18-19).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:128.Saul_Attempts_to_Kill_David.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/09/David_spreekt_met_soldaten_over_Goliat_Van_Saul%2C_David%2C_en_Goliath_%28serietitel%29_Geschiedenis_van_David_en_Saul_%28serietitel%29_Den_Grooten_Figuer-Bibel_%28serietitel%29%2C_RP-P-1982-306-149.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "1 Samuel",
+    "chapter_refs": [
+      18,
+      19
+    ]
+  },
+  {
+    "title": "The Witch of Endor",
+    "description": "King Saul consults the medium at Endor and encounters the spirit of Samuel before his final defeat (1 Samuel 28).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:130.Saul_and_the_Witch_of_Endor.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/08/075.Saul_and_the_Witch_of_Endor.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "1 Samuel",
+    "chapter_refs": [
+      28
+    ]
+  },
+  {
+    "title": "David's Lament for Absalom",
+    "description": "King David weeps bitterly upon hearing of the death of his rebellious son Absalom: 'O my son Absalom!' (2 Samuel 19).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:142.David_Mourns_the_Death_of_Absalom.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Illustrated_Bible_Dictionary_%281893%29.djvu",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "2 Samuel",
+    "chapter_refs": [
+      18,
+      19
+    ]
+  },
+  {
+    "title": "Solomon's Temple Dedication",
+    "description": "King Solomon dedicates the newly completed Temple in Jerusalem, as the glory of the Lord fills the house (1 Kings 8).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:145.Solomon_Dedicates_the_Temple_at_Jerusalem.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/23/Model_of_Solomon%27s_Temple_-_02.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "1 Kings",
+    "chapter_refs": [
+      8
+    ]
+  },
+  {
+    "title": "The Destruction of Sennacherib's Army",
+    "description": "The angel of the Lord strikes down 185,000 Assyrian soldiers besieging Jerusalem in a single night (2 Kings 19:35).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:162.Solomon.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/101.Sennacherib%27s_Army_Is_Destroyed.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "2 Kings",
+    "chapter_refs": [
+      19
+    ]
+  },
+  {
+    "title": "David's Psalm of Praise",
+    "description": "David raises his voice in thanksgiving to God, the archetypal psalmist whose songs define the Book of Psalms.",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:132.The_Anointing_of_David.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Benisch-Bible-D-1861.djvu",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Psalms",
+    "chapter_refs": [
+      1,
+      19,
+      119,
+      139
+    ]
+  },
+  {
+    "title": "The Calling of Isaiah",
+    "description": "A seraph touches Isaiah's lips with a burning coal from the altar, purifying him for prophetic ministry (Isaiah 6:6-7).",
+    "artist": "Julius Schnorr von Carolsfeld",
+    "year_created": "1860",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Schnorr_von_Carolsfeld_Bibel_in_Bildern_1860_138.png",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Schnorr_von_Carolsfeld_Bibel_in_Bildern_1860_138.png",
+    "attribution": "Julius Schnorr von Carolsfeld, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Isaiah",
+    "chapter_refs": [
+      6,
+      40
+    ]
+  },
+  {
+    "title": "Jeremiah in the Pit",
+    "description": "The prophet Jeremiah is lowered into a muddy cistern by his enemies for prophesying Jerusalem's fall (Jeremiah 38).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:174.Job_and_His_Friends.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/81/Benisch-Bible-C-1856.djvu",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Jeremiah",
+    "chapter_refs": [
+      38
+    ]
+  },
+  {
+    "title": "The Ascension of Christ",
+    "description": "The risen Christ ascends to heaven from the Mount of Olives as his disciples watch in wonder (Acts 1:9-11).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:229.Jesus_Ascends_to_Heaven.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/70/Cyclopedia_of_painters_and_paintings_-_Volume_I.djvu",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Acts",
+    "chapter_refs": [
+      1
+    ]
+  },
+  {
+    "title": "Peter Delivered from Prison",
+    "description": "An angel appears in Peter's prison cell and miraculously frees him from his chains and guards (Acts 12).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:232.Peter_Is_Delivered_from_Prison.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/63/The_Emphasised_Bible_-_Vol_4.djvu",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Acts",
+    "chapter_refs": [
+      12
+    ]
+  },
+  {
+    "title": "The Agony in the Garden",
+    "description": "Jesus prays in anguish at Gethsemane while his disciples sleep, on the night before his crucifixion (Mark 14:32-42).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:218.Jesus_in_the_Garden_of_Gethsemane.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/09/Jesus_Praying_in_the_Garden_%281878%29_%2814577654100%29.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Mark",
+    "chapter_refs": [
+      14
+    ]
+  },
+  {
+    "title": "The Arrest of Jesus",
+    "description": "Judas betrays Jesus with a kiss as soldiers arrive in the Garden of Gethsemane to arrest him (Mark 14:43-52).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:219.The_Judas_Kiss.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Hofmann%2C_Arrest_of_Christ_1858.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Mark",
+    "chapter_refs": [
+      14
+    ]
+  },
+  {
+    "title": "The Burial of Christ",
+    "description": "The body of Jesus is placed in the tomb of Joseph of Arimathea after the crucifixion (Mark 15:42-47).",
+    "artist": "Carl Bloch",
+    "year_created": "1873",
+    "source_url": "https://commons.wikimedia.org/wiki/File:The-Burial-of-Christ-Carl-Bloch.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/5f/%27The_Burial%27_by_Carl_Heinrich_Bloch_1873.jpg",
+    "attribution": "Carl Bloch, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "painting",
+    "book_ref": "Mark",
+    "chapter_refs": [
+      15
+    ]
+  },
+  {
+    "title": "Christ and the Rich Young Ruler",
+    "description": "Jesus tells the rich young man to sell all he has and give to the poor, a challenging encounter (Mark 10:17-27).",
+    "artist": "Carl Bloch",
+    "year_created": "1873",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Bloch-ChristAndTheRichYoungRuler.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Hoffman-ChristAndTheRichYoungRuler.jpg",
+    "attribution": "Carl Bloch, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "painting",
+    "book_ref": "Mark",
+    "chapter_refs": [
+      10
+    ]
+  },
+  {
+    "title": "Jesus and the Woman Taken in Adultery",
+    "description": "Jesus stoops to write in the dust as the Pharisees present a woman caught in adultery, then declares 'Let him who is without sin cast the first stone' (John 8:1-11).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:205.Jesus_and_the_Woman_Taken_in_Adultery.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/ad/The_art_Bible%2C_comprising_the_Old_and_new_Testaments_-_with_numerous_illustrations_%281896%29_%2814783129125%29.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "John",
+    "chapter_refs": [
+      8
+    ]
+  },
+  {
+    "title": "The Supper at Emmaus",
+    "description": "The risen Jesus reveals himself to two disciples at Emmaus in the breaking of bread (Luke 24:13-35).",
+    "artist": "Caravaggio",
+    "year_created": "1601",
+    "source_url": "https://commons.wikimedia.org/wiki/File:1602-3_Caravaggio,Supper_at_Emmaus_National_Gallery,_London.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/1602-3_Caravaggio%2CSupper_at_Emmaus_National_Gallery%2C_London.jpg",
+    "attribution": "Caravaggio, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "painting",
+    "book_ref": "Luke",
+    "chapter_refs": [
+      24
+    ]
+  },
+  {
+    "title": "The Manna from Heaven",
+    "description": "God provides manna from heaven to feed the Israelites during their wilderness journey (Exodus 16).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:067.The_Israelites_Gather_Manna_in_the_Desert.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Germany%2C_15th_century_-_N%C3%BCremberg_Bible-_Manna_Falling_from_Heaven_-_1928.764_-_Cleveland_Museum_of_Art.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Exodus",
+    "chapter_refs": [
+      16
+    ]
+  },
+  {
+    "title": "The Twelve Spies Return from Canaan",
+    "description": "The spies return from scouting the Promised Land carrying an enormous cluster of grapes from Eshcol (Numbers 13).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:076.The_Grapes_of_Eshcol.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Arthur_Szyk_%281894-1951%29._Visual_History_of_Nations%2C_Israel_%281948%29%2C_New_Canaan%2C_CT.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Numbers",
+    "chapter_refs": [
+      13,
+      14
+    ]
+  },
+  {
+    "title": "Samson Slaying a Lion",
+    "description": "The young Samson tears apart a lion with his bare hands, empowered by the Spirit of the Lord (Judges 14:5-6).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:110.Samson_Slaying_a_Lion.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/20/060.Samson_Slays_a_Lion.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Judges",
+    "chapter_refs": [
+      14
+    ]
+  },
+  {
+    "title": "Ruth and Naomi",
+    "description": "Ruth clings to her mother-in-law Naomi, declaring 'Where you go I will go' — one of the Bible's most famous pledges of loyalty (Ruth 1:16).",
+    "artist": "Julius Schnorr von Carolsfeld",
+    "year_created": "1860",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Schnorr_von_Carolsfeld_Bibel_in_Bildern_1860_068.png",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Schnorr_von_Carolsfeld_Bibel_in_Bildern_1860_068.png",
+    "attribution": "Julius Schnorr von Carolsfeld, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Ruth",
+    "chapter_refs": [
+      1
+    ]
+  },
+  {
+    "title": "The Calling of Samuel",
+    "description": "The young Samuel hears God calling his name in the night at the tabernacle in Shiloh (1 Samuel 3).",
+    "artist": "Julius Schnorr von Carolsfeld",
+    "year_created": "1860",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Schnorr_von_Carolsfeld_Bibel_in_Bildern_1860_071.png",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Schnorr_von_Carolsfeld_Bibel_in_Bildern_1860_071.png",
+    "attribution": "Julius Schnorr von Carolsfeld, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "1 Samuel",
+    "chapter_refs": [
+      3
+    ]
+  },
+  {
+    "title": "Bathsheba at Her Bath",
+    "description": "King David observes Bathsheba bathing from his rooftop, the beginning of his great sin (2 Samuel 11).",
+    "artist": "Rembrandt",
+    "year_created": "1654",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Rembrandt_-_Bathsheba_at_Her_Bath_(Louvre).jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Amsterdam_-_Rijksmuseum_-_Late_Rembrandt_Exposition_2015_-_Bathsheba_at_Her_Bath_1654.jpg",
+    "attribution": "Rembrandt, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "painting",
+    "book_ref": "2 Samuel",
+    "chapter_refs": [
+      11
+    ]
+  },
+  {
+    "title": "Queen of Sheba Visits Solomon",
+    "description": "The Queen of Sheba arrives in Jerusalem with gifts and questions for King Solomon, marveling at his wisdom (1 Kings 10).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:144.The_Queen_of_Sheba.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Illustrated_Bible_Dictionary_%281893%29.djvu",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "1 Kings",
+    "chapter_refs": [
+      10
+    ]
+  },
+  {
+    "title": "The Destruction of Leviathan",
+    "description": "God's power over the great sea monster Leviathan, described in Job 41 as an unstoppable creature under divine authority.",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Destruction_of_Leviathan.png",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Destruction_of_Leviathan.png",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Job",
+    "chapter_refs": [
+      41
+    ]
+  },
+  {
+    "title": "The Fiery Flying Serpent",
+    "description": "Isaiah's vision of seraphim and fiery creatures, connected to the prophet's dramatic call narrative.",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:081.The_Brazen_Serpent.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Great_Men_and_Famous_Women_Volume_8.djvu",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Isaiah",
+    "chapter_refs": [
+      14,
+      30
+    ]
+  },
+  {
+    "title": "The Parable of the Ten Virgins",
+    "description": "Five wise and five foolish virgins await the bridegroom, a parable of readiness for Christ's return (Matthew 25:1-13).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:216.The_Wise_and_Foolish_Virgins.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/59/The_parable_of_the_ten_virgins_Fleuron_T085215-4.png",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Matthew",
+    "chapter_refs": [
+      25
+    ]
+  },
+  {
+    "title": "Jesus Cleansing the Temple",
+    "description": "Jesus drives out the money changers and merchants from the temple courts in holy indignation (Matthew 21:12-13).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:214.The_Buyers_and_Sellers_Driven_Out_of_the_Temple.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/63/The_Emphasised_Bible_-_Vol_4.djvu",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Matthew",
+    "chapter_refs": [
+      21
+    ]
+  },
+  {
+    "title": "Christ Before Pilate",
+    "description": "Jesus stands before Pontius Pilate, who finds no guilt in him but yields to the crowd's demands (Matthew 27:11-26).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:221.Jesus_Before_Pilate.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/64_Mark%E2%80%99s_Gospel_W._the_Roman_trial_and_mocking_image_1_of_4._Jesus_brought_before_Pilate._Mortier.png",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Matthew",
+    "chapter_refs": [
+      27
+    ]
+  },
+  {
+    "title": "Hagar and Ishmael in the Wilderness",
+    "description": "Hagar and her son Ishmael wander in the wilderness of Beersheba after being sent away by Abraham (Genesis 21:14-19).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:021.Hagar_and_Ishmael_in_the_Wilderness.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/35/015.Hagar_and_Ishmael_in_the_Wilderness.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Genesis",
+    "chapter_refs": [
+      21
+    ]
+  },
+  {
+    "title": "Joseph Sold by His Brothers",
+    "description": "Joseph's jealous brothers sell him to Ishmaelite traders heading to Egypt, beginning his long exile (Genesis 37).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:034.Joseph_Is_Sold_by_His_Brothers.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/38/026.Joseph_Is_Sold_by_His_Brothers.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Genesis",
+    "chapter_refs": [
+      37
+    ]
+  },
+  {
+    "title": "The Burning of Jerusalem",
+    "description": "The city of Jerusalem burns as the Babylonians complete their destruction, the event that occasioned the Book of Lamentations.",
+    "artist": "Julius Schnorr von Carolsfeld",
+    "year_created": "1860",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Schnorr_von_Carolsfeld_Bibel_in_Bildern_1860_152.png",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Schnorr_von_Carolsfeld_Bibel_in_Bildern_1860_152.png",
+    "attribution": "Julius Schnorr von Carolsfeld, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Lamentations",
+    "chapter_refs": [
+      1,
+      2,
+      4
+    ]
+  },
+  {
+    "title": "Ezekiel's Vision of the New Temple",
+    "description": "Ezekiel sees the vision of the restored and glorified temple of God, described in detail in Ezekiel 40-48.",
+    "artist": "Julius Schnorr von Carolsfeld",
+    "year_created": "1860",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Schnorr_von_Carolsfeld_Bibel_in_Bildern_1860_158.png",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Schnorr_von_Carolsfeld_Bibel_in_Bildern_1860_158.png",
+    "attribution": "Julius Schnorr von Carolsfeld, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Ezekiel",
+    "chapter_refs": [
+      40,
+      47
+    ]
+  },
+  {
+    "title": "The Writing on the Wall",
+    "description": "A mysterious hand writes the words MENE, MENE, TEKEL, UPHARSIN on the wall during Belshazzar's feast (Daniel 5).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:178.Belshazzar%27s_Feast.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/70/130.Daniel_Interprets_the_Writing_on_the_Wall.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Daniel",
+    "chapter_refs": [
+      5
+    ]
+  },
+  {
+    "title": "Daniel's Vision of the Four Beasts",
+    "description": "Daniel's apocalyptic vision of four great beasts representing successive world empires (Daniel 7).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:180.Daniel_in_the_Lions%27_Den.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/132.Daniel%27s_Vision_of_the_Four_Beasts.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Daniel",
+    "chapter_refs": [
+      7
+    ]
+  },
+  {
+    "title": "The Healing of the Blind Man",
+    "description": "Jesus heals a man born blind by making clay with his saliva and applying it to the man's eyes (John 9).",
+    "artist": "Carl Bloch",
+    "year_created": "1871",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Carl_Bloch_Healing_of_the_Blind_Man.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/25/Healing_of_the_Blind_Man_by_Jesus_Christ.jpg",
+    "attribution": "Carl Bloch, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "painting",
+    "book_ref": "John",
+    "chapter_refs": [
+      9
+    ]
+  },
+  {
+    "title": "The Visitation",
+    "description": "Mary visits her cousin Elizabeth, who is pregnant with John the Baptist. Elizabeth greets Mary with the words 'Blessed are you among women' (Luke 1:39-56).",
+    "artist": "Raphael",
+    "year_created": "1517",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Raphael_-_The_Visitation_-_WGA18737.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Raphael_-_The_visitation.jpg",
+    "attribution": "Raphael, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "painting",
+    "book_ref": "Luke",
+    "chapter_refs": [
+      1
+    ]
+  },
+  {
+    "title": "The Presentation at the Temple",
+    "description": "Simeon holds the infant Jesus in the temple and declares him a light for revelation to the Gentiles (Luke 2:22-35).",
+    "artist": "Rembrandt",
+    "year_created": "1631",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Rembrandt_Harmensz._van_Rijn_145.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/96/Rembrandt_Harmensz._van_Rijn_145.jpg",
+    "attribution": "Rembrandt, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "painting",
+    "book_ref": "Luke",
+    "chapter_refs": [
+      2
+    ]
+  },
+  {
+    "title": "The Parable of the Sower",
+    "description": "Jesus teaches the crowd the parable of the sower and the four types of soil, representing different responses to God's word (Luke 8:4-15).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:196.The_Parable_of_the_Sower.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/da/A_man_scatters_seeds%3B_representing_the_Biblical_parable_of_the_sower_Wellcome_V0007642EBR.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Luke",
+    "chapter_refs": [
+      8
+    ]
+  },
+  {
+    "title": "Cain Slaying Abel",
+    "description": "Cain murders his brother Abel in the first act of violence in human history, driven by jealousy over God's acceptance of Abel's offering (Genesis 4).",
+    "artist": "Peter Paul Rubens",
+    "year_created": "1609",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Peter_Paul_Rubens_-_Cain_slaying_Abel_(Courtauld_Institute).jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/51/Peter_Paul_Rubens_-_Cain_slaying_Abel_%28Courtauld_Institute%29.jpg",
+    "attribution": "Peter Paul Rubens, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "painting",
+    "book_ref": "Genesis",
+    "chapter_refs": [
+      4
+    ]
+  },
+  {
+    "title": "The Expulsion from Eden",
+    "description": "Adam and Eve are driven out of the Garden of Eden by an angel with a flaming sword (Genesis 3:22-24).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:008.Adam_and_Eve_Are_Driven_out_of_Eden.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/01/003.Adam_and_Eve_Are_Driven_out_of_Eden.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Genesis",
+    "chapter_refs": [
+      3
+    ]
+  },
+  {
+    "title": "The Crowning with Thorns",
+    "description": "Roman soldiers mock Jesus with a crown of thorns and a purple robe before his crucifixion (John 19:1-5).",
+    "artist": "Caravaggio",
+    "year_created": "1603",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Caravaggio_-_The_Crowning_with_Thorns.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Michelangelo_Caravaggio_072.jpg",
+    "attribution": "Caravaggio, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "painting",
+    "book_ref": "John",
+    "chapter_refs": [
+      19
+    ]
+  },
+  {
+    "title": "Noli Me Tangere",
+    "description": "The risen Jesus appears to Mary Magdalene at the tomb and tells her 'Do not touch me, for I have not yet ascended' (John 20:17).",
+    "artist": "Carl Bloch",
+    "year_created": "1879",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Carl_Heinrich_Bloch_-_Noli_Me_Tangere.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/08/Claude_Lorrain_025.jpg",
+    "attribution": "Carl Bloch, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "painting",
+    "book_ref": "John",
+    "chapter_refs": [
+      20
+    ]
+  },
+  {
+    "title": "Philip and the Ethiopian Eunuch",
+    "description": "Philip explains the scriptures to the Ethiopian official and baptizes him on the road from Jerusalem to Gaza (Acts 8:26-40).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:231.The_Martyrdom_of_St._Stephen.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/03/Aelbert_Cuyp_-_Saint_Philip_Baptising_the_Ethiopian_Eunuch_NTIII_ANG_515655.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Acts",
+    "chapter_refs": [
+      8
+    ]
+  },
+  {
+    "title": "The Destruction of Sodom",
+    "description": "Fire and brimstone rain down upon the cities of Sodom and Gomorrah as divine judgment for their wickedness (Genesis 19).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:024.Lot_Flees_as_Sodom_and_Gomorrah_Burn.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Illustration_of_Lot_fleeing_Sodom%2C_1873_Holy_Bible_%28Eyre_and_Spottiswoode%2C_London%29._After_Raphael%2C_adapted_by_Robert_Dudley_01.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Genesis",
+    "chapter_refs": [
+      19
+    ]
+  },
+  {
+    "title": "The Seven Seals",
+    "description": "The Lamb of God opens the seven seals of judgment, unleashing divine wrath upon the earth (Revelation 5-8).",
+    "artist": "Albrecht Dürer",
+    "year_created": "1498",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Dürer_-_The_Revelation_of_St_John_-_3._St_John_and_the_Seven_Candlesticks.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/92/Bible_de_Moutier-Grandval_-_BL_Add10546_-_f.449r.jpg",
+    "attribution": "Albrecht Dürer, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Revelation",
+    "chapter_refs": [
+      5,
+      6,
+      7,
+      8
+    ]
+  },
+  {
+    "title": "The Angel with the Key of the Abyss",
+    "description": "An angel descends from heaven with the key to the bottomless pit and a great chain to bind Satan (Revelation 20:1-3).",
+    "artist": "Albrecht Dürer",
+    "year_created": "1498",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Dürer_-_The_Revelation_of_St_John_-_12._The_Sea_Monster_and_the_Beast_with_the_Lamb%27s_Horn.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/96/G.F._Watts_-_Chesterton.djvu",
+    "attribution": "Albrecht Dürer, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Revelation",
+    "chapter_refs": [
+      12,
+      13,
+      20
+    ]
+  },
+  {
+    "title": "The Sacrifice of Noah",
+    "description": "Noah offers a sacrifice of thanksgiving after the flood, and God establishes his covenant with the rainbow (Genesis 8:20-22).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:014.Noah%27s_Sacrifice.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/The_Story_of_Mexico.djvu",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Genesis",
+    "chapter_refs": [
+      8,
+      9
+    ]
+  },
+  {
+    "title": "Isaac Blessing Jacob",
+    "description": "The blind Isaac is deceived into blessing his younger son Jacob instead of Esau (Genesis 27).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:028.Isaac_Blesses_Jacob.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Amsterdam_-_Rijksmuseum_1885_-_The_Gallery_of_Honour_%281st_Floor%29_-_Isaac_blessing_Jacob_1638_by_Govert_Flinck.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Genesis",
+    "chapter_refs": [
+      27
+    ]
+  },
+  {
+    "title": "Jacob's Dream",
+    "description": "Jacob sleeps at Bethel and dreams of a ladder reaching to heaven with angels ascending and descending (Genesis 28:10-22).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:029.Jacob%27s_Dream.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/70/Cyclopedia_of_painters_and_paintings_-_Volume_I.djvu",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Genesis",
+    "chapter_refs": [
+      28
+    ]
+  },
+  {
+    "title": "Joseph Interprets Pharaoh's Dream",
+    "description": "Joseph interprets Pharaoh's dreams of seven fat cows and seven lean cows, foretelling years of plenty and famine (Genesis 41).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:037.Joseph_Interprets_Pharaoh%27s_Dream.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/027.Joseph_Interprets_Pharaoh%27s_Dream.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Genesis",
+    "chapter_refs": [
+      41
+    ]
+  },
+  {
+    "title": "The Firstborn Slain",
+    "description": "The angel of death passes over Egypt, striking down every firstborn in the final and most devastating plague (Exodus 12).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:062.The_Firstborn_Slain.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/0b/035.The_Firstborn_of_the_Egyptians_Are_Slain.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Exodus",
+    "chapter_refs": [
+      12
+    ]
+  },
+  {
+    "title": "Water from the Rock",
+    "description": "Moses strikes the rock at Horeb and water flows out for the thirsty Israelites in the wilderness (Exodus 17:1-7).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:070.Moses_Strikes_the_Rock_at_Horeb.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/041.Moses_Strikes_the_Rock_at_Horeb.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Exodus",
+    "chapter_refs": [
+      17
+    ]
+  },
+  {
+    "title": "The Rebellion of Korah",
+    "description": "The earth opens up and swallows Korah and his followers who rebelled against Moses' authority (Numbers 16).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:078.The_Death_of_Korah,_Dathan,_and_Abiram.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/0b/The_Bible_and_its_story.._%281908%29_%2814586318670%29.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Numbers",
+    "chapter_refs": [
+      16
+    ]
+  },
+  {
+    "title": "Christ Healing the Paralytic at Bethesda",
+    "description": "Jesus heals the paralyzed man at the pool of Bethesda who had waited 38 years (John 5:1-15).",
+    "artist": "Carl Bloch",
+    "year_created": "1883",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Carl_Bloch_-_Healing_at_the_Pool_of_Bethesda.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/00/Artus_Wolffort_-_Christ_at_the_Pool_of_Bethesda_%28Ontario%29.jpg",
+    "attribution": "Carl Bloch, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "painting",
+    "book_ref": "John",
+    "chapter_refs": [
+      5
+    ]
+  },
+  {
+    "title": "The Calling of Matthew",
+    "description": "Jesus calls the tax collector Matthew (Levi) to follow him, as depicted in Caravaggio's masterful use of light and shadow (Matthew 9:9).",
+    "artist": "Caravaggio",
+    "year_created": "1600",
+    "source_url": "https://commons.wikimedia.org/wiki/File:The_Calling_of_Saint_Matthew-Caravaggo_(1599-1600).jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/48/The_Calling_of_Saint_Matthew-Caravaggo_%281599-1600%29.jpg",
+    "attribution": "Caravaggio, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "painting",
+    "book_ref": "Matthew",
+    "chapter_refs": [
+      9
+    ]
+  },
+  {
+    "title": "The Tribute Money",
+    "description": "Jesus instructs Peter to find a coin in a fish's mouth to pay the temple tax, a scene from Matthew 17:24-27.",
+    "artist": "Peter Paul Rubens",
+    "year_created": "1612",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Peter_Paul_Rubens_-_The_Tribute_Money_-_Google_Art_Project.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/74/Da_rubens%2C_cristo_e_l%27ultimo_dei_cesari%2C_post_1614.JPG",
+    "attribution": "Peter Paul Rubens, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "painting",
+    "book_ref": "Matthew",
+    "chapter_refs": [
+      17
+    ]
+  },
+  {
+    "title": "Ecce Homo",
+    "description": "Pilate presents the scourged Jesus to the crowd with the words 'Behold the man' before handing him over (John 19:5).",
+    "artist": "Carl Bloch",
+    "year_created": "1871",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Carl_Bloch_-_Ecce_Homo.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/58/ChristandThorns.jpg",
+    "attribution": "Carl Bloch, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "painting",
+    "book_ref": "John",
+    "chapter_refs": [
+      19
+    ]
+  },
+  {
+    "title": "The Massacre of the Innocents",
+    "description": "King Herod orders the massacre of all male infants in Bethlehem in his attempt to destroy the newborn King (Matthew 2:16-18).",
+    "artist": "Peter Paul Rubens",
+    "year_created": "1612",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Peter_Paul_Rubens_Massacre_of_the_Innocents.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Peter_Paul_Rubens_Massacre_of_the_Innocents.jpg",
+    "attribution": "Peter Paul Rubens, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "painting",
+    "book_ref": "Matthew",
+    "chapter_refs": [
+      2
+    ]
+  },
+  {
+    "title": "The Descent from the Cross",
+    "description": "Christ's body is lowered from the cross by his followers, a scene of profound grief and tenderness.",
+    "artist": "Peter Paul Rubens",
+    "year_created": "1614",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Peter_Paul_Rubens_-_The_Descent_from_the_Cross_(Centre_Panel).jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Peter_Paul_Rubens_-_Descent_from_the_Cross_-_WGA20212.jpg",
+    "attribution": "Peter Paul Rubens, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "painting",
+    "book_ref": "John",
+    "chapter_refs": [
+      19
+    ]
+  },
+  {
+    "title": "Elisha and the Bears",
+    "description": "Two bears come out of the woods and maul the youths who had mocked the prophet Elisha (2 Kings 2:23-25).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:159.The_Children_Destroyed_by_Bears.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/41/095.Some_Children_Are_Destroyed_by_Bears.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "2 Kings",
+    "chapter_refs": [
+      2
+    ]
+  },
+  {
+    "title": "Moses Before Pharaoh",
+    "description": "Moses and Aaron confront Pharaoh demanding the release of the Israelites, as the plagues begin (Exodus 7-10).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:052.Moses_and_Aaron_Before_Pharaoh.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/8c/032.Moses_and_Aaron_Appear_before_Pharaoh.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Exodus",
+    "chapter_refs": [
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "title": "The Judgment of Solomon (Doré)",
+    "description": "King Solomon reveals his divine wisdom by resolving the dispute of two mothers who claim the same child (1 Kings 3).",
+    "artist": "Gustave Doré",
+    "year_created": "1866",
+    "source_url": "https://commons.wikimedia.org/wiki/File:143.The_Judgment_of_Solomon.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/61/084.The_Judgment_of_Solomon.jpg",
+    "attribution": "Gustave Doré, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "1 Kings",
+    "chapter_refs": [
+      3
+    ]
+  },
+  {
+    "title": "Levitical Priests Offering Sacrifice",
+    "description": "The Levitical priests perform the sacrificial rituals described in the Book of Leviticus at the tabernacle altar.",
+    "artist": "Julius Schnorr von Carolsfeld",
+    "year_created": "1860",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Schnorr_von_Carolsfeld_Bibel_in_Bildern_1860_043.png",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/78/Schnorr_von_Carolsfeld_Bibel_in_Bildern_1860_043.png",
+    "attribution": "Julius Schnorr von Carolsfeld, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Leviticus",
+    "chapter_refs": [
+      1,
+      4,
+      16,
+      23
+    ]
+  },
+  {
+    "title": "Moses' Final Address",
+    "description": "Moses delivers his final speeches to the Israelites, recounting God's laws before they enter the Promised Land.",
+    "artist": "Julius Schnorr von Carolsfeld",
+    "year_created": "1860",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Schnorr_von_Carolsfeld_Bibel_in_Bildern_1860_053.png",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/75/Schnorr_von_Carolsfeld_Bibel_in_Bildern_1860_053.png",
+    "attribution": "Julius Schnorr von Carolsfeld, Public domain, via Wikimedia Commons",
+    "license": "Public Domain",
+    "media_type": "illustration",
+    "book_ref": "Deuteronomy",
+    "chapter_refs": [
+      1,
+      6,
+      28,
+      30
+    ]
   }
 ]

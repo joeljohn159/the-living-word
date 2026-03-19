@@ -17,8 +17,7 @@ const FALLBACK_ARTWORK: ArtworkData = {
   title: "The Creation of Adam",
   artist: "Michelangelo",
   yearCreated: "c. 1508-1512",
-  imageUrl:
-    "https://upload.wikimedia.org/wikipedia/commons/5/5b/Michelangelo_-_Creation_of_Adam_%28cropped%29.jpg",
+  imageUrl: "/images/landing/creation-of-adam.jpg",
   description:
     "One of the most iconic images in art history, depicting the moment God gives life to Adam. Painted on the ceiling of the Sistine Chapel in Vatican City.",
   attribution: "Wikimedia Commons, Public Domain",

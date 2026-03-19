@@ -12,10 +12,6 @@ const nextConfig = {
       },
     ],
   },
-  // Ensure better-sqlite3 is not bundled for client
-  experimental: {
-    serverComponentsExternalPackages: ["better-sqlite3"],
-  },
 };
 
 export default nextConfig;

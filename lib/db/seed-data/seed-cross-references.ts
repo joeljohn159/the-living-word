@@ -8,8 +8,8 @@
 
 import { readFileSync } from "fs";
 import { resolve } from "path";
-import { getRawDb } from "../connection";
-import { db } from "../connection";
+import { getRawDb } from "../seed-connection";
+import { seedDb as db } from "../seed-connection";
 import { crossReferences } from "../schema";
 
 interface RawCrossRef {

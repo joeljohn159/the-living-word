@@ -3,7 +3,7 @@ import Database from "better-sqlite3";
 import { drizzle } from "drizzle-orm/better-sqlite3";
 import { eq } from "drizzle-orm";
 import * as schema from "@/lib/db/schema";
-import { BOOK_METADATA, type BookMeta } from "@/lib/db/seed-data/book-metadata";
+import { BOOK_METADATA } from "@/lib/db/seed-data/book-metadata";
 import { CHAPTER_SUMMARIES } from "@/lib/db/seed-data/chapter-summaries";
 
 /**
@@ -233,7 +233,7 @@ describe("CHAPTER_SUMMARIES — chapter summary data", () => {
   });
 
   it("should have non-empty string values for all summaries", () => {
-    for (const [key, value] of Object.entries(CHAPTER_SUMMARIES)) {
+    for (const [, value] of Object.entries(CHAPTER_SUMMARIES)) {
       expect(typeof value).toBe("string");
       expect(value.length).toBeGreaterThan(0);
     }

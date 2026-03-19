@@ -18,6 +18,7 @@ import { seedLocations } from "./seed-data/seed-locations";
 import { seedJourneys } from "./seed-data/seed-journeys";
 import { seedLocationReferences } from "./seed-data/seed-location-references";
 import { seedCrossReferences } from "./seed-data/seed-cross-references";
+import { seedDictionary } from "./seed-data/seed-dictionary";
 
 async function main() {
   console.log("╔══════════════════════════════════════════════╗");
@@ -58,6 +59,9 @@ async function main() {
 
     // Step 11: Insert cross-references (500+ entries)
     seedCrossReferences();
+
+    // Step 12: Insert dictionary (archaic KJV words)
+    seedDictionary();
 
     console.log();
     console.log("✅ Seed complete! The Living Word database is ready.");

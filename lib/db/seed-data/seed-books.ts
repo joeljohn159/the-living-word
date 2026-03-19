@@ -3,7 +3,7 @@
  * Returns a map of sortOrder (1-66) → inserted book ID.
  */
 
-import { db } from "../connection";
+import { seedDb as db } from "../seed-connection";
 import { books } from "../schema";
 import { BOOK_METADATA } from "./book-metadata";
 import { slugify } from "../../utils";

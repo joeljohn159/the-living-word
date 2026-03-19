@@ -2,7 +2,7 @@
  * Seeds the KJV translation record.
  */
 
-import { db } from "../connection";
+import { seedDb as db } from "../seed-connection";
 import { translations } from "../schema";
 import { eq } from "drizzle-orm";
 

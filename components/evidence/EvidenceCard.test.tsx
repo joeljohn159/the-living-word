@@ -23,7 +23,8 @@ vi.mock("next/link", () => ({
 vi.mock("next/image", () => ({
   default: (props: Record<string, unknown>) => {
     const { fill, ...rest } = props;
-    return <img data-fill={fill ? "true" : undefined} {...rest} />;
+    // eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text
+    return <img alt="" data-fill={fill ? "true" : undefined} {...rest} />;
   },
 }));
 

@@ -18,86 +18,96 @@ interface TimelineEvent {
 
 const TIMELINE_EVENTS: TimelineEvent[] = [
   {
+    date: "c. 4000 BC",
+    title: "Creation",
+    description: "God creates the heavens and the earth in six days",
+    era: "Creation",
+    imageUrl: "/images/landing/creation-of-adam.jpg",
+    imageAlt: "The Creation of Adam by Michelangelo, Sistine Chapel",
+  },
+  {
+    date: "c. 2350 BC",
+    title: "The Great Flood",
+    description: "God sends a worldwide flood; Noah and his family are saved in the Ark",
+    era: "Patriarchs",
+    imageUrl: "/images/landing/el-diluvio.jpg",
+    imageAlt: "The Deluge by Michelangelo, Sistine Chapel ceiling",
+  },
+  {
     date: "c. 2000 BC",
     title: "Call of Abraham",
-    description: "God calls Abraham to leave Ur and travel to the Promised Land",
+    description: "God calls Abraham to leave Ur and journey to the Promised Land of Canaan",
     era: "Patriarchs",
-    imageUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Herrad_von_Landsberg_-_Abrahams_Bosom.jpg/256px-Herrad_von_Landsberg_-_Abrahams_Bosom.jpg",
-    imageAlt:
-      "Abraham, from Hortus Deliciarum by Herrad of Landsberg (12th century)",
   },
   {
     date: "c. 1446 BC",
     title: "The Exodus",
-    description: "Moses leads Israel out of Egyptian bondage",
+    description: "Moses leads Israel out of Egyptian slavery through the parted Red Sea",
     era: "Exodus",
-    imageUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Crossing_the_Red_Sea.jpg/256px-Crossing_the_Red_Sea.jpg",
-    imageAlt: "Crossing the Red Sea, illustration from a medieval manuscript",
+    imageUrl: "/images/landing/moses-ten-commandments.jpg",
+    imageAlt: "Moses with the Ten Commandments by Rembrandt",
   },
   {
     date: "c. 1400 BC",
     title: "Conquest of Canaan",
-    description: "Joshua leads Israel into the Promised Land",
+    description: "Joshua leads Israel into the Promised Land; the walls of Jericho fall",
     era: "Conquest",
+    imageUrl: "/images/landing/walls-of-jericho.jpg",
+    imageAlt: "The Walls of Jericho Fall Down by Gustave Doré",
   },
   {
     date: "c. 1010 BC",
     title: "David Becomes King",
-    description: "David unites the twelve tribes of Israel",
+    description: "David slays Goliath and later unites the twelve tribes of Israel",
     era: "United Kingdom",
-    imageUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/David_SM_Maggiore.jpg/256px-David_SM_Maggiore.jpg",
-    imageAlt:
-      "King David playing the harp, 13th-century fresco from Santa Maria Maggiore",
+    imageUrl: "/images/landing/king-david-harp.jpg",
+    imageAlt: "King David Playing the Harp by Gerard van Honthorst",
   },
   {
     date: "c. 966 BC",
     title: "Solomon's Temple",
-    description: "Construction of the First Temple in Jerusalem",
+    description: "King Solomon builds the First Temple in Jerusalem",
     era: "United Kingdom",
-    imageUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Solomon%27s_Temple.jpg/256px-Solomon%27s_Temple.jpg",
-    imageAlt: "Illustration of Solomon's Temple in Jerusalem",
   },
   {
     date: "586 BC",
     title: "Fall of Jerusalem",
-    description: "Babylon destroys the Temple and exiles Judah",
+    description: "Nebuchadnezzar destroys the Temple; Judah is exiled to Babylon",
     era: "Exile",
+    imageUrl: "/images/landing/temple-destruction.jpg",
+    imageAlt: "The Destruction of the Temple of Jerusalem by Francesco Hayez",
   },
   {
     date: "c. 5 BC",
     title: "Birth of Jesus",
-    description: "The Messiah is born in Bethlehem of Judea",
+    description: "The Messiah is born in Bethlehem of Judea, fulfilling ancient prophecy",
     era: "New Testament",
-    imageUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Giotto_-_Scrovegni_-_-17-_-_Nativity%2C_Birth_of_Jesus.jpg/256px-Giotto_-_Scrovegni_-_-17-_-_Nativity%2C_Birth_of_Jesus.jpg",
-    imageAlt:
-      "Nativity of Jesus by Giotto di Bondone, Scrovegni Chapel (c. 1305)",
+    imageUrl: "/images/landing/caravaggio-nativity.jpg",
+    imageAlt: "Nativity by Caravaggio",
   },
   {
     date: "c. AD 30",
     title: "Crucifixion & Resurrection",
-    description: "Jesus is crucified and rises from the dead",
+    description: "Jesus is crucified at Golgotha and rises from the dead on the third day",
     era: "New Testament",
-    imageUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Giotto_-_Scrovegni_-_-35-_-_Crucifixion.jpg/256px-Giotto_-_Scrovegni_-_-35-_-_Crucifixion.jpg",
-    imageAlt:
-      "Crucifixion of Jesus by Giotto di Bondone, Scrovegni Chapel (c. 1305)",
+    imageUrl: "/images/landing/crucifixion-raphael.jpg",
+    imageAlt: "The Crucifixion by Raphael",
   },
   {
     date: "c. AD 50",
     title: "Paul's Missionary Journeys",
-    description: "The Gospel spreads throughout the Roman Empire",
+    description: "The Apostle Paul spreads the Gospel across the Roman Empire",
     era: "Early Church",
+    imageUrl: "/images/landing/conversion-paul.jpg",
+    imageAlt: "The Conversion of Saint Paul by Caravaggio",
   },
   {
     date: "c. AD 95",
     title: "Book of Revelation",
-    description: "John receives visions on the isle of Patmos",
+    description: "John receives apocalyptic visions on the isle of Patmos",
     era: "Early Church",
+    imageUrl: "/images/landing/four-horsemen.jpg",
+    imageAlt: "The Four Horsemen of the Apocalypse by Albrecht Dürer",
   },
 ];
 
@@ -166,7 +176,7 @@ export function TimelinePreview() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.06 }}
-                className="relative flex flex-col items-center w-[140px] sm:w-[180px] flex-shrink-0"
+                className="relative flex flex-col items-center w-[160px] sm:w-[200px] flex-shrink-0"
               >
                 {/* Date */}
                 <span className="font-source-sans text-[11px] leading-4 text-[var(--text-secondary)] mb-2 whitespace-nowrap font-medium">

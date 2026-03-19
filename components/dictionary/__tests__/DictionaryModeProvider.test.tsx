@@ -6,20 +6,12 @@ import { usePreferencesStore } from "@/stores/preferences";
 // Mock framer-motion
 vi.mock("framer-motion", () => ({
   motion: {
-    div: ({
-      children,
-      ...props
-    }: React.PropsWithChildren<Record<string, unknown>>) => {
-      const { initial, animate, exit, transition, ...htmlProps } =
-        props as Record<string, unknown>;
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    div: ({ children, initial, animate, exit, transition, ...htmlProps }: React.PropsWithChildren<Record<string, unknown>>) => {
       return <div {...(htmlProps as React.HTMLAttributes<HTMLDivElement>)}>{children}</div>;
     },
-    aside: ({
-      children,
-      ...props
-    }: React.PropsWithChildren<Record<string, unknown>>) => {
-      const { initial, animate, exit, transition, ...htmlProps } =
-        props as Record<string, unknown>;
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    aside: ({ children, initial, animate, exit, transition, ...htmlProps }: React.PropsWithChildren<Record<string, unknown>>) => {
       return <aside {...(htmlProps as React.HTMLAttributes<HTMLElement>)}>{children}</aside>;
     },
   },

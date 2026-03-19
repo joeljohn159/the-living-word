@@ -4,13 +4,19 @@
     "slug": "dead-sea-scrolls",
     "description": "A collection of nearly 1,000 manuscripts discovered in caves near the Dead Sea. They include the oldest known copies of Hebrew Bible texts, predating previously known manuscripts by roughly 1,000 years.",
     "category": "manuscript",
-    "date_discovered": "1946–1956",
+    "date_discovered": "1946\u20131956",
     "location_found": "Qumran, West Bank",
     "current_location": "Shrine of the Book, Israel Museum, Jerusalem",
     "significance": "Confirmed the remarkable textual accuracy of the Hebrew Bible over a millennium of transmission. Contains fragments of every Old Testament book except Esther.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/21/Dead_Sea_Scroll_-_Great_Isaiah_Scroll.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/31/Great_Isaiah_Scroll.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File:Dead_Sea_Scroll_-_Great_Isaiah_Scroll.jpg",
-    "book_refs": ["Isaiah", "Psalms", "Deuteronomy", "Genesis", "Exodus"]
+    "book_refs": [
+      "Isaiah",
+      "Psalms",
+      "Deuteronomy",
+      "Genesis",
+      "Exodus"
+    ]
   },
   {
     "title": "Rosetta Stone",
@@ -23,20 +29,26 @@
     "significance": "Unlocked the ability to read ancient Egyptian texts, providing crucial context for understanding the biblical narrative of the Exodus and Israel's time in Egypt.",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/23/Rosetta_Stone.JPG",
     "source_url": "https://commons.wikimedia.org/wiki/File:Rosetta_Stone.JPG",
-    "book_refs": ["Exodus", "Genesis"]
+    "book_refs": [
+      "Exodus",
+      "Genesis"
+    ]
   },
   {
     "title": "Tel Dan Inscription",
     "slug": "tel-dan-inscription",
-    "description": "A fragmentary Aramaic stele discovered at Tel Dan in northern Israel. It contains the phrase 'House of David' — the first mention of King David found outside the Bible.",
+    "description": "A fragmentary Aramaic stele discovered at Tel Dan in northern Israel. It contains the phrase 'House of David' \u2014 the first mention of King David found outside the Bible.",
     "category": "inscription",
     "date_discovered": "1993",
     "location_found": "Tel Dan, Israel",
     "current_location": "Israel Museum, Jerusalem",
     "significance": "Provides the earliest extra-biblical evidence for the existence of King David and his royal dynasty, corroborating the biblical accounts in Samuel and Kings.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Tel_Dan_Stele.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Tel_dan_inscription.JPG",
     "source_url": "https://commons.wikimedia.org/wiki/File:Tel_Dan_Stele.jpg",
-    "book_refs": ["2 Samuel", "1 Kings"]
+    "book_refs": [
+      "2 Samuel",
+      "1 Kings"
+    ]
   },
   {
     "title": "Cyrus Cylinder",
@@ -47,9 +59,13 @@
     "location_found": "Babylon, Iraq",
     "current_location": "British Museum, London",
     "significance": "Corroborates the biblical account in Ezra and 2 Chronicles of Cyrus issuing a decree allowing the Jewish exiles to return to Jerusalem and rebuild the Temple.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Cyrus_Cylinder.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/35/Cyrus_Cylinder.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File:Cyrus_Cylinder.jpg",
-    "book_refs": ["Ezra", "2 Chronicles", "Isaiah"]
+    "book_refs": [
+      "Ezra",
+      "2 Chronicles",
+      "Isaiah"
+    ]
   },
   {
     "title": "Pilate Inscription",
@@ -60,9 +76,14 @@
     "location_found": "Caesarea Maritima, Israel",
     "current_location": "Israel Museum, Jerusalem",
     "significance": "Provides the only known archaeological evidence for the existence of Pontius Pilate, confirming the Gospel accounts of the Roman governor who presided over the trial of Jesus.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Pilate_Inscription.JPG",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Pilate_Inscription.JPG",
     "source_url": "https://commons.wikimedia.org/wiki/File:Pilate_Inscription.JPG",
-    "book_refs": ["Matthew", "Mark", "Luke", "John"]
+    "book_refs": [
+      "Matthew",
+      "Mark",
+      "Luke",
+      "John"
+    ]
   },
   {
     "title": "James Ossuary",
@@ -73,9 +94,12 @@
     "location_found": "Silwan, Jerusalem (attributed)",
     "current_location": "Royal Ontario Museum (on loan)",
     "significance": "If authentic, this is the earliest artifact directly referencing Jesus of Nazareth by name, connecting to the New Testament figure of James, leader of the Jerusalem church.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/James_Ossuary.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/60/JamesOssuaryInscription-1-.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File:James_Ossuary.jpg",
-    "book_refs": ["Matthew", "Acts"]
+    "book_refs": [
+      "Matthew",
+      "Acts"
+    ]
   },
   {
     "title": "Hezekiah's Tunnel (Siloam Tunnel)",
@@ -86,9 +110,12 @@
     "location_found": "City of David, Jerusalem",
     "current_location": "In situ, Jerusalem",
     "significance": "Directly confirms the account in 2 Kings 20:20 and 2 Chronicles 32:30 of Hezekiah's water engineering project to prepare Jerusalem for the Assyrian siege.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/33/Siloam_tunnel.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Siloam_Inscription.svg",
     "source_url": "https://commons.wikimedia.org/wiki/File:Siloam_tunnel.jpg",
-    "book_refs": ["2 Kings", "2 Chronicles"]
+    "book_refs": [
+      "2 Kings",
+      "2 Chronicles"
+    ]
   },
   {
     "title": "Babylonian Chronicles",
@@ -99,9 +126,13 @@
     "location_found": "Babylon, Iraq",
     "current_location": "British Museum, London",
     "significance": "Provides independent confirmation of the biblical account of the Babylonian conquest of Jerusalem and the exile of King Jehoiachin, as recorded in 2 Kings 24.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f1/British_Museum_-_Babylonian_Chronicle.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/ABC_05_Early_Years_of_Nebuchadnezzar_chronicle.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File:British_Museum_-_Babylonian_Chronicle.jpg",
-    "book_refs": ["2 Kings", "Jeremiah", "Daniel"]
+    "book_refs": [
+      "2 Kings",
+      "Jeremiah",
+      "Daniel"
+    ]
   },
   {
     "title": "Moabite Stone (Mesha Stele)",
@@ -112,9 +143,11 @@
     "location_found": "Dhiban, Jordan",
     "current_location": "Louvre Museum, Paris",
     "significance": "Corroborates biblical accounts in 2 Kings 3 of the conflict between Moab and Israel. Contains one of the earliest references to YHWH outside the Bible.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Mesha_stele.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/18/Mesha_stele.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File:Mesha_stele.jpg",
-    "book_refs": ["2 Kings"]
+    "book_refs": [
+      "2 Kings"
+    ]
   },
   {
     "title": "Merneptah Stele",
@@ -125,9 +158,12 @@
     "location_found": "Thebes, Egypt",
     "current_location": "Egyptian Museum, Cairo",
     "significance": "Provides the oldest evidence outside the Bible for the existence of Israel as an identifiable people, dating to the period of the Judges.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/07/Merneptah_Israel_Stele_Cairo.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/43/Merenptah_Israel_Stele_Cairo.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File:Merneptah_Israel_Stele_Cairo.jpg",
-    "book_refs": ["Joshua", "Judges"]
+    "book_refs": [
+      "Joshua",
+      "Judges"
+    ]
   },
   {
     "title": "Codex Sinaiticus",
@@ -138,9 +174,16 @@
     "location_found": "Saint Catherine's Monastery, Sinai, Egypt",
     "current_location": "British Library, London (primary portion)",
     "significance": "One of the two most important witnesses to the Greek text of the New Testament. Essential for textual criticism and establishing the reliability of biblical manuscripts.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Codex_Sinaiticus_Matthew_6%2C4-32.JPG",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/be/Codex_Sinaiticus_Matthew_6%2C4-32.JPG",
     "source_url": "https://commons.wikimedia.org/wiki/File:Codex_Sinaiticus_Matthew_6,4-32.JPG",
-    "book_refs": ["Matthew", "Mark", "Luke", "John", "Romans", "Revelation"]
+    "book_refs": [
+      "Matthew",
+      "Mark",
+      "Luke",
+      "John",
+      "Romans",
+      "Revelation"
+    ]
   },
   {
     "title": "Codex Vaticanus",
@@ -151,22 +194,30 @@
     "location_found": "Vatican Library, Rome",
     "current_location": "Vatican Library, Rome",
     "significance": "Along with Codex Sinaiticus, forms the foundation for modern critical editions of the Greek New Testament. Its careful scribal tradition indicates early concern for accurate transmission.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Codex_Vaticanus_B%2C_2Thess._3%2C11-18%2C_Hebr._1%2C1-2%2C2.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Codex_Vaticanus_B%2C_2Thess._3%2C11-18%2C_Hebr._1%2C1-2%2C2.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File:Codex_Vaticanus_B,_2Thess._3,11-18,_Hebr._1,1-2,2.jpg",
-    "book_refs": ["Genesis", "Psalms", "Matthew", "Romans", "Hebrews"]
+    "book_refs": [
+      "Genesis",
+      "Psalms",
+      "Matthew",
+      "Romans",
+      "Hebrews"
+    ]
   },
   {
     "title": "Ketef Hinnom Scrolls",
     "slug": "ketef-hinnom-scrolls",
-    "description": "Two tiny silver scrolls containing the oldest known text from the Hebrew Bible — the Priestly Blessing from Numbers 6:24-26, dating to the 7th century BC.",
+    "description": "Two tiny silver scrolls containing the oldest known text from the Hebrew Bible \u2014 the Priestly Blessing from Numbers 6:24-26, dating to the 7th century BC.",
     "category": "artifact",
     "date_discovered": "1979",
     "location_found": "Ketef Hinnom, Jerusalem",
     "current_location": "Israel Museum, Jerusalem",
     "significance": "Predates the Dead Sea Scrolls by 400 years, providing the oldest known fragments of biblical text and confirming the antiquity of the Priestly Blessing.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Ketef_Hinnom_-_Priestly_Benediction_Amulet_-_Israel_Museum.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Ketef_Hinnom_KH2_Scroll.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File:Ketef_Hinnom_-_Priestly_Benediction_Amulet_-_Israel_Museum.jpg",
-    "book_refs": ["Numbers"]
+    "book_refs": [
+      "Numbers"
+    ]
   },
   {
     "title": "Lachish Letters",
@@ -177,9 +228,12 @@
     "location_found": "Tell ed-Duweir (Lachish), Israel",
     "current_location": "British Museum, London / Israel Museum, Jerusalem",
     "significance": "Provide a firsthand account of the final days of Judah before the Babylonian destruction, corroborating the setting described in Jeremiah 34:7.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/67/Lachish_Letter_IV.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/46/Lakhish_Letters.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File:Lachish_Letter_IV.jpg",
-    "book_refs": ["Jeremiah", "2 Kings"]
+    "book_refs": [
+      "Jeremiah",
+      "2 Kings"
+    ]
   },
   {
     "title": "Black Obelisk of Shalmaneser III",
@@ -190,9 +244,11 @@
     "location_found": "Nimrud (Kalhu), Iraq",
     "current_location": "British Museum, London",
     "significance": "Contains the only known contemporary depiction of an Israelite king. Confirms the existence of King Jehu, whose reign is described in 2 Kings 9-10.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Black_Obelisk_of_Shalmaneser_III.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/30/The_Black_Obelisk_of_Shalmaneser_III%2C_9th_century_BC%2C_from_Nimrud%2C_Iraq._The_British_Museum.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File:Black_Obelisk_of_Shalmaneser_III.jpg",
-    "book_refs": ["2 Kings"]
+    "book_refs": [
+      "2 Kings"
+    ]
   },
   {
     "title": "Taylor Prism (Sennacherib's Prism)",
@@ -203,9 +259,13 @@
     "location_found": "Nineveh, Iraq",
     "current_location": "British Museum, London",
     "significance": "Confirms the biblical account of the Assyrian siege of Jerusalem (2 Kings 18-19, Isaiah 36-37). Sennacherib boasts of trapping Hezekiah 'like a caged bird' but notably never claims to have conquered Jerusalem.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Taylor_Prism-1.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/de/Taylor_Prism-1.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File:Taylor_Prism-1.jpg",
-    "book_refs": ["2 Kings", "Isaiah", "2 Chronicles"]
+    "book_refs": [
+      "2 Kings",
+      "Isaiah",
+      "2 Chronicles"
+    ]
   },
   {
     "title": "Siloam Inscription",
@@ -216,22 +276,29 @@
     "location_found": "Siloam Tunnel, Jerusalem",
     "current_location": "Istanbul Archaeology Museum, Turkey",
     "significance": "Provides a contemporary account of the construction of Hezekiah's Tunnel, confirming the engineering feat described in 2 Kings 20:20.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/55/Siloam_inscription.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Siloam_inscription.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File:Siloam_inscription.jpg",
-    "book_refs": ["2 Kings", "2 Chronicles"]
+    "book_refs": [
+      "2 Kings",
+      "2 Chronicles"
+    ]
   },
   {
     "title": "Sennacherib's Lachish Reliefs",
     "slug": "lachish-reliefs",
     "description": "Carved stone panels from Sennacherib's palace at Nineveh depicting the Assyrian siege and conquest of the Judean city of Lachish in 701 BC.",
     "category": "archaeology",
-    "date_discovered": "1845–1847",
+    "date_discovered": "1845\u20131847",
     "location_found": "Nineveh, Iraq",
     "current_location": "British Museum, London",
     "significance": "Provide detailed visual evidence of the Assyrian campaign against Judah described in 2 Kings 18:13-14 and 2 Chronicles 32:9.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Lachish_Relief.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/55/Lachish_Reliefs.svg",
     "source_url": "https://commons.wikimedia.org/wiki/File:Lachish_Relief.jpg",
-    "book_refs": ["2 Kings", "2 Chronicles", "Isaiah"]
+    "book_refs": [
+      "2 Kings",
+      "2 Chronicles",
+      "Isaiah"
+    ]
   },
   {
     "title": "Nabonidus Chronicle",
@@ -242,9 +309,12 @@
     "location_found": "Babylon, Iraq",
     "current_location": "British Museum, London",
     "significance": "Corroborates the account in Daniel 5 of the fall of Babylon and provides historical context for the decree of Cyrus allowing the Jews to return to Jerusalem.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Nabonidus_Chronicle.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Nabonidus%27s_faults_and_absences_were_recorded_alongside_events_of_his_reign._By_the_autumn_of_539_BCE%2C_Babylon_had_surrendered_to_the_army_of_king_Cyrus_to_become_part_of_the_growing_Achaemenid_Empire._From_Babylon%2C_Iraq%2C_530-400_BCE.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File:Nabonidus_Chronicle.jpg",
-    "book_refs": ["Daniel", "Ezra"]
+    "book_refs": [
+      "Daniel",
+      "Ezra"
+    ]
   },
   {
     "title": "Pool of Siloam",
@@ -255,9 +325,12 @@
     "location_found": "City of David, Jerusalem",
     "current_location": "In situ, Jerusalem",
     "significance": "Confirms the existence and location of the Pool of Siloam mentioned in the Gospel of John, validating the historical accuracy of the narrative.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Pool_of_Siloam.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Pool_of_Siloam.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File:Pool_of_Siloam.jpg",
-    "book_refs": ["John", "2 Kings"]
+    "book_refs": [
+      "John",
+      "2 Kings"
+    ]
   },
   {
     "title": "Caiaphas Ossuary",
@@ -268,9 +341,12 @@
     "location_found": "Peace Forest, Jerusalem",
     "current_location": "Israel Museum, Jerusalem",
     "significance": "Provides archaeological evidence for the historical existence of Caiaphas, the high priest described in the Gospel accounts of Jesus' trial (Matthew 26:57).",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Caiaphas_Ossuary.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Ossuary_of_the_high_priest_Joseph_Caiaphas_P1180839.JPG",
     "source_url": "https://commons.wikimedia.org/wiki/File:Caiaphas_Ossuary.jpg",
-    "book_refs": ["Matthew", "John"]
+    "book_refs": [
+      "Matthew",
+      "John"
+    ]
   },
   {
     "title": "Pilate's Ring",
@@ -281,9 +357,14 @@
     "location_found": "Herodium, West Bank",
     "current_location": "Israel Museum, Jerusalem",
     "significance": "A second artifact bearing Pilate's name, supplementing the Pilate Inscription and further confirming the historical existence of the Roman governor mentioned in the Gospels.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/33/Pilate_Ring.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Wuppertal%2C_Deutscher_Ring_9%2C_St._Bonifatius%2C_n%C3%B6rdl._Seitenschiff%2C_1._Kreuzweg-Station%2C_Christus_vor_Pilatus.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File:Pilate_Ring.jpg",
-    "book_refs": ["Matthew", "Mark", "Luke", "John"]
+    "book_refs": [
+      "Matthew",
+      "Mark",
+      "Luke",
+      "John"
+    ]
   },
   {
     "title": "Nazareth Inscription",
@@ -292,11 +373,14 @@
     "category": "inscription",
     "date_discovered": "1878",
     "location_found": "Nazareth, Israel",
-    "current_location": "Bibliothèque nationale de France, Paris",
+    "current_location": "Biblioth\u00e8que nationale de France, Paris",
     "significance": "May reflect Roman awareness of early Christian claims about the resurrection of Jesus, suggesting the empty tomb narrative was circulating early enough to prompt an imperial response.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Nazareth_Inscription.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Nazareth_Inscription.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File:Nazareth_Inscription.jpg",
-    "book_refs": ["Matthew", "Mark"]
+    "book_refs": [
+      "Matthew",
+      "Mark"
+    ]
   },
   {
     "title": "Gallio Inscription",
@@ -307,9 +391,12 @@
     "location_found": "Delphi, Greece",
     "current_location": "Delphi Archaeological Museum, Greece",
     "significance": "Allows precise dating of Paul's appearance before Gallio (Acts 18:12-17) to approximately AD 51-52, establishing a firm date in Pauline chronology.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Inscription_of_Gallio_at_Delphi.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Delphes_Gallion.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File:Inscription_of_Gallio_at_Delphi.jpg",
-    "book_refs": ["Acts", "1 Corinthians"]
+    "book_refs": [
+      "Acts",
+      "1 Corinthians"
+    ]
   },
   {
     "title": "Erastus Inscription",
@@ -320,9 +407,12 @@
     "location_found": "Corinth, Greece",
     "current_location": "In situ, Corinth",
     "significance": "May identify the city treasurer Erastus mentioned in Romans 16:23, providing a tangible connection between Paul's letters and the archaeological record of Corinth.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/09/Erastus_inscription.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Erastus_Inschrift.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File:Erastus_inscription.jpg",
-    "book_refs": ["Romans", "Acts"]
+    "book_refs": [
+      "Romans",
+      "Acts"
+    ]
   },
   {
     "title": "Politarch Inscription",
@@ -333,9 +423,12 @@
     "location_found": "Thessalonica, Greece",
     "current_location": "British Museum, London",
     "significance": "Vindicates Luke's use of the term 'politarch' in Acts 17:6-8, demonstrating his precise knowledge of local governmental titles in Thessalonica.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Politarch_inscription.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Politarch_inscription%2C_Golden_Gate_Thessaloniki%2C_before_1874.png",
     "source_url": "https://commons.wikimedia.org/wiki/File:Politarch_inscription.jpg",
-    "book_refs": ["Acts", "1 Thessalonians"]
+    "book_refs": [
+      "Acts",
+      "1 Thessalonians"
+    ]
   },
   {
     "title": "Nebo-Sarsekim Tablet",
@@ -346,9 +439,11 @@
     "location_found": "Sippar, Iraq",
     "current_location": "British Museum, London",
     "significance": "Confirms the historical accuracy of an otherwise obscure detail in Jeremiah, demonstrating the reliability of the prophet's account of the fall of Jerusalem.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/44/Nebo-Sarsekim_Tablet.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/90/The_chief_eunuch%2C_Nabu-sharussu-ukin_%28Nebuchadnezzar_II%27s_right-hand_man%29%2C_%22rab_sha-reshi%22%2C_donated_gold_to_the_god_Marduk_temple_at_Babylon._His_name_and_title_occur_as_Nebo-Sarsekim%2C%22rab-saris%22%2C_in_Hebrew_in_the_Book_of_Jeremiah.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File:Nebo-Sarsekim_Tablet.jpg",
-    "book_refs": ["Jeremiah"]
+    "book_refs": [
+      "Jeremiah"
+    ]
   },
   {
     "title": "LMLK Seal Impressions",
@@ -359,9 +454,12 @@
     "location_found": "Various sites across Judah, Israel",
     "current_location": "Various museums",
     "significance": "Demonstrate the administrative organization of the Kingdom of Judah under Hezekiah, consistent with the biblical portrayal of his reign in 2 Kings 18-20.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/83/LMLK_seal_impression.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a0/LMLK_Seals_on_Jar_Handles.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File:LMLK_seal_impression.jpg",
-    "book_refs": ["2 Kings", "2 Chronicles"]
+    "book_refs": [
+      "2 Kings",
+      "2 Chronicles"
+    ]
   },
   {
     "title": "Hezekiah's Royal Seal (Bulla)",
@@ -372,9 +470,13 @@
     "location_found": "Ophel, Jerusalem",
     "current_location": "Hebrew University, Jerusalem",
     "significance": "The first seal impression of an Israelite or Judean king found in a controlled archaeological excavation, directly confirming King Hezekiah's existence.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Hezekiah_Bulla.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/81/%D7%98%D7%91%D7%99%D7%A2%D7%AA_%D7%97%D7%95%D7%AA%D7%9D_%D7%94%D7%9E%D7%9C%D7%9A_%D7%97%D7%96%D7%A7%D7%99%D7%94%D7%95.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File:Hezekiah_Bulla.jpg",
-    "book_refs": ["2 Kings", "Isaiah", "2 Chronicles"]
+    "book_refs": [
+      "2 Kings",
+      "Isaiah",
+      "2 Chronicles"
+    ]
   },
   {
     "title": "Isaiah Bulla",
@@ -385,22 +487,30 @@
     "location_found": "Ophel, Jerusalem",
     "current_location": "Hebrew University, Jerusalem",
     "significance": "If confirmed as belonging to the prophet Isaiah, this would be the first extra-biblical evidence of the prophet, found mere feet from King Hezekiah's own seal.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Isaiah_Bulla.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Isaiah_Bulla.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File:Isaiah_Bulla.jpg",
-    "book_refs": ["Isaiah", "2 Kings"]
+    "book_refs": [
+      "Isaiah",
+      "2 Kings"
+    ]
   },
   {
     "title": "Pontius Pilate Coin",
     "slug": "pontius-pilate-coin",
-    "description": "Bronze prutah coins minted under Pontius Pilate as prefect of Judaea (AD 26-36), featuring a simpulum (ladle) and lituus (augur's wand) — Roman religious symbols.",
+    "description": "Bronze prutah coins minted under Pontius Pilate as prefect of Judaea (AD 26-36), featuring a simpulum (ladle) and lituus (augur's wand) \u2014 Roman religious symbols.",
     "category": "artifact",
     "date_discovered": "Various finds",
     "location_found": "Judaea, Israel",
     "current_location": "Various collections worldwide",
     "significance": "These coins are contemporaneous evidence of Pilate's governance of Judaea, supplementing the Pilate Inscription and literary sources about the man who sentenced Jesus.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/70/Pontius_Pilate_coin.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Prutah_Of_Pontius_Pilate.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File:Pontius_Pilate_coin.jpg",
-    "book_refs": ["Matthew", "Mark", "Luke", "John"]
+    "book_refs": [
+      "Matthew",
+      "Mark",
+      "Luke",
+      "John"
+    ]
   },
   {
     "title": "Arch of Titus",
@@ -411,9 +521,13 @@
     "location_found": "Rome, Italy",
     "current_location": "In situ, Roman Forum, Rome",
     "significance": "Provides visual confirmation of the destruction of the Second Temple, which Jesus prophesied in Matthew 24:2, Mark 13:2, and Luke 21:6.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Arch_of_Titus_Menorah.png",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Arch_of_Titus_Menorah.png",
     "source_url": "https://commons.wikimedia.org/wiki/File:Arch_of_Titus_Menorah.png",
-    "book_refs": ["Matthew", "Mark", "Luke"]
+    "book_refs": [
+      "Matthew",
+      "Mark",
+      "Luke"
+    ]
   },
   {
     "title": "Church of the Holy Sepulchre",
@@ -424,22 +538,29 @@
     "location_found": "Jerusalem",
     "current_location": "In situ, Old City, Jerusalem",
     "significance": "Archaeological evidence confirms the site was a quarry and burial ground outside the city walls in the 1st century, consistent with the Gospel accounts of Jesus' crucifixion and burial.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Holy_Sepulchre.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/01/The_Church_of_the_Holy_Sepulchre-Jerusalem.JPG",
     "source_url": "https://commons.wikimedia.org/wiki/File:Holy_Sepulchre.jpg",
-    "book_refs": ["Matthew", "Mark", "Luke", "John"]
+    "book_refs": [
+      "Matthew",
+      "Mark",
+      "Luke",
+      "John"
+    ]
   },
   {
     "title": "Jericho Walls",
     "slug": "jericho-walls",
     "description": "Archaeological remains of massive fortification walls at Tell es-Sultan (ancient Jericho), showing evidence of destruction consistent with the biblical account.",
     "category": "archaeology",
-    "date_discovered": "1930s–1950s (Garstang and Kenyon excavations)",
+    "date_discovered": "1930s\u20131950s (Garstang and Kenyon excavations)",
     "location_found": "Tell es-Sultan, Jericho, West Bank",
     "current_location": "In situ, Jericho",
     "significance": "Excavations revealed collapsed mudbrick walls that fell outward (unusual for siege warfare), consistent with Joshua 6's account of Jericho's walls falling flat.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Jericho_Wall.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Ancient_Jericho_excavation._The_city_wall_showing_Mt._Temptation_LOC_matpc.04114.tif",
     "source_url": "https://commons.wikimedia.org/wiki/File:Jericho_Wall.jpg",
-    "book_refs": ["Joshua"]
+    "book_refs": [
+      "Joshua"
+    ]
   },
   {
     "title": "Gezer Calendar",
@@ -450,9 +571,11 @@
     "location_found": "Gezer, Israel",
     "current_location": "Istanbul Archaeology Museum, Turkey",
     "significance": "Demonstrates Hebrew literacy during the period of Solomon, when 1 Kings records that Gezer was given to Solomon as a wedding gift from Pharaoh (1 Kings 9:16).",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/58/Gezer_calendar.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/05/Gezer_calendar_close_up.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File:Gezer_calendar.jpg",
-    "book_refs": ["1 Kings"]
+    "book_refs": [
+      "1 Kings"
+    ]
   },
   {
     "title": "Kurkh Monolith",
@@ -463,9 +586,11 @@
     "location_found": "Kurkh, Turkey",
     "current_location": "British Museum, London",
     "significance": "Provides extra-biblical evidence for King Ahab of Israel and his military strength, consistent with the portrayal of Ahab's reign in 1 Kings 16-22.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Kurkh_Monolith.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/de/Shalmaneser_III-1.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File:Kurkh_Monolith.jpg",
-    "book_refs": ["1 Kings"]
+    "book_refs": [
+      "1 Kings"
+    ]
   },
   {
     "title": "Ivory Pomegranate",
@@ -476,35 +601,43 @@
     "location_found": "Jerusalem (attributed)",
     "current_location": "Israel Museum, Jerusalem",
     "significance": "If authentic, may be the only surviving artifact from Solomon's Temple. The pomegranate motif matches the Temple decorations described in 1 Kings 7:18-20.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Ivory_Pomegranate.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Ben-Hur_a_tale_of_the_Christ.djvu",
     "source_url": "https://commons.wikimedia.org/wiki/File:Ivory_Pomegranate.jpg",
-    "book_refs": ["1 Kings", "2 Chronicles"]
+    "book_refs": [
+      "1 Kings",
+      "2 Chronicles"
+    ]
   },
   {
     "title": "Seal of Baruch ben Neriah",
     "slug": "baruch-seal",
-    "description": "A clay seal impression reading 'Belonging to Berekhyahu, son of Neriyahu, the scribe' — identified as Baruch, the personal scribe of the prophet Jeremiah.",
+    "description": "A clay seal impression reading 'Belonging to Berekhyahu, son of Neriyahu, the scribe' \u2014 identified as Baruch, the personal scribe of the prophet Jeremiah.",
     "category": "artifact",
     "date_discovered": "1975",
     "location_found": "Jerusalem (antiquities market)",
     "current_location": "Israel Museum, Jerusalem",
     "significance": "Provides tangible evidence for the existence of Baruch, Jeremiah's scribe, mentioned in Jeremiah 32:12, 36:4, and 45:1.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Baruch_seal.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/62/AvneyMoreshet-2b8f0f96-Archaeological_Park_-_Ramat_Rachel.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File:Baruch_seal.jpg",
-    "book_refs": ["Jeremiah"]
+    "book_refs": [
+      "Jeremiah"
+    ]
   },
   {
     "title": "Arad Ostraca",
     "slug": "arad-ostraca",
     "description": "Over 100 inscribed pottery shards from the fortress of Arad in the Negev, including references to the 'House of YHWH' and priestly families mentioned in the Bible.",
     "category": "inscription",
-    "date_discovered": "1962–1967",
+    "date_discovered": "1962\u20131967",
     "location_found": "Tel Arad, Israel",
     "current_location": "Israel Museum, Jerusalem",
     "significance": "Provide evidence of organized worship of YHWH and the administrative structure of Judah during the period of the monarchy described in Kings and Chronicles.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/55/Arad_Ostracon.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/26/%D7%9E%D7%9B%D7%AA%D7%91_18_%D7%9E%D7%A2%D7%A8%D7%93%2C_2.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File:Arad_Ostracon.jpg",
-    "book_refs": ["2 Kings", "2 Chronicles"]
+    "book_refs": [
+      "2 Kings",
+      "2 Chronicles"
+    ]
   },
   {
     "title": "Ekron Inscription",
@@ -515,9 +648,13 @@
     "location_found": "Tel Miqne (Ekron), Israel",
     "current_location": "Israel Museum, Jerusalem",
     "significance": "Identifies ancient Ekron, one of the five Philistine cities mentioned repeatedly in the books of Joshua, Judges, and 1 Samuel.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Ekron_Inscription.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Ekron_inscription.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File:Ekron_Inscription.jpg",
-    "book_refs": ["Joshua", "Judges", "1 Samuel"]
+    "book_refs": [
+      "Joshua",
+      "Judges",
+      "1 Samuel"
+    ]
   },
   {
     "title": "Shishak Relief at Karnak",
@@ -528,9 +665,12 @@
     "location_found": "Karnak Temple, Luxor, Egypt",
     "current_location": "In situ, Karnak Temple, Egypt",
     "significance": "Corroborates the biblical account of Pharaoh Shishak's invasion of Judah during Rehoboam's reign (1 Kings 14:25-26, 2 Chronicles 12:2-9).",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/39/Shishak_Relief.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/36/Great_Forecourt_of_Karnak_01.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File:Shishak_Relief.jpg",
-    "book_refs": ["1 Kings", "2 Chronicles"]
+    "book_refs": [
+      "1 Kings",
+      "2 Chronicles"
+    ]
   },
   {
     "title": "City of David Excavations",
@@ -541,22 +681,29 @@
     "location_found": "City of David, Jerusalem",
     "current_location": "In situ, Jerusalem",
     "significance": "Reveals the physical reality of David's Jerusalem, including possible palatial structures from the 10th century BC consistent with the biblical account in 2 Samuel 5.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d0/City_of_David.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/74/City_of_David.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File:City_of_David.jpg",
-    "book_refs": ["2 Samuel", "1 Chronicles"]
+    "book_refs": [
+      "2 Samuel",
+      "1 Chronicles"
+    ]
   },
   {
     "title": "Elephantine Papyri",
     "slug": "elephantine-papyri",
     "description": "A collection of 5th-century BC papyrus documents from a Jewish military colony on Elephantine Island in Egypt, written in Aramaic.",
     "category": "manuscript",
-    "date_discovered": "1893–1907",
+    "date_discovered": "1893\u20131907",
     "location_found": "Elephantine Island, Aswan, Egypt",
     "current_location": "Various museums (Berlin, Brooklyn, Cairo)",
     "significance": "Provide evidence of Jewish diaspora communities during the Persian period, contemporary with the events of Ezra and Nehemiah, and mention the Temple in Jerusalem.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Elephantine_papyrus.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Ananiah_Gives_Yehoishema_a_House%2C_Marh_10%2C_402_B.C.E%2C_47.218.88.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File:Elephantine_papyrus.jpg",
-    "book_refs": ["Ezra", "Nehemiah", "Esther"]
+    "book_refs": [
+      "Ezra",
+      "Nehemiah",
+      "Esther"
+    ]
   },
   {
     "title": "Sargon II Palace Inscriptions",
@@ -567,9 +714,12 @@
     "location_found": "Khorsabad (Dur-Sharrukin), Iraq",
     "current_location": "Louvre Museum, Paris / Oriental Institute, Chicago",
     "significance": "Confirms the biblical account of the Assyrian conquest of the Northern Kingdom of Israel (2 Kings 17:6), providing the Assyrian perspective on this pivotal event.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Sargon_II_Khorsabad.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Relief_B%2C_section_2_of_3_detail_-_Palace_of_Sargon_II%2C_Khorsabad_-_Oriental_Institute_Museum%2C_University_of_Chicago_-_DSC07547.JPG",
     "source_url": "https://commons.wikimedia.org/wiki/File:Sargon_II_Khorsabad.jpg",
-    "book_refs": ["2 Kings", "Isaiah"]
+    "book_refs": [
+      "2 Kings",
+      "Isaiah"
+    ]
   },
   {
     "title": "Amarna Letters",
@@ -580,9 +730,12 @@
     "location_found": "Tell el-Amarna, Egypt",
     "current_location": "Various museums (Berlin, Cairo, London, Paris)",
     "significance": "Mention the 'Habiru' people and describe conditions in Canaan shortly before or during the Israelite settlement period, providing context for the book of Joshua and Judges.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Amarna_Letters.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Amarna_letter._Letter_from_Yapahu_%28ruler_of_Gezer%29_to_the_Egyptian_pharaoh_Amenhotep_III_or_son_Akhenaten.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File:Amarna_Letters.jpg",
-    "book_refs": ["Joshua", "Judges"]
+    "book_refs": [
+      "Joshua",
+      "Judges"
+    ]
   },
   {
     "title": "Magdala Stone",
@@ -593,9 +746,13 @@
     "location_found": "Magdala, Israel",
     "current_location": "In situ / Magdala Center, Israel",
     "significance": "The synagogue at Magdala dates to the time of Jesus and may be one where he taught. The menorah carving is the earliest known stone depiction while the Temple still stood.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Magdala_Stone.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/51/Magdala_Stone.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File:Magdala_Stone.jpg",
-    "book_refs": ["Matthew", "Mark", "Luke"]
+    "book_refs": [
+      "Matthew",
+      "Mark",
+      "Luke"
+    ]
   },
   {
     "title": "Crucified Man of Givat HaMivtar",
@@ -606,9 +763,14 @@
     "location_found": "Givat HaMivtar, Jerusalem",
     "current_location": "Israel Antiquities Authority, Jerusalem",
     "significance": "Provides physical evidence for the practice of crucifixion as described in the Gospel accounts of Jesus' death, confirming details about nail placement and burial practices.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/82/Heel_Bone_of_Crucified_Man.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Nail_%26_Heel_Bone_Only_Known_Evidence_of_Crucifixion%2C_Jerusalem%2C_1st_C._AD_%2829347803498%29.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File:Heel_Bone_of_Crucified_Man.jpg",
-    "book_refs": ["Matthew", "Mark", "Luke", "John"]
+    "book_refs": [
+      "Matthew",
+      "Mark",
+      "Luke",
+      "John"
+    ]
   },
   {
     "title": "Rylands Papyrus P52",
@@ -619,9 +781,11 @@
     "location_found": "Egypt",
     "current_location": "John Rylands Library, Manchester, UK",
     "significance": "Demonstrates that the Gospel of John was in circulation in Egypt within a generation of its composition, supporting an early date for the writing of the Gospels.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d2/P52_recto.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/32/P52_recto.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File:P52_recto.jpg",
-    "book_refs": ["John"]
+    "book_refs": [
+      "John"
+    ]
   },
   {
     "title": "Chester Beatty Papyri",
@@ -632,9 +796,14 @@
     "location_found": "Egypt",
     "current_location": "Chester Beatty Library, Dublin / University of Michigan",
     "significance": "Among the oldest substantial manuscripts of the New Testament, predating Codex Sinaiticus by over a century. Include early copies of the Gospels, Acts, Pauline Epistles, and Revelation.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/54/P46.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/P46.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File:P46.jpg",
-    "book_refs": ["Romans", "Ephesians", "Galatians", "Revelation"]
+    "book_refs": [
+      "Romans",
+      "Ephesians",
+      "Galatians",
+      "Revelation"
+    ]
   },
   {
     "title": "Capernaum Synagogue",
@@ -645,9 +814,13 @@
     "location_found": "Capernaum, Israel",
     "current_location": "In situ, Capernaum",
     "significance": "The basalt foundation beneath the visible limestone structure dates to the 1st century, consistent with the synagogue where Jesus taught and performed miracles (Mark 1:21-28, Luke 4:31-37).",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Capernaum_synagogue.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Capernaum_synagogue_by_David_Shankbone.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File:Capernaum_synagogue.jpg",
-    "book_refs": ["Matthew", "Mark", "Luke"]
+    "book_refs": [
+      "Matthew",
+      "Mark",
+      "Luke"
+    ]
   },
   {
     "title": "Seal of Jeroboam II",
@@ -658,8 +831,12 @@
     "location_found": "Megiddo, Israel",
     "current_location": "Istanbul Archaeology Museum, Turkey",
     "significance": "Provides direct epigraphic evidence for the reign of Jeroboam II, the powerful Israelite king described in 2 Kings 14:23-29 during whose reign the prophets Amos and Hosea ministered.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/14/Megiddo_Shema_Seal.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/39/Shema_Seal_%28Replica%29.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File:Megiddo_Shema_Seal.jpg",
-    "book_refs": ["2 Kings", "Amos", "Hosea"]
+    "book_refs": [
+      "2 Kings",
+      "Amos",
+      "Hosea"
+    ]
   }
 ]

@@ -11,11 +11,15 @@ import {
   Image,
   Link2,
   ChevronUp,
+  StickyNote,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { MediaGallery } from "@/components/media/MediaGallery";
 import type { MediaItem } from "@/components/media/types";
 import { PeopleTabContent } from "@/components/people/PeopleTabContent";
+import { PlacesTabContent } from "./PlacesTabContent";
+import { StudyTabContent } from "./StudyTabContent";
+import { NotesTabContent } from "./NotesTabContent";
 import { CrossRefTab } from "./CrossRefTab";
 
 const TABS = [
@@ -23,6 +27,7 @@ const TABS = [
   { id: "cross-references", label: "Refs", icon: Link2 },
   { id: "places", label: "Places", icon: MapPin },
   { id: "people", label: "People", icon: Users },
+  { id: "notes", label: "Notes", icon: StickyNote },
   { id: "study", label: "Study", icon: BookOpen },
 ] as const;
 
@@ -221,7 +226,7 @@ function TabBar({ activeTab, setTab }: { activeTab: string; setTab: (t: string) 
           aria-selected={activeTab === id}
           role="tab"
         >
-          <Icon className="w-4 h-4" />
+          <Icon className="w-4 h-4" aria-hidden="true" />
           {label}
         </button>
       ))}
@@ -252,11 +257,25 @@ function TabContent({
       );
     case "cross-references":
       return <CrossRefTab />;
+    case "places":
+      return (
+        <div className="p-3">
+          <PlacesTabContent />
+        </div>
+      );
+    case "notes":
+      return <NotesTabContent />;
+    case "study":
+      return (
+        <div className="p-3">
+          <StudyTabContent />
+        </div>
+      );
     default:
       return (
         <div className="flex-1 flex items-center justify-center p-6">
           <p className="text-sm text-[var(--text-muted)] text-center italic">
-            Context content coming soon&hellip;
+            Content loading&hellip;
           </p>
         </div>
       );

@@ -8,7 +8,7 @@ import { MapFilters } from "./MapFilters";
 import { JourneySelector } from "./JourneySelector";
 import { MapOverlayToggle } from "./MapOverlayToggle";
 import type { TileStyle } from "./MapOverlayToggle";
-import type { MapLocationWithRefs, Journey, JourneyWithStops } from "./types";
+import type { MapLocation, MapLocationWithRefs, Journey, JourneyWithStops } from "./types";
 
 // Dynamic import for Leaflet (no SSR)
 const MapsHubMapInner = dynamic(() => import("./MapsHubMapInner"), {
@@ -41,6 +41,7 @@ export function MapsHub({ locations, journeys }: MapsHubProps) {
   const [activeJourney, setActiveJourney] = useState<JourneyWithStops | null>(null);
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [loadingJourney, setLoadingJourney] = useState(false);
+  const [selectedLocation, setSelectedLocation] = useState<MapLocation | null>(null);
 
   // Unique location types
   const availableTypes = useMemo(() => {
@@ -205,7 +206,16 @@ export function MapsHub({ locations, journeys }: MapsHubProps) {
               {filteredLocations.map((loc) => (
                 <li
                   key={loc.id}
-                  className="px-4 py-2.5 hover:bg-[var(--bg-card)] transition-colors cursor-default"
+                  className="px-4 py-2.5 hover:bg-[var(--bg-card)] transition-colors cursor-pointer"
+                  role="button"
+                  tabIndex={0}
+                  onClick={() => setSelectedLocation(loc)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      e.preventDefault();
+                      setSelectedLocation(loc);
+                    }
+                  }}
                 >
                   <p className="text-sm font-semibold text-[var(--text-primary)]">
                     {loc.name}
@@ -245,6 +255,7 @@ export function MapsHub({ locations, journeys }: MapsHubProps) {
           locations={filteredLocations}
           tileStyle={tileStyle}
           activeJourney={activeJourney}
+          selectedLocation={selectedLocation}
         />
       </div>
     </div>

@@ -4,6 +4,7 @@ import { ThemeProvider } from "@/components/shared/theme-provider";
 import { KeyboardShortcutsProvider } from "@/components/shared/KeyboardShortcutsProvider";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { PageLoader } from "@/components/shared/PageLoader";
 import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE, buildWebSiteJsonLd, jsonLdScriptProps } from "@/lib/seo";
 import "./globals.css";
 
@@ -95,17 +96,19 @@ export default function RootLayout({
       >
         <ThemeProvider>
           <KeyboardShortcutsProvider>
-            <a
-              href="#main-content"
-              className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:rounded-lg focus:bg-gold focus:px-4 focus:py-2 focus:text-[var(--bg-primary)] focus:font-source-sans focus:font-semibold focus:text-sm focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2"
-            >
-              Skip to content
-            </a>
-            <div className="flex min-h-screen flex-col">
-              <Header />
-              <main id="main-content" className="flex-1">{children}</main>
-              <Footer />
-            </div>
+            <PageLoader>
+              <a
+                href="#main-content"
+                className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:rounded-lg focus:bg-gold focus:px-4 focus:py-2 focus:text-[var(--bg-primary)] focus:font-source-sans focus:font-semibold focus:text-sm focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2"
+              >
+                Skip to content
+              </a>
+              <div className="flex min-h-screen flex-col">
+                <Header />
+                <main id="main-content" className="flex-1">{children}</main>
+                <Footer />
+              </div>
+            </PageLoader>
           </KeyboardShortcutsProvider>
         </ThemeProvider>
       </body>

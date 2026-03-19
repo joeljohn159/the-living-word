@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useMemo } from "react";
-import { MapContainer, useMap } from "react-leaflet";
+import { MapContainer, useMap, ZoomControl } from "react-leaflet";
 import L from "leaflet";
 import type { Map as LeafletMap } from "leaflet";
 import { LocationPin } from "./LocationPin";
@@ -74,6 +74,21 @@ function FitBounds({ locations }: { locations: MapLocation[] }) {
   return null;
 }
 
+// ─── Fly to selected location ───────────────────────────────
+
+function FlyToSelected({ location }: { location: MapLocation | null }) {
+  const map = useMap();
+  const prevId = useRef<number | null>(null);
+
+  useEffect(() => {
+    if (!location || location.id === prevId.current) return;
+    prevId.current = location.id;
+    map.flyTo([location.latitude, location.longitude], 10, { duration: 1 });
+  }, [location, map]);
+
+  return null;
+}
+
 // ─── Main Map ───────────────────────────────────────────────
 
 const DEFAULT_CENTER: [number, number] = [31.5, 35.2];
@@ -83,6 +98,7 @@ interface MapsHubMapInnerProps {
   locations: MapLocation[];
   tileStyle: TileStyle;
   activeJourney: JourneyWithStops | null;
+  selectedLocation?: MapLocation | null;
 }
 
 /**
@@ -93,6 +109,7 @@ export default function MapsHubMapInner({
   locations,
   tileStyle,
   activeJourney,
+  selectedLocation,
 }: MapsHubMapInnerProps) {
   const mapRef = useRef<LeafletMap | null>(null);
 
@@ -109,16 +126,20 @@ export default function MapsHubMapInner({
       className="h-full w-full"
       ref={mapRef}
       scrollWheelZoom={true}
-      zoomControl={true}
+      zoomControl={false}
       attributionControl={true}
     >
       {/* Dynamic tile layer */}
       <TileLayerSwitcher tileStyle={tileStyle} />
 
-      {/* Location markers */}
-      {locations.map((loc) => (
-        <LocationPin key={loc.id} location={loc} />
-      ))}
+      {/* Zoom control — bottom right */}
+      <ZoomControl position="bottomright" />
+
+      {/* Location markers — hidden when a journey is active */}
+      {!activeJourney &&
+        locations.map((loc) => (
+          <LocationPin key={loc.id} location={loc} />
+        ))}
 
       {/* Journey route overlay */}
       {activeJourney && activeJourney.stops.length > 0 && (
@@ -131,6 +152,9 @@ export default function MapsHubMapInner({
 
       {/* Auto-fit when no journey is active */}
       {!activeJourney && <FitBounds locations={locations} />}
+
+      {/* Fly to selected sidebar location */}
+      <FlyToSelected location={selectedLocation ?? null} />
     </MapContainer>
   );
 }

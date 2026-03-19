@@ -1,8 +1,10 @@
+"use client";
+
 import Link from "next/link";
-import Image from "next/image";
-import { MapPin, Calendar, Star } from "lucide-react";
+import { MapPin, Calendar, Star, Landmark } from "lucide-react";
 import { cn, truncate } from "@/lib/utils";
 import { CategoryBadge } from "./CategoryBadge";
+import { SmartImage } from "@/components/shared/SmartImage";
 
 interface EvidenceCardProps {
   title: string;
@@ -41,28 +43,24 @@ export function EvidenceCard({
       )}
       aria-label={`View details about ${title}`}
     >
-      {imageUrl && (
-        <div className="relative aspect-[4/3] overflow-hidden bg-[var(--bg-secondary)]">
-          <Image
-            src={imageUrl}
-            alt={title}
-            fill
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-            className="object-cover transition-transform duration-500 group-hover:scale-105"
-            unoptimized
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-          <div className="absolute top-3 left-3">
-            <CategoryBadge category={category} />
-          </div>
+      <div className="relative aspect-[4/3] overflow-hidden bg-[var(--bg-secondary)]">
+        <SmartImage
+          src={imageUrl}
+          alt={title}
+          fill
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          fallbackLabel={title}
+          fallbackIcon={<Landmark className="h-8 w-8" />}
+          fallbackClassName="absolute inset-0"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+        <div className="absolute top-3 left-3 z-20">
+          <CategoryBadge category={category} />
         </div>
-      )}
+      </div>
 
       <div className="p-4 space-y-3">
-        {!imageUrl && (
-          <CategoryBadge category={category} />
-        )}
-
         <h3 className="heading text-lg text-[var(--foreground)] group-hover:text-gold transition-colors line-clamp-2">
           {title}
         </h3>

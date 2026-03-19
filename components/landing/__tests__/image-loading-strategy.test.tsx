@@ -18,6 +18,7 @@ const imageProps: Record<string, unknown>[] = [];
 vi.mock("next/image", () => ({
   default: (props: Record<string, unknown>) => {
     imageProps.push({ ...props });
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { fill, priority, sizes, ...rest } = props;
     // eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text
     return <img data-loading={props.loading} data-priority={String(!!priority)} {...(rest as React.ImgHTMLAttributes<HTMLImageElement>)} />;
@@ -48,6 +49,7 @@ vi.mock("framer-motion", () => ({
       children,
       ...props
     }: React.PropsWithChildren<Record<string, unknown>>) => {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const { initial, animate, transition, whileInView, viewport, layout, ...rest } =
         props as Record<string, unknown>;
       return <div {...(rest as React.HTMLAttributes<HTMLDivElement>)}>{children}</div>;
@@ -56,6 +58,7 @@ vi.mock("framer-motion", () => ({
       children,
       ...props
     }: React.PropsWithChildren<Record<string, unknown>>) => {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const { initial, animate, transition, whileInView, viewport, layout, ...rest } =
         props as Record<string, unknown>;
       return <article {...(rest as React.HTMLAttributes<HTMLElement>)}>{children}</article>;

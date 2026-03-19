@@ -1,34 +1,29 @@
-import Database from "better-sqlite3";
-import { drizzle } from "drizzle-orm/better-sqlite3";
+import { createClient } from "@libsql/client";
+import { drizzle } from "drizzle-orm/libsql";
 import path from "path";
 import * as schema from "./schema";
 
-const DB_PATH = process.env.DATABASE_URL || path.join(process.cwd(), "data", "bible.db");
-
-let sqlite: Database.Database | null = null;
-
 /**
- * Get or create a singleton SQLite database connection.
- * Enables WAL mode and foreign key constraints.
+ * Turso / libSQL connection.
+ * - Production (Vercel): uses TURSO_DATABASE_URL + TURSO_AUTH_TOKEN env vars
+ * - Local dev: falls back to a local file-based SQLite database
  */
-function getDatabase(): Database.Database {
-  if (!sqlite) {
-    sqlite = new Database(DB_PATH);
-    sqlite.pragma("journal_mode = WAL");
-    sqlite.pragma("foreign_keys = ON");
-  }
-  return sqlite;
-}
+const client = createClient({
+  url:
+    process.env.TURSO_DATABASE_URL ||
+    `file:${path.join(process.cwd(), "data", "bible.db")}`,
+  authToken: process.env.TURSO_AUTH_TOKEN,
+});
 
 /**
  * Drizzle ORM database instance — singleton.
  * Includes schema for relational queries.
  */
-export const db = drizzle(getDatabase(), { schema });
+export const db = drizzle(client, { schema });
 
 /**
- * Get the raw better-sqlite3 instance for advanced operations.
+ * Get the raw libSQL client for advanced operations.
  */
-export function getRawDb(): Database.Database {
-  return getDatabase();
+export function getRawClient() {
+  return client;
 }

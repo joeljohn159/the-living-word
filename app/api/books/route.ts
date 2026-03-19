@@ -8,7 +8,7 @@ import { books } from "@/lib/db/schema";
  */
 export async function GET() {
   try {
-    const allBooks = db
+    const allBooks = await db
       .select({
         name: books.name,
         slug: books.slug,

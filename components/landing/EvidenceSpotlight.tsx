@@ -23,29 +23,26 @@ const FALLBACK_EVIDENCE: EvidenceItem[] = [
     locationFound: "Qumran, West Bank",
     significance:
       "The oldest known copies of Hebrew Bible texts, dating from the 3rd century BC to the 1st century AD, confirming remarkable textual preservation.",
-    imageUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Dead_Sea_Scroll_-_Great_Isaiah_Scroll.jpg/800px-Dead_Sea_Scroll_-_Great_Isaiah_Scroll.jpg",
+    imageUrl: "/images/landing/great-isaiah-scroll.jpg",
     slug: "dead-sea-scrolls",
   },
   {
-    title: "Tel Dan Stele",
+    title: "Tel Dan Inscription",
     category: "inscription",
     locationFound: "Tel Dan, Israel",
     significance:
       "A 9th-century BC inscription containing the earliest known reference to the 'House of David' outside the Bible.",
-    imageUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Tel_Dan_Stele.jpg/440px-Tel_Dan_Stele.jpg",
-    slug: "tel-dan-stele",
+    imageUrl: "/images/landing/tel-dan-inscription.jpg",
+    slug: "tel-dan-inscription",
   },
   {
-    title: "Pilate Stone",
+    title: "Pilate Inscription",
     category: "inscription",
     locationFound: "Caesarea Maritima, Israel",
     significance:
       "A limestone block with a Latin inscription mentioning Pontius Pilate as prefect of Judaea, confirming the historical existence of the Roman governor.",
-    imageUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Pontius_Pilate_Inscription.jpg/440px-Pontius_Pilate_Inscription.jpg",
-    slug: "pilate-stone",
+    imageUrl: "/images/landing/pilate-stone.jpg",
+    slug: "pilate-inscription",
   },
 ];
 

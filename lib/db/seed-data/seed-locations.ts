@@ -3,7 +3,7 @@
  * Returns a map of location name → inserted location ID.
  */
 
-import { db } from "../connection";
+import { seedDb as db } from "../seed-connection";
 import { locations } from "../schema";
 import { slugify } from "../../utils";
 import locationsData from "../../../data/locations.json";

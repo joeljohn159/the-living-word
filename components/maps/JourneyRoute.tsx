@@ -1,9 +1,39 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Polyline, CircleMarker, Tooltip, useMap } from "react-leaflet";
+import { Polyline, Marker, Tooltip, useMap } from "react-leaflet";
 import L from "leaflet";
 import type { JourneyStop } from "./types";
+
+// ─── Numbered journey pin icon ──────────────────────────────
+
+const PIN_W = 30;
+const PIN_H = 40;
+
+function createJourneyStopIcon(
+  index: number,
+  total: number,
+  color: string,
+) {
+  const fill =
+    index === 0 ? "#4CAF50" : index === total - 1 ? "#F44336" : color;
+
+  const svg = `
+    <svg xmlns="http://www.w3.org/2000/svg" width="${PIN_W}" height="${PIN_H}" viewBox="0 0 30 40">
+      <path d="M15 0C6.7 0 0 6.7 0 15c0 11.2 15 25 15 25s15-13.8 15-25C30 6.7 23.3 0 15 0z"
+            fill="${fill}" stroke="#1E1E35" stroke-width="1.5"/>
+      <circle cx="15" cy="14" r="10" fill="#1E1E35" opacity="0.25"/>
+      <text x="15" y="18" text-anchor="middle" fill="white" font-size="12" font-weight="bold" font-family="sans-serif">${index + 1}</text>
+    </svg>`;
+
+  return L.divIcon({
+    html: svg,
+    className: "bible-map-pin",
+    iconSize: [PIN_W, PIN_H],
+    iconAnchor: [PIN_W / 2, PIN_H],
+    popupAnchor: [0, -PIN_H + 4],
+  });
+}
 
 interface JourneyRouteProps {
   stops: JourneyStop[];
@@ -81,22 +111,16 @@ export function JourneyRoute({
         />
       )}
 
-      {/* Stop markers */}
+      {/* Stop pin markers */}
       {visibleStops.map((stop, index) => (
-        <CircleMarker
+        <Marker
           key={stop.id}
-          center={[stop.latitude!, stop.longitude!]}
-          radius={index === 0 || index === validStops.length - 1 ? 8 : 6}
-          pathOptions={{
-            color: "#1E1E35",
-            fillColor: index === 0 ? "#4CAF50" : index === validStops.length - 1 ? "#F44336" : color,
-            fillOpacity: 0.9,
-            weight: 2,
-          }}
+          position={[stop.latitude!, stop.longitude!]}
+          icon={createJourneyStopIcon(index, validStops.length, color)}
         >
           <Tooltip
             direction="top"
-            offset={[0, -8]}
+            offset={[0, -PIN_H + 2]}
             permanent={false}
           >
             <span className="font-cormorant text-sm font-bold">
@@ -108,7 +132,7 @@ export function JourneyRoute({
               </span>
             )}
           </Tooltip>
-        </CircleMarker>
+        </Marker>
       ))}
     </>
   );

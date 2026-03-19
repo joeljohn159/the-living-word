@@ -1,12 +1,13 @@
 /**
- * Seeds media (paintings/art) and links them to books via media_references.
+ * Seeds media (paintings/art) and links them to books and chapters via media_references.
  * Uses data/media-references.json as the source.
  */
 
 import { readFileSync } from "fs";
 import { resolve } from "path";
-import { db } from "../connection";
-import { media, mediaReferences, books } from "../schema";
+import { eq, and } from "drizzle-orm";
+import { seedDb as db } from "../seed-connection";
+import { media, mediaReferences, books, chapters } from "../schema";
 
 interface MediaEntry {
   title: string;
@@ -19,6 +20,7 @@ interface MediaEntry {
   license: string;
   media_type: "painting" | "illustration" | "photograph" | "map";
   book_ref: string;
+  chapter_refs?: number[];
 }
 
 export function seedMedia(): void {
@@ -68,10 +70,34 @@ export function seedMedia(): void {
     // Link to book
     const bookId = bookNameMap.get(entry.book_ref);
     if (bookId) {
-      db.insert(mediaReferences)
-        .values({ mediaId: result.id, bookId })
-        .run();
-      refCount++;
+      // If chapter_refs are specified, create a reference for each chapter
+      if (entry.chapter_refs && entry.chapter_refs.length > 0) {
+        for (const chapterNum of entry.chapter_refs) {
+          const chapter = db
+            .select()
+            .from(chapters)
+            .where(
+              and(
+                eq(chapters.bookId, bookId),
+                eq(chapters.chapterNumber, chapterNum)
+              )
+            )
+            .get();
+
+          if (chapter) {
+            db.insert(mediaReferences)
+              .values({ mediaId: result.id, bookId, chapterId: chapter.id })
+              .run();
+            refCount++;
+          }
+        }
+      } else {
+        // Book-level reference only (fallback)
+        db.insert(mediaReferences)
+          .values({ mediaId: result.id, bookId })
+          .run();
+        refCount++;
+      }
     } else {
       console.warn(`   ⚠ Book not found: "${entry.book_ref}"`);
     }

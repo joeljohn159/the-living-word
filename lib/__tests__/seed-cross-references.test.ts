@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { describe, it, expect, beforeAll, afterAll, beforeEach } from "vitest";
 import Database from "better-sqlite3";
 import { drizzle } from "drizzle-orm/better-sqlite3";
@@ -12,7 +13,8 @@ import * as schema from "@/lib/db/schema";
  */
 
 let sqlite: Database.Database;
-let db: ReturnType<typeof drizzle>;
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+let _db: ReturnType<typeof drizzle>;
 
 function applySchema(rawDb: Database.Database) {
   rawDb.exec(`
@@ -119,7 +121,7 @@ beforeAll(() => {
   sqlite = new Database(":memory:");
   applySchema(sqlite);
   insertFixtures(sqlite);
-  db = drizzle(sqlite, { schema });
+  _db = drizzle(sqlite, { schema });
 });
 
 afterAll(() => {
@@ -139,6 +141,7 @@ describe("Cross-references table — schema constraints", () => {
       VALUES (1, 100, 'allusion', 'In the beginning — Genesis echoed in John')
     `);
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const rows = sqlite.prepare("SELECT * FROM cross_references").all() as any[];
     expect(rows).toHaveLength(1);
     expect(rows[0].relationship).toBe("allusion");
@@ -162,6 +165,7 @@ describe("Cross-references table — schema constraints", () => {
         INSERT INTO cross_references (source_verse_id, target_verse_id, relationship, note)
         VALUES (1, 100, '${type}', 'test note')
       `);
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const row = sqlite
         .prepare("SELECT relationship FROM cross_references LIMIT 1")
         .get() as any;
@@ -175,6 +179,7 @@ describe("Cross-references table — schema constraints", () => {
       VALUES (1, 100, 'allusion')
     `);
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const row = sqlite
       .prepare("SELECT note FROM cross_references LIMIT 1")
       .get() as any;
@@ -187,6 +192,7 @@ describe("Cross-references table — schema constraints", () => {
       VALUES (1, 100, 'allusion', 'test cascade')
     `);
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const before = sqlite
       .prepare("SELECT COUNT(*) as cnt FROM cross_references")
       .get() as any;
@@ -194,6 +200,7 @@ describe("Cross-references table — schema constraints", () => {
 
     // Delete source verse (id=1) — should cascade
     sqlite.exec("DELETE FROM verses WHERE id = 1");
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const after = sqlite
       .prepare("SELECT COUNT(*) as cnt FROM cross_references")
       .get() as any;
@@ -213,6 +220,7 @@ describe("Cross-references table — schema constraints", () => {
     `);
 
     sqlite.exec("DELETE FROM verses WHERE id = 100");
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const after = sqlite
       .prepare("SELECT COUNT(*) as cnt FROM cross_references")
       .get() as any;
@@ -308,6 +316,7 @@ describe("Cross-references — batch insertion", () => {
       { src: 70, tgt: 400, rel: "prophecy-fulfillment", note: "Seed of woman" },
     ]);
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const count = sqlite
       .prepare("SELECT COUNT(*) as cnt FROM cross_references")
       .get() as any;
@@ -392,6 +401,7 @@ describe("Cross-references — idempotency checks", () => {
     });
     tx();
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const existing = sqlite
       .prepare("SELECT COUNT(*) as cnt FROM cross_references")
       .get() as any;
@@ -411,6 +421,7 @@ describe("Cross-references — idempotency checks", () => {
       insertStmt.run(1, 100, "allusion", `Partial ${i}`);
     }
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const existing = sqlite
       .prepare("SELECT COUNT(*) as cnt FROM cross_references")
       .get() as any;
@@ -422,6 +433,7 @@ describe("Cross-references — idempotency checks", () => {
       sqlite.exec("DELETE FROM cross_references");
     }
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const afterClear = sqlite
       .prepare("SELECT COUNT(*) as cnt FROM cross_references")
       .get() as any;
@@ -441,6 +453,7 @@ describe("Cross-references — idempotency checks", () => {
     });
     tx();
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const existing = sqlite
       .prepare("SELECT COUNT(*) as cnt FROM cross_references")
       .get() as any;
@@ -456,17 +469,21 @@ describe("Cross-references — idempotency checks", () => {
 
 describe("Cross-references — database indexes", () => {
   it("has an index on source_verse_id", () => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const indexes = sqlite
       .prepare("SELECT name FROM sqlite_master WHERE type='index' AND tbl_name='cross_references'")
       .all() as any[];
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const names = indexes.map((i: any) => i.name);
     expect(names).toContain("idx_cross_refs_source");
   });
 
   it("has an index on target_verse_id", () => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const indexes = sqlite
       .prepare("SELECT name FROM sqlite_master WHERE type='index' AND tbl_name='cross_references'")
       .all() as any[];
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const names = indexes.map((i: any) => i.name);
     expect(names).toContain("idx_cross_refs_target");
   });

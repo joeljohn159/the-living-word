@@ -5,7 +5,7 @@
 
 import { readFileSync } from "fs";
 import { resolve } from "path";
-import { db } from "../connection";
+import { seedDb as db } from "../seed-connection";
 import { evidence, evidenceReferences, books } from "../schema";
 import { slugify } from "../../utils";
 

@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 import { ScriptureDisplay } from "./ScriptureDisplay";
 
 // Mock the preferences store
-const mockStore = { fontSize: 20, readingMode: "paragraph" as const };
+const mockStore: { fontSize: number; readingMode: "paragraph" | "verse-per-line" } = { fontSize: 20, readingMode: "paragraph" };
 
 vi.mock("@/stores/preferences", () => ({
   usePreferencesStore: (selector: (s: typeof mockStore) => unknown) =>

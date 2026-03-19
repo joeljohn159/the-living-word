@@ -6,7 +6,7 @@
 
 import fs from "fs";
 import path from "path";
-import { db } from "../connection";
+import { seedDb as db } from "../seed-connection";
 import { people, peopleReferences, books, chapters, verses } from "../schema";
 import { slugify } from "../../utils";
 import { eq, and } from "drizzle-orm";

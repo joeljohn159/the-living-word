@@ -25,10 +25,8 @@ const VALID_RELATIONSHIPS = [
 // Bible book count: 66 canonical books (1-indexed)
 const MAX_BOOK_NUM = 66;
 
-let crossRefs: RawCrossRef[];
-
 // Load once for all tests
-crossRefs = JSON.parse(
+const crossRefs: RawCrossRef[] = JSON.parse(
   readFileSync(resolve(process.cwd(), "data/cross-references.json"), "utf-8"),
 );
 

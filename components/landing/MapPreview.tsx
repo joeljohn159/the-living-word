@@ -5,8 +5,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { MapPin } from "lucide-react";
 
-const MAP_IMAGE_URL =
-  "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Palestine_1020BC-Smith1915.jpg/800px-Palestine_1020BC-Smith1915.jpg";
+const MAP_IMAGE_URL = "/images/maps/historical-israel.png";
 
 interface LocationPin {
   name: string;
@@ -64,7 +63,7 @@ export function MapPreview() {
               src={MAP_IMAGE_URL}
               alt="Historical map of Palestine circa 1020 BC by William Smith, 1915"
               fill
-              className="object-cover"
+              className="object-cover object-[center_60%]"
               sizes="(max-width: 768px) 100vw, 1152px"
               priority={false}
             />
@@ -143,9 +142,9 @@ export function MapPreview() {
           {/* Stats bar */}
           <div className="grid grid-cols-3 divide-x divide-[var(--border)] border-t border-[var(--border)]">
             {[
-              { label: "Locations", value: "100+" },
-              { label: "Journeys", value: "5+" },
-              { label: "Regions", value: "12+" },
+              { label: "Locations", value: "130+" },
+              { label: "Journeys", value: "8" },
+              { label: "Regions", value: "15+" },
             ].map((stat) => (
               <div key={stat.label} className="py-4 text-center">
                 <p className="font-cormorant text-xl sm:text-2xl font-semibold text-gold">
