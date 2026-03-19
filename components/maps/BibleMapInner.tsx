@@ -73,8 +73,8 @@ export default function BibleMapInner({ locations }: BibleMapInnerProps) {
 
       {/* Muted antiquity-style tiles — Stamen Toner Lite via Stadia Maps (free, no key) */}
       <TileLayer
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
+        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/">CARTO</a>'
         maxZoom={18}
       />
 
