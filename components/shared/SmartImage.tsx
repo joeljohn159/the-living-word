@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useCallback, useEffect, useRef } from "react";
-import Image, { type ImageProps } from "next/image";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 const MAX_RETRIES = 3;
@@ -64,7 +64,7 @@ export function SmartImage({
     if (img && img.complete && img.naturalWidth > 0 && status === "loading") {
       setStatus("loaded");
     }
-  });
+  }, [status, imgKey]);
 
   const handleError = useCallback(() => {
     setRetryCount((prev) => {

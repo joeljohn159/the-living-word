@@ -134,6 +134,7 @@ export function StudyTabContent() {
                 {/* Image */}
                 {item.imageUrl && (
                   <div className="relative h-28 overflow-hidden bg-[var(--bg-tertiary)]">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={item.imageUrl}
                       alt={item.title}
